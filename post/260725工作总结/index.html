@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 1.2.1">
-  <title>58的无锡买房租房项目搭建 | W662000&#39;s Blog</title>
+  <title>260725工作总结 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="58的无锡买房租房项目搭建" />
+<meta property="og:title" content="260725工作总结" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"58的无锡买房租房项目搭建","url":"https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/","description":"用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为\u0026quot;浏览器验证救不了沙箱\u0026quot;，后来实测发现：用户在浏览\u0026hellip;","datePublished":"2026-07-25T23:30:00+08:00","dateModified":"2026-07-26T00:24:10+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/","name":"58的无锡买房租房项目搭建","position":2}]}</script>
-<meta property="og:title" content="58的无锡买房租房项目搭建">
-<meta property="og:description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
+<meta name="description" content="无锡 58 买房租房爬虫全量完成。 数据已全部落库，项目交付。 Hermes 模型导入 WorkBuddy。 合并后共二十四条模型。 排查 Wispbyte 广告拦截误报。 根因为网络阻断三个域名。 罗马尼亚 VPS 用 gost 起代理。 放弃 sing-box 回退 gost。 整理免费服务器资源四类清单。 备好 Gaming4Free 部署续约脚本。 产出 Discord&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260725工作总结/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"260725工作总结","url":"https://towertop.kdns.fr/post/260725工作总结/","description":"无锡 58 买房租房爬虫全量完成。 数据已全部落库，项目交付。 Hermes 模型导入 WorkBuddy。 合并后共二十四条模型。 排查 Wispbyte 广告拦截误报。 根因为网络阻断三个域名。 罗马尼亚 VPS 用 gost 起代理。 放弃 sing-box 回退 gost。 整理免费服务器资源四类清单。 备好 Gaming4Free 部署续约脚本。 产出 Discord\u0026hellip;","datePublished":"2026-07-25T23:59:00+08:00","dateModified":"2026-07-25T23:34:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260725工作总结/","name":"260725工作总结","position":2}]}</script>
+<meta property="og:title" content="260725工作总结">
+<meta property="og:description" content="无锡 58 买房租房爬虫全量完成。 数据已全部落库，项目交付。 Hermes 模型导入 WorkBuddy。 合并后共二十四条模型。 排查 Wispbyte 广告拦截误报。 根因为网络阻断三个域名。 罗马尼亚 VPS 用 gost 起代理。 放弃 sing-box 回退 gost。 整理免费服务器资源四类清单。 备好 Gaming4Free 部署续约脚本。 产出 Discord&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260725工作总结/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
-<meta name="twitter:title" content="58的无锡买房租房项目搭建">
-<meta name="twitter:description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260725工作总结/">
+<meta name="twitter:title" content="260725工作总结">
+<meta name="twitter:description" content="无锡 58 买房租房爬虫全量完成。 数据已全部落库，项目交付。 Hermes 模型导入 WorkBuddy。 合并后共二十四条模型。 排查 Wispbyte 广告拦截误报。 根因为网络阻断三个域名。 罗马尼亚 VPS 用 gost 起代理。 放弃 sing-box 回退 gost。 整理免费服务器资源四类清单。 备好 Gaming4Free 部署续约脚本。 产出 Discord&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,7 +172,7 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">58的无锡买房租房项目搭建</h1>
+    <h1 class="article-title">260725工作总结</h1>
     <div class="article-meta">
       
       <span class="article-meta__item">2026-07-25</span>
@@ -186,10 +186,6 @@
       
       <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/58-tong-cheng/" class="tag-pill tag-pill--sm">58同城</a>
-      
-      <a href="/tag/pa-chong/" class="tag-pill tag-pill--sm">爬虫</a>
-      
     </div>
     
   </header>
@@ -197,30 +193,35 @@
   
 
   <div class="article-content">
-    <p>用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。</p>
-<p>最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&quot;浏览器验证救不了沙箱&quot;，后来实测发现：用户在浏览器里手动过一次验证码，就能给沙箱 IP 开一个宽松窗口——一次手动验证竟连跑锡山、新吴、江阴、宜兴 4 个整区（各 50 页、零撞墙），远超预期。</p>
-<p>最终成果：买房 3685 条、租房 7466 条，7/7 区全部落库，看板可看全城数据。</p>
-<p>踩坑沉淀成 11 条铁律，最关键的三条：① 灌库前必须只删本区叶子（import_data.sql 是普通 INSERT，重复导入会翻倍）；② 清表会触发自动播种污染，跑完要 strip seed；③ 拿到窗口别做探针，直奔目标区。完整流程与命令见 HANDOFF.md / HANDOFF_AGENT.md。</p>
+    <p>无锡 58 买房租房爬虫全量完成。<br />
+数据已全部落库，项目交付。<br />
+Hermes 模型导入 WorkBuddy。<br />
+合并后共二十四条模型。<br />
+排查 Wispbyte 广告拦截误报。<br />
+根因为网络阻断三个域名。<br />
+罗马尼亚 VPS 用 gost 起代理。<br />
+放弃 sing-box 回退 gost。<br />
+整理免费服务器资源四类清单。<br />
+备好 Gaming4Free 部署续约脚本。<br />
+产出 Discord 自建机器人路线。</p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260725工作总结/" class="post-nav-card post-nav-card--prev">
-      
+    <div class="post-nav-card post-nav-card--empty">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">260725工作总结</span>
+        <span class="post-nav-card__empty-text">没有上一篇了~</span>
       </div>
-      <span class="post-nav-card__arrow">&larr;</span>
-    </a>
+    </div>
     
     
-    <a href="/post/260724工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260725-58的无锡买房租房项目搭建/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260724工作总结</span>
+        <span class="post-nav-card__title">58的无锡买房租房项目搭建</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
