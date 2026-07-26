@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 1.2.1">
-  <title>Serv00 注册开放监控（自动注册） | W662000&#39;s Blog</title>
+  <title>Hermes Windows 原生部署迁移 + 启动器自启修复 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="Serv00 注册开放监控（自动注册）" />
+<meta property="og:title" content="Hermes Windows 原生部署迁移 + 启动器自启修复" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Serv00 注册开放监控（自动注册）","url":"https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/","description":"用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动\u0026hellip;","datePublished":"2026-07-26T23:30:00+08:00","dateModified":"2026-07-26T12:40:56+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/","name":"Serv00 注册开放监控（自动注册）","position":2}]}</script>
-<meta property="og:title" content="Serv00 注册开放监控（自动注册）">
-<meta property="og:description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
+<meta name="description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须含 &amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hermes Windows 原生部署迁移 + 启动器自启修复","url":"https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/","description":"把 Docker 版 Hermes 迁到 Windows 原生：D:\\hermes-agent（gateway :8642）+ D:\\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须含 \u0026hellip;","datePublished":"2026-07-23T23:30:00+08:00","dateModified":"2026-07-26T22:40:25+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/","name":"Hermes Windows 原生部署迁移 + 启动器自启修复","position":2}]}</script>
+<meta property="og:title" content="Hermes Windows 原生部署迁移 + 启动器自启修复">
+<meta property="og:description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须含 &amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
-<meta name="twitter:title" content="Serv00 注册开放监控（自动注册）">
-<meta name="twitter:description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
+<meta name="twitter:title" content="Hermes Windows 原生部署迁移 + 启动器自启修复">
+<meta name="twitter:description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须含 &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Serv00 注册开放监控（自动注册）</h1>
+    <h1 class="article-title">Hermes Windows 原生部署迁移 + 启动器自启修复</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-26</span>
+      <span class="article-meta__item">2026-07-23</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -187,25 +187,28 @@
   
 
   <div class="article-content">
-    <p>用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动蹲守低效；本机方案因电脑非 24h 开机被否，改为云端 GitHub Actions。ClawBot 微信推送因 WorkBuddy 不暴露 bot_token 而放弃，改邮件通道。调试中踩了两个坑：GitHub Actions 引用不存在的 Secret 会注入空串导致 int(&rsquo;&rsquo;) 崩溃；fetch() 返回 3 元组但主流程只解包 2 个。均已修复，现已验证 [未开放] 健康态。注意：Serv00 免费版 ToS 禁代理/VPN，此号只建站/SSH；90 天不登录删号。完整命令与架构见 HANDOFF.md。</p>
+    <p>把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。</p>
+<p>修通：git_info 黑框（workspace.py/updates.py 的 <code>_run_git()</code> 加 CREATE_NO_WINDOW）、Startup 路径必须含 Programs、启动器用 VBS + FreeConsole 实现无窗口；装 Git for Windows + 导入 WSL Ubuntu 修 bash 工具。gateway 用 <code>--replace --accept-hooks</code> 才监听 8642；Docker 的 Linux .venv 不能复制到 Windows，必须重装。重启电脑后自启生效。</p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <div class="post-nav-card post-nav-card--empty">
+    <a href="/post/260723工作总结/" class="post-nav-card post-nav-card--prev">
+      
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__empty-text">没有上一篇了~</span>
+        <span class="post-nav-card__title">260723工作总结</span>
       </div>
-    </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
     
     
-    <a href="/post/260725工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260722工作总结/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260725工作总结</span>
+        <span class="post-nav-card__title">260722工作总结</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
