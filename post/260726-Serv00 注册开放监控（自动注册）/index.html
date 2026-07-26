@@ -27,21 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 1.2.1">
-  <title>全部文章 | W662000&#39;s Blog</title>
+  <title>Serv00 注册开放监控（自动注册） | W662000&#39;s Blog</title>
   
-<meta name="description" content="Welcome to W662000's Blog">
-<link rel="canonical" href="https://towertop.kdns.fr/post/page/2/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"W662000's Blog","url":"https://towertop.kdns.fr","description":"Welcome to W662000's Blog","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://towertop.kdns.fr/search?q={search_term_string}"}}</script>
-<meta property="og:title" content="W662000's Blog">
-<meta property="og:description" content="Welcome to W662000's Blog">
-<meta property="og:url" content="https://towertop.kdns.fr/post/page/2/">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Serv00 注册开放监控（自动注册）" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Serv00 注册开放监控（自动注册）","url":"https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/","description":"用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动\u0026hellip;","datePublished":"2026-07-26T23:30:00+08:00","dateModified":"2026-07-26T12:40:56+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/","name":"Serv00 注册开放监控（自动注册）","position":2}]}</script>
+<meta property="og:title" content="Serv00 注册开放监控（自动注册）">
+<meta property="og:description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/page/2/">
-<meta name="twitter:title" content="W662000's Blog">
-<meta name="twitter:description" content="Welcome to W662000's Blog">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260726-Serv00 注册开放监控（自动注册）/">
+<meta name="twitter:title" content="Serv00 注册开放监控（自动注册）">
+<meta name="twitter:description" content="用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -165,96 +170,54 @@
 
   <main class="site-main" role="main">
     
-<div class="container">
-  <div class="page-header">
-    <h1 class="page-title">全部文章</h1>
-    
-    <p class="page-subtitle">Welcome to W662000&#39;s Blog</p>
-    
-  </div>
-
-  
-  <div class="post-list">
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260718工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260718工作总结</h3>
-    </a>
-    <a href="/post/260718工作总结/" class="post-card__excerpt clamp-2">
-      彻底关闭 Windows 10 强制更新。
-服务层禁用 wuauserv/UsoSvc/bits/WaaSMedicSvc。
-注册表锁定 22H2 防大版本升级。
-计划任务禁用 15 项更新任务。
-核心突破：制服 WaaSMedicS...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-18
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">Serv00 注册开放监控（自动注册）</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-07-26</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">1 分钟阅读</span>
       
     </div>
-  </div>
-  
-</article>
-
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/kai-tou/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">开头</h3>
-    </a>
-    <a href="/post/kai-tou/" class="post-card__excerpt clamp-2">
-      突然想做个BLOG，搜了一下就用gridea了，结果一看停更了，挺可惜的，忽然又发现了其他大大写的pro版本，赶紧下载了一用，发现跟我自己用的flomo非常接近，真棒！
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-08
-      
+  </header>
+
+  
+
+  <div class="article-content">
+    <p>用 WorkBuddy 搭了一套 Serv00 免费主机注册开放自动监控系统：GitHub Actions 每 10 分钟探测 serv00.com 注册页，一旦放出免费名额就自动填表注册、用 126 邮箱 IMAP 读取验证码邮件、点激活链接，最后把账户信息（用户名/密码/SSH 地址）发回 126 邮箱。起因是 Serv00 长期限流（server user limit reached），手动蹲守低效；本机方案因电脑非 24h 开机被否，改为云端 GitHub Actions。ClawBot 微信推送因 WorkBuddy 不暴露 bot_token 而放弃，改邮件通道。调试中踩了两个坑：GitHub Actions 引用不存在的 Secret 会注入空串导致 int(&rsquo;&rsquo;) 崩溃；fetch() 返回 3 元组但主流程只解包 2 个。均已修复，现已验证 [未开放] 健康态。注意：Serv00 免费版 ToS 禁代理/VPN，此号只建站/SSH；90 天不登录删号。完整命令与架构见 HANDOFF.md。</p>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <div class="post-nav-card post-nav-card--empty">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__empty-text">没有上一篇了~</span>
+      </div>
     </div>
-  </div>
-  
-</article>
-
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/quick-start/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">Gridea Pro 完全上手指南 —— 从写作到发布，一篇搞定</h3>
-    </a>
-    <a href="/post/quick-start/" class="post-card__excerpt clamp-2">
-      这篇指南会带你一步一步熟悉 Gridea Pro 的界面和操作，从写第一篇文章到把博客发布到互联网上。
-
-认识界面
-打开 Gridea Pro 后，你会看到左侧是导航栏，右侧是内容区域。
-左侧导航从上到下依次是：
-
-
-
-导航
-说明
-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-08
+    
+    <a href="/post/260725工作总结/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">260725工作总结</span>
+      </div>
       
-    </div>
-  </div>
-  
-</article>
-
-    
-  </div>
-  
-
-  
-  
-  <nav class="pagination">
-    
-    <a href="/post/" class="btn btn--secondary">&larr; 上一页</a>
-    
-    <span class="pagination__info">2 / 2</span>
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
     
   </nav>
+
   
-</div>
+  
+
+
+</article>
 
   </main>
 
