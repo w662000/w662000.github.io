@@ -182,11 +182,10 @@
       <h3 class="post-card__title clamp-3">全球AI排行榜</h3>
     </a>
     <a href="/post/260802-quanqiuai-paixingbang/" class="post-card__excerpt clamp-2">
-      全球AI排行榜
-
-  :root{
-    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2933; --sub:#6b7785;
-    --line:#e3e8ef; --accent:#2...
+      /* ── 作用域隔离：所有变量锁在 .ai-lb 下，不污染 Gridea 全局 :root ── */
+  .ai-lb{
+    /* 暗色默认（匹配 Gridea flavor-theme 暗色） */
+    --ai...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-02

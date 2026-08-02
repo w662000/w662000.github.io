@@ -35,7 +35,7 @@
 
 <meta name="description" content="Welcome to W662000's Blog">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260802-quanqiuai-paixingbang/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"全球AI排行榜","url":"https://towertop.kdns.fr/post/260802-quanqiuai-paixingbang/","description":"Welcome to W662000's Blog","datePublished":"2026-08-02T15:50:00+08:00","dateModified":"2026-08-02T15:50:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"全球AI排行榜","url":"https://towertop.kdns.fr/post/260802-quanqiuai-paixingbang/","description":"Welcome to W662000's Blog","datePublished":"2026-08-02T15:50:00+08:00","dateModified":"2026-08-02T16:58:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260802-quanqiuai-paixingbang/","name":"全球AI排行榜","position":2}]}</script>
 <meta property="og:title" content="全球AI排行榜">
 <meta property="og:description" content="Welcome to W662000's Blog">
@@ -178,7 +178,7 @@
       <span class="article-meta__item">2026-08-02</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">29 分钟阅读</span>
+      <span class="article-meta__item">30 分钟阅读</span>
       
     </div>
     
@@ -195,63 +195,76 @@
   
 
   <div class="article-content">
-    <title>全球AI排行榜</title>
+    <div class="ai-lb">
 <style>
-  :root{
-    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2933; --sub:#6b7785;
-    --line:#e3e8ef; --accent:#2f6df6; --accent-soft:#eaf1ff;
-    --open:#0a9d6b; --closed:#e06c2b; --gold:#f5b301;
-    --shadow:0 1px 3px rgba(16,24,40,.08),0 1px 2px rgba(16,24,40,.04);
+  /* ── 作用域隔离：所有变量锁在 .ai-lb 下，不污染 Gridea 全局 :root ── */
+  .ai-lb{
+    /* 暗色默认（匹配 Gridea flavor-theme 暗色） */
+    --ai-bg:#0d0d0d; --ai-card:#161616; --ai-ink:#e0e0e0; --ai-sub:#888;
+    --ai-line:#2a2a2a; --ai-accent:#54675e; --ai-accent-soft:#1e2a24;
+    --ai-open:#0a9d6b; --ai-closed:#e06c2b; --ai-gold:#e8c547;
+    --ai-shadow:0 1px 3px rgba(0,0,0,.3),0 1px 2px rgba(0,0,0,.2);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    color:var(--ai-ink);line-height:1.5
+  }
+  /* 亮色：Gridea 切换到 theme-light 时自动适配 */
+  .theme-light .ai-lb,
+  :root:not(.flavor-theme) .ai-lb{
+    --ai-bg:#f5f7fa; --ai-card:#ffffff; --ai-ink:#1f2933; --ai-sub:#6b7785;
+    --ai-line:#e3e8ef; --ai-accent:#2f6df6; --ai-accent-soft:#eaf1ff;
+    --ai-shadow:0 1px 3px rgba(16,24,40,.08),0 1px 2px rgba(16,24,40,.04);
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-    background:var(--bg);color:var(--ink);line-height:1.5}
-  .wrap{max-width:1100px;margin:0 auto;padding:24px 18px 60px}
-  header h1{font-size:24px;margin:0 0 6px}
-  header .meta{color:var(--sub);font-size:13px;margin:0 0 4px}
-  header .warn{margin-top:10px;padding:10px 14px;border-radius:10px;background:#fff7e6;border:1px solid #ffe2a8;
-    color:#8a5a00;font-size:13px}
-  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
-  .tab{padding:9px 16px;border:1px solid var(--line);background:var(--card);border-radius:999px;cursor:pointer;
-    font-size:14px;color:var(--sub);transition:.15s;user-select:none}
-  .tab:hover{border-color:var(--accent)}
-  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-  .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
-  .toolbar .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .toolbar .seg button{border:0;background:var(--card);padding:7px 14px;cursor:pointer;font-size:13px;color:var(--sub)}
-  .toolbar .seg button.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
-  .toolbar .hint{font-size:12px;color:var(--sub)}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
-  table{width:100%;border-collapse:collapse;font-size:14px}
-  thead th{position:sticky;top:0;background:#fafbfc;text-align:left;padding:11px 14px;font-weight:600;
-    color:var(--sub);border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
-  thead th .arrow{opacity:.4;font-size:11px;margin-left:3px}
-  thead th.sorted .arrow{opacity:1;color:var(--accent)}
-  tbody td{padding:11px 14px;border-bottom:1px solid var(--line)}
-  tbody tr:last-child td{border-bottom:0}
-  tbody tr:hover{background:#fafcff}
-  .rank{font-weight:700;color:var(--sub);width:46px}
-  .rank.top{color:var(--gold)}
-  .model{font-weight:600}
-  .vendor{color:var(--sub);font-size:13px}
-  .score{font-weight:700;font-variant-numeric:tabular-nums}
-  .bar{height:6px;border-radius:3px;background:var(--accent);margin-top:5px;min-width:4px}
-  .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
-  .tag.open{background:#e6f7f0;color:var(--open)}
-  .tag.closed{background:#fdeee3;color:var(--closed)}
-  .champ{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0 4px}
-  .champ .c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
-  .champ .c .p{font-size:12px;color:var(--sub);margin-bottom:4px}
-  .champ .c .m{font-weight:700;font-size:15px}
-  .champ .c .v{font-size:12px;color:var(--sub);margin-top:3px}
-  .note{font-size:12px;color:var(--sub);margin:10px 2px 0}
-  footer{margin-top:28px;font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-top:14px}
-  footer a{color:var(--accent);text-decoration:none}
-  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:11px;padding:2px 7px;border-radius:6px;margin-left:6px}
+  .ai-lb .wrap{max-width:1100px;margin:0 auto;padding:24px 18px 60px}
+  .ai-lb header h1{font-size:24px;margin:0 0 6px}
+  .ai-lb header .meta{color:var(--ai-sub);font-size:13px;margin:0 0 4px}
+  .ai-lb header .warn{margin-top:10px;padding:10px 14px;border-radius:10px;background:#3a2e00;border:1px solid #5a4a00;
+    color:#e8c547;font-size:13px}
+  .theme-light .ai-lb header .warn{background:#fff7e6;border-color:#ffe2a8;color:#8a5a00}
+  .ai-lb .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 14px}
+  .ai-lb .tab{padding:9px 16px;border:1px solid var(--ai-line);background:var(--ai-card);border-radius:999px;cursor:pointer;
+    font-size:14px;color:var(--ai-sub);transition:.15s;user-select:none}
+  .ai-lb .tab:hover{border-color:var(--ai-accent)}
+  .ai-lb .tab.active{background:var(--ai-accent);color:#fff;border-color:var(--ai-accent)}
+  .ai-lb .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
+  .ai-lb .toolbar .seg{display:inline-flex;border:1px solid var(--ai-line);border-radius:8px;overflow:hidden}
+  .ai-lb .toolbar .seg button{border:0;background:var(--ai-card);padding:7px 14px;cursor:pointer;font-size:13px;color:var(--ai-sub)}
+  .ai-lb .toolbar .seg button.on{background:var(--ai-accent-soft);color:var(--ai-accent);font-weight:600}
+  .ai-lb .toolbar .hint{font-size:12px;color:var(--ai-sub)}
+  .ai-lb .panel{background:var(--ai-card);border:1px solid var(--ai-line);border-radius:14px;box-shadow:var(--ai-shadow);overflow:hidden}
+  .ai-lb table{width:100%;border-collapse:collapse;font-size:14px}
+  .ai-lb thead th{position:sticky;top:0;background:var(--ai-card);text-align:left;padding:11px 14px;font-weight:600;
+    color:var(--ai-sub);border-bottom:1px solid var(--ai-line);cursor:pointer;white-space:nowrap;user-select:none}
+  .ai-lb thead th .arrow{opacity:.4;font-size:11px;margin-left:3px}
+  .ai-lb thead th.sorted .arrow{opacity:1;color:var(--ai-accent)}
+  .ai-lb tbody td{padding:11px 14px;border-bottom:1px solid var(--ai-line)}
+  .ai-lb tbody tr:last-child td{border-bottom:0}
+  .ai-lb tbody tr:hover{background:rgba(255,255,255,.03)}
+  .theme-light .ai-lb tbody tr:hover{background:#fafcff}
+  .ai-lb .rank{font-weight:700;color:var(--ai-sub);width:46px}
+  .ai-lb .rank.top{color:var(--ai-gold)}
+  .ai-lb .model{font-weight:600}
+  .ai-lb .vendor{color:var(--ai-sub);font-size:13px}
+  .ai-lb .score{font-weight:700;font-variant-numeric:tabular-nums}
+  .ai-lb .bar{height:6px;border-radius:3px;background:var(--ai-accent);margin-top:5px;min-width:4px}
+  .ai-lb .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+  .ai-lb .tag.open{background:#0a3d2e;color:#4ade80}
+  .ai-lb .tag.closed{background:#3d1a0a;color:#f87171}
+  .theme-light .ai-lb .tag.open{background:#e6f7f0;color:var(--ai-open)}
+  .theme-light .ai-lb .tag.closed{background:#fdeee3;color:var(--ai-closed)}
+  .ai-lb .champ{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0 4px}
+  .ai-lb .champ .c{background:var(--ai-card);border:1px solid var(--ai-line);border-radius:12px;padding:14px;box-shadow:var(--ai-shadow)}
+  .ai-lb .champ .c .p{font-size:12px;color:var(--ai-sub);margin-bottom:4px}
+  .ai-lb .champ .c .m{font-weight:700;font-size:15px}
+  .ai-lb .champ .c .v{font-size:12px;color:var(--ai-sub);margin-top:3px}
+  .ai-lb .note{font-size:12px;color:var(--ai-sub);margin:10px 2px 0}
+  .ai-lb footer{margin-top:28px;font-size:12px;color:var(--ai-sub);border-top:1px solid var(--ai-line);padding-top:14px}
+  .ai-lb footer a{color:var(--ai-accent);text-decoration:none}
+  .ai-lb .badge{display:inline-block;background:var(--ai-accent-soft);color:var(--ai-accent);font-size:11px;padding:2px 7px;border-radius:6px;margin-left:6px}
 </style>
 <div class="wrap">
   <header>
-    <h1>🏆 全球AI排行榜 <span class="badge">2026-08 校正版</span></h1>
+    <h1>🏆 全球 AI 模型排行榜看板 <span class="badge">2026-08 校正版</span></h1>
     <p class="meta">数据截止：LMArena 2026-08-01 · Artificial Analysis 2026-07-25 · OpenCompass 2026-05-13 · SuperCLUE 2026-05-28 · LiveBench 2026-06-25</p>
     <p class="meta">数据来源：LMArena (HuggingFace)、Artificial Analysis、OpenCompass 司南、SuperCLUE、LiveBench 官方榜单（经 WorkBuddy 联网重抓校正）</p>
     <div class="warn">⚠️ 本看板由 WorkBuddy 基于公开榜单联网重抓校正，纠正了原始报告中过时的模型名与分数（如 LiveBench 真实榜首为 GPT-5.6 Sol，而非报告中写的 Gemini 2.5 Pro）。榜单更新频率高，使用前请以各平台官网实时数据为准。</div>
@@ -396,7 +409,7 @@ const DATA = {
 
 let cur = "lmarena";
 let sortKey = "rank";
-let sortDir = 1;          // 1 升序, -1 降序
+let sortDir = 1;
 let filter = "all";
 
 const tabsEl = document.getElementById("tabs");
@@ -404,7 +417,6 @@ const headEl = document.getElementById("head");
 const bodyEl = document.getElementById("body");
 const champsEl = document.getElementById("champs");
 
-// 构建 tabs
 Object.keys(DATA).forEach(k=>{
   const b=document.createElement("div");
   b.className="tab"+(k===cur?" active":"");
@@ -413,7 +425,6 @@ Object.keys(DATA).forEach(k=>{
   tabsEl.appendChild(b);
 });
 
-// filter 段
 const seg=document.getElementById("filterSeg");
 seg.querySelectorAll("button").forEach(btn=>{
   btn.onclick=()=>{filter=btn.dataset.f;syncFilter();render();};
@@ -426,7 +437,6 @@ function renderTabs(){[...tabsEl.children].forEach((t,i)=>t.classList.toggle("ac
 
 function render(){
   const d=DATA[cur];
-  // head
   headEl.innerHTML="";
   d.cols.forEach(c=>{
     const th=document.createElement("th");
@@ -439,7 +449,6 @@ function render(){
     };
     headEl.appendChild(th);
   });
-  // rows
   let rows=d.rows.filter(r=> filter==="all" || (filter==="open"&&r.open) || (filter==="closed"&&!r.open));
   rows.sort((a,b)=>{
     let x=a[sortKey], y=b[sortKey];
@@ -457,7 +466,7 @@ function render(){
         if(r.score!=null){const bar=document.createElement("div");bar.className="bar";bar.style.width=Math.max(4,(r.score/maxScore)*160)+"px";td.appendChild(bar);}}
       else if(c.k==="vendor"){td.className="vendor";td.textContent=r.vendor;}
       else if(c.k==="score"){td.className="score";td.textContent=r.score;}
-      else if(c.k==="cost"){td.textContent="$"+r.cost.toFixed(3);}
+      else if(c.k==="cost"){textContent="$"+r.cost.toFixed(3);}
       else if(c.k==="open"){td.innerHTML=r.open?'<span class="tag open">开源</span>':'<span class="tag closed">闭源</span>';}
       else {td.textContent=r[c.k];}
       tr.appendChild(td);
@@ -465,7 +474,6 @@ function render(){
     bodyEl.appendChild(tr);
   });
   if(d.extraNote){const n=document.createElement("p");n.className="note";n.textContent=d.extraNote;
-    // remove previous
     const old=document.querySelector(".extra-note"); if(old) old.remove();
     n.classList.add("extra-note"); bodyEl.parentElement.parentElement.appendChild(n);}
   else {const old=document.querySelector(".extra-note"); if(old) old.remove();}
@@ -485,6 +493,7 @@ function renderChamps(){
 
 render();renderChamps();
 </script>
+</div>
   </div>
 
   
