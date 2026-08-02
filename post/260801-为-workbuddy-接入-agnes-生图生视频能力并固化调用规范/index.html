@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>58的无锡买房租房项目搭建 | W662000&#39;s Blog</title>
+  <title>为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="58的无锡买房租房项目搭建" />
+<meta property="og:title" content="为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览器里&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"58的无锡买房租房项目搭建","url":"https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/","description":"用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为\u0026quot;浏览器验证救不了沙箱\u0026quot;，后来实测发现：用户在浏览器里\u0026hellip;","datePublished":"2026-07-25T23:30:00+08:00","dateModified":"2026-07-26T00:24:10+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/","name":"58的无锡买房租房项目搭建","position":2}]}</script>
-<meta property="og:title" content="58的无锡买房租房项目搭建">
-<meta property="og:description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览器里&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
+<meta name="description" content="活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判&amp;quot;死了&amp;quot;）。 目标：恢复并正式接入这两个生成模型，让 WorkBuddy 能生图、生视频。 活清单加回模型： 补回 a&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01","url":"https://towertop.kdns.fr/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","description":"活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判\u0026quot;死了\u0026quot;）。 目标：恢复并正式接入这两个生成模型，让 WorkBuddy 能生图、生视频。 活清单加回模型： 补回 a\u0026hellip;","datePublished":"2026-08-02T01:21:09+08:00","dateModified":"2026-08-02T01:21:09+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","name":"为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01","position":2}]}</script>
+<meta property="og:title" content="为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01">
+<meta property="og:description" content="活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判&amp;quot;死了&amp;quot;）。 目标：恢复并正式接入这两个生成模型，让 WorkBuddy 能生图、生视频。 活清单加回模型： 补回 a&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260725-58的无锡买房租房项目搭建/">
-<meta name="twitter:title" content="58的无锡买房租房项目搭建">
-<meta name="twitter:description" content="用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。 最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&amp;quot;浏览器验证救不了沙箱&amp;quot;，后来实测发现：用户在浏览器里&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
+<meta name="twitter:title" content="为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01">
+<meta name="twitter:description" content="活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判&amp;quot;死了&amp;quot;）。 目标：恢复并正式接入这两个生成模型，让 WorkBuddy 能生图、生视频。 活清单加回模型： 补回 a&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">58的无锡买房租房项目搭建</h1>
+    <h1 class="article-title">为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-25</span>
+      <span class="article-meta__item">2026-08-02</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -186,9 +186,7 @@
       
       <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/58-tong-cheng/" class="tag-pill tag-pill--sm">58同城</a>
-      
-      <a href="/tag/pa-chong/" class="tag-pill tag-pill--sm">爬虫</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -197,29 +195,39 @@
   
 
   <div class="article-content">
-    <p>用 WorkBuddy 搭了一套「爬 58 同城无锡房源 → Cloudflare D1 存储 → Pages 看板展示」的数据系统，分买房（二手房）和租房两个频道，共 7 个区。</p>
-<p>最大难点是 58 的反爬验证码墙：它对沙箱出口 IP 做了主动拦截（code=300），纯 HTTP 请求过不了，必须上 Playwright 真浏览器。一度以为&quot;浏览器验证救不了沙箱&quot;，后来实测发现：用户在浏览器里手动过一次验证码，就能给沙箱 IP 开一个宽松窗口——一次手动验证竟连跑锡山、新吴、江阴、宜兴 4 个整区（各 50 页、零撞墙），远超预期。</p>
-<p>最终成果：买房 3685 条、租房 7466 条，7/7 区全部落库，看板可看全城数据。踩坑沉淀成 11 条铁律，最关键的三条：① 灌库前必须只删本区叶子（import_data.sql 是普通 INSERT，重复导入会翻倍）；② 清表会触发自动播种污染，跑完要 strip seed；③ 拿到窗口别做探针，直奔目标区。完整流程与命令见 HANDOFF.md / HANDOFF_AGENT.md。</p>
+    <ul>
+<li>活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判&quot;死了&quot;）。</li>
+<li>目标：恢复并正式接入这两个生成模型，让 WorkBuddy 能生图、生视频。</li>
+</ul>
+<ol>
+<li>活清单加回模型：
+<ul>
+<li>补回 agnes-image-2.1-flash、agnes-video-v2.0（以及 agnes-2.0-flash、agnes-2.5-pro 等共 4 个此前误删/遗漏的多模态与文本模型），同时清理 15 条无效条目（NVIDIA 7 真下线、OpenRouter 2 无端点、SenseNova 1 查无、OmniRoute 3 重复）。</li>
+<li>备份：models.json.bak-agnes-add-20260801-200129。</li>
+</ul>
+</li>
+<li>摸清两个模型的真实调用方式（关键坑位）：…</li>
+</ol>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260725工作总结/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260802-quanqiuai-paixingbang/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">260725工作总结</span>
+        <span class="post-nav-card__title">全球AI排行榜</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260725-免费VPS代理Wispbyte_gost跑通/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260801-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">免费 VPS 多协议代理 Wispbyte gost 跑通</span>
+        <span class="post-nav-card__title">model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复 · 2026-08-01</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
