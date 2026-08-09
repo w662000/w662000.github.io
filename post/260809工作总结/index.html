@@ -27,21 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>W662000&#39;s Blog</title>
+  <title>每日工作总结 · 2026-08-09 | W662000&#39;s Blog</title>
   
-<meta name="description" content="Welcome to W662000's Blog">
-<link rel="canonical" href="https://towertop.kdns.fr/page/3/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"W662000's Blog","url":"https://towertop.kdns.fr","description":"Welcome to W662000's Blog","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://towertop.kdns.fr/search?q={search_term_string}"}}</script>
-<meta property="og:title" content="W662000's Blog">
-<meta property="og:description" content="Welcome to W662000's Blog">
-<meta property="og:url" content="https://towertop.kdns.fr/page/3/">
-<meta property="og:type" content="website">
+<meta property="og:title" content="每日工作总结 · 2026-08-09" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。 上午拔掉一个最高权限常驻的 cua-driver 进程。 查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。 中午揪出前日两个自动化双双失败的真根因。 不是抢资源，是 Clash 没开导致系统代理连接被拒。 关键误区：换成境内模型也不脱钩，请求照样走代理端口。 下午到深夜死磕 Hermes Studio &amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260809工作总结/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"每日工作总结 · 2026-08-09","url":"https://towertop.kdns.fr/post/260809工作总结/","description":"今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。 上午拔掉一个最高权限常驻的 cua-driver 进程。 查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。 中午揪出前日两个自动化双双失败的真根因。 不是抢资源，是 Clash 没开导致系统代理连接被拒。 关键误区：换成境内模型也不脱钩，请求照样走代理端口。 下午到深夜死磕 Hermes Studio \u0026hellip;","datePublished":"2026-08-09T23:00:00+08:00","dateModified":"2026-08-09T23:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260809工作总结/","name":"每日工作总结 · 2026-08-09","position":2}]}</script>
+<meta property="og:title" content="每日工作总结 · 2026-08-09">
+<meta property="og:description" content="今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。 上午拔掉一个最高权限常驻的 cua-driver 进程。 查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。 中午揪出前日两个自动化双双失败的真根因。 不是抢资源，是 Clash 没开导致系统代理连接被拒。 关键误区：换成境内模型也不脱钩，请求照样走代理端口。 下午到深夜死磕 Hermes Studio &amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260809工作总结/">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/page/3/">
-<meta name="twitter:title" content="W662000's Blog">
-<meta name="twitter:description" content="Welcome to W662000's Blog">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260809工作总结/">
+<meta name="twitter:title" content="每日工作总结 · 2026-08-09">
+<meta name="twitter:description" content="今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。 上午拔掉一个最高权限常驻的 cua-driver 进程。 查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。 中午揪出前日两个自动化双双失败的真根因。 不是抢资源，是 Clash 没开导致系统代理连接被拒。 关键误区：换成境内模型也不脱钩，请求照样走代理端口。 下午到深夜死磕 Hermes Studio &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -165,317 +170,76 @@
 
   <main class="site-main" role="main">
     
-
-
-
-<section class="hero-section">
-  <img class="hero-image" src="https://pic2.zhimg.com/v2-87f75ecb18ab5d86fe6dc404594c5cdd_r.jpg" alt="" />
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    
-    <h2 class="hero-title clamp-3">探索数字世界的无限可能</h2>
-    
-    
-    <p class="hero-subtitle">技术与创造力的交汇</p>
-    
-    
-  </div>
-</section>
-
-
-<div class="container">
-  
-  
-  <section class="section-popular">
-    <div class="section-header">
-      <h2 class="section-title">热门文章</h2>
-      <a href="/post" class="section-more meta-text">查看全部 &rarr;</a>
-    </div>
-    <div class="compact-grid">
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">每日工作总结 · 2026-08-09</h1>
+    <div class="article-meta">
       
-       <article class="post-card post-card--compact">
-  <a href="/post/260731工作总结/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">260731工作总结</h3>
-      <div class="post-card__meta meta-text">2026-07-31</div>
+      <span class="article-meta__item">2026-08-09</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">1 分钟阅读</span>
+      
     </div>
     
-  </a>
-</article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/260731-模型平台对比/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">模型平台对比（26-07-31 Handoff）</h3>
-      <div class="post-card__meta meta-text">2026-07-31</div>
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
     </div>
     
-  </a>
-</article>
+  </header>
+
   
-       <article class="post-card post-card--compact">
-  <a href="/post/260730-每日完成项目/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">每日完成项目（26-07-30 Handoff）</h3>
-      <div class="post-card__meta meta-text">2026-07-31</div>
+
+  <div class="article-content">
+    <p>今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。<br />
+上午拔掉一个最高权限常驻的 cua-driver 进程。<br />
+查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。<br />
+中午揪出前日两个自动化双双失败的真根因。<br />
+不是抢资源，是 Clash 没开导致系统代理连接被拒。<br />
+关键误区：换成境内模型也不脱钩，请求照样走代理端口。<br />
+下午到深夜死磕 Hermes Studio 看板空白。<br />
+第一层是启动脚本漏配 HERMES_BIN，找不到可执行文件。<br />
+第二层更隐蔽，缺 HERMES_HOME 导致读错了看板数据库。<br />
+用系统级环境变量修好，全程没碰用户配置也没重启服务。<br />
+看板本身其实一条任务都没建过，显示空列并非故障。<br />
+顺手把 Studio 用的 Node 升到 v24，与旧版并存可回滚。<br />
+晚上因为凭一个字段就断言两个项目是同一个，被严厉批评。<br />
+拉一手数据核实后确认是两条独立开发线，不同作者不同语言。<br />
+教训写进铁律：名字不同先默认不同，再拿证据说话。<br />
+沙箱边界也摸清了，能只读核查磁盘，写操作必须用户亲自来。<br />
+遗留风险是服务挂在后台任务上，重启后修复可能失效。</p>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <div class="post-nav-card post-nav-card--empty">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__empty-text">没有上一篇了~</span>
+      </div>
     </div>
     
-  </a>
-</article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/260730-26-30项目汇总/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">26-30项目汇总（26-07-30 Handoff）</h3>
-      <div class="post-card__meta meta-text">2026-07-31</div>
-    </div>
     
-  </a>
-</article>
-  
-       
-       
-       
-       
-       
-        </div>
-  </section>
-  
-
-  <div class="content-grid">
-    <div class="main-content">
-      
-      
-      <section class="section-latest">
-        <div class="section-header">
-          <h2 class="section-title">最新文章</h2>
-        </div>
-        <div class="post-list">
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260731工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260731工作总结</h3>
-    </a>
-    <a href="/post/260731工作总结/" class="post-card__excerpt clamp-2">
-      跨项目记忆精简三成六，每轮对话省近千 token。
-每日日志四端发布合并进 23:00 一条任务，生成完即发。
-Gridea 改脚本自动渲染推送，不再手动点同步。
-重构 handoff 流水线为扫描、发布、归档三段。
-阶跃十四款、商汤...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260731-模型平台对比/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">模型平台对比（26-07-31 Handoff）</h3>
-    </a>
-    <a href="/post/260731-模型平台对比/" class="post-card__excerpt clamp-2">
-      归类原则：以 models.json 中每个模型实际使用的 API Key 和 endpoint 为准，而不是模型原始提供方。
-
-例：GLM-5.2 原始提供方是智谱，但你用 SenseNova Key 调用 → 归入商汤日日新。
-例...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260730-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目（26-07-30 Handoff）</h3>
-    </a>
-    <a href="/post/260730-每日完成项目/" class="post-card__excerpt clamp-2">
-      OmniRoute 本地网关从安装到跑通
-
-把 OmniRoute（一个把多家大模型聚合成单一 OpenAI 兼容接口的工具）装到本机，并一路排查它启动黑屏/数据库报错的问题，最终定位根因是安装包自带的数据库原生模块与运行环境版本不匹...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260730-26-30项目汇总/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">26-30项目汇总（26-07-30 Handoff）</h3>
-    </a>
-    <a href="/post/260730-26-30项目汇总/" class="post-card__excerpt clamp-2">
-      这 11 份独立 handoff 已在 7-26~28 陆续交付，本次统一收进 bak/，此处仅留索引：
-
-
-
-#
-项目
-bak 文件名
-
-
-
-
-1
-云南旅居房分析系统
-260719_云南旅居房分析系统_handoff.md
-
-
-2
-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260729-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目（26-07-29 Handoff）</h3>
-    </a>
-    <a href="/post/260729-每日完成项目/" class="post-card__excerpt clamp-2">
-      DNSHE 免费域名平台梳理：把该平台 7 个可注册后缀（cc.cd / de5.net / bot.cd / ccwu.cc / bbroot.com / ddns.ge / l.cd）在 Cloudflare 托管兼容性与国内访问...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260728-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目（26-07-28 Handoff）</h3>
-    </a>
-    <a href="/post/260728-每日完成项目/" class="post-card__excerpt clamp-2">
-      通达信选股公式（强于大盘）：为用户整理 4 个版本的通达信条件选股公式，核心是「个股 vs 大盘涨幅对比 + 连续 N 天 + 明显跑赢」——覆盖每日跑赢、累计跑赢、综合版（推荐）、相对强度 RPS 思路；附公式管理器使用方法和踩坑提...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260727-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目（26-07-27 Handoff）</h3>
-    </a>
-    <a href="/post/260727-每日完成项目/" class="post-card__excerpt clamp-2">
-      
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-31
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260730工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260730工作总结</h3>
-    </a>
-    <a href="/post/260730工作总结/" class="post-card__excerpt clamp-2">
-      本地跑通 OmniRoute 网关。
-黑屏根因是安装包模块版本不匹配，打补丁修复。
-接好 8 个上游模型平台。
-OmniRoute 接入 WorkBuddy。
-改用 3 个具体模型替代不稳的智能路由。
-OmniRoute 接入 Her...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-30
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260730-各平台免费模型清单/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">各平台免费模型清单</h3>
-    </a>
-    <a href="/post/260730-各平台免费模型清单/" class="post-card__excerpt clamp-2">
-      汇总 10 家 LLM 平台的免费模型与接入坐标，目标是直接塞进 WorkBuddy 的 models.json，一个 key 吃多家。
-实测拉到清单的 5 家（✅优先直连，国内可通）：OpenRouter（17 个真免费，最强 nv...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-30
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260729工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260729工作总结</h3>
-    </a>
-    <a href="/post/260729工作总结/" class="post-card__excerpt clamp-2">
-      梳理 DNSHE 七后缀，推 de5.net。
-扫 de5 三位子域，305 可注册 694 占。
-实测 NIM 24 模型全免费。
-最快首字 0.28 秒。
-Kimi 已确认下线。
-模型扩至 30，改 5 个 NVIDIA 拼写。
-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-07-29
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-        </div>
-      </section>
-      
-
-      
-      
-      <div class="view-more">
-        <a href="/post/page/2/" class="btn btn--secondary">查看更多文章 &rarr;</a>
+    <a href="/post/260808工作总结/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">每日工作总结 · 2026-08-08</span>
       </div>
       
-    </div>
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
 
-    
-    
-  </div>
-</div>
+  
+  
+
+
+</article>
 
   </main>
 
