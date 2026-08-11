@@ -27,21 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>#workbuddy | W662000&#39;s Blog</title>
+  <title>每日工作总结 · 2026-08-10 | W662000&#39;s Blog</title>
   
-<meta name="description" content="Welcome to W662000's Blog">
-<link rel="canonical" href="https://towertop.kdns.fr/tag/workbuddy/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"W662000's Blog","url":"https://towertop.kdns.fr","description":"Welcome to W662000's Blog","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://towertop.kdns.fr/search?q={search_term_string}"}}</script>
-<meta property="og:title" content="W662000's Blog">
-<meta property="og:description" content="Welcome to W662000's Blog">
-<meta property="og:url" content="https://towertop.kdns.fr/tag/workbuddy/">
-<meta property="og:type" content="website">
+<meta property="og:title" content="每日工作总结 · 2026-08-10" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="今日主线只有一条：把 handoff 五天没发的问题彻底解决。 先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。 发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。 接着查 handoff 从 8.5 起断更的原因。 结论是源头断供，不是脚本坏了。 扫描只认 HANDOFF 开头的文件，而 8.6 之后项目都写成了进度文档。 真读了四&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260810工作总结/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"每日工作总结 · 2026-08-10","url":"https://towertop.kdns.fr/post/260810工作总结/","description":"今日主线只有一条：把 handoff 五天没发的问题彻底解决。 先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。 发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。 接着查 handoff 从 8.5 起断更的原因。 结论是源头断供，不是脚本坏了。 扫描只认 HANDOFF 开头的文件，而 8.6 之后项目都写成了进度文档。 真读了四\u0026hellip;","datePublished":"2026-08-10T23:00:00+08:00","dateModified":"2026-08-10T23:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260810工作总结/","name":"每日工作总结 · 2026-08-10","position":2}]}</script>
+<meta property="og:title" content="每日工作总结 · 2026-08-10">
+<meta property="og:description" content="今日主线只有一条：把 handoff 五天没发的问题彻底解决。 先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。 发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。 接着查 handoff 从 8.5 起断更的原因。 结论是源头断供，不是脚本坏了。 扫描只认 HANDOFF 开头的文件，而 8.6 之后项目都写成了进度文档。 真读了四&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260810工作总结/">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/tag/workbuddy/">
-<meta name="twitter:title" content="W662000's Blog">
-<meta name="twitter:description" content="Welcome to W662000's Blog">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260810工作总结/">
+<meta name="twitter:title" content="每日工作总结 · 2026-08-10">
+<meta name="twitter:description" content="今日主线只有一条：把 handoff 五天没发的问题彻底解决。 先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。 发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。 接着查 handoff 从 8.5 起断更的原因。 结论是源头断供，不是脚本坏了。 扫描只认 HANDOFF 开头的文件，而 8.6 之后项目都写成了进度文档。 真读了四&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -165,257 +170,77 @@
 
   <main class="site-main" role="main">
     
-<div class="container">
-  <div class="page-header">
-    <a href="/tags" class="page-back meta-text">&larr; 所有标签</a>
-    <h1 class="page-title"><span class="page-title__hash">#</span>workbuddy</h1>
-    
-    <p class="page-subtitle meta-text">共 10 篇文章</p>
-    
-  </div>
-
-  
-  <div class="post-list">
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单 · 2026-08-04</h3>
-    </a>
-    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
-      #
-名称
-slug
-分类
-⭐
-安装
-认证
-链接
-
-
-
-
-1
-A股量化 AkShare
-akshare-stock
-professional
-235
-13337
-未认证
-链接
-
-
-2
-A股量化回测策略引擎
-quant-backtest-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-11
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">每日工作总结 · 2026-08-10</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-08-10</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">1 分钟阅读</span>
       
     </div>
-  </div>
-  
-</article>
-
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260810工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-10</h3>
-    </a>
-    <a href="/post/260810工作总结/" class="post-card__excerpt clamp-2">
-      今日主线只有一条：把 handoff 五天没发的问题彻底解决。
-先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。
-发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。
-接着...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
     </div>
-  </div>
-  
-</article>
-
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260729-2026-07-26-07-30-项目汇总-handoff/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">2026-07-26 ~ 07-30 项目汇总 Handoff · 2026-07-29</h3>
-    </a>
-    <a href="/post/260729-2026-07-26-07-30-项目汇总-handoff/" class="post-card__excerpt clamp-2">
-      这 11 份独立 handoff 已在 7-26~28 陆续交付，本次统一收进 bak/，此处仅留索引：
+  </header>
 
+  
 
+  <div class="article-content">
+    <p>今日主线只有一条：把 handoff 五天没发的问题彻底解决。<br />
+先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。<br />
+发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。<br />
+接着查 handoff 从 8.5 起断更的原因。<br />
+结论是源头断供，不是脚本坏了。<br />
+扫描只认 HANDOFF 开头的文件，而 8.6 之后项目都写成了进度文档。<br />
+真读了四天日志核实，确实有实质项目，只是命名不合规被跳过。<br />
+当晚补写并发布了 MemOS 排障交接件，四端全通。<br />
+又把 8.7 看板方案和 8.8 模型评分表两篇补发出去。<br />
+顺带揪出脚本一个真缺陷：文档承诺了代码从没实现的回退逻辑。<br />
+用户拍板废除旧护栏，改由我天天扫日志查漏补缺。<br />
+脚本改成三级回退：先找交接件，再找主题文档，最后从日志提炼。<br />
+补跑七天窗口一次捞回十篇漏发的项目。<br />
+最后修好 Gridea 浓缩版本地有线上没有的老问题。<br />
+根因是写稿时间落在同步窗口之后，改成三步顺接即可。<br />
+遗留风险是补捞件的标题可能带日志小节名，需要人工审阅。</p>
 
-#
-项目
-bak 文件名
+  </div>
 
-
-
-
-1
-云南旅居房分析系统
-260719_云南旅居房分析系统_handoff.md
-
-
-2
-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
+  
+  <nav class="post-nav">
+    
+    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-nav-card post-nav-card--prev">
       
-    </div>
-  </div>
-  
-</article>
-
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单 · 2026-08-04</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260731-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目 · 2026-07-31</h3>
-    </a>
-    <a href="/post/260731-每日完成项目/" class="post-card__excerpt clamp-2">
-      跨项目记忆瘦身（方案 B）：把 ~/.workbuddy/MEMORY.md 从 26KB／约 2747 token 压到约 16.6KB／1770 token，每次对话省约 977 token（36%）。6 条强制红线一字未动，He...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
+    
+    <a href="/post/260729-2026-07-26-07-30-项目汇总-handoff/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">2026-07-26 ~ 07-30 项目汇总 Handoff · 2026-07-29</span>
+      </div>
       
-    </div>
-  </div>
-  
-</article>
-
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
     
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260725-免费vps代理与gaming4free部署/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">免费VPS代理与Gaming4Free部署 · 2026-07-25</h3>
-    </a>
-    <a href="/post/260725-免费vps代理与gaming4free部署/" class="post-card__excerpt clamp-2">
-      Wispbyte 免费 VPS：gost 单二进制 SOCKS5 代理（罗马尼亚，IP 78.154.103.35:13986）已稳定运行，客户端 FIclash 走该节点加速 GitHub/pypi/raw.github。YouTu...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
+  </nav>
+
   
+  
+
+
 </article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260729-handoff_agent-md-2026-07-26-30-项目汇总-机读版/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">HANDOFF_AGENT.md — 2026-07-26~30 项目汇总（机读版） · 2026-07-29</h3>
-    </a>
-    <a href="/post/260729-handoff_agent-md-2026-07-26-30-项目汇总-机读版/" class="post-card__excerpt clamp-2">
-      26-28 已交付（11 项，详细 handoff 在 D:\AI work\workbuddy\handoff\bak\）：云南旅居分析、Hermes Docker/Windows 部署、58 无锡爬虫、Wispbyte+gost ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260731-模型平台对比清单-按实际调用-key-_-端点归类/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">模型平台对比清单（按实际调用 Key _ 端点归类） · 2026-07-31</h3>
-    </a>
-    <a href="/post/260731-模型平台对比清单-按实际调用-key-_-端点归类/" class="post-card__excerpt clamp-2">
-      归类原则：以 models.json 中每个模型实际使用的 API Key 和 endpoint 为准，而不是模型原始提供方。
-
-例：GLM-5.2 原始提供方是智谱，但你用 SenseNova Key 调用 → 归入商汤日日新。
-例...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260807-二-关键决策-_-注意事项/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">二、关键决策 _ 注意事项 · 2026-08-07</h3>
-    </a>
-    <a href="/post/260807-二-关键决策-_-注意事项/" class="post-card__excerpt clamp-2">
-      资金流看板走「同源代理 + UI 不动」路线。 不改人家的前端逻辑，只把 host 指向本地代理，服务端替它出网。这样保留了原版观感，也绕开了浏览器直连东财的一切跨域/风控问题。
-数据源双轨：主源 push2delay + 备用源 a...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260807-三-生成的有用文件/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">三、生成的有用文件 · 2026-08-07</h3>
-    </a>
-    <a href="/post/260807-三-生成的有用文件/" class="post-card__excerpt clamp-2">
-      文件 / 目录
-路径
-用途
-
-
-
-
-资金流看板项目目录
-D:\AI work\workbuddy\主力资金流向白名单版\
-今日最大交付，与模型测速雷达并列的独立项目
-
-
-看板服务端
-D:\AI work\workbuddy\主力资金流...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260805-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">联想 N50-80 双系统部署清单：Win10 + Debian + Hermes 数据共享 · 2026-08-05</h3>
-    </a>
-    <a href="/post/260805-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
-      直接说结论，免得你照做翻车：
-
-Hermes 的代码和数据混在同一个根目录：
-
-Linux 根目录：~/.hermes/（里面 hermes-agent/ 是代码，其余是配置/会话/记忆/技能）
-Windows 原生根目录：%LOCA...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-10
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-  </div>
-  
-</div>
 
   </main>
 
