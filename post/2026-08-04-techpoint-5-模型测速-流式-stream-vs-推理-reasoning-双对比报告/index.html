@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 5 模型测速 流式 vs 推理双对比 | W662000&#39;s Blog</title>
+  <title>技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 5 模型测速 流式 vs 推理双对比" />
+<meta property="og:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="这个实验用 2×2 析因设计测了 5 个模型，把 stream（流式）和 reasoning（推理）两个变量拆开，结果证明原帖「去掉推理就变快」其实是流式的功劳。 最该复用的三点： 2×2 析因把两个变量隔离后，44.8% 的加速 100% 来自 stream，原帖把功劳记错到 reasoning 头上——要证「参数 A 让 X 变快」，必须先排除 B 同时变了。 TTFT（&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 5 模型测速 流式 vs 推理双对比","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","description":"这个实验用 2×2 析因设计测了 5 个模型，把 stream（流式）和 reasoning（推理）两个变量拆开，结果证明原帖「去掉推理就变快」其实是流式的功劳。 最该复用的三点： 2×2 析因把两个变量隔离后，44.8% 的加速 100% 来自 stream，原帖把功劳记错到 reasoning 头上——要证「参数 A 让 X 变快」，必须先排除 B 同时变了。 TTFT（\u0026hellip;","datePublished":"2026-08-04T14:00:00+08:00","dateModified":"2026-08-04T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","name":"技术点 · 5 模型测速 流式 vs 推理双对比","position":2}]}</script>
-<meta property="og:title" content="技术点 · 5 模型测速 流式 vs 推理双对比">
-<meta property="og:description" content="这个实验用 2×2 析因设计测了 5 个模型，把 stream（流式）和 reasoning（推理）两个变量拆开，结果证明原帖「去掉推理就变快」其实是流式的功劳。 最该复用的三点： 2×2 析因把两个变量隔离后，44.8% 的加速 100% 来自 stream，原帖把功劳记错到 reasoning 头上——要证「参数 A 让 X 变快」，必须先排除 B 同时变了。 TTFT（&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","description":"选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分\u0026quot;stream 的功劳\u0026quot;和\u0026quot;reasoning 的影响\u0026quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / \u0026hellip;","datePublished":"2026-08-11T19:18:27+08:00","dateModified":"2026-08-11T19:18:27+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","name":"技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告","position":2}]}</script>
+<meta property="og:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告">
+<meta property="og:description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
-<meta name="twitter:title" content="技术点 · 5 模型测速 流式 vs 推理双对比">
-<meta name="twitter:description" content="这个实验用 2×2 析因设计测了 5 个模型，把 stream（流式）和 reasoning（推理）两个变量拆开，结果证明原帖「去掉推理就变快」其实是流式的功劳。 最该复用的三点： 2×2 析因把两个变量隔离后，44.8% 的加速 100% 来自 stream，原帖把功劳记错到 reasoning 头上——要证「参数 A 让 X 变快」，必须先排除 B 同时变了。 TTFT（&amp;hellip;">
+<meta name="twitter:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告">
+<meta name="twitter:description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 5 模型测速 流式 vs 推理双对比</h1>
+    <h1 class="article-title">技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-04</span>
+      <span class="article-meta__item">2026-08-11</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,62 @@
   
 
   <div class="article-content">
-    <p>这个实验用 2×2 析因设计测了 5 个模型，把 stream（流式）和 reasoning（推理）两个变量拆开，结果证明原帖「去掉推理就变快」其实是流式的功劳。</p>
-<p>最该复用的三点：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实验设计</td>
+<td><strong>2×2 析因（stream × reasoning 四组全组合）</strong></td>
+<td>单变量前后对比</td>
+<td>单变量对比无法区分&quot;stream 的功劳&quot;和&quot;reasoning 的影响&quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论）</td>
+</tr>
+<tr>
+<td>分组定义</td>
+<td><strong>N0 非流无推 / S0 流无推 / S1 流有推 / N1 非流有推</strong></td>
+<td>&ldquo;开/关某开关&quot;两段描述</td>
+<td>四组正交命名，任何两两比较都有明确语义（T1）</td>
+</tr>
+<tr>
+<td>度量指标</td>
+<td><strong>TTFT 首包延迟 + tot 总耗时 双指标</strong></td>
+<td>只看总耗时</td>
+<td>TTFT 反映&quot;用户多快看到第一个字&rdquo;，tot 反映&quot;完整响应成本&quot;；二者机制不同，必须分开（T1）</td>
+</tr>
+<tr>
+<td>采样纪律</td>
+<td><strong>每组 1 次、温和间隔、不重试</strong></td>
+<td>多次平均 / 重试</td>
+<td>守限流红线；单次样本明确标注&quot;仅供参考&quot;，不把 ±20% 内差异当显著（T1）</td>
+</tr>
+<tr>
+<td>验证手段</td>
+<td><strong>解析客户端产物（app.asar）实锤</strong></td>
+<td>只靠接口测速</td>
+<td>测速能证&quot;快了&quot;，但&quot;为什么快&quot;要扒客户端代码确认硬编码 <code>stream:true</code> 才闭环（T1）</td>
+</tr>
+<tr>
+<td>报告生成</td>
+<td><strong>脚本自动算百分比</strong></td>
+<td>手工填表</td>
+<td>20 行数据手工算改善率必出错；<code>bench_report.py</code> 由原始 JSON 自动生成对比表（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>2×2 析因把两个变量隔离后，44.8% 的加速 100% 来自 stream，原帖把功劳记错到 reasoning 头上——要证「参数 A 让 X 变快」，必须先排除 B 同时变了。</li>
-<li>TTFT（首包延迟）和 tot（总耗时）机制不同：流式对 TTFT 普降 70%+，但对 tot 不一定降（只是提前吐字、不减少总生成量）。只盯 tot 会得出「流式没用」的错误结论。</li>
-<li>reasoning_effort 只对支持的模型生效，不支持的被服务端忽略。最佳组合是「带推理 + 流式」。扒客户端 app.asar（比标准多 8 字节头部）发现 stream 硬编码为 true——cli/dist/codebuddy.js 里 14+ 处 stream:!0，无分支。</li>
-</ol>
-<p>下一步：要验证「参数 A 让 X 变快/变慢」这类命题，直接套这套 2×2 析因 + TTFT/tot 双指标设计。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=80</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=99</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>2×2 析因的核心价值是&quot;分离两个变量&quot;。</strong> 原帖作者感知&quot;去掉 reasoning_effort 变快了&quot;，但本项目固定流式条件单独看推理效果、再固定推理条件单独看流式效果，最终证明：那 44.8% 的加速 100% 来自 stream，作者把 stream 的功劳误记到 reasoning 头上（T1，5 模型全印证）。</li>
+<li><strong>TTFT 与 tot 的机制不同，结论可能相反。</strong> 本实验结论：
+<ul>
+<li><strong>流式对 TTFT 普适大幅下降</strong>：5 模型 TTFT 平均 ↓70%+（最快 ↓93.5%），与模型类型、是否带推理无关。</li>
+<li><strong>流式对 tot 不一定降</strong>：流式只是提前吐字、不减少总生成量；部分模型 tot 反而略升（流式返回了更多元数据/思考内容，字节数上涨）。…</li>
+</ul>
+</li>
 </ol>
 
   </div>
@@ -217,20 +258,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · china-stock-data 用法</span>
+        <span class="post-nav-card__title">交接文档 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单 · 2026-08-04</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260803-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260810工作总结/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · SkillHub 9.8 万技能中「爬虫 _ Playwright 浏览器自动化」技能提炼 · 2026-08-03</span>
+        <span class="post-nav-card__title">每日工作总结 · 2026-08-10</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
