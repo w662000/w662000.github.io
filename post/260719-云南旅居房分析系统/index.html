@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>云南旅居房分析系统（yunnan-housing） | W662000&#39;s Blog</title>
+  <title>交接文档 · 云南旅居房分析系统（yunnan-housing） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="云南旅居房分析系统（yunnan-housing）" />
+<meta property="og:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + wrangler d1 execute &amp;hellip;">
+<meta name="description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"云南旅居房分析系统（yunnan-housing）","url":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","description":"用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + wrangler d1 execute \u0026hellip;","datePublished":"2026-07-19T23:30:00+08:00","dateModified":"2026-07-19T23:30:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","name":"云南旅居房分析系统（yunnan-housing）","position":2}]}</script>
-<meta property="og:title" content="云南旅居房分析系统（yunnan-housing）">
-<meta property="og:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + wrangler d1 execute &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · 云南旅居房分析系统（yunnan-housing）","url":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","description":"用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute\u0026hellip;","datePublished":"2026-07-19T23:30:00+08:00","dateModified":"2026-07-19T23:30:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","name":"交接文档 · 云南旅居房分析系统（yunnan-housing）","position":2}]}</script>
+<meta property="og:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）">
+<meta property="og:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
-<meta name="twitter:title" content="云南旅居房分析系统（yunnan-housing）">
-<meta name="twitter:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + wrangler d1 execute &amp;hellip;">
+<meta name="twitter:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）">
+<meta name="twitter:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,7 +172,7 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">云南旅居房分析系统（yunnan-housing）</h1>
+    <h1 class="article-title">交接文档 · 云南旅居房分析系统（yunnan-housing）</h1>
     <div class="article-meta">
       
       <span class="article-meta__item">2026-07-19</span>

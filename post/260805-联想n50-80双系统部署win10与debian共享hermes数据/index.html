@@ -27,17 +27,17 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05 | W662000&#39;s Blog</title>
+  <title>交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05" />
+<meta property="og:title" content="交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05" />
 <meta property="og:type" content="article" />
 
 
 <meta name="description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05","url":"https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/","description":"要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统\u0026hellip;","datePublished":"2026-08-05T23:03:53+08:00","dateModified":"2026-08-05T23:03:53+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/","name":"联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05","position":2}]}</script>
-<meta property="og:title" content="联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05","url":"https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/","description":"要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统\u0026hellip;","datePublished":"2026-08-05T23:03:53+08:00","dateModified":"2026-08-05T23:03:53+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/","name":"交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05","position":2}]}</script>
+<meta property="og:title" content="交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05">
 <meta property="og:description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/">
 <meta property="og:type" content="article">
@@ -45,7 +45,7 @@
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/">
-<meta name="twitter:title" content="联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05">
+<meta name="twitter:title" content="交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05">
 <meta name="twitter:description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
@@ -172,7 +172,7 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05</h1>
+    <h1 class="article-title">交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05</h1>
     <div class="article-meta">
       
       <span class="article-meta__item">2026-08-05</span>

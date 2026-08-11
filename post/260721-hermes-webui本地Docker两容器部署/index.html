@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>hermes-webui 本地 Docker 两容器部署 | W662000&#39;s Blog</title>
+  <title>交接文档 · hermes-webui 本地 Docker 两容器部署 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="hermes-webui 本地 Docker 两容器部署" />
+<meta property="og:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真实环&amp;hellip;">
+<meta name="description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"hermes-webui 本地 Docker 两容器部署","url":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","description":"用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真实环\u0026hellip;","datePublished":"2026-07-21T23:30:00+08:00","dateModified":"2026-07-26T22:40:25+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","name":"hermes-webui 本地 Docker 两容器部署","position":2}]}</script>
-<meta property="og:title" content="hermes-webui 本地 Docker 两容器部署">
-<meta property="og:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真实环&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · hermes-webui 本地 Docker 两容器部署","url":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","description":"用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真\u0026hellip;","datePublished":"2026-07-21T23:30:00+08:00","dateModified":"2026-07-26T22:40:25+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","name":"交接文档 · hermes-webui 本地 Docker 两容器部署","position":2}]}</script>
+<meta property="og:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署">
+<meta property="og:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
-<meta name="twitter:title" content="hermes-webui 本地 Docker 两容器部署">
-<meta name="twitter:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真实环&amp;hellip;">
+<meta name="twitter:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署">
+<meta name="twitter:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,7 +172,7 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">hermes-webui 本地 Docker 两容器部署</h1>
+    <h1 class="article-title">交接文档 · hermes-webui 本地 Docker 两容器部署</h1>
     <div class="article-meta">
       
       <span class="article-meta__item">2026-07-21</span>
