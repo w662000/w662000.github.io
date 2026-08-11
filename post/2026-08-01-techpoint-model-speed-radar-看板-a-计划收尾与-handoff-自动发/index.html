@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05 | W662000&#39;s Blog</title>
+  <title>技术点 · model-speed-radar 看板收尾与自动发布 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05" />
+<meta property="og:title" content="技术点 · model-speed-radar 看板收尾与自动发布" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260805-handoff-文档-联想-n50-80-双系统部署-win10-debian-/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05","url":"https://towertop.kdns.fr/post/260805-handoff-文档-联想-n50-80-双系统部署-win10-debian-/","description":"要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统\u0026hellip;","datePublished":"2026-08-10T01:31:58+08:00","dateModified":"2026-08-10T01:31:58+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260805-handoff-文档-联想-n50-80-双系统部署-win10-debian-/","name":"Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05","position":2}]}</script>
-<meta property="og:title" content="Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05">
-<meta property="og:description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260805-handoff-文档-联想-n50-80-双系统部署-win10-debian-/">
+<meta name="description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · model-speed-radar 看板收尾与自动发布","url":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","description":"这个项目干了啥：给模型测速看板做收尾，并修好一条\u0026quot;一份稿件自动发到多端\u0026quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把\u0026quot;路由级 404（接口不符）\u0026ldquo;和\u0026quot;资源级 404（模型真下线）\u0026ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分\u0026quot;无额度/真限流\u0026rdquo;，免得对\u0026hellip;","datePublished":"2026-08-01T14:00:00+08:00","dateModified":"2026-08-01T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","name":"技术点 · model-speed-radar 看板收尾与自动发布","position":2}]}</script>
+<meta property="og:title" content="技术点 · model-speed-radar 看板收尾与自动发布">
+<meta property="og:description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260805-handoff-文档-联想-n50-80-双系统部署-win10-debian-/">
-<meta name="twitter:title" content="Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05">
-<meta name="twitter:description" content="要做什么：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。 当前进度：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。 关键决策（已和用户拍板）： 系统&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
+<meta name="twitter:title" content="技术点 · model-speed-radar 看板收尾与自动发布">
+<meta name="twitter:description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Handoff 文档 · 联想 N50-80 双系统部署（Win10 + Debian + Hermes 共享） · 2026-08-05</h1>
+    <h1 class="article-title">技术点 · model-speed-radar 看板收尾与自动发布</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-10</span>
+      <span class="article-meta__item">2026-08-01</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
       
-      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
       
     </div>
     
@@ -195,14 +195,16 @@
   
 
   <div class="article-content">
-    <hr />
-<p><strong>要做什么</strong>：把一台闲置联想 N50-80 笔记本，装成「Win10 应急 + Debian 常开跑 agent」双系统，并用一块 NTFS 共享盘让 Hermes Agent 在两个系统下数据互通（记忆/会话/技能共享）。<br />
-<strong>当前进度</strong>：方案与完整操作清单已定稿（见下文第四节正文）。尚未开始任何实际操作（没装系统、没分区）。<br />
-<strong>关键决策（已和用户拍板）</strong>：</p>
+    <p>这个项目干了啥：给模型测速看板做收尾，并修好一条&quot;一份稿件自动发到多端&quot;的发布链路。</p>
+<p>最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&quot;路由级 404（接口不符）&ldquo;和&quot;资源级 404（模型真下线）&ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&quot;无额度/真限流&rdquo;，免得对着没额度的目标无限重试。③多端发布必须单串行且按端分别生成格式：扫描实测 144 秒就别只留 120 秒间隔让下游抢跑；纯 Markdown 平台吃 HTML 会把表格整块崩，必须每端单独出格式；全端成功才归档，且&quot;落盘≠上线&quot;要看渲染产物。</p>
+<p>下一步：把&quot;无源可发却记成功=监控失明&quot;这处缺陷补上非零返回码。</p>
+<hr />
+<p>详细原文请看：</p>
 <ol>
-<li>系统对比结论：Debian 比 Ubuntu 更轻（主因 Ubuntu 默认带 snapd），老机器选 Debian minimal 更优。</li>
-<li>机器定位：4GB 内存 + 5 代低压双核，<strong>只能跑「调远程 API」的 agent，不能本地跑大模型</strong>。</li>
-<li>双系统方案选 <strong>路线 A</strong>：Windows 装 <strong>Win10</strong>（不是 Win7——Win7 已停更且 Node18/Py3.10 装不上，会废掉 Hermes 双系统用途），Debian 常开为主。…</li>
+<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发</li>
+<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=74</li>
+<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=93</li>
+<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
 </ol>
 
   </div>
@@ -210,20 +212,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260805-用户级-skill-清单/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-01-techpoint-glm-_-智谱-官方免费档清单-2026-08-01-核对/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">用户级 Skill 清单 · 2026-08-05</span>
+        <span class="post-nav-card__title">技术点 · 模型免费档核实</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260804-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260731-项目管理思维工具全景回顾/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">china-stock-data 实测报告（2026-08-04 21_xx） · 2026-08-04</span>
+        <span class="post-nav-card__title">项目管理思维工具全景回顾（26-07-31 Handoff）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
