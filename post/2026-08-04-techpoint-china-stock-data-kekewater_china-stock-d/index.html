@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · china-stock-data 用法 | W662000&#39;s Blog</title>
+  <title>技术点 · china-stock-data（@kekewater/china-stock-data）用法大全 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · china-stock-data 用法" />
+<meta property="og:title" content="技术点 · china-stock-data（@kekewater/china-stock-data）用法大全" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="这个项目把多个不稳定的 A 股数据源统一成一个 CLI（16 个子命令），核心是「免 Key 主源 + 自动降级链」。 最该复用的踩坑： 两条降级链是骨架：行情 TDX→腾讯→iFinD，公告 CNINFO→Tushare→AKShare。降级必须静默自动，并在返回体回写 source 字段，调用方才知道数据实际来自哪。 路径别照抄 SKILL.md——那是作者宿主（Herm&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 接口形态 CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令） Python 库 import / 常驻服务 Agent 侧调用只需拼一行命令，不必管进程生命周期与依赖隔离；输出统一 JSON 易解析（T1 实测） 免 Key 主行情源 &amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · china-stock-data 用法","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/","description":"这个项目把多个不稳定的 A 股数据源统一成一个 CLI（16 个子命令），核心是「免 Key 主源 + 自动降级链」。 最该复用的踩坑： 两条降级链是骨架：行情 TDX→腾讯→iFinD，公告 CNINFO→Tushare→AKShare。降级必须静默自动，并在返回体回写 source 字段，调用方才知道数据实际来自哪。 路径别照抄 SKILL.md——那是作者宿主（Herm\u0026hellip;","datePublished":"2026-08-04T14:00:00+08:00","dateModified":"2026-08-04T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/","name":"技术点 · china-stock-data 用法","position":2}]}</script>
-<meta property="og:title" content="技术点 · china-stock-data 用法">
-<meta property="og:description" content="这个项目把多个不稳定的 A 股数据源统一成一个 CLI（16 个子命令），核心是「免 Key 主源 + 自动降级链」。 最该复用的踩坑： 两条降级链是骨架：行情 TDX→腾讯→iFinD，公告 CNINFO→Tushare→AKShare。降级必须静默自动，并在返回体回写 source 字段，调用方才知道数据实际来自哪。 路径别照抄 SKILL.md——那是作者宿主（Herm&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · china-stock-data（@kekewater/china-stock-data）用法大全","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/","description":"选型项 选定 落选 依据 接口形态 CLI 子命令（china_stock.py \u0026lt;cmd\u0026gt; \u0026lt;args\u0026gt;，16 个子命令） Python 库 import / 常驻服务 Agent 侧调用只需拼一行命令，不必管进程生命周期与依赖隔离；输出统一 JSON 易解析（T1 实测） 免 Key 主行情源 \u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/","name":"技术点 · china-stock-data（@kekewater/china-stock-data）用法大全","position":2}]}</script>
+<meta property="og:title" content="技术点 · china-stock-data（@kekewater/china-stock-data）用法大全">
+<meta property="og:description" content="选型项 选定 落选 依据 接口形态 CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令） Python 库 import / 常驻服务 Agent 侧调用只需拼一行命令，不必管进程生命周期与依赖隔离；输出统一 JSON 易解析（T1 实测） 免 Key 主行情源 &amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/">
-<meta name="twitter:title" content="技术点 · china-stock-data 用法">
-<meta name="twitter:description" content="这个项目把多个不稳定的 A 股数据源统一成一个 CLI（16 个子命令），核心是「免 Key 主源 + 自动降级链」。 最该复用的踩坑： 两条降级链是骨架：行情 TDX→腾讯→iFinD，公告 CNINFO→Tushare→AKShare。降级必须静默自动，并在返回体回写 source 字段，调用方才知道数据实际来自哪。 路径别照抄 SKILL.md——那是作者宿主（Herm&amp;hellip;">
+<meta name="twitter:title" content="技术点 · china-stock-data（@kekewater/china-stock-data）用法大全">
+<meta name="twitter:description" content="选型项 选定 落选 依据 接口形态 CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令） Python 库 import / 常驻服务 Agent 侧调用只需拼一行命令，不必管进程生命周期与依赖隔离；输出统一 JSON 易解析（T1 实测） 免 Key 主行情源 &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · china-stock-data 用法</h1>
+    <h1 class="article-title">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-04</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,22 +195,73 @@
   
 
   <div class="article-content">
-    <p>这个项目把多个不稳定的 A 股数据源统一成一个 CLI（16 个子命令），核心是「免 Key 主源 + 自动降级链」。</p>
-<p>最该复用的踩坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接口形态</td>
+<td><strong>CLI 子命令</strong>（<code>china_stock.py &lt;cmd&gt; &lt;args&gt;</code>，16 个子命令）</td>
+<td>Python 库 import / 常驻服务</td>
+<td>Agent 侧调用只需拼一行命令，不必管进程生命周期与依赖隔离；输出统一 JSON 易解析（T1 实测）</td>
+</tr>
+<tr>
+<td>免 Key 主行情源</td>
+<td><strong>通达信 TDX（pytdx）</strong></td>
+<td>直接用付费终端 API</td>
+<td>免 Key、带 5 档盘口与多周期 K 线，其它免费源给不了盘口（T1）</td>
+</tr>
+<tr>
+<td>免 Key 兜底行情源</td>
+<td><strong>腾讯财经 <code>qt.gtimg.cn</code></strong></td>
+<td>东方财富 <code>push2.eastmoney.com</code></td>
+<td>东财系在本机网络环境被封（T1 日志实证）；腾讯 HTTP 接口稳定且自带 PE/PB/市值/换手率</td>
+</tr>
+<tr>
+<td>公告源</td>
+<td><strong>巨潮 CNINFO</strong> 首选</td>
+<td>Tushare Pro / AKShare</td>
+<td>CNINFO 免 Key、支持全文搜索、返回真实 PDF 直链，另两者都要 token 或重依赖（T1）</td>
+</tr>
+<tr>
+<td>研报/资金流</td>
+<td><strong>AKShare</strong></td>
+<td>自己爬东财页面</td>
+<td>AKShare 已封装东财接口并持续跟进字段变更；自爬维护成本高（T1）</td>
+</tr>
+<tr>
+<td>语义选股</td>
+<td><strong>iWencai 问财</strong></td>
+<td>自建规则筛选</td>
+<td>自然语言直出候选集；代价是需 token 且 IP 级易 403（T1）</td>
+</tr>
+<tr>
+<td>Python 运行时</td>
+<td><strong>WorkBuddy 托管 venv</strong> <code>binaries/python/envs/default</code></td>
+<td>系统 Python / 新建 venv</td>
+<td>依赖已装齐、与其它 skill 共享，避免多份重复环境（T1）</td>
+</tr>
+<tr>
+<td><strong>选型的核心结论</strong>：免费数据源单个都不可靠，但<strong>故障模式互不相关</strong>（TDX 挂的是 TCP 出网、东财挂的是限流、iFinD 挂的是 token 过期）。所以正确做法不是挑一个&quot;最好的&quot;，而是<strong>按可靠性排序做降级链</strong>。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>两条降级链是骨架：行情 TDX→腾讯→iFinD，公告 CNINFO→Tushare→AKShare。降级必须静默自动，并在返回体回写 source 字段，调用方才知道数据实际来自哪。</li>
-<li>路径别照抄 SKILL.md——那是作者宿主（Hermes）的路径。WorkBuddy 下真实路径是 C:/Users/Administrator/.workbuddy/skills/@kekewater/china-stock-data，Python 用托管 venv（binaries/python/envs/default）。</li>
-<li>Windows 用带盘符的原生路径，别用 /c/&hellip; POSIX 形式（Git Bash 下会被下游拼成 D:\c...）。cd 到脚本目录内再执行，规避相对导入失败。</li>
-<li>主动限速比被封后重试成本低：TDX 4 台服务器轮询 + 每次间隔 ≥0.5s。status 子命令做自检排障入口，一键看全部源可用/待配/未装。</li>
-</ol>
-<p>下一步：接任何行情、资讯类多源数据，直接套这套「按可靠性排序做降级链 + 回写 source」的思路。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=81</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=100</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>两条降级链，是整套方案的骨架</strong>（T1 实测跑通）：
+<ul>
+<li>行情：<code>TDX → 腾讯 → iFinD</code></li>
+<li>公告：<code>CNINFO → Tushare Pro → AKShare</code>…</li>
+</ul>
+</li>
 </ol>
 
   </div>
@@ -218,20 +269,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · china-stock-data 安装扫描</span>
+        <span class="post-nav-card__title">技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260803-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · SkillHub 9.8 万技能中「爬虫 _ Playwright 浏览器自动化」技能提炼 · 2026-08-03</span>
+        <span class="post-nav-card__title">技术点 · china-stock-data 安装扫描报告</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

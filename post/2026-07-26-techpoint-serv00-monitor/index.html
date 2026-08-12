@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · GitHub Actions 自动抢注监控 | W662000&#39;s Blog</title>
+  <title>技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · GitHub Actions 自动抢注监控" />
+<meta property="og:title" content="技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 GitHub Actions 每 10 分钟探测 Serv00 注册开放，配合 126 邮箱 IMAP 收验证码，自动完成注册全流程。 最该复用的坑： GitHub 引用不存在的 Secret 会注入空串而非报错，所有环境变量读取必须做空串兜底，否则 int(&amp;quot;&amp;quot;) 直接崩。 通道降级：ClawBot token 云端读不到就不选它，改用标准 IMAP/SMTP 授权码；&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 调度 GitHub Actions（cron 每 10 分钟） 本机探测脚本 + 弹窗 云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1） 通知通道 126 邮箱（SMTP_SSL + IMAP） 微信 ClawBot 推送 ClawBot tok&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · GitHub Actions 自动抢注监控","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/","description":"用 GitHub Actions 每 10 分钟探测 Serv00 注册开放，配合 126 邮箱 IMAP 收验证码，自动完成注册全流程。 最该复用的坑： GitHub 引用不存在的 Secret 会注入空串而非报错，所有环境变量读取必须做空串兜底，否则 int(\u0026quot;\u0026quot;) 直接崩。 通道降级：ClawBot token 云端读不到就不选它，改用标准 IMAP/SMTP 授权码；\u0026hellip;","datePublished":"2026-07-26T14:00:00+08:00","dateModified":"2026-07-26T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/","name":"技术点 · GitHub Actions 自动抢注监控","position":2}]}</script>
-<meta property="og:title" content="技术点 · GitHub Actions 自动抢注监控">
-<meta property="og:description" content="用 GitHub Actions 每 10 分钟探测 Serv00 注册开放，配合 126 邮箱 IMAP 收验证码，自动完成注册全流程。 最该复用的坑： GitHub 引用不存在的 Secret 会注入空串而非报错，所有环境变量读取必须做空串兜底，否则 int(&amp;quot;&amp;quot;) 直接崩。 通道降级：ClawBot token 云端读不到就不选它，改用标准 IMAP/SMTP 授权码；&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/","description":"选型项 选定 落选 选型依据 调度 GitHub Actions（cron 每 10 分钟） 本机探测脚本 + 弹窗 云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1） 通知通道 126 邮箱（SMTP_SSL + IMAP） 微信 ClawBot 推送 ClawBot tok\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/","name":"技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）","position":2}]}</script>
+<meta property="og:title" content="技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 调度 GitHub Actions（cron 每 10 分钟） 本机探测脚本 + 弹窗 云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1） 通知通道 126 邮箱（SMTP_SSL + IMAP） 微信 ClawBot 推送 ClawBot tok&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/">
-<meta name="twitter:title" content="技术点 · GitHub Actions 自动抢注监控">
-<meta name="twitter:description" content="用 GitHub Actions 每 10 分钟探测 Serv00 注册开放，配合 126 邮箱 IMAP 收验证码，自动完成注册全流程。 最该复用的坑： GitHub 引用不存在的 Secret 会注入空串而非报错，所有环境变量读取必须做空串兜底，否则 int(&amp;quot;&amp;quot;) 直接崩。 通道降级：ClawBot token 云端读不到就不选它，改用标准 IMAP/SMTP 授权码；&amp;hellip;">
+<meta name="twitter:title" content="技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 调度 GitHub Actions（cron 每 10 分钟） 本机探测脚本 + 弹窗 云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1） 通知通道 126 邮箱（SMTP_SSL + IMAP） 微信 ClawBot 推送 ClawBot tok&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · GitHub Actions 自动抢注监控</h1>
+    <h1 class="article-title">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-26</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,53 @@
   
 
   <div class="article-content">
-    <p>用 GitHub Actions 每 10 分钟探测 Serv00 注册开放，配合 126 邮箱 IMAP 收验证码，自动完成注册全流程。</p>
-<p>最该复用的坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>调度</td>
+<td><strong>GitHub Actions（cron 每 10 分钟）</strong></td>
+<td>本机探测脚本 + 弹窗</td>
+<td>云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）</td>
+</tr>
+<tr>
+<td>通知通道</td>
+<td><strong>126 邮箱（SMTP_SSL + IMAP）</strong></td>
+<td>微信 ClawBot 推送</td>
+<td>ClawBot token 在 WorkBuddy 不落本地明文，云端 Actions 读不到；126 有标准 IMAP/SMTP 授权码（T1 实测）</td>
+</tr>
+<tr>
+<td>验证码获取</td>
+<td><strong>IMAP 轮询 126 收件箱</strong></td>
+<td>人工看邮件</td>
+<td>自动提取激活链接，闭合注册流程（T1）</td>
+</tr>
+<tr>
+<td>凭据存储</td>
+<td><strong>GitHub Secrets（5 个）</strong></td>
+<td>仓库文件 / 硬编码</td>
+<td>Secrets 不入库、不进日志（被 <code>***</code> 打码）（T0）</td>
+</tr>
+<tr>
+<td>HTTP 客户端</td>
+<td><strong>Python 标准库 <code>urllib</code></strong></td>
+<td>第三方 requests</td>
+<td>Actions runner 无需装依赖，启动更快（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>GitHub 引用不存在的 Secret 会注入空串而非报错，所有环境变量读取必须做空串兜底，否则 int(&quot;&quot;) 直接崩。</li>
-<li>通道降级：ClawBot token 云端读不到就不选它，改用标准 IMAP/SMTP 授权码；注册表单动态解析（含 csrf）而非硬编码字段，抗小改版。</li>
-<li>Actions cron 有 5–15 分钟抖动不保证准点；先只探测，开 AUTO_REGISTER 才执行，失败降级为仅发提醒邮件。</li>
-</ol>
-<p>下一步：放号/补货/抢注类云端监控直接复用这套 CI cron + 收码闭环，不依赖本机开机。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-26-techpoint-serv00-monitor</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=71</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=90</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>cron 写法与抖动</strong>：<code>serv00-monitor.yml</code> 用 <code>schedule: cron: &quot;*/10 * * * *&quot;</code>；注意 GitHub Actions cron <strong>有排队延迟，不保证准点</strong>（常见 5–15 分钟偏差，属正常）（T1）。</li>
+<li><strong>空 Secret 兜底（致命坑）</strong>：GitHub 引用不存在的 Secret 会<strong>注入空字符串而非报错</strong>；脚本崩在 <code>int(&quot;&quot;)</code>。所有环境变量读取必须做空串兜底（T1 实测）。</li>
+<li><strong>函数返回值解包同步</strong>：<code>fetch()</code> 从 2 元组改成 3 元组后，主流程只解包 2 个 → <code>ValueError: too many values to unpack</code>；改返回结构必须同步所有解包点（T1）。</li>
+<li><strong>排错必展开 step 内部日志</strong>：顶部 Annotations 摘要会把 Secret 打码成 <code>***</code>，看不到真错误，必须展开失败 step 内部日志（T1）。…</li>
 </ol>
 
   </div>
@@ -217,20 +249,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · 游戏 VPS 注入代理（封号教训）</span>
+        <span class="post-nav-card__title">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-31-techpoint-项目管理思维工具全景回顾/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · bbs1org 免费论坛挂 MCP</span>
+        <span class="post-nav-card__title">技术点 · 项目管理思维工具全景（可作 Agent 指导纲要的方法论资产）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

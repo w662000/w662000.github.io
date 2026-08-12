@@ -33,12 +33,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把容器化的 Hermes Agent 迁到 Windows 原生进程，做到完全无窗口自启，并补齐 POSIX bash 环境。 最该复用的三点： 容器里的 Linux venv 不能复制：含 ELF 二进制，到 Windows 全废，必须用对应 Windows Python 重建 venv；迁移用 tar 流式同步时排除 .venv 和 .playwright。 配置写进 &amp;hellip;.">
+<meta name="description" content="选型项 选定 落选 依据 运行形态 Windows 原生进程（agent + WebUI 各跑进程） 保留 Docker 容器 容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作回退（T1） 配置目录 复用在宿主的 ~/.hermes &amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · hermes-windows","url":"https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/","description":"把容器化的 Hermes Agent 迁到 Windows 原生进程，做到完全无窗口自启，并补齐 POSIX bash 环境。 最该复用的三点： 容器里的 Linux venv 不能复制：含 ELF 二进制，到 Windows 全废，必须用对应 Windows Python 重建 venv；迁移用 tar 流式同步时排除 .venv 和 .playwright。 配置写进 \u0026hellip;.","datePublished":"2026-07-23T14:00:00+08:00","dateModified":"2026-07-23T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · hermes-windows","url":"https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/","description":"选型项 选定 落选 依据 运行形态 Windows 原生进程（agent + WebUI 各跑进程） 保留 Docker 容器 容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作回退（T1） 配置目录 复用在宿主的 ~/.hermes \u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/","name":"技术点 · hermes-windows","position":2}]}</script>
 <meta property="og:title" content="技术点 · hermes-windows">
-<meta property="og:description" content="把容器化的 Hermes Agent 迁到 Windows 原生进程，做到完全无窗口自启，并补齐 POSIX bash 环境。 最该复用的三点： 容器里的 Linux venv 不能复制：含 ELF 二进制，到 Windows 全废，必须用对应 Windows Python 重建 venv；迁移用 tar 流式同步时排除 .venv 和 .playwright。 配置写进 &amp;hellip;.">
+<meta property="og:description" content="选型项 选定 落选 依据 运行形态 Windows 原生进程（agent + WebUI 各跑进程） 保留 Docker 容器 容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作回退（T1） 配置目录 复用在宿主的 ~/.hermes &amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/">
 <meta name="twitter:title" content="技术点 · hermes-windows">
-<meta name="twitter:description" content="把容器化的 Hermes Agent 迁到 Windows 原生进程，做到完全无窗口自启，并补齐 POSIX bash 环境。 最该复用的三点： 容器里的 Linux venv 不能复制：含 ELF 二进制，到 Windows 全废，必须用对应 Windows Python 重建 venv；迁移用 tar 流式同步时排除 .venv 和 .playwright。 配置写进 &amp;hellip;.">
+<meta name="twitter:description" content="选型项 选定 落选 依据 运行形态 Windows 原生进程（agent + WebUI 各跑进程） 保留 Docker 容器 容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作回退（T1） 配置目录 复用在宿主的 ~/.hermes &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -175,7 +175,7 @@
     <h1 class="article-title">技术点 · hermes-windows</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-23</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,42 +195,86 @@
   
 
   <div class="article-content">
-    <p>把容器化的 Hermes Agent 迁到 Windows 原生进程，做到完全无窗口自启，并补齐 POSIX bash 环境。</p>
-<p>最该复用的三点：</p>
-<ol>
-<li>容器里的 Linux venv 不能复制：含 ELF 二进制，到 Windows 全废，必须用对应 Windows Python 重建 venv；迁移用 tar 流式同步时排除 .venv 和 .playwright。</li>
-<li>配置写进 .env 而非只在启动脚本 set：复杂启动链下子进程拿不到只在当前 shell 设的变量，表现是「网关起来了却没有 API 接口」。会被子进程继承的配置优先用 .env 文件。gateway 还必须满足 API_SERVER_ENABLED=true、强制 API_SERVER_KEY、aiohttp 已装（漏装会静默禁用）三项。</li>
-<li>完全无窗口拉起三件套：CREATE_BREAKAWAY_FROM_JOB（脱离会话不随父死）+ FreeConsole + STARTUPINFO(SW_HIDE)，缺一个就留可见窗口或进程被杀。自启入口用 VBS 而非 .lnk（被安全策略拦截），且 Startup 路径必须含 Programs 否则静默失败。</li>
-</ol>
-<p>下一步：把无窗口启动器 + VBS 做成标准模板，迁移其他本地长驻服务复用。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-23-techpoint-hermes-windows</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=65</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=84</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
-</ol>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>运行形态</td>
+<td><strong>Windows 原生进程</strong>（agent + WebUI 各跑进程）</td>
+<td>保留 Docker 容器</td>
+<td>容器停了很麻烦；原生进程下 <code>localhost</code> 即宿主机，三端发布链路更顺；保留 Docker 作回退（T1）</td>
+</tr>
+<tr>
+<td>配置目录</td>
+<td><strong>复用在宿主的 <code>~/.hermes</code></strong></td>
+<td>容器内配置</td>
+<td>配置不丢、可直编（T1）</td>
+</tr>
+<tr>
+<td>网关启动方式</td>
+<td><strong><code>hermes gateway run --replace --accept-hooks</code></strong></td>
+<td><code>--no-supervise</code></td>
+<td>原生 Windows 下 <code>--no-supervise</code> 不监听 8642（T1 实测）</td>
+</tr>
+<tr>
+<td>鉴权配置落点</td>
+<td><strong><code>~/.hermes/.env</code>（持久化）</strong></td>
+<td>仅在启动脚本里 <code>set</code></td>
+<td>复杂启动链下子进程拿不到只在当前 shell 设的变量（T1）</td>
+</tr>
+<tr>
+<td>自启入口</td>
+<td><strong><code>.vbs</code> 隐藏式脚本</strong></td>
+<td><code>.bat</code> / <code>.lnk</code></td>
+<td><code>.lnk</code> 被安全策略 COM 拦截；<code>.bat</code> 双击会留窗口；VBS 可彻底无窗口（T1）</td>
+</tr>
+<tr>
+<td>启动器实现</td>
+<td><strong>Python 启动器（subprocess + 窗口标志）</strong></td>
+<td>纯 bat</td>
+<td>需要精细控制「脱离父进程 + 完全隐藏窗口」（T1）</td>
+</tr>
+<tr>
+<td>POSIX 环境</td>
+<td><strong>Git for Windows + WSL Ubuntu 24.04 双重补齐</strong></td>
+<td>仅其一</td>
+<td>Git Bash 主用；WSL 作 fallback（T1）</td>
+</tr>
+<tr>
+<td>Python 环境</td>
+<td><strong>Windows 重新建 venv</strong></td>
+<td>复用 Linux <code>.venv</code></td>
+<td>容器里的 <code>.venv</code> 是 ELF 二进制，Windows 无法执行（T1，硬约束）</td>
+</tr>
+</tbody>
+</table>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260723-Hermes_Windows原生部署迁移/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复</span>
+        <span class="post-nav-card__title">技术点 · daily-publish</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260722工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260722工作总结</span>
+        <span class="post-nav-card__title">技术点 · wispbyte-gost</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

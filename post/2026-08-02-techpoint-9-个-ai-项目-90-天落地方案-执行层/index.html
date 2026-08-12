@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 9 个 AI 项目 90 天落地 | W662000&#39;s Blog</title>
+  <title>技术点 · 9 个 AI 项目 90 天落地方案（执行层） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 9 个 AI 项目 90 天落地" />
+<meta property="og:title" content="技术点 · 9 个 AI 项目 90 天落地方案（执行层）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="这个项目干了啥：把 9 个候选项目排成 90 天可执行的落地方案，定并发、技术栈和验收。 最该复用的 3 个要点：①并发度是选型的一部分：2 人团队用看板 WIP≤2（两条构建线），副线每周≤8h 越线即砍，别全并行——排 9 条平行甘特图纯属白费。②先设一票否决（长账期/需资质/需固定资产）再谈优先级，用 MoSCoW 直接出局 Won&amp;rsquo;t 项，比先打分省大量评估。③Cloudflare &amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 并发度控制模型 看板 WIP≤2（2 个核心构建 slot） 全并行推进 9 项目 2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论） 优先级模型 MoSCoW + Tier1/Tier2 分层 单&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 9 个 AI 项目 90 天落地","url":"https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/","description":"这个项目干了啥：把 9 个候选项目排成 90 天可执行的落地方案，定并发、技术栈和验收。 最该复用的 3 个要点：①并发度是选型的一部分：2 人团队用看板 WIP≤2（两条构建线），副线每周≤8h 越线即砍，别全并行——排 9 条平行甘特图纯属白费。②先设一票否决（长账期/需资质/需固定资产）再谈优先级，用 MoSCoW 直接出局 Won\u0026rsquo;t 项，比先打分省大量评估。③Cloudflare \u0026hellip;","datePublished":"2026-08-02T14:00:00+08:00","dateModified":"2026-08-02T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/","name":"技术点 · 9 个 AI 项目 90 天落地","position":2}]}</script>
-<meta property="og:title" content="技术点 · 9 个 AI 项目 90 天落地">
-<meta property="og:description" content="这个项目干了啥：把 9 个候选项目排成 90 天可执行的落地方案，定并发、技术栈和验收。 最该复用的 3 个要点：①并发度是选型的一部分：2 人团队用看板 WIP≤2（两条构建线），副线每周≤8h 越线即砍，别全并行——排 9 条平行甘特图纯属白费。②先设一票否决（长账期/需资质/需固定资产）再谈优先级，用 MoSCoW 直接出局 Won&amp;rsquo;t 项，比先打分省大量评估。③Cloudflare &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 9 个 AI 项目 90 天落地方案（执行层）","url":"https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/","description":"选型项 选定 落选 依据 并发度控制模型 看板 WIP≤2（2 个核心构建 slot） 全并行推进 9 项目 2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论） 优先级模型 MoSCoW + Tier1/Tier2 分层 单\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/","name":"技术点 · 9 个 AI 项目 90 天落地方案（执行层）","position":2}]}</script>
+<meta property="og:title" content="技术点 · 9 个 AI 项目 90 天落地方案（执行层）">
+<meta property="og:description" content="选型项 选定 落选 依据 并发度控制模型 看板 WIP≤2（2 个核心构建 slot） 全并行推进 9 项目 2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论） 优先级模型 MoSCoW + Tier1/Tier2 分层 单&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/">
-<meta name="twitter:title" content="技术点 · 9 个 AI 项目 90 天落地">
-<meta name="twitter:description" content="这个项目干了啥：把 9 个候选项目排成 90 天可执行的落地方案，定并发、技术栈和验收。 最该复用的 3 个要点：①并发度是选型的一部分：2 人团队用看板 WIP≤2（两条构建线），副线每周≤8h 越线即砍，别全并行——排 9 条平行甘特图纯属白费。②先设一票否决（长账期/需资质/需固定资产）再谈优先级，用 MoSCoW 直接出局 Won&amp;rsquo;t 项，比先打分省大量评估。③Cloudflare &amp;hellip;">
+<meta name="twitter:title" content="技术点 · 9 个 AI 项目 90 天落地方案（执行层）">
+<meta name="twitter:description" content="选型项 选定 落选 依据 并发度控制模型 看板 WIP≤2（2 个核心构建 slot） 全并行推进 9 项目 2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论） 优先级模型 MoSCoW + Tier1/Tier2 分层 单&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 9 个 AI 项目 90 天落地</h1>
+    <h1 class="article-title">技术点 · 9 个 AI 项目 90 天落地方案（执行层）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-02</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,16 +195,74 @@
   
 
   <div class="article-content">
-    <p>这个项目干了啥：把 9 个候选项目排成 90 天可执行的落地方案，定并发、技术栈和验收。</p>
-<p>最该复用的 3 个要点：①并发度是选型的一部分：2 人团队用看板 WIP≤2（两条构建线），副线每周≤8h 越线即砍，别全并行——排 9 条平行甘特图纯属白费。②先设一票否决（长账期/需资质/需固定资产）再谈优先级，用 MoSCoW 直接出局 Won&rsquo;t 项，比先打分省大量评估。③Cloudflare 同栈优先：Pages+Functions+D1+R2 一套部署省跨服务鉴权与出网费；D1 批量导入必须走 REST 批量接口+按字节切分+INSERT OR IGNORE 幂等，CLI 整文件导入会撞 SQLITE_TOOBIG；数据源按 host 分层挑接口，同库不同 host 可用性可相反。</p>
-<p>下一步：每个 Wave 挂&quot;付费转化&quot;硬验收（非流量指标）再放行。</p>
-<hr />
-<p>详细原文请看：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>并发度控制模型</td>
+<td><strong>看板 WIP≤2</strong>（2 个核心构建 slot）</td>
+<td>全并行推进 9 项目</td>
+<td>2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论）</td>
+</tr>
+<tr>
+<td>优先级模型</td>
+<td><strong>MoSCoW + Tier1/Tier2 分层</strong></td>
+<td>单纯打分排序</td>
+<td>打分排序只给顺序、不给「砍不砍」；MoSCoW 的 Won&rsquo;t 档能直接出局，减少决策疲劳</td>
+</tr>
+<tr>
+<td>判域方法</td>
+<td><strong>Cynefin</strong></td>
+<td>统一按「清晰域」做详细计划</td>
+<td>混沌/复杂域项目做不出可靠甘特图，只能做探针 + 信号决策树</td>
+</tr>
+<tr>
+<td>旗舰产品前端</td>
+<td><strong>Cloudflare Pages</strong></td>
+<td>自建 VPS + Nginx</td>
+<td>静态托管免运维、免费额度足；同账号可直连 Functions/D1（T1 已在 skillhub 项目实测上线）</td>
+</tr>
+<tr>
+<td>旗舰产品数据层</td>
+<td><strong>Cloudflare D1</strong></td>
+<td>自建 MySQL/Postgres</td>
+<td>单文件级 SQLite 语义 + 边缘读取，订单量级下无需独立数据库实例</td>
+</tr>
+<tr>
+<td>临时文件存储</td>
+<td><strong>Cloudflare R2</strong></td>
+<td>本地磁盘 / 第三方对象存储</td>
+<td>与 Pages/Functions 同栈，出网零费用；文档转换类产物本就是临时件</td>
+</tr>
+<tr>
+<td>量化类项目数据源</td>
+<td><strong>AkShare</strong></td>
+<td>商业行情 API</td>
+<td>免费、覆盖 A 股研报/因子/选股；已在本机实测可用（注意接口分层，见第二节）</td>
+</tr>
+<tr>
+<td>收款通道</td>
+<td>微信支付 / 支付宝（个体户「其他互联网服务」类目）</td>
+<td>年付订阅平台</td>
+<td>需要短账期收现；年付订阅账期长且退款风险高，被一票否决规则排除</td>
+</tr>
+<tr>
+<td>内容标识合规基线</td>
+<td><strong>GB 45438-2025 显式 + 隐式标识</strong></td>
+<td>只写免责声明</td>
+<td>标识是强制项，免责声明替代不了（T0 标准文本）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=76</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=95</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>第 0 周做「地基」，且必须一次性做完</strong>：定双线 → 建通用免责库 → 开通收款 → 注册域名 → 立账本。地基没完成就开工，后面每个项目都会被同一件事阻塞一次（T1）。…</li>
 </ol>
 
   </div>
@@ -212,20 +270,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · AI 赚钱机会研究 A/B/C 计划</span>
+        <span class="post-nav-card__title">技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260801-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 · 2026-08-01</span>
+        <span class="post-nav-card__title">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

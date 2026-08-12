@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · bbs1org 免费论坛挂 MCP | W662000&#39;s Blog</title>
+  <title>技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · bbs1org 免费论坛挂 MCP" />
+<meta property="og:title" content="技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把 iFastNet 免费 PHP 主机上的 bbs1org 极简论坛改造成 AI 可写的 MCP 知识库，插件随请求触发、零常驻进程、成本为零。 最该复用的坑： 代理层会剥离 Authorization 头，自定义 X-Mcp-Token 才穿透；WAF 用 aes.js 解 __test cookie，出口 IP 变就重解。 标「MySQL 5.7」实为 MariaDB：&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 免费主机 my-place.us（iFastNet） 其他免费 PHP 主机 提供 PHP+MySQL，成本 0，可装论坛（T1） 论坛 bbs1org 极简 PHP 论坛（单文件 294KB） phpBB 单文件、无 composer 依赖、能跑在免费主&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · bbs1org 免费论坛挂 MCP","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/","description":"把 iFastNet 免费 PHP 主机上的 bbs1org 极简论坛改造成 AI 可写的 MCP 知识库，插件随请求触发、零常驻进程、成本为零。 最该复用的坑： 代理层会剥离 Authorization 头，自定义 X-Mcp-Token 才穿透；WAF 用 aes.js 解 __test cookie，出口 IP 变就重解。 标「MySQL 5.7」实为 MariaDB：\u0026hellip;","datePublished":"2026-07-26T14:00:00+08:00","dateModified":"2026-07-26T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/","name":"技术点 · bbs1org 免费论坛挂 MCP","position":2}]}</script>
-<meta property="og:title" content="技术点 · bbs1org 免费论坛挂 MCP">
-<meta property="og:description" content="把 iFastNet 免费 PHP 主机上的 bbs1org 极简论坛改造成 AI 可写的 MCP 知识库，插件随请求触发、零常驻进程、成本为零。 最该复用的坑： 代理层会剥离 Authorization 头，自定义 X-Mcp-Token 才穿透；WAF 用 aes.js 解 __test cookie，出口 IP 变就重解。 标「MySQL 5.7」实为 MariaDB：&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/","description":"选型项 选定 落选 选型依据 免费主机 my-place.us（iFastNet） 其他免费 PHP 主机 提供 PHP+MySQL，成本 0，可装论坛（T1） 论坛 bbs1org 极简 PHP 论坛（单文件 294KB） phpBB 单文件、无 composer 依赖、能跑在免费主\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/","name":"技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）","position":2}]}</script>
+<meta property="og:title" content="技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 免费主机 my-place.us（iFastNet） 其他免费 PHP 主机 提供 PHP+MySQL，成本 0，可装论坛（T1） 论坛 bbs1org 极简 PHP 论坛（单文件 294KB） phpBB 单文件、无 composer 依赖、能跑在免费主&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/">
-<meta name="twitter:title" content="技术点 · bbs1org 免费论坛挂 MCP">
-<meta name="twitter:description" content="把 iFastNet 免费 PHP 主机上的 bbs1org 极简论坛改造成 AI 可写的 MCP 知识库，插件随请求触发、零常驻进程、成本为零。 最该复用的坑： 代理层会剥离 Authorization 头，自定义 X-Mcp-Token 才穿透；WAF 用 aes.js 解 __test cookie，出口 IP 变就重解。 标「MySQL 5.7」实为 MariaDB：&amp;hellip;">
+<meta name="twitter:title" content="技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 免费主机 my-place.us（iFastNet） 其他免费 PHP 主机 提供 PHP+MySQL，成本 0，可装论坛（T1） 论坛 bbs1org 极简 PHP 论坛（单文件 294KB） phpBB 单文件、无 composer 依赖、能跑在免费主&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · bbs1org 免费论坛挂 MCP</h1>
+    <h1 class="article-title">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-26</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,22 +195,57 @@
   
 
   <div class="article-content">
-    <p>把 iFastNet 免费 PHP 主机上的 bbs1org 极简论坛改造成 AI 可写的 MCP 知识库，插件随请求触发、零常驻进程、成本为零。</p>
-<p>最该复用的坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免费主机</td>
+<td><strong>my-place.us（iFastNet）</strong></td>
+<td>其他免费 PHP 主机</td>
+<td>提供 PHP+MySQL，成本 0，可装论坛（T1）</td>
+</tr>
+<tr>
+<td>论坛</td>
+<td><strong>bbs1org 极简 PHP 论坛（单文件 294KB）</strong></td>
+<td>phpBB</td>
+<td>单文件、无 composer 依赖、能跑在免费主机；phpBB 见同批 handoff（T1）</td>
+</tr>
+<tr>
+<td>MCP 接入</td>
+<td><strong>mcp_server 插件（v1.1.4）</strong></td>
+<td>自写独立 Node MCP 服务</td>
+<td>免费主机无法常驻 Node 进程，插件随 PHP 请求触发，零额外进程（T1）</td>
+</tr>
+<tr>
+<td>鉴权头</td>
+<td><strong>自定义 <code>X-Mcp-Token</code></strong></td>
+<td><code>Authorization</code></td>
+<td>代理层剥离 <code>Authorization</code>，自定义头能穿透（T1 实测）</td>
+</tr>
+<tr>
+<td>发布账号</td>
+<td><strong>专用管理员 WorkbuddyBot</strong></td>
+<td>用人类管理员账号</td>
+<td>MCP 操作以 actor=WorkbuddyBot 留痕，与人类管理分离（T1）</td>
+</tr>
+<tr>
+<td>发帖限流</td>
+<td><strong>脚本侧 8s 间隔 + 退避重试 + 标题幂等</strong></td>
+<td>不限流</td>
+<td>防论坛 flood-control 触发，且幂等可重跑（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>代理层会剥离 Authorization 头，自定义 X-Mcp-Token 才穿透；WAF 用 aes.js 解 __test cookie，出口 IP 变就重解。</li>
-<li>标「MySQL 5.7」实为 MariaDB：删 WITH PARSER ngram，INSERT&hellip;AS new 改成 VALUES(col)。</li>
-<li>插件从 DB 读 manifest，直接 FTP 改文件不生效，需触发 plugin_registry_sync；版块列表缓存在 app_settings.cache_forums，建版块后要删 cache_%。</li>
-<li>批量发帖加 8s 间隔+退避重试+标题幂等，可随时重跑。</li>
-</ol>
-<p>下一步：受限 PHP 主机挂 MCP 端点直接复用这套网关穿透+幂等发布。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-26-techpoint-bbs1org-mcp</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=68</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=87</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>注册 IP 一致性</strong>：iFastNet 要求「注册提交 IP == 激活点击 IP」。走 Cloudflare 代理注册、直连点激活会被拒；全程统一网络重注册。FTP 主机以 cPanel 显示的 <code>ftpupload.net</code> 为准；MySQL host 填 <code>sql103.my-place.us</code>（非 localhost）；FTP/cPanel/MySQL 三套同凭据（T1）。</li>
+<li><strong><code>declare(strict_types=1)</code> 头铁律</strong>：bbs1org 的 <code>index.php</code> 第 3 行必须是脚本第一条语句，插调试代码会触发编译期 fatal（整站 500）。排错用<strong>外部 wrapper</strong>（<code>debug.php</code> include index.php），不动原文件头（T1）。…</li>
 </ol>
 
   </div>
@@ -218,20 +253,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · GitHub Actions 自动抢注监控</span>
+        <span class="post-nav-card__title">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260726-Serv00注册开放监控/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">Serv00 注册开放监控（GitHub Actions + 126 邮箱自动注册）</span>
+        <span class="post-nav-card__title">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

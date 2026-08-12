@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · SkillHub 9.8万技能部署 | W662000&#39;s Blog</title>
+  <title>技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · SkillHub 9.8万技能部署" />
+<meta property="og:title" content="技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="这个项目干了啥：抓下 SkillHub 9.8 万条技能数据，灌进 Cloudflare D1，用 Pages+Functions 搭出公网可检索站。 最该复用的 3 个要点：①先确认目标站 API 是否匿名可读（返回真 JSON 而非挑战页）再上并发；12 路按分类分路+错峰+退避+断点续传，采集时按主键去重得 98,824 条。②灌库两坑：CLI d1 execute --file &amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 数据源 目标站官方 API（匿名可读、分页） 爬 HTML 页面 前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实） 采集并发 12 路并行后台采集（每分类一路） 单线程顺序 10 万级条目必须并行；错峰启动 + 退避重试避&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · SkillHub 9.8万技能部署","url":"https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/","description":"这个项目干了啥：抓下 SkillHub 9.8 万条技能数据，灌进 Cloudflare D1，用 Pages+Functions 搭出公网可检索站。 最该复用的 3 个要点：①先确认目标站 API 是否匿名可读（返回真 JSON 而非挑战页）再上并发；12 路按分类分路+错峰+退避+断点续传，采集时按主键去重得 98,824 条。②灌库两坑：CLI d1 execute --file \u0026hellip;","datePublished":"2026-08-02T14:00:00+08:00","dateModified":"2026-08-02T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/","name":"技术点 · SkillHub 9.8万技能部署","position":2}]}</script>
-<meta property="og:title" content="技术点 · SkillHub 9.8万技能部署">
-<meta property="og:description" content="这个项目干了啥：抓下 SkillHub 9.8 万条技能数据，灌进 Cloudflare D1，用 Pages+Functions 搭出公网可检索站。 最该复用的 3 个要点：①先确认目标站 API 是否匿名可读（返回真 JSON 而非挑战页）再上并发；12 路按分类分路+错峰+退避+断点续传，采集时按主键去重得 98,824 条。②灌库两坑：CLI d1 execute --file &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线","url":"https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/","description":"选型项 选定 落选 依据 数据源 目标站官方 API（匿名可读、分页） 爬 HTML 页面 前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实） 采集并发 12 路并行后台采集（每分类一路） 单线程顺序 10 万级条目必须并行；错峰启动 + 退避重试避\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/","name":"技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线","position":2}]}</script>
+<meta property="og:title" content="技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线">
+<meta property="og:description" content="选型项 选定 落选 依据 数据源 目标站官方 API（匿名可读、分页） 爬 HTML 页面 前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实） 采集并发 12 路并行后台采集（每分类一路） 单线程顺序 10 万级条目必须并行；错峰启动 + 退避重试避&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/">
-<meta name="twitter:title" content="技术点 · SkillHub 9.8万技能部署">
-<meta name="twitter:description" content="这个项目干了啥：抓下 SkillHub 9.8 万条技能数据，灌进 Cloudflare D1，用 Pages+Functions 搭出公网可检索站。 最该复用的 3 个要点：①先确认目标站 API 是否匿名可读（返回真 JSON 而非挑战页）再上并发；12 路按分类分路+错峰+退避+断点续传，采集时按主键去重得 98,824 条。②灌库两坑：CLI d1 execute --file &amp;hellip;">
+<meta name="twitter:title" content="技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线">
+<meta name="twitter:description" content="选型项 选定 落选 依据 数据源 目标站官方 API（匿名可读、分页） 爬 HTML 页面 前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实） 采集并发 12 路并行后台采集（每分类一路） 单线程顺序 10 万级条目必须并行；错峰启动 + 退避重试避&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · SkillHub 9.8万技能部署</h1>
+    <h1 class="article-title">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-02</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,16 +195,64 @@
   
 
   <div class="article-content">
-    <p>这个项目干了啥：抓下 SkillHub 9.8 万条技能数据，灌进 Cloudflare D1，用 Pages+Functions 搭出公网可检索站。</p>
-<p>最该复用的 3 个要点：①先确认目标站 API 是否匿名可读（返回真 JSON 而非挑战页）再上并发；12 路按分类分路+错峰+退避+断点续传，采集时按主键去重得 98,824 条。②灌库两坑：CLI <code>d1 execute --file</code> 把整文件当单条语句会 SQLITE_TOOBIG，必须走 REST <code>{&quot;batch&quot;:[...]}</code> 分批；D1 单条上限 10 万字节，按字节切分单条&lt;80KB，配 INSERT OR IGNORE 幂等+ckpt 续传。③前端用 <code>window.SKILLS</code> 全局变量注入绕开 file:// 跨域，双击即用；Functions 后端做分页/搜索/排序，偶发冷启动 522 重试即好。</p>
-<p>下一步：守住索引/评论/推荐合规边界，别转售搬运原文件。</p>
-<hr />
-<p>详细原文请看：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据源</td>
+<td><strong>目标站官方 API（匿名可读、分页）</strong></td>
+<td>爬 HTML 页面</td>
+<td>前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）</td>
+</tr>
+<tr>
+<td>采集并发</td>
+<td><strong>12 路并行后台采集（每分类一路）</strong></td>
+<td>单线程顺序</td>
+<td>10 万级条目必须并行；错峰启动 + 退避重试避免触发风控（T1）</td>
+</tr>
+<tr>
+<td>导入通道</td>
+<td><strong>D1 REST API <code>{&quot;batch&quot;:[...]}</code></strong></td>
+<td>官方 CLI <code>d1 execute --file</code></td>
+<td>CLI 会把大文件整体当单条语句执行 → <code>SQLITE_TOOBIG</code>；REST 批交可控（T1，实测撞过坑）</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td><strong>Cloudflare D1（APAC 区）</strong></td>
+<td>传统云数据库</td>
+<td>与 Pages Functions 同生态、绑定即用、免费额度对 10 万行绰绰有余（实测已用约 97MB / 5GB，T1）</td>
+</tr>
+<tr>
+<td>前端形态</td>
+<td><strong>静态前端 + Functions API</strong></td>
+<td>全栈框架</td>
+<td>只做检索不需要 SSR；静态页面零冷启动成本（Pages Function 冷启动偶发 522，重试即好，T1）</td>
+</tr>
+<tr>
+<td>本地预览</td>
+<td><strong>JSON 包装成 <code>window.SKILLS=[...]</code> 用 script 引入</strong></td>
+<td>fetch 本地 JSON 文件</td>
+<td>双击本地 HTML 直接打开时 fetch 本地文件会触发跨域限制；用 script 标签全局变量绕开，做到双击即用（T1）</td>
+</tr>
+<tr>
+<td>检索能力</td>
+<td><strong>后端 Functions 做分页/分类/搜索/排序</strong></td>
+<td>前端一次性全量过滤</td>
+<td>10 万条放前端全量过滤会卡；后端按需返回（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=78</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=97</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>判定 API 是否匿名可读是第一道关</strong>。先发单请求确认返回的是真实 JSON 而非登录页/挑战页，再上并发。错过这步会把挑战页当数据读进来（T1）。</li>
+<li><strong>12 路并行要错峰 + 退避</strong>：各分类一路启动时间错开，撞错按指数退避重试；配合断点续传，中途断网可从断点续跑，不重头（T1）。</li>
+<li><strong>去重是硬指标</strong>：98,824 个条目是去重后的结果，采集时就要按稳定主键去重，否则分页重叠会产生大量重复（T1）。…</li>
 </ol>
 
   </div>
@@ -212,20 +260,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260802-quanqiuai-paixingbang/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">全球AI排行榜</span>
+        <span class="post-nav-card__title">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · AI 赚钱机会研究 A/B/C 计划</span>
+        <span class="post-nav-card__title">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

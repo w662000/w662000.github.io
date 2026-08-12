@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · china-stock-data 安装扫描 | W662000&#39;s Blog</title>
+  <title>技术点 · china-stock-data 安装扫描报告 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · china-stock-data 安装扫描" />
+<meta property="og:title" content="技术点 · china-stock-data 安装扫描报告" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="从第三方源装完一个 skill，要在跑之前做一遍静态审计，而不是等出问题再查——因为硬编码凭据一旦执行就已经外发出去了。 最该复用的六查清单（按序）：目录结构→版本一致性→依赖分层→子命令全集→硬编码凭据→凭据矩阵。两个关键坑： 项目里 china_stock.py 第 512 行把 Tushare token 明文写死随包分发，谁装谁拿得到。判定依据是「风格突变」：同项目另外 7 &amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 分发渠道 SkillHub CLI：skillhub install china-stock-data --namespace kekewater 手动 clone / 复制目录 带命名空间与版本元数据，可追溯来源；手动拷贝无版本信息（T1） 审计时机 **装完立即静态扫&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · china-stock-data 安装扫描","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/","description":"从第三方源装完一个 skill，要在跑之前做一遍静态审计，而不是等出问题再查——因为硬编码凭据一旦执行就已经外发出去了。 最该复用的六查清单（按序）：目录结构→版本一致性→依赖分层→子命令全集→硬编码凭据→凭据矩阵。两个关键坑： 项目里 china_stock.py 第 512 行把 Tushare token 明文写死随包分发，谁装谁拿得到。判定依据是「风格突变」：同项目另外 7 \u0026hellip;","datePublished":"2026-08-04T14:00:00+08:00","dateModified":"2026-08-04T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/","name":"技术点 · china-stock-data 安装扫描","position":2}]}</script>
-<meta property="og:title" content="技术点 · china-stock-data 安装扫描">
-<meta property="og:description" content="从第三方源装完一个 skill，要在跑之前做一遍静态审计，而不是等出问题再查——因为硬编码凭据一旦执行就已经外发出去了。 最该复用的六查清单（按序）：目录结构→版本一致性→依赖分层→子命令全集→硬编码凭据→凭据矩阵。两个关键坑： 项目里 china_stock.py 第 512 行把 Tushare token 明文写死随包分发，谁装谁拿得到。判定依据是「风格突变」：同项目另外 7 &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · china-stock-data 安装扫描报告","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/","description":"选型项 选定 落选 依据 分发渠道 SkillHub CLI：skillhub install china-stock-data --namespace kekewater 手动 clone / 复制目录 带命名空间与版本元数据，可追溯来源；手动拷贝无版本信息（T1） 审计时机 **装完立即静态扫\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/","name":"技术点 · china-stock-data 安装扫描报告","position":2}]}</script>
+<meta property="og:title" content="技术点 · china-stock-data 安装扫描报告">
+<meta property="og:description" content="选型项 选定 落选 依据 分发渠道 SkillHub CLI：skillhub install china-stock-data --namespace kekewater 手动 clone / 复制目录 带命名空间与版本元数据，可追溯来源；手动拷贝无版本信息（T1） 审计时机 **装完立即静态扫&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-安装扫描报告/">
-<meta name="twitter:title" content="技术点 · china-stock-data 安装扫描">
-<meta name="twitter:description" content="从第三方源装完一个 skill，要在跑之前做一遍静态审计，而不是等出问题再查——因为硬编码凭据一旦执行就已经外发出去了。 最该复用的六查清单（按序）：目录结构→版本一致性→依赖分层→子命令全集→硬编码凭据→凭据矩阵。两个关键坑： 项目里 china_stock.py 第 512 行把 Tushare token 明文写死随包分发，谁装谁拿得到。判定依据是「风格突变」：同项目另外 7 &amp;hellip;">
+<meta name="twitter:title" content="技术点 · china-stock-data 安装扫描报告">
+<meta name="twitter:description" content="选型项 选定 落选 依据 分发渠道 SkillHub CLI：skillhub install china-stock-data --namespace kekewater 手动 clone / 复制目录 带命名空间与版本元数据，可追溯来源；手动拷贝无版本信息（T1） 审计时机 **装完立即静态扫&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · china-stock-data 安装扫描</h1>
+    <h1 class="article-title">技术点 · china-stock-data 安装扫描报告</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-04</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,61 @@
   
 
   <div class="article-content">
-    <p>从第三方源装完一个 skill，要在跑之前做一遍静态审计，而不是等出问题再查——因为硬编码凭据一旦执行就已经外发出去了。</p>
-<p>最该复用的六查清单（按序）：目录结构→版本一致性→依赖分层→子命令全集→硬编码凭据→凭据矩阵。两个关键坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分发渠道</td>
+<td><strong>SkillHub CLI</strong>：<code>skillhub install china-stock-data --namespace kekewater</code></td>
+<td>手动 clone / 复制目录</td>
+<td>带命名空间与版本元数据，可追溯来源；手动拷贝无版本信息（T1）</td>
+</tr>
+<tr>
+<td>审计时机</td>
+<td><strong>装完立即静态扫描，跑之前</strong></td>
+<td>用出问题再查</td>
+<td>硬编码凭据、非官方域名重定向这类问题一旦执行就已经外发请求了（T1，本项目正是扫描阶段发现的）</td>
+</tr>
+<tr>
+<td>审计方式</td>
+<td><strong>只读扫描 + 逐文件通读关键脚本</strong></td>
+<td>只看 SKILL.md 说明</td>
+<td>说明文档不会写&quot;我这里硬编码了别人的 token&quot;（T1）</td>
+</tr>
+<tr>
+<td>版本真值来源</td>
+<td><strong><code>_meta.json</code></strong></td>
+<td><code>SKILL.md</code> frontmatter</td>
+<td>前者是发布平台写入的元数据，后者是作者手填、易与实际发布版本脱节（T1 推断）</td>
+</tr>
+<tr>
+<td>依赖判定</td>
+<td><strong><code>requirements.txt</code> 核心/可选分层</strong></td>
+<td>一次性全装</td>
+<td>可选依赖各自要账号、且部分会引发版本冲突（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>项目里 china_stock.py 第 512 行把 Tushare token 明文写死随包分发，谁装谁拿得到。判定依据是「风格突变」：同项目另外 7 个源都走环境变量或配置文件，唯独它硬编码——这种不一致本身就是最强可疑信号，比逐行读代码高效。</li>
-<li>版本以平台元数据 _meta.json 为准，别信作者手填的 frontmatter（本项目 2.0.0 vs 1.7.0 对不上）。</li>
-</ol>
-<p>安装通道坑：Git Bash 下 MSYS 的 tar 解析 C: 失败、/c/&hellip; 被当成相对路径拼成 D:\c...，用 cygpath -w 统一转成 Windows 原生路径。托管 pip 的 safe-delete 进回收站，沙箱无回收站会中止，需单开沙箱豁免。</p>
-<p>下一步：任何来源不明的 skill / 插件 / 包，照这套六查走一遍再决定是否用。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-04-techpoint-china-stock-data-安装扫描报告</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=82</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=101</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>查目录结构</strong>——先建立整体认知，看清入口脚本、依赖声明、元数据、参考资料各在哪：
+<pre><code>china-stock-data/
+├── _meta.json          (135 B)   版本元数据
+├── SKILL.md            (13.9 KB) 技能说明（frontmatter 含 version）
+├── requirements.txt    (565 B)   依赖清单
+├── scripts/                      5 个 Python 脚本
+│   ├── china_stock.py     (28.4 KB) 主 CLI（16 个子命令）
+│   ├── news_aggregator.py (9.4 KB)
+│   ├── daily_briefing_image.py (9.8 KB)
+│   ├── stock_monitor.py   (3.8 KB)…
+</code></pre>
+</li>
 </ol>
 
   </div>
@@ -217,20 +257,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · china-stock-data 实测</span>
+        <span class="post-nav-card__title">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · china-stock-data 用法</span>
+        <span class="post-nav-card__title">技术点 · china-stock-data 实测报告（2026-08-04 21_xx）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

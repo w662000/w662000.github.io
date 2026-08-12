@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 游戏 VPS 注入代理（封号教训） | W662000&#39;s Blog</title>
+  <title>技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 游戏 VPS 注入代理（封号教训）" />
+<meta property="og:title" content="技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="在 Gaming4Free 翼龙游戏 VPS 上把真实入口二进制替换成 wrapper，注入 sing-box 多协议——技术成功但违反 ToS 被封号。 最该复用的坑： 注入点只能是替换真实二进制（如 TerrariaServer.bin.x86_64）为 wrapper：先起旁路进程再 exec 交棒，保持 PID 1 让面板存活检测通过。只替换不 exec 会让游戏进程起不来。&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 平台 Gaming4Free（翼龙面板游戏 VPS） Wispbyte / Serv00 / Oracle 比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏） 代理内核 sing-box v1.11.0 gost（Wispbyt&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 游戏 VPS 注入代理（封号教训）","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/","description":"在 Gaming4Free 翼龙游戏 VPS 上把真实入口二进制替换成 wrapper，注入 sing-box 多协议——技术成功但违反 ToS 被封号。 最该复用的坑： 注入点只能是替换真实二进制（如 TerrariaServer.bin.x86_64）为 wrapper：先起旁路进程再 exec 交棒，保持 PID 1 让面板存活检测通过。只替换不 exec 会让游戏进程起不来。\u0026hellip;","datePublished":"2026-07-26T14:00:00+08:00","dateModified":"2026-07-26T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/","name":"技术点 · 游戏 VPS 注入代理（封号教训）","position":2}]}</script>
-<meta property="og:title" content="技术点 · 游戏 VPS 注入代理（封号教训）">
-<meta property="og:description" content="在 Gaming4Free 翼龙游戏 VPS 上把真实入口二进制替换成 wrapper，注入 sing-box 多协议——技术成功但违反 ToS 被封号。 最该复用的坑： 注入点只能是替换真实二进制（如 TerrariaServer.bin.x86_64）为 wrapper：先起旁路进程再 exec 交棒，保持 PID 1 让面板存活检测通过。只替换不 exec 会让游戏进程起不来。&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/","description":"选型项 选定 落选 选型依据 平台 Gaming4Free（翼龙面板游戏 VPS） Wispbyte / Serv00 / Oracle 比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏） 代理内核 sing-box v1.11.0 gost（Wispbyt\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/","name":"技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）","position":2}]}</script>
+<meta property="og:title" content="技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 平台 Gaming4Free（翼龙面板游戏 VPS） Wispbyte / Serv00 / Oracle 比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏） 代理内核 sing-box v1.11.0 gost（Wispbyt&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/">
-<meta name="twitter:title" content="技术点 · 游戏 VPS 注入代理（封号教训）">
-<meta name="twitter:description" content="在 Gaming4Free 翼龙游戏 VPS 上把真实入口二进制替换成 wrapper，注入 sing-box 多协议——技术成功但违反 ToS 被封号。 最该复用的坑： 注入点只能是替换真实二进制（如 TerrariaServer.bin.x86_64）为 wrapper：先起旁路进程再 exec 交棒，保持 PID 1 让面板存活检测通过。只替换不 exec 会让游戏进程起不来。&amp;hellip;">
+<meta name="twitter:title" content="技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 平台 Gaming4Free（翼龙面板游戏 VPS） Wispbyte / Serv00 / Oracle 比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏） 代理内核 sing-box v1.11.0 gost（Wispbyt&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 游戏 VPS 注入代理（封号教训）</h1>
+    <h1 class="article-title">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-26</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,51 @@
   
 
   <div class="article-content">
-    <p>在 Gaming4Free 翼龙游戏 VPS 上把真实入口二进制替换成 wrapper，注入 sing-box 多协议——技术成功但违反 ToS 被封号。</p>
-<p>最该复用的坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平台</td>
+<td><strong>Gaming4Free（翼龙面板游戏 VPS）</strong></td>
+<td>Wispbyte / Serv00 / Oracle</td>
+<td>比 Wispbyte 大方 5 倍、可多开端口铺多协议（但<strong>只适合真玩游戏</strong>）</td>
+</tr>
+<tr>
+<td>代理内核</td>
+<td><strong>sing-box v1.11.0</strong></td>
+<td>gost（Wispbyte 方案）</td>
+<td>单二进制、无依赖、免 root、内置 SS/VLESS/Hysteria2 多协议，适合非 root 容器（T1）</td>
+</tr>
+<tr>
+<td>注入点</td>
+<td><strong>替换真实二进制 <code>TerrariaServer.bin.x86_64</code> 为 wrapper</strong></td>
+<td>MOTD 变量 / Console 命令 / <code>.real</code> 改名</td>
+<td>MOTD/Console/原 wrapper 均未被调用，只有替换真实入口二进制才生效（T1 实测）</td>
+</tr>
+<tr>
+<td>文件传输</td>
+<td><strong>SFTP（端口 2022，FileZilla）</strong></td>
+<td>网页 Console 粘贴</td>
+<td>网页 Console 多行粘贴被吞、不支持 Ctrl+C，SFTP 上传文件再执行更稳（T1）</td>
+</tr>
+<tr>
+<td>续约</td>
+<td><strong><code>g4f_renew.py</code>（cURL Cookie 重放 Extend 按钮）</strong></td>
+<td>标准 Pterodactyl API</td>
+<td>标准 API 只有 start/stop/restart，无延长租约端点（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>注入点只能是替换真实二进制（如 TerrariaServer.bin.x86_64）为 wrapper：先起旁路进程再 exec 交棒，保持 PID 1 让面板存活检测通过。只替换不 exec 会让游戏进程起不来。</li>
-<li>受限非 root 容器选单静态二进制 sing-box（免依赖、免 root、内置多协议）；端口须在面板 Allocations 申请才通外网。</li>
-<li>网页 Console 多行粘贴被吞，一律用 SFTP（端口 2022）上传脚本再执行。</li>
-</ol>
-<p>下一步：这套入口替换注入技巧改用到 Wispbyte/Serv00/Oracle 等允许背景进程的免费平台，别再碰游戏 VPS。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-26-techpoint-gaming4free-singbox</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=69</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=88</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>注入链路（最终成功写法）</strong>：把真实二进制 <code>TerrariaServer.bin.x86_64</code>（6MB）改名为 <code>.real</code>，新建同名 shell wrapper——先后台注入 <code>deploy_sing-box.sh</code>（拉起 sing-box 三协议），再用 <code>exec</code> 交棒真实二进制，保持 PID 1 语义让面板存活检测正常（T1）。</li>
+<li><strong>三协议端口</strong>：SS <code>13986</code> / VLESS <code>13987</code> / Hysteria2 <code>13988</code>；端口须在面板 Allocations 申请才能通外网（T1）。…</li>
 </ol>
 
   </div>
@@ -217,20 +247,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · phpBB 子目录论坛挂 MCP</span>
+        <span class="post-nav-card__title">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · GitHub Actions 自动抢注监控</span>
+        <span class="post-nav-card__title">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

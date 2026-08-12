@@ -33,12 +33,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="在免费 Wispbyte VPS（Pterodactyl 容器，非 root、单端口）上用 go-gost 单二进制跑起一个 SOCKS5 代理，给开发资源加速。 最该复用的三点： 受限容器优先选单二进制：非 root 下编译型（3proxy）和一键脚本都跑不了，只有「上传预编译单二进制 + 直接 nohup 跑」不依赖 root。把是否需要 root/编译作为第一道过滤网。 2&amp;hellip;.">
+<meta name="description" content="选型项 选定 落选 依据 免费 VPS 平台 Wispbyte（Pterodactyl 容器） Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban） Wispbyte 允许自定义 Startup Command 写 /bin/sh，无需替换二进制（T1） 代理服&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · wispbyte-gost","url":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/","description":"在免费 Wispbyte VPS（Pterodactyl 容器，非 root、单端口）上用 go-gost 单二进制跑起一个 SOCKS5 代理，给开发资源加速。 最该复用的三点： 受限容器优先选单二进制：非 root 下编译型（3proxy）和一键脚本都跑不了，只有「上传预编译单二进制 + 直接 nohup 跑」不依赖 root。把是否需要 root/编译作为第一道过滤网。 2\u0026hellip;.","datePublished":"2026-07-25T14:00:00+08:00","dateModified":"2026-07-25T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · wispbyte-gost","url":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/","description":"选型项 选定 落选 依据 免费 VPS 平台 Wispbyte（Pterodactyl 容器） Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban） Wispbyte 允许自定义 Startup Command 写 /bin/sh，无需替换二进制（T1） 代理服\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/","name":"技术点 · wispbyte-gost","position":2}]}</script>
 <meta property="og:title" content="技术点 · wispbyte-gost">
-<meta property="og:description" content="在免费 Wispbyte VPS（Pterodactyl 容器，非 root、单端口）上用 go-gost 单二进制跑起一个 SOCKS5 代理，给开发资源加速。 最该复用的三点： 受限容器优先选单二进制：非 root 下编译型（3proxy）和一键脚本都跑不了，只有「上传预编译单二进制 + 直接 nohup 跑」不依赖 root。把是否需要 root/编译作为第一道过滤网。 2&amp;hellip;.">
+<meta property="og:description" content="选型项 选定 落选 依据 免费 VPS 平台 Wispbyte（Pterodactyl 容器） Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban） Wispbyte 允许自定义 Startup Command 写 /bin/sh，无需替换二进制（T1） 代理服&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/">
 <meta name="twitter:title" content="技术点 · wispbyte-gost">
-<meta name="twitter:description" content="在免费 Wispbyte VPS（Pterodactyl 容器，非 root、单端口）上用 go-gost 单二进制跑起一个 SOCKS5 代理，给开发资源加速。 最该复用的三点： 受限容器优先选单二进制：非 root 下编译型（3proxy）和一键脚本都跑不了，只有「上传预编译单二进制 + 直接 nohup 跑」不依赖 root。把是否需要 root/编译作为第一道过滤网。 2&amp;hellip;.">
+<meta name="twitter:description" content="选型项 选定 落选 依据 免费 VPS 平台 Wispbyte（Pterodactyl 容器） Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban） Wispbyte 允许自定义 Startup Command 写 /bin/sh，无需替换二进制（T1） 代理服&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -175,7 +175,7 @@
     <h1 class="article-title">技术点 · wispbyte-gost</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-25</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,63 @@
   
 
   <div class="article-content">
-    <p>在免费 Wispbyte VPS（Pterodactyl 容器，非 root、单端口）上用 go-gost 单二进制跑起一个 SOCKS5 代理，给开发资源加速。</p>
-<p>最该复用的三点：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免费 VPS 平台</td>
+<td><strong>Wispbyte（Pterodactyl 容器）</strong></td>
+<td>Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）</td>
+<td>Wispbyte 允许自定义 Startup Command 写 <code>/bin/sh</code>，无需替换二进制（T1）</td>
+</tr>
+<tr>
+<td>代理服务端</td>
+<td><strong>go-gost v3.2.6 单二进制 SOCKS5</strong></td>
+<td>sing-box、3proxy</td>
+<td>单文件、无需 root、一行起、带认证；sing-box 受面板限制放弃（T1 实测）</td>
+</tr>
+<tr>
+<td>部署方式</td>
+<td><strong>Startup Command 持久化 + <code>nohup</code> 后台跑</strong></td>
+<td>一键脚本（需 root 跑不了）</td>
+<td>Pterodactyl 容器非 root，编译型方案全卡；改 Startup 直接拉起二进制最稳（T1）</td>
+</tr>
+<tr>
+<td>认证</td>
+<td><strong>SOCKS5 用户名/密码</strong></td>
+<td>无认证</td>
+<td>公网扫描器狂暴 <code>auth failure</code>，必须改默认弱密码（T1）</td>
+</tr>
+<tr>
+<td>DNS resolver</td>
+<td><strong><code>8.8.8.8:53</code></strong></td>
+<td>系统默认</td>
+<td>明确指定公共解析器，避免某些免费环境默认 resolver 不稳（T1）</td>
+</tr>
+<tr>
+<td>客户端</td>
+<td><strong>FIclash（Clash.Meta 内核）</strong></td>
+<td>V2rayN（SOCKS5 认证支持差）、魔改 Clash Verge（核心起不来）</td>
+<td>原生支持 SOCKS5 认证，复用同一 yaml 可靠（T1 实测）</td>
+</tr>
+<tr>
+<td>上传通道</td>
+<td><strong>SFTP（FileZilla，端口 2022）</strong></td>
+<td>网页 Console 粘贴</td>
+<td>网页 Console 多行粘贴被吞、不支持 Ctrl+C，SFTP 上传最稳（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>受限容器优先选单二进制：非 root 下编译型（3proxy）和一键脚本都跑不了，只有「上传预编译单二进制 + 直接 nohup 跑」不依赖 root。把是否需要 root/编译作为第一道过滤网。</li>
-<li>部署走 Startup Command 持久化 + SFTP 上传：网页 Console 多行粘贴被吞、不支持 Ctrl+C，所有脚本先在本地写好用 SFTP（端口 2022）传上去；Startup 固化启动命令，容器重启自动拉起。</li>
-<li>免费机房 IP 被流媒体拉黑是通病：YouTube 打不开先分两层定位——VPS 本地回环能通、经代理被掐，就是 IP 封禁而非配置错。免费代理定位是「开发加速」（GitHub/pypi），不是流媒体解锁；别用默认弱密码，公网扫描器会狂暴爆破。</li>
-</ol>
-<p>下一步：把单二进制 + Startup + SFTP 的组合固化，换其他免费 VPS 直接套。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-25-techpoint-wispbyte-gost</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=66</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=85</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>拿到 shell 的方式</strong>（T1）：Wispbyte 面板允许把 <strong>Startup Command</strong> 写成 <code>/bin/sh</code>，网页 Console 也能用（但多行粘贴不友好）。这让&quot;改启动命令拿交互 shell&quot;成为可能——这是它区别于 Gaming4Free（锁 shell、需替换二进制注入）的关键。</li>
+<li><strong>单二进制部署 SOCKS5</strong>（T1，核心流程）：…</li>
 </ol>
 
   </div>
@@ -217,20 +259,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · 无锡58爬虫</span>
+        <span class="post-nav-card__title">技术点 · hermes-windows</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260724工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260724工作总结</span>
+        <span class="post-nav-card__title">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

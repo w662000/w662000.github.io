@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 主力资金流向看板8850改造 | W662000&#39;s Blog</title>
+  <title>技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 主力资金流向看板8850改造" />
+<meta property="og:title" content="技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把东方财富「主力资金流向」动态看板本地化常驻，并做多源冗余降级的一套管路。 最该复用的点： 同源代理：前端只改一处 host:&amp;quot;&amp;quot; 走本地，后端加 /api/qt/* 转发真源（60s 缓存+JSONP 透传），原版 UI 一字不改就本地化，绕开跨域与风控。 判定「接口被封」前先换同站子域测——本机 push2/push2his 全挂，但 push2delay 全通，漏测子域&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 数据接入方式 同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;） 前端直连东财 浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测） 主数据源 host push2delay.eastmoney.com push2 / `p&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 主力资金流向看板8850改造","url":"https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/","description":"把东方财富「主力资金流向」动态看板本地化常驻，并做多源冗余降级的一套管路。 最该复用的点： 同源代理：前端只改一处 host:\u0026quot;\u0026quot; 走本地，后端加 /api/qt/* 转发真源（60s 缓存+JSONP 透传），原版 UI 一字不改就本地化，绕开跨域与风控。 判定「接口被封」前先换同站子域测——本机 push2/push2his 全挂，但 push2delay 全通，漏测子域\u0026hellip;","datePublished":"2026-08-07T14:00:00+08:00","dateModified":"2026-08-07T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/","name":"技术点 · 主力资金流向看板8850改造","position":2}]}</script>
-<meta property="og:title" content="技术点 · 主力资金流向看板8850改造">
-<meta property="og:description" content="把东方财富「主力资金流向」动态看板本地化常驻，并做多源冗余降级的一套管路。 最该复用的点： 同源代理：前端只改一处 host:&amp;quot;&amp;quot; 走本地，后端加 /api/qt/* 转发真源（60s 缓存+JSONP 透传），原版 UI 一字不改就本地化，绕开跨域与风控。 判定「接口被封」前先换同站子域测——本机 push2/push2his 全挂，但 push2delay 全通，漏测子域&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案","url":"https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/","description":"选型项 选定 落选 依据 数据接入方式 同源代理（服务端出网 + 前端走 host:\u0026quot;\u0026quot;） 前端直连东财 浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测） 主数据源 host push2delay.eastmoney.com push2 / `p\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/","name":"技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案","position":2}]}</script>
+<meta property="og:title" content="技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案">
+<meta property="og:description" content="选型项 选定 落选 依据 数据接入方式 同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;） 前端直连东财 浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测） 主数据源 host push2delay.eastmoney.com push2 / `p&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/">
-<meta name="twitter:title" content="技术点 · 主力资金流向看板8850改造">
-<meta name="twitter:description" content="把东方财富「主力资金流向」动态看板本地化常驻，并做多源冗余降级的一套管路。 最该复用的点： 同源代理：前端只改一处 host:&amp;quot;&amp;quot; 走本地，后端加 /api/qt/* 转发真源（60s 缓存+JSONP 透传），原版 UI 一字不改就本地化，绕开跨域与风控。 判定「接口被封」前先换同站子域测——本机 push2/push2his 全挂，但 push2delay 全通，漏测子域&amp;hellip;">
+<meta name="twitter:title" content="技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案">
+<meta name="twitter:description" content="选型项 选定 落选 依据 数据接入方式 同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;） 前端直连东财 浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测） 主数据源 host push2delay.eastmoney.com push2 / `p&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 主力资金流向看板8850改造</h1>
+    <h1 class="article-title">技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-07</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,22 +195,62 @@
   
 
   <div class="article-content">
-    <p>把东方财富「主力资金流向」动态看板本地化常驻，并做多源冗余降级的一套管路。</p>
-<p>最该复用的点：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据接入方式</td>
+<td><strong>同源代理（服务端出网 + 前端走 <code>host:&quot;&quot;</code>）</strong></td>
+<td>前端直连东财</td>
+<td>浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测）</td>
+</tr>
+<tr>
+<td>主数据源 host</td>
+<td><strong><code>push2delay.eastmoney.com</code></strong></td>
+<td><code>push2</code> / <code>push2his</code></td>
+<td>本机环境 <code>push2</code>/<code>push2his</code> 被应用层风控断流，<strong>换子域后直连通</strong>——判定「全封」是漏测子域的误判（T1）</td>
+</tr>
+<tr>
+<td>备用数据源</td>
+<td><strong>akshare 走 sina 系接口</strong></td>
+<td>akshare 走东财 push2 系</td>
+<td>akshare 凡绕东财 push2 的接口全挂（ProxyError），走 sina 的直连可达（T1 逐个实测）</td>
+</tr>
+<tr>
+<td>监听栈</td>
+<td><strong>双栈（bind <code>::</code> + 关 <code>IPV6_V6ONLY</code>）</strong></td>
+<td>仅 IPv4</td>
+<td>浏览器把 <code>127.0.0.1</code> 解析成 <code>::1</code>，只绑 IPv4 会转圈超时（T1）</td>
+</tr>
+<tr>
+<td>进程模型</td>
+<td><strong><code>ThreadingTCPServer</code></strong></td>
+<td>单线程 BaseHTTP</td>
+<td>多栏目并发请求下单线程会串行阻塞（T1）</td>
+</tr>
+<tr>
+<td>favicon 交付</td>
+<td><strong>base64 内联 data URI</strong></td>
+<td>独立 <code>.svg</code> 文件引用</td>
+<td>简易 python 静态服务给 <code>.svg</code> 返回 <code>application/octet-stream</code>，浏览器不渲染（T1）</td>
+</tr>
+<tr>
+<td>启动器编码</td>
+<td><strong>GBK + CRLF + 无 BOM，回显纯 ASCII</strong></td>
+<td>UTF-8 / 带中文回显</td>
+<td>中文 Windows cmd 下 UTF-8 无 BOM 在开头语法崩溃（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>同源代理：前端只改一处 host:&quot;&quot; 走本地，后端加 /api/qt/* 转发真源（60s 缓存+JSONP 透传），原版 UI 一字不改就本地化，绕开跨域与风控。</li>
-<li>判定「接口被封」前先换同站子域测——本机 push2/push2his 全挂，但 push2delay 全通，漏测子域会误判「东财全封」。</li>
-<li>降级链按「同构」设计：主源 push2delay 挂了自动切 akshare（sina 系），输出形状对齐 {f12,f14,f62}，前端零改；分时K线无等价源就优雅空图，不硬凑。</li>
-<li>双栈监听（bind &lsquo;::&rsquo; + 关 IPV6_V6ONLY）解决浏览器把 127.0.0.1 解析成 ::1 的超时；开页面加 &ndash;no-proxy-server 绕过 Clash 截胡回环。</li>
-</ol>
-<p>下一步：补一份各数据源 host 可用性清单，按 host 而非按库记录。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=88</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=107</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>判定「某接口全封」前先换子域测</strong>：本机 <code>push2</code>/<code>push2his</code> 全挂，但 <code>push2delay</code> 全通——只测前两个就下「东财资金流被封」是实打实的误判。任何「流量被断」的结论，都先在同站其他子域上验证一次（T1）。…</li>
 </ol>
 
   </div>
@@ -218,20 +258,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260807工作总结/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">每日工作总结 · 2026-08-07</span>
+        <span class="post-nav-card__title">技术点 · AutoClaw 2026-08-07</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260806工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">每日工作总结 · 2026-08-06</span>
+        <span class="post-nav-card__title">技术点 · AutoClaw 2026-08-08</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

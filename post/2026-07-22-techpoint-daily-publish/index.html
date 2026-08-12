@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 每日分发流水线 | W662000&#39;s Blog</title>
+  <title>技术点 · daily-publish | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 每日分发流水线" />
+<meta property="og:title" content="技术点 · daily-publish" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="搭了一条「一份内容 → 多端自动分发」的流水线：GitHub Pages 博客、语雀、Gridea 浓缩版定时自动发，重点是幂等、限流和失败兜底。 最该复用的三点： API 成功判定按真实响应写：语雀 v2 成功响应里没有 status 字段，结构是 {data,meta}。先打印一次真实成功响应再写判据（HTTP 200 且 data.id 存在），别按想当然字段名写，否则发了成功&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 博客端 GitHub Pages + Jekyll（daily-note-blog） Gridea Pro 单独承担 push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1） 知识库端 语雀 v2 API 网页手工粘贴 有开放 API，可脚本化（T0 有官&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 每日分发流水线","url":"https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/","description":"搭了一条「一份内容 → 多端自动分发」的流水线：GitHub Pages 博客、语雀、Gridea 浓缩版定时自动发，重点是幂等、限流和失败兜底。 最该复用的三点： API 成功判定按真实响应写：语雀 v2 成功响应里没有 status 字段，结构是 {data,meta}。先打印一次真实成功响应再写判据（HTTP 200 且 data.id 存在），别按想当然字段名写，否则发了成功\u0026hellip;","datePublished":"2026-07-22T14:00:00+08:00","dateModified":"2026-07-22T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/","name":"技术点 · 每日分发流水线","position":2}]}</script>
-<meta property="og:title" content="技术点 · 每日分发流水线">
-<meta property="og:description" content="搭了一条「一份内容 → 多端自动分发」的流水线：GitHub Pages 博客、语雀、Gridea 浓缩版定时自动发，重点是幂等、限流和失败兜底。 最该复用的三点： API 成功判定按真实响应写：语雀 v2 成功响应里没有 status 字段，结构是 {data,meta}。先打印一次真实成功响应再写判据（HTTP 200 且 data.id 存在），别按想当然字段名写，否则发了成功&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · daily-publish","url":"https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/","description":"选型项 选定 落选 依据 博客端 GitHub Pages + Jekyll（daily-note-blog） Gridea Pro 单独承担 push 即自动构建上线，彻底消灭\u0026quot;手动点同步\u0026quot;（T1） 知识库端 语雀 v2 API 网页手工粘贴 有开放 API，可脚本化（T0 有官\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/","name":"技术点 · daily-publish","position":2}]}</script>
+<meta property="og:title" content="技术点 · daily-publish">
+<meta property="og:description" content="选型项 选定 落选 依据 博客端 GitHub Pages + Jekyll（daily-note-blog） Gridea Pro 单独承担 push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1） 知识库端 语雀 v2 API 网页手工粘贴 有开放 API，可脚本化（T0 有官&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/">
-<meta name="twitter:title" content="技术点 · 每日分发流水线">
-<meta name="twitter:description" content="搭了一条「一份内容 → 多端自动分发」的流水线：GitHub Pages 博客、语雀、Gridea 浓缩版定时自动发，重点是幂等、限流和失败兜底。 最该复用的三点： API 成功判定按真实响应写：语雀 v2 成功响应里没有 status 字段，结构是 {data,meta}。先打印一次真实成功响应再写判据（HTTP 200 且 data.id 存在），别按想当然字段名写，否则发了成功&amp;hellip;">
+<meta name="twitter:title" content="技术点 · daily-publish">
+<meta name="twitter:description" content="选型项 选定 落选 依据 博客端 GitHub Pages + Jekyll（daily-note-blog） Gridea Pro 单独承担 push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1） 知识库端 语雀 v2 API 网页手工粘贴 有开放 API，可脚本化（T0 有官&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 每日分发流水线</h1>
+    <h1 class="article-title">技术点 · daily-publish</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-22</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,75 @@
   
 
   <div class="article-content">
-    <p>搭了一条「一份内容 → 多端自动分发」的流水线：GitHub Pages 博客、语雀、Gridea 浓缩版定时自动发，重点是幂等、限流和失败兜底。</p>
-<p>最该复用的三点：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>博客端</td>
+<td><strong>GitHub Pages + Jekyll（<code>daily-note-blog</code>）</strong></td>
+<td>Gridea Pro 单独承担</td>
+<td>push 即自动构建上线，彻底消灭&quot;手动点同步&quot;（T1）</td>
+</tr>
+<tr>
+<td>知识库端</td>
+<td><strong>语雀 v2 API</strong></td>
+<td>网页手工粘贴</td>
+<td>有开放 API，可脚本化（T0 有官方 API；限流行为 T1 实测）</td>
+</tr>
+<tr>
+<td>浓缩版端</td>
+<td><strong>Gridea Pro（写文件）</strong></td>
+<td>直接调 API</td>
+<td>Gridea 无开放发布 API，只能写 <code>posts/*.md</code> 待用户点同步（T1）</td>
+</tr>
+<tr>
+<td>说说端</td>
+<td><strong>Ech0（本地 Docker）</strong></td>
+<td>—</td>
+<td>7-23 已从自动发布链路<strong>移除</strong>，仅保留本地运行（T1）</td>
+</tr>
+<tr>
+<td>语雀调度位置</td>
+<td><strong>本机 23:35 定时任务</strong></td>
+<td>GitHub Actions 云端 23:59</td>
+<td>云端 Actions 定时有十几分钟延迟，且早期误判为&quot;未发布&quot;；本机直发更可控（T1，7-24 日志）</td>
+</tr>
+<tr>
+<td>传输库</td>
+<td><strong>裸 <code>requests.post</code> + 强制不走代理</strong></td>
+<td><code>requests.Session</code></td>
+<td>Session 在该环境下会吞请求返回空；环境代理会导致连不上语雀（T1）</td>
+</tr>
+<tr>
+<td>版本与推送</td>
+<td><strong>git + <code>gh</code> CLI</strong></td>
+<td>自建 API 上传</td>
+<td>内容天然适合版本化；push 失败不丢内容（T1）</td>
+</tr>
+<tr>
+<td>脚本语言</td>
+<td><strong>Python</strong></td>
+<td>PowerShell/bat</td>
+<td>跨端 API 调用 + 文件生成 + 幂等逻辑更好写（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>API 成功判定按真实响应写：语雀 v2 成功响应里没有 status 字段，结构是 {data,meta}。先打印一次真实成功响应再写判据（HTTP 200 且 data.id 存在），别按想当然字段名写，否则发了成功却报失败。</li>
-<li>限流靠收敛通道而非加重试：本地云端双发会顶满语雀 token 导致连续 429。把语雀收敛到唯一发布通道，主脚本默认跳过、靠幂等保证重复触发无害，而不是加重试加剧限流。</li>
-<li>push 失败不致命：内容先落本地仓库，git 推送失败只提示不抛错，网络恢复下次自动补齐；离线兜底让不稳定网络下也能长期无人值守。</li>
-</ol>
-<p>下一步：把分发流水线抽成通用脚本，新平台照「有 API 直发 / 吃文件则生成 / 价值低就移除」三档接入。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-22-techpoint-daily-publish</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=64</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=83</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>API 成功判定必须按真实响应结构写</strong>（T1，踩过两次）：
+<ul>
+<li>语雀 v2 API <strong>成功响应里没有 <code>status</code> 字段</strong>，结构是 <code>{&quot;data&quot;:{...},&quot;meta&quot;:{...}}</code>；</li>
+<li>早期按 <code>status</code> 判定 → 明明发布成功却报 FAIL；</li>
+<li>正确判据：<strong>HTTP 200 且 <code>data.id</code> 存在</strong>；</li>
+<li>通用教训：<strong>先把一次真实成功响应打印出来，再写判定逻辑</strong>，不要按想当然的字段名写。…</li>
+</ul>
+</li>
 </ol>
 
   </div>
@@ -217,20 +271,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260722-每日工作总结多端自动发布系统/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · 每日工作总结多端自动发布系统</span>
+        <span class="post-nav-card__title">技术点 · hermes-docker</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260721-hermes-webui本地Docker两容器部署/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · hermes-webui 本地 Docker 两容器部署</span>
+        <span class="post-nav-card__title">技术点 · hermes-windows</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 联想N50-80双系统部署实操 | W662000&#39;s Blog</title>
+  <title>技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 联想N50-80双系统部署实操" />
+<meta property="og:title" content="技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把老 N50-80 实操装成 Win10 + Debian 双系统、共享 Hermes 数据的一次落地记录。 可复用的实操坑： 分区先扣 EFI（512MB）再切其余，曾漏扣导致 Debian 只剩约 11.5G 偏紧；最终 Win60G / Debian18G / 共享40G NTFS。 先 Win 后 Deb，Debian 装整盘自动把 Win10 加进 grub 菜单；&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 常开系统（跑 agent） Debian minimal Ubuntu Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T1 社区实测） 应急/兼容系统 Win10 Win7 Nod&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 联想N50-80双系统部署实操","url":"https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/","description":"把老 N50-80 实操装成 Win10 + Debian 双系统、共享 Hermes 数据的一次落地记录。 可复用的实操坑： 分区先扣 EFI（512MB）再切其余，曾漏扣导致 Debian 只剩约 11.5G 偏紧；最终 Win60G / Debian18G / 共享40G NTFS。 先 Win 后 Deb，Debian 装整盘自动把 Win10 加进 grub 菜单；\u0026hellip;","datePublished":"2026-08-05T14:00:00+08:00","dateModified":"2026-08-05T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/","name":"技术点 · 联想N50-80双系统部署实操","position":2}]}</script>
-<meta property="og:title" content="技术点 · 联想N50-80双系统部署实操">
-<meta property="og:description" content="把老 N50-80 实操装成 Win10 + Debian 双系统、共享 Hermes 数据的一次落地记录。 可复用的实操坑： 分区先扣 EFI（512MB）再切其余，曾漏扣导致 Debian 只剩约 11.5G 偏紧；最终 Win60G / Debian18G / 共享40G NTFS。 先 Win 后 Deb，Debian 装整盘自动把 Win10 加进 grub 菜单；&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）","url":"https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/","description":"选型项 选定 落选 选型依据 常开系统（跑 agent） Debian minimal Ubuntu Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T1 社区实测） 应急/兼容系统 Win10 Win7 Nod\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/","name":"技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）","position":2}]}</script>
+<meta property="og:title" content="技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 常开系统（跑 agent） Debian minimal Ubuntu Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T1 社区实测） 应急/兼容系统 Win10 Win7 Nod&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/">
-<meta name="twitter:title" content="技术点 · 联想N50-80双系统部署实操">
-<meta name="twitter:description" content="把老 N50-80 实操装成 Win10 + Debian 双系统、共享 Hermes 数据的一次落地记录。 可复用的实操坑： 分区先扣 EFI（512MB）再切其余，曾漏扣导致 Debian 只剩约 11.5G 偏紧；最终 Win60G / Debian18G / 共享40G NTFS。 先 Win 后 Deb，Debian 装整盘自动把 Win10 加进 grub 菜单；&amp;hellip;">
+<meta name="twitter:title" content="技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 常开系统（跑 agent） Debian minimal Ubuntu Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T1 社区实测） 应急/兼容系统 Win10 Win7 Nod&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 联想N50-80双系统部署实操</h1>
+    <h1 class="article-title">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-05</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,23 +195,54 @@
   
 
   <div class="article-content">
-    <p>把老 N50-80 实操装成 Win10 + Debian 双系统、共享 Hermes 数据的一次落地记录。</p>
-<p>可复用的实操坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>常开系统（跑 agent）</td>
+<td><strong>Debian minimal</strong></td>
+<td>Ubuntu</td>
+<td>Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T1 社区实测）</td>
+</tr>
+<tr>
+<td>应急/兼容系统</td>
+<td><strong>Win10</strong></td>
+<td>Win7</td>
+<td>Node18 / Py3.10 起不支持 Win7，Hermes 安装器需要这些版本；Win7 已停更（T0 官方）</td>
+</tr>
+<tr>
+<td>共享盘格式</td>
+<td><strong>NTFS</strong></td>
+<td>exFAT</td>
+<td>双系统原生读写；NTFS 有权限位（uid/gid）适配 Linux 用户体系，exFAT 无（T1）</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>原装 4GB（建议加 DDR3L 到 8G）</td>
+<td>—</td>
+<td>N50-80 有 2 个 SO-DIMM 槽，DDR3L 1.35V 二手约 ¥20–40（T1）</td>
+</tr>
+<tr>
+<td>启动盘工具</td>
+<td><strong>Ventoy</strong></td>
+<td>反复格 U 盘</td>
+<td>多 ISO 共存，免反复写盘（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>分区先扣 EFI（512MB）再切其余，曾漏扣导致 Debian 只剩约 11.5G 偏紧；最终 Win60G / Debian18G / 共享40G NTFS。</li>
-<li>先 Win 后 Deb，Debian 装整盘自动把 Win10 加进 grub 菜单；装时只勾 SSH+标准工具、不装桌面最省。</li>
-<li>共享 NTFS 用 LABEL 挂载带 uid/gid；关快速启动解锁卷；本地时间对齐 timedatectl set-local-rtc 1，否则双系统时间打架、证书日志错乱。</li>
-<li>代码留系统盘、数据软链共享盘；一次只启一系统防 SQLite 锁。</li>
-<li>清理 Hermes 进程锁要按完整路径过滤（wmic 按 ExecutablePath like &lsquo;%win-unpacked%Hermes.exe&rsquo;），taskkill /IM 不分大小写会误杀网关进程。</li>
-</ol>
-<p>下一步：等内存到货再验证常开稳定性。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=87</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=106</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>双系统安装顺序</strong>：先 Win10 后 Debian。反了 Windows 会覆盖 grub 导致 Debian 不可引导——硬规则，非建议（T1）。</li>
+<li><strong>grub 接管引导</strong>：Debian 装到整盘 <code>/dev/sda</code>，自动识别 Win10 加进菜单（T1）。</li>
+<li><strong>共享盘 fstab 自动挂</strong>：用 <code>LABEL=SHARED</code> 比 <code>/dev/sda4</code> 稳（设备名可能变）；挂载必须带 <code>uid=1000,gid=1000</code>，否则 Hermes 权限不足读不了配置（T1）。</li>
+<li><strong>代码/数据分离共享</strong>：Hermes 代码各留系统盘，只把数据子目录（sessions/skills/memory/config）真身放共享盘、两边软链（Debian 用 <code>ln -s</code>，Win 用 <code>mklink /J</code> junction）（T1）。</li>
+<li><strong>关 Windows 快速启动</strong>：否则 Win 关机是休眠、NTFS 锁卷、Debian 只读，整套方案废（T1）。…</li>
 </ol>
 
   </div>
@@ -219,20 +250,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260805-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · 联想N50-80双系统部署Win10与Debian共享Hermes数据 · 2026-08-05</span>
+        <span class="post-nav-card__title">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · 联想N50-80双系统部署清单</span>
+        <span class="post-nav-card__title">技术点 · AutoClaw 2026-08-07</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

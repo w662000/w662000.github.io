@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · model-speed-radar 看板收尾与自动发布 | W662000&#39;s Blog</title>
+  <title>技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · model-speed-radar 看板收尾与自动发布" />
+<meta property="og:title" content="技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 探测进程运行方式 系统级常驻（nohup / 无窗口后台） 框架后台任务句柄 后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现） 探测语言/依赖 Python 标准库，零第三方依赖 requests / FastAPI 等 守护进程要&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · model-speed-radar 看板收尾与自动发布","url":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","description":"这个项目干了啥：给模型测速看板做收尾，并修好一条\u0026quot;一份稿件自动发到多端\u0026quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把\u0026quot;路由级 404（接口不符）\u0026ldquo;和\u0026quot;资源级 404（模型真下线）\u0026ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分\u0026quot;无额度/真限流\u0026rdquo;，免得对\u0026hellip;","datePublished":"2026-08-01T14:00:00+08:00","dateModified":"2026-08-01T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","name":"技术点 · model-speed-radar 看板收尾与自动发布","position":2}]}</script>
-<meta property="og:title" content="技术点 · model-speed-radar 看板收尾与自动发布">
-<meta property="og:description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复","url":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","description":"选型项 选定 落选 依据 探测进程运行方式 系统级常驻（nohup / 无窗口后台） 框架后台任务句柄 后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现） 探测语言/依赖 Python 标准库，零第三方依赖 requests / FastAPI 等 守护进程要\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/","name":"技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复","position":2}]}</script>
+<meta property="og:title" content="技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复">
+<meta property="og:description" content="选型项 选定 落选 依据 探测进程运行方式 系统级常驻（nohup / 无窗口后台） 框架后台任务句柄 后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现） 探测语言/依赖 Python 标准库，零第三方依赖 requests / FastAPI 等 守护进程要&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/">
-<meta name="twitter:title" content="技术点 · model-speed-radar 看板收尾与自动发布">
-<meta name="twitter:description" content="这个项目干了啥：给模型测速看板做收尾，并修好一条&amp;quot;一份稿件自动发到多端&amp;quot;的发布链路。 最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&amp;quot;路由级 404（接口不符）&amp;ldquo;和&amp;quot;资源级 404（模型真下线）&amp;ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&amp;quot;无额度/真限流&amp;rdquo;，免得对&amp;hellip;">
+<meta name="twitter:title" content="技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复">
+<meta name="twitter:description" content="选型项 选定 落选 依据 探测进程运行方式 系统级常驻（nohup / 无窗口后台） 框架后台任务句柄 后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现） 探测语言/依赖 Python 标准库，零第三方依赖 requests / FastAPI 等 守护进程要&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · model-speed-radar 看板收尾与自动发布</h1>
+    <h1 class="article-title">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-01</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,16 +195,63 @@
   
 
   <div class="article-content">
-    <p>这个项目干了啥：给模型测速看板做收尾，并修好一条&quot;一份稿件自动发到多端&quot;的发布链路。</p>
-<p>最该复用的 3 个要点：①常驻探测进程别用框架后台任务句柄，要系统级 nohup 无窗口常驻，否则对话轮次一切换进程就静默消失。②错误必须细分类型——把&quot;路由级 404（接口不符）&ldquo;和&quot;资源级 404（模型真下线）&ldquo;分开，否则会把活着但不接该端点的模型误删；429 还要按业务码再分&quot;无额度/真限流&rdquo;，免得对着没额度的目标无限重试。③多端发布必须单串行且按端分别生成格式：扫描实测 144 秒就别只留 120 秒间隔让下游抢跑；纯 Markdown 平台吃 HTML 会把表格整块崩，必须每端单独出格式；全端成功才归档，且&quot;落盘≠上线&quot;要看渲染产物。</p>
-<p>下一步：把&quot;无源可发却记成功=监控失明&quot;这处缺陷补上非零返回码。</p>
-<hr />
-<p>详细原文请看：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>探测进程运行方式</td>
+<td><strong>系统级常驻（nohup / 无窗口后台）</strong></td>
+<td>框架后台任务句柄</td>
+<td>后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）</td>
+</tr>
+<tr>
+<td>探测语言/依赖</td>
+<td><strong>Python 标准库，零第三方依赖</strong></td>
+<td>requests / FastAPI 等</td>
+<td>守护进程要跨会话常驻、随时被人手动拉起，依赖越少启动失败面越小（T1）</td>
+</tr>
+<tr>
+<td>前端技术</td>
+<td><strong>原生 JS + 轮询（10s）</strong>，无外部库</td>
+<td>框架 + WebSocket</td>
+<td>离线可用、单文件可拷；轮询&quot;有新数据才刷新&quot;避免整页闪（T1）</td>
+</tr>
+<tr>
+<td>错误归类粒度</td>
+<td><strong>细分 <code>endpoint_mismatch</code> / <code>model_gone</code> / 限流 / 无额度</strong></td>
+<td>统一 <code>error</code></td>
+<td>粗归类会把&quot;模型活着但不接这个端点&quot;误判成&quot;模型下线&quot;，直接导致误删条目（T1，栽过两次）</td>
+</tr>
+<tr>
+<td>发布链路时序</td>
+<td><strong>单串行任务，显式依赖</strong></td>
+<td>多任务靠时间间隔隐式串行</td>
+<td>实测扫描要 144s 而间隔只给 120s，下游抢跑 24s，会读到写了一半的收件箱（T1）</td>
+</tr>
+<tr>
+<td>归档策略</td>
+<td><strong>全部目标端成功才归档，任一失败留箱</strong></td>
+<td>无条件归档</td>
+<td>无条件归档会让次日补发扑空，容灾形同虚设（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=74</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=93</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>温和拨测规则写进代码而不是写进文档</strong>（T1）：串行执行、目标间隔 2.5 秒、每目标每轮只发 1 次、撞错立刻停不重试、限流冷却 2 轮、无额度冷却 6 轮、手动触发 5 分钟冷却、端口占用即退出防双实例、重启时距上次不足一个周期先等够再测。<strong>曲线平滑靠&quot;近 N 轮均值&quot;，不靠多打几枪。</strong></li>
+<li><strong>区分&quot;路由级 404&quot;与&quot;资源级 404&quot;</strong>，这是错误归类的核心技术点（T1）：
+<ul>
+<li>生成类探针命中路由级 404（典型响应体 <code>{&quot;detail&quot;:&quot;Not Found&quot;}</code>）→ 归 <code>endpoint_mismatch</code>（接口不符）；</li>
+<li>对话类探针命中 404 → 归 <code>model_gone</code>（真下线）；</li>
+<li>生成类本就无对应端点 → 归 <code>model_gone</code>。…</li>
+</ul>
+</li>
 </ol>
 
   </div>
@@ -216,16 +263,16 @@
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · 模型免费档核实</span>
+        <span class="post-nav-card__title">技术点 · GLM _ 智谱 官方免费档清单（2026-08-01 核对）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260731-项目管理思维工具全景回顾/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · 项目管理思维工具全景回顾（26-07-31）</span>
+        <span class="post-nav-card__title">技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

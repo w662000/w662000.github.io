@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 无锡58爬虫 | W662000&#39;s Blog</title>
+  <title>技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 无锡58爬虫" />
+<meta property="og:title" content="技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="做了无锡 58 同城买房/租房两套爬虫系统，本地 Playwright 抓、经 wrangler 直连 Cloudflare D1 落库，搭云端看板。 最该复用的三点： 反爬令牌靠真浏览器 + 新鲜 fzq_h：带 Cookie 的 urllib 过不了 code=300 验证码网关，必须 Playwright 跨频道热身生成 fzq_h，每区重开浏览器拿干净会话；Playwrigh&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 抓取方式 Playwright 无头 Chromium 纯 urllib/requests 58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执行 JS 生成新鲜 fzq_h 令牌（T1 实测） 数据中转 **本地 &amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 无锡58爬虫","url":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/","description":"做了无锡 58 同城买房/租房两套爬虫系统，本地 Playwright 抓、经 wrangler 直连 Cloudflare D1 落库，搭云端看板。 最该复用的三点： 反爬令牌靠真浏览器 + 新鲜 fzq_h：带 Cookie 的 urllib 过不了 code=300 验证码网关，必须 Playwright 跨频道热身生成 fzq_h，每区重开浏览器拿干净会话；Playwrigh\u0026hellip;","datePublished":"2026-07-25T14:00:00+08:00","dateModified":"2026-07-25T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/","name":"技术点 · 无锡58爬虫","position":2}]}</script>
-<meta property="og:title" content="技术点 · 无锡58爬虫">
-<meta property="og:description" content="做了无锡 58 同城买房/租房两套爬虫系统，本地 Playwright 抓、经 wrangler 直连 Cloudflare D1 落库，搭云端看板。 最该复用的三点： 反爬令牌靠真浏览器 + 新鲜 fzq_h：带 Cookie 的 urllib 过不了 code=300 验证码网关，必须 Playwright 跨频道热身生成 fzq_h，每区重开浏览器拿干净会话；Playwrigh&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）","url":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/","description":"选型项 选定 落选 选型依据 抓取方式 Playwright 无头 Chromium 纯 urllib/requests 58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执行 JS 生成新鲜 fzq_h 令牌（T1 实测） 数据中转 **本地 \u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/","name":"技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）","position":2}]}</script>
+<meta property="og:title" content="技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 抓取方式 Playwright 无头 Chromium 纯 urllib/requests 58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执行 JS 生成新鲜 fzq_h 令牌（T1 实测） 数据中转 **本地 &amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/">
-<meta name="twitter:title" content="技术点 · 无锡58爬虫">
-<meta name="twitter:description" content="做了无锡 58 同城买房/租房两套爬虫系统，本地 Playwright 抓、经 wrangler 直连 Cloudflare D1 落库，搭云端看板。 最该复用的三点： 反爬令牌靠真浏览器 + 新鲜 fzq_h：带 Cookie 的 urllib 过不了 code=300 验证码网关，必须 Playwright 跨频道热身生成 fzq_h，每区重开浏览器拿干净会话；Playwrigh&amp;hellip;">
+<meta name="twitter:title" content="技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 抓取方式 Playwright 无头 Chromium 纯 urllib/requests 58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执行 JS 生成新鲜 fzq_h 令牌（T1 实测） 数据中转 **本地 &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 无锡58爬虫</h1>
+    <h1 class="article-title">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-25</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,62 @@
   
 
   <div class="article-content">
-    <p>做了无锡 58 同城买房/租房两套爬虫系统，本地 Playwright 抓、经 wrangler 直连 Cloudflare D1 落库，搭云端看板。</p>
-<p>最该复用的三点：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抓取方式</td>
+<td><strong>Playwright 无头 Chromium</strong></td>
+<td>纯 urllib/requests</td>
+<td>58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执行 JS 生成新鲜 <code>fzq_h</code> 令牌（T1 实测）</td>
+</tr>
+<tr>
+<td>数据中转</td>
+<td><strong>本地 SQLite <code>local_crawl.db</code></strong></td>
+<td>爬虫直推 Worker</td>
+<td>国内 <code>*.workers.dev</code> 的 POST 被网络拦截；落盘后可离线重放，与网络可达性解耦（T1）</td>
+</tr>
+<tr>
+<td>云端库</td>
+<td><strong>Cloudflare D1（SQLite 协议）</strong></td>
+<td>PostgreSQL/MySQL 托管</td>
+<td>免费、与 Pages/Worker 同生态、SQL 即建即用（T0）</td>
+</tr>
+<tr>
+<td>看板</td>
+<td><strong>Worker + Pages</strong></td>
+<td>自建前端服务器</td>
+<td>静态托管零运维，Worker 做只读查询代理（T0/T1）</td>
+</tr>
+<tr>
+<td>写库通道</td>
+<td><strong><code>wrangler d1 execute --remote --file=import_data.sql</code></strong></td>
+<td>经 Worker API 写</td>
+<td>绕开 POST 拦截，本地生成 SQL 文件后直连 D1（T1）</td>
+</tr>
+<tr>
+<td>Cookie 注入</td>
+<td><strong>原始 <code>Cookie</code> 请求头</strong></td>
+<td><code>http.cookiejar</code></td>
+<td>cookiejar 会吞掉复杂 Cookie 导致鉴权失效（T1）</td>
+</tr>
+<tr>
+<td>Python 运行时</td>
+<td><strong>受管 venv</strong>（已装 playwright）</td>
+<td>系统 python</td>
+<td>避免依赖缺失；路径 <code>C:/Users/Administrator/.workbuddy/binaries/python/envs/default/Scripts/python.exe</code>（T1）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>反爬令牌靠真浏览器 + 新鲜 fzq_h：带 Cookie 的 urllib 过不了 code=300 验证码网关，必须 Playwright 跨频道热身生成 fzq_h，每区重开浏览器拿干净会话；Playwright 实例全程只启一次，否则 asyncio 冲突后续区全跳。</li>
-<li>回传走本地落盘 + wrangler 直连：国内 workers.dev 的 POST 被拦截，数据先落本地 SQLite，再 db_to_sql.py 出单区 SQL，用 wrangler d1 execute &ndash;remote &ndash;file 导入，与网络可达性解耦、可重放。</li>
-<li>分区增量幂等灌库：导入前 DELETE 本区叶子（绝不清全表，否则其他区补好的数据被冲掉），因 import_data.sql 是普通 INSERT 会翻倍；拿到 IP 信誉窗口别先 &ndash;test 探针，直奔目标区否则额度耗光。</li>
-</ol>
-<p>下一步：把「本地 Playwright 抓 + wrangler 回传 + 分区幂等」抽成模板，复刻到其他城市。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-25-techpoint-wuxi-58</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=67</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=86</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong>反爬令牌靠「真浏览器 + 新鲜 <code>fzq_h</code>」</strong>：带 Cookie 的 urllib 已无法过网关；必须 Playwright 跨频道「热身」生成 <code>fzq_h</code>，且每区重开浏览器拿干净会话——冷启动直冲目标频道会被主动验证码墙拦（T1）。…</li>
 </ol>
 
   </div>
@@ -217,20 +258,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260725-免费VPS代理Wispbyte_gost跑通/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">免费 VPS 多协议代理 Wispbyte gost 跑通</span>
+        <span class="post-nav-card__title">技术点 · wispbyte-gost</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · wispbyte-gost</span>
+        <span class="post-nav-card__title">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

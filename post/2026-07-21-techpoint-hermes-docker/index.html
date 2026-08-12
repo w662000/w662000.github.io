@@ -33,12 +33,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把 Hermes Agent 跑成「WebUI 容器 + 执行容器」双容器编排，在受限网络下用国内镜像站和依赖源落地。 最该复用的三点： 跨容器网关心跳失败的排查清单：依赖装没装（aiohttp）→ 开关开没开（API_SERVER_ENABLED=1）→ 监听地址对不对（必须 0.0.0.0，不是 127.0.0.1）→ 两端 API_SERVER_KEY 是否一致。四步缺一不可，&amp;hellip;">
+<meta name="description" content="选型项 选定 落选 依据 部署形态 双容器（WebUI + Agent gateway） 单容器塞两个进程 官方支持路径；两者依赖差异大，混装易互相污染（T1） 容器间通信 Docker bridge 网络 + HTTP 网关 共享 volume / IPC Agent 暴露 Open&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · hermes-docker","url":"https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/","description":"把 Hermes Agent 跑成「WebUI 容器 + 执行容器」双容器编排，在受限网络下用国内镜像站和依赖源落地。 最该复用的三点： 跨容器网关心跳失败的排查清单：依赖装没装（aiohttp）→ 开关开没开（API_SERVER_ENABLED=1）→ 监听地址对不对（必须 0.0.0.0，不是 127.0.0.1）→ 两端 API_SERVER_KEY 是否一致。四步缺一不可，\u0026hellip;","datePublished":"2026-07-21T14:00:00+08:00","dateModified":"2026-07-21T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · hermes-docker","url":"https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/","description":"选型项 选定 落选 依据 部署形态 双容器（WebUI + Agent gateway） 单容器塞两个进程 官方支持路径；两者依赖差异大，混装易互相污染（T1） 容器间通信 Docker bridge 网络 + HTTP 网关 共享 volume / IPC Agent 暴露 Open\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/","name":"技术点 · hermes-docker","position":2}]}</script>
 <meta property="og:title" content="技术点 · hermes-docker">
-<meta property="og:description" content="把 Hermes Agent 跑成「WebUI 容器 + 执行容器」双容器编排，在受限网络下用国内镜像站和依赖源落地。 最该复用的三点： 跨容器网关心跳失败的排查清单：依赖装没装（aiohttp）→ 开关开没开（API_SERVER_ENABLED=1）→ 监听地址对不对（必须 0.0.0.0，不是 127.0.0.1）→ 两端 API_SERVER_KEY 是否一致。四步缺一不可，&amp;hellip;">
+<meta property="og:description" content="选型项 选定 落选 依据 部署形态 双容器（WebUI + Agent gateway） 单容器塞两个进程 官方支持路径；两者依赖差异大，混装易互相污染（T1） 容器间通信 Docker bridge 网络 + HTTP 网关 共享 volume / IPC Agent 暴露 Open&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/">
 <meta name="twitter:title" content="技术点 · hermes-docker">
-<meta name="twitter:description" content="把 Hermes Agent 跑成「WebUI 容器 + 执行容器」双容器编排，在受限网络下用国内镜像站和依赖源落地。 最该复用的三点： 跨容器网关心跳失败的排查清单：依赖装没装（aiohttp）→ 开关开没开（API_SERVER_ENABLED=1）→ 监听地址对不对（必须 0.0.0.0，不是 127.0.0.1）→ 两端 API_SERVER_KEY 是否一致。四步缺一不可，&amp;hellip;">
+<meta name="twitter:description" content="选型项 选定 落选 依据 部署形态 双容器（WebUI + Agent gateway） 单容器塞两个进程 官方支持路径；两者依赖差异大，混装易互相污染（T1） 容器间通信 Docker bridge 网络 + HTTP 网关 共享 volume / IPC Agent 暴露 Open&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -175,7 +175,7 @@
     <h1 class="article-title">技术点 · hermes-docker</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-21</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,42 +195,86 @@
   
 
   <div class="article-content">
-    <p>把 Hermes Agent 跑成「WebUI 容器 + 执行容器」双容器编排，在受限网络下用国内镜像站和依赖源落地。</p>
-<p>最该复用的三点：</p>
-<ol>
-<li>跨容器网关心跳失败的排查清单：依赖装没装（aiohttp）→ 开关开没开（API_SERVER_ENABLED=1）→ 监听地址对不对（必须 0.0.0.0，不是 127.0.0.1）→ 两端 API_SERVER_KEY 是否一致。四步缺一不可，按这个顺序查就行。</li>
-<li>环境变量要落 compose 的 environment: 而非只写 .env 文件——调用层读 os.environ、检测层读 .env，路径不一致会「配了 key 却 401」。切 provider 时还要清掉残留 base_url，否则套到新 provider 上同样 401。</li>
-<li>改 compose 配置只用 docker compose restart，禁用 &ndash;force-recreate：recreate 会触发入口脚本全量重跑（rsync 1.2G + 重装 95+ 包），耗时近 1 小时；挂载路径 Windows 下漏写盘符还会静默造垃圾目录。</li>
-</ol>
-<p>下一步：把这套双容器编排做成可复用模板，加环境变量只 restart。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-21-techpoint-hermes-docker</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=63</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=82</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
-</ol>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署形态</td>
+<td><strong>双容器（WebUI + Agent gateway）</strong></td>
+<td>单容器塞两个进程</td>
+<td>官方支持路径；两者依赖差异大，混装易互相污染（T1）</td>
+</tr>
+<tr>
+<td>容器间通信</td>
+<td><strong>Docker bridge 网络 + HTTP 网关</strong></td>
+<td>共享 volume / IPC</td>
+<td>Agent 暴露 OpenAI 兼容 <code>/v1</code> 接口，WebUI 当普通 provider 调用，解耦（T1）</td>
+</tr>
+<tr>
+<td>源码共享方式</td>
+<td><strong>命名卷（named volume）由 Agent 镜像填充</strong></td>
+<td>直接 bind mount 宿主目录</td>
+<td>Agent 源码不在 WebUI 仓库里，必须由 Agent 镜像的 <code>/opt/hermes</code> 首启填充卷（T1）</td>
+</tr>
+<tr>
+<td>配置目录</td>
+<td><strong>bind mount 宿主 <code>~/.hermes</code></strong></td>
+<td>匿名卷</td>
+<td>配置要能在宿主直接编辑、要能跨重建存活（T1）</td>
+</tr>
+<tr>
+<td>镜像源</td>
+<td><strong><code>docker.1ms.run</code> 镜像站 + <code>docker tag</code> 改名</strong></td>
+<td>官方 docker.io 直连</td>
+<td><code>auth.docker.io</code> 被阻断，官方直连拉不动（T1）</td>
+</tr>
+<tr>
+<td>pip 源</td>
+<td><strong><code>UV_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/</code></strong></td>
+<td>PyPI 官方</td>
+<td>重装时 95+ 包走官方源必超时（T1）</td>
+</tr>
+<tr>
+<td>LLM Provider</td>
+<td><strong>OpenRouter</strong></td>
+<td>Gemini（需代理）/ HuggingFace（被墙）</td>
+<td>本机出口 IP 下仅 OpenRouter 直连可用（T1 实测）</td>
+</tr>
+<tr>
+<td>Agent 默认模型</td>
+<td><strong>支持 tools 的具体模型</strong>（如 <code>nvidia/nemotron-3-nano-30b-a3b:free</code>）</td>
+<td><code>openrouter/free</code> 自动路由器</td>
+<td>自动路由器<strong>不支持 tools</strong>，Agent 无法调用工具（T1，硬约束）</td>
+</tr>
+</tbody>
+</table>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260721-hermes-webui本地Docker两容器部署/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · hermes-webui 本地 Docker 两容器部署</span>
+        <span class="post-nav-card__title">技术点 · yunnan-housing</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260721工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260721工作总结</span>
+        <span class="post-nav-card__title">技术点 · daily-publish</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

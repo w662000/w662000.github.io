@@ -2,25 +2,307 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://towertop.kdns.fr/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://towertop.kdns.fr/post/260812%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://towertop.kdns.fr/post/260811%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2026-08-11T23:07:50+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260811-4-%E7%AB%AF-handoff-%E5%8E%BB%E9%87%8D%E6%89%A7%E8%A1%8C%E6%8A%A5%E5%91%8A-2026-08-11/</loc>
+    <lastmod>2026-08-12T23:04:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/post/260804-skillhub-98824-%E4%B8%AA-skill-%E4%B8%AD-akshare-%E7%9B%B8%E5%85%B3-mcp-/</loc>
-    <lastmod>2026-08-11T23:03:27+08:00</lastmod>
+    <lastmod>2026-08-12T23:03:58+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-07-31-techpoint-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7%E5%85%A8%E6%99%AF%E5%9B%9E%E9%A1%BE/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-glm-_-%E6%99%BA%E8%B0%B1-%E5%AE%98%E6%96%B9%E5%85%8D%E8%B4%B9%E6%A1%A3%E6%B8%85%E5%8D%95-2026-08-01-%E6%A0%B8%E5%AF%B9/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-%E7%9C%8B%E6%9D%BF-a-%E8%AE%A1%E5%88%92%E6%94%B6%E5%B0%BE%E4%B8%8E-handoff-%E8%87%AA%E5%8A%A8%E5%8F%91/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-%E4%B8%BA-workbuddy-%E6%8E%A5%E5%85%A5-agnes-%E7%94%9F%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91%E8%83%BD%E5%8A%9B%E5%B9%B6%E5%9B%BA%E5%8C%96%E8%B0%83%E7%94%A8%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-9-%E4%B8%AA-ai-%E9%A1%B9%E7%9B%AE-90-%E5%A4%A9%E8%90%BD%E5%9C%B0%E6%96%B9%E6%A1%88-%E6%89%A7%E8%A1%8C%E5%B1%82/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-ai-%E8%B5%9A%E9%92%B1%E5%95%86%E4%B8%9A%E6%9C%BA%E4%BC%9A%E7%A0%94%E7%A9%B6-16-%E6%9C%BA%E4%BC%9A-a_b_c-%E8%AE%A1%E5%88%92-9-%E9%A1%B9%E7%9B%AE-90-%E5%A4%A9%E8%B7%AF%E7%BA%BF%E5%9B%BE/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-%E4%B8%87%E6%8A%80%E8%83%BD%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E-cloudflare-%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-03-techpoint-skillhub-9-8-%E4%B8%87%E6%8A%80%E8%83%BD%E4%B8%AD-%E7%88%AC%E8%99%AB-_-playwright-%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-5-%E6%A8%A1%E5%9E%8B%E6%B5%8B%E9%80%9F-%E6%B5%81%E5%BC%8F-stream-vs-%E6%8E%A8%E7%90%86-reasoning-%E5%8F%8C%E5%AF%B9%E6%AF%94%E6%8A%A5%E5%91%8A/</loc>
-    <lastmod>2026-08-11T19:18:27+08:00</lastmod>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-%E5%AE%89%E8%A3%85%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%91%8A/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-%E5%AE%9E%E6%B5%8B%E6%8A%A5%E5%91%8A-2026-08-04-21_xx/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-skillhub-98824-%E4%B8%AA-skill-%E4%B8%AD-akshare-%E7%9B%B8%E5%85%B3-mcp-/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E7%94%A8%E6%88%B7%E7%BA%A7-skill-%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E8%81%94%E6%83%B3-n50-80-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%B8%85%E5%8D%95-win10-debian-hermes-%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E8%81%94%E6%83%B3n50-80%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2win10%E4%B8%8Edebian%E5%85%B1%E4%BA%ABhermes%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-07-techpoint-autoclaw-2026-08-07/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-07-techpoint-%E4%B8%BB%E5%8A%9B%E8%B5%84%E9%87%91%E6%B5%81%E5%90%91%E7%9C%8B%E6%9D%BF-8850-%E6%95%B0%E6%8D%AE%E6%BA%90-%E7%85%A7%E6%90%AC-%E5%A4%9A%E8%A1%A5-%E6%94%B9%E9%80%A0%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-08-techpoint-autoclaw-2026-08-08/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-08-techpoint-hermes-%E6%8E%A5%E5%85%A5%E6%A8%A1%E5%9E%8B%E8%AF%84%E5%88%86%E8%A1%A8-%E7%BA%AF-5-%E7%AB%99%E6%A6%9C%E5%8D%95%E8%A7%86%E8%A7%92-moa-%E9%80%89%E5%9E%8B/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-09-techpoint-autoclaw-2026-08-09/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-09-techpoint-memos-%E6%8E%A5%E5%85%A5-autoclaw_hermes-%E6%8E%92%E9%9A%9C-%E7%9C%8B%E6%9D%BF%E7%A9%BA%E7%99%BD-%E7%BD%91%E5%85%B3-slot/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-10-techpoint-autoclaw-2026-08-10/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-11-techpoint-autoclaw-2026-08-11/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/2026-08-12-techpoint-autoclaw-2026-08-12/</loc>
+    <lastmod>2026-08-12T20:14:44+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E8%8C%85%E5%8F%B0600519%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A-20260811/</loc>
+    <lastmod>2026-08-12T20:08:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E6%A8%A1%E5%9E%8B%E8%AF%84%E5%88%86%E8%A1%A8_hermes-moa%E9%80%89%E5%9E%8B/</loc>
+    <lastmod>2026-08-12T20:08:27+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E6%A8%A1%E5%9E%8B%E8%83%BD%E5%8A%9B%E6%B8%85%E5%8D%95_2026-08-06/</loc>
+    <lastmod>2026-08-12T20:08:04+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-12/</loc>
+    <lastmod>2026-08-12T20:07:43+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-11/</loc>
+    <lastmod>2026-08-12T20:07:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-10/</loc>
+    <lastmod>2026-08-12T20:07:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-09/</loc>
+    <lastmod>2026-08-12T20:06:40+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-08/</loc>
+    <lastmod>2026-08-12T20:06:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-2026-08-07/</loc>
+    <lastmod>2026-08-12T20:05:57+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-slg-resume-plan/</loc>
+    <lastmod>2026-08-12T20:05:35+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/post/260812-autoclaw-nim-100%E6%A8%A1%E5%9E%8B%E6%B8%85%E5%8D%95/</loc>
+    <lastmod>2026-08-12T20:05:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -121,32 +403,14 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-09-techpoint-memos-%E6%8E%A5%E5%85%A5-autoclaw_hermes-%E6%8E%92%E9%9A%9C-%E7%9C%8B%E6%9D%BF%E7%A9%BA%E7%99%BD-%E7%BD%91%E5%85%B3-slot/</loc>
-    <lastmod>2026-08-09T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260808%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-08T23:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-08-techpoint-hermes-%E6%8E%A5%E5%85%A5%E6%A8%A1%E5%9E%8B%E8%AF%84%E5%88%86%E8%A1%A8-%E7%BA%AF-5-%E7%AB%99%E6%A6%9C%E5%8D%95%E8%A7%86%E8%A7%92-moa-%E9%80%89%E5%9E%8B/</loc>
-    <lastmod>2026-08-08T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260807%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-07T23:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-07-techpoint-%E4%B8%BB%E5%8A%9B%E8%B5%84%E9%87%91%E6%B5%81%E5%90%91%E7%9C%8B%E6%9D%BF-8850-%E6%95%B0%E6%8D%AE%E6%BA%90-%E7%85%A7%E6%90%AC-%E5%A4%9A%E8%A1%A5-%E6%94%B9%E9%80%A0%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2026-08-07T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -175,50 +439,8 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E8%81%94%E6%83%B3n50-80%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2win10%E4%B8%8Edebian%E5%85%B1%E4%BA%ABhermes%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2026-08-05T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E8%81%94%E6%83%B3-n50-80-%E5%8F%8C%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E6%B8%85%E5%8D%95-win10-debian-hermes-%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2026-08-05T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-05-techpoint-%E7%94%A8%E6%88%B7%E7%BA%A7-skill-%E6%B8%85%E5%8D%95/</loc>
-    <lastmod>2026-08-05T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260804%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-04T23:08:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-skillhub-98824-%E4%B8%AA-skill-%E4%B8%AD-akshare-%E7%9B%B8%E5%85%B3-mcp-/</loc>
-    <lastmod>2026-08-04T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-%E5%AE%9E%E6%B5%8B%E6%8A%A5%E5%91%8A-2026-08-04-21_xx/</loc>
-    <lastmod>2026-08-04T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-%E5%AE%89%E8%A3%85%E6%89%AB%E6%8F%8F%E6%8A%A5%E5%91%8A/</loc>
-    <lastmod>2026-08-04T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/</loc>
-    <lastmod>2026-08-04T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -231,12 +453,6 @@
   <url>
     <loc>https://towertop.kdns.fr/post/260803%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-03T23:03:09+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-03-techpoint-skillhub-9-8-%E4%B8%87%E6%8A%80%E8%83%BD%E4%B8%AD-%E7%88%AC%E8%99%AB-_-playwright-%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2026-08-03T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -271,24 +487,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-skillhub-9-8-%E4%B8%87%E6%8A%80%E8%83%BD%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94%E4%B8%8E-cloudflare-%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF/</loc>
-    <lastmod>2026-08-02T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-ai-%E8%B5%9A%E9%92%B1%E5%95%86%E4%B8%9A%E6%9C%BA%E4%BC%9A%E7%A0%94%E7%A9%B6-16-%E6%9C%BA%E4%BC%9A-a_b_c-%E8%AE%A1%E5%88%92-9-%E9%A1%B9%E7%9B%AE-90-%E5%A4%A9%E8%B7%AF%E7%BA%BF%E5%9B%BE/</loc>
-    <lastmod>2026-08-02T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-02-techpoint-9-%E4%B8%AA-ai-%E9%A1%B9%E7%9B%AE-90-%E5%A4%A9%E8%90%BD%E5%9C%B0%E6%96%B9%E6%A1%88-%E6%89%A7%E8%A1%8C%E5%B1%82/</loc>
-    <lastmod>2026-08-02T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260801-%E4%B8%BA-workbuddy-%E6%8E%A5%E5%85%A5-agnes-%E7%94%9F%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91%E8%83%BD%E5%8A%9B%E5%B9%B6%E5%9B%BA%E5%8C%96%E8%B0%83%E7%94%A8%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2026-08-02T01:21:09+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -309,24 +507,6 @@
   <url>
     <loc>https://towertop.kdns.fr/post/260801%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-08-01T23:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-%E4%B8%BA-workbuddy-%E6%8E%A5%E5%85%A5-agnes-%E7%94%9F%E5%9B%BE%E7%94%9F%E8%A7%86%E9%A2%91%E8%83%BD%E5%8A%9B%E5%B9%B6%E5%9B%BA%E5%8C%96%E8%B0%83%E7%94%A8%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2026-08-01T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-glm-_-%E6%99%BA%E8%B0%B1-%E5%AE%98%E6%96%B9%E5%85%8D%E8%B4%B9%E6%A1%A3%E6%B8%85%E5%8D%95-2026-08-01-%E6%A0%B8%E5%AF%B9/</loc>
-    <lastmod>2026-08-01T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-08-01-techpoint-model-speed-radar-%E7%9C%8B%E6%9D%BF-a-%E8%AE%A1%E5%88%92%E6%94%B6%E5%B0%BE%E4%B8%8E-handoff-%E8%87%AA%E5%8A%A8%E5%8F%91/</loc>
-    <lastmod>2026-08-01T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -375,12 +555,6 @@
   <url>
     <loc>https://towertop.kdns.fr/post/260727-%E6%AF%8F%E6%97%A5%E5%AE%8C%E6%88%90%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2026-07-31T22:58:29+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-31-techpoint-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7%E5%85%A8%E6%99%AF%E5%9B%9E%E9%A1%BE/</loc>
-    <lastmod>2026-07-31T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -439,30 +613,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/</loc>
-    <lastmod>2026-07-26T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-gaming4free-singbox/</loc>
-    <lastmod>2026-07-26T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-serv00-monitor/</loc>
-    <lastmod>2026-07-26T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-26-techpoint-bbs1org-mcp/</loc>
-    <lastmod>2026-07-26T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260726-Serv00%E6%B3%A8%E5%86%8C%E5%BC%80%E6%94%BE%E7%9B%91%E6%8E%A7/</loc>
     <lastmod>2026-07-26T22:40:25+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -481,26 +631,14 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/260725-58%E7%9A%84%E6%97%A0%E9%94%A1%E4%B9%B0%E6%88%BF%E7%A7%9F%E6%88%BF%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2026-07-26T00:24:10+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260725-%E5%85%8D%E8%B4%B9VPS%E4%BB%A3%E7%90%86Wispbyte_gost%E8%B7%91%E9%80%9A/</loc>
     <lastmod>2026-07-25T23:30:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-25-techpoint-wuxi-58/</loc>
-    <lastmod>2026-07-25T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-25-techpoint-wispbyte-gost/</loc>
-    <lastmod>2026-07-25T14:00:00+08:00</lastmod>
+    <loc>https://towertop.kdns.fr/post/260725-58%E7%9A%84%E6%97%A0%E9%94%A1%E4%B9%B0%E6%88%BF%E7%A7%9F%E6%88%BF%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2026-07-26T00:24:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -523,12 +661,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-23-techpoint-hermes-windows/</loc>
-    <lastmod>2026-07-23T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260722%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-07-23T14:28:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -541,20 +673,8 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-22-techpoint-daily-publish/</loc>
-    <lastmod>2026-07-22T14:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://towertop.kdns.fr/post/260721-hermes-webui%E6%9C%AC%E5%9C%B0Docker%E4%B8%A4%E5%AE%B9%E5%99%A8%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2026-07-26T22:40:25+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-docker/</loc>
-    <lastmod>2026-07-21T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -573,12 +693,6 @@
   <url>
     <loc>https://towertop.kdns.fr/post/260719-%E4%BA%91%E5%8D%97%E6%97%85%E5%B1%85%E6%88%BF%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-07-19T23:30:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/</loc>
-    <lastmod>2026-07-19T14:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -608,145 +722,133 @@
   </url>
   <url>
     <loc>https://towertop.kdns.fr/post/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/memos/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tags/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/archives/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tag/gridea-pro/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tag/getting-started/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/bbs1org/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tag/dai-li/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/pa-chong/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/bo-ke/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/api-jie-ru/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/mcp/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/58-tong-cheng/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/zi-dong-hua/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/handoff/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tag/workbuddy/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/mian-fei-mo-xing/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/cloudflare/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/fang-jia/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/workbuddy/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/ji-shu-dian/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://towertop.kdns.fr/tag/phpbb/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/tag/vps/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/58-tong-cheng/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/bo-ke/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/zi-dong-hua/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/cloudflare/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/handoff/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/mian-fei-mo-xing/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/bbs1org/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/pa-chong/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/fang-jia/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/api-jie-ru/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/phpbb/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://towertop.kdns.fr/tag/mcp/</loc>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://towertop.kdns.fr/links/</loc>
-    <lastmod>2026-08-11T23:07:51+08:00</lastmod>
+    <lastmod>2026-08-12T23:07:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

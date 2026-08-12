@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · phpBB 子目录论坛挂 MCP | W662000&#39;s Blog</title>
+  <title>技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展） | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · phpBB 子目录论坛挂 MCP" />
+<meta property="og:title" content="技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="在 my-place.us 的 /AIblog 子目录一键装 phpBB，写平铺单文件 mcp.php，实现真·无限级子版块树与 Markdown→BBCode 转换。 最该复用的坑： 老框架 bootstrap 禁用超全局，平铺文件 include common.php 比正规 ext 更稳；但别把局部变量命名成 $request，会覆盖框架全局导致 submit_post 崩。 &amp;hellip;">
+<meta name="description" content="选型项 选定 落选 选型依据 论坛 phpBB 3.3（Softaculous 一键装，子目录 /AIblog） bbs1org 需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1） MCP 形态 **平铺单文件 mcp.php（include common.ph&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · phpBB 子目录论坛挂 MCP","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/","description":"在 my-place.us 的 /AIblog 子目录一键装 phpBB，写平铺单文件 mcp.php，实现真·无限级子版块树与 Markdown→BBCode 转换。 最该复用的坑： 老框架 bootstrap 禁用超全局，平铺文件 include common.php 比正规 ext 更稳；但别把局部变量命名成 $request，会覆盖框架全局导致 submit_post 崩。 \u0026hellip;","datePublished":"2026-07-26T14:00:00+08:00","dateModified":"2026-07-26T14:00:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/","name":"技术点 · phpBB 子目录论坛挂 MCP","position":2}]}</script>
-<meta property="og:title" content="技术点 · phpBB 子目录论坛挂 MCP">
-<meta property="og:description" content="在 my-place.us 的 /AIblog 子目录一键装 phpBB，写平铺单文件 mcp.php，实现真·无限级子版块树与 Markdown→BBCode 转换。 最该复用的坑： 老框架 bootstrap 禁用超全局，平铺文件 include common.php 比正规 ext 更稳；但别把局部变量命名成 $request，会覆盖框架全局导致 submit_post 崩。 &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）","url":"https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/","description":"选型项 选定 落选 选型依据 论坛 phpBB 3.3（Softaculous 一键装，子目录 /AIblog） bbs1org 需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1） MCP 形态 **平铺单文件 mcp.php（include common.ph\u0026hellip;","datePublished":"2026-08-12T20:14:44+08:00","dateModified":"2026-08-12T20:14:44+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/","name":"技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）","position":2}]}</script>
+<meta property="og:title" content="技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）">
+<meta property="og:description" content="选型项 选定 落选 选型依据 论坛 phpBB 3.3（Softaculous 一键装，子目录 /AIblog） bbs1org 需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1） MCP 形态 **平铺单文件 mcp.php（include common.ph&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-26-techpoint-phpbb-mcp/">
-<meta name="twitter:title" content="技术点 · phpBB 子目录论坛挂 MCP">
-<meta name="twitter:description" content="在 my-place.us 的 /AIblog 子目录一键装 phpBB，写平铺单文件 mcp.php，实现真·无限级子版块树与 Markdown→BBCode 转换。 最该复用的坑： 老框架 bootstrap 禁用超全局，平铺文件 include common.php 比正规 ext 更稳；但别把局部变量命名成 $request，会覆盖框架全局导致 submit_post 崩。 &amp;hellip;">
+<meta name="twitter:title" content="技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）">
+<meta name="twitter:description" content="选型项 选定 落选 选型依据 论坛 phpBB 3.3（Softaculous 一键装，子目录 /AIblog） bbs1org 需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1） MCP 形态 **平铺单文件 mcp.php（include common.ph&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · phpBB 子目录论坛挂 MCP</h1>
+    <h1 class="article-title">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-26</span>
+      <span class="article-meta__item">2026-08-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -184,9 +184,9 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/ji-shu-dian/" class="tag-pill tag-pill--sm">技术点</a>
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">WorkBuddy</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -195,21 +195,50 @@
   
 
   <div class="article-content">
-    <p>在 my-place.us 的 /AIblog 子目录一键装 phpBB，写平铺单文件 mcp.php，实现真·无限级子版块树与 Markdown→BBCode 转换。</p>
-<p>最该复用的坑：</p>
+    <table>
+<thead>
+<tr>
+<th>选型项</th>
+<th>选定</th>
+<th>落选</th>
+<th>选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论坛</td>
+<td><strong>phpBB 3.3（Softaculous 一键装，子目录 <code>/AIblog</code>）</strong></td>
+<td>bbs1org</td>
+<td>需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）</td>
+</tr>
+<tr>
+<td>MCP 形态</td>
+<td><strong>平铺单文件 <code>mcp.php</code>（include common.php）</strong></td>
+<td>正规 ext 扩展 <code>wb/mcpserver/</code></td>
+<td>phpBB 3.3 bootstrap 禁用超全局 + <code>submit_post()</code> 强依赖 <code>$user-&gt;data</code>/<code>$auth-&gt;acl()</code>，ext 加载器约束难满足；平铺文件直接拿 DI 容器更稳（T1 实测）</td>
+</tr>
+<tr>
+<td>鉴权</td>
+<td><strong><code>X-Mcp-Token</code>（优先）+ 回退 Authorization/getallheaders</strong></td>
+<td>仅 Authorization</td>
+<td>同 iFastNet 代理剥离 Authorization，自定义头穿透（T1）</td>
+</tr>
+<tr>
+<td>富文本</td>
+<td><strong>Markdown→BBCode 状态机</strong></td>
+<td>直接存 Markdown</td>
+<td>phpBB 的 s9e 只认 BBCode 不认 Markdown，存 Markdown 会裸显 <code>##</code>/<code>**</code>（T1）</td>
+</tr>
+<tr>
+<td>配置位置</td>
+<td><strong><code>~/.workbuddy/mcp.json</code>（无点）</strong></td>
+<td><code>.mcp.json</code>（带点）</td>
+<td>WorkBuddy 只直读 <code>mcp.json</code>，误建带点文件不生效（T1 实测）</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>老框架 bootstrap 禁用超全局，平铺文件 include common.php 比正规 ext 更稳；但别把局部变量命名成 $request，会覆盖框架全局导致 submit_post 崩。</li>
-<li>phpBB 只认 BBCode，Markdown 直接存会裸显，必须转（标题→size、粗体→b、代码→code 等状态机）；读取用自写正则解析绕过 style 依赖。</li>
-<li>程序建版块默认 f_list=NO 不可见，建完要把父版块 ACL 角色 INSERT&hellip;SELECT 复制过来 + acl_clear_prefetch + 删 data_acl_* 缓存文件。</li>
-</ol>
-<p>下一步：需无限级子版块的 MCP 论坛知识库直接复用，和 bbs1org 共用 WAF/代理穿透方案。</p>
-<hr />
-<p>详细原文请看：</p>
-<ol>
-<li>博客源：https://w662000.github.io/daily-note-blog/_handoffs/2026-07-26-techpoint-phpbb-mcp</li>
-<li>备份论坛1（bbs1org）：https://w662002.my-place.us/index.php?a=topic&amp;id=70</li>
-<li>备份论坛2（phpBB）：https://w662002.my-place.us/AIblog/viewtopic.php?t=89</li>
-<li>语雀：TODO（限流恢复后补发并更新此链接）</li>
+<li><strong><code>$request</code> 全局冲突（隐蔽坑）</strong>：JSON-RPC 分发里把 <code>json_decode</code> 结果命名为 <code>$request</code> 会覆盖 phpBB 全局 <code>$request</code>，导致 <code>submit_post</code> 调 <code>$request-&gt;variable()</code> 报 &ldquo;Call to a member function variable() on array&rdquo;。改局部变量 <code>$rpc</code>（T1）。…</li>
 </ol>
 
   </div>
@@ -217,20 +246,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260726-bbs1org免费主机论坛_MCP知识库/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · bbs1org 免费主机论坛 + MCP 知识库</span>
+        <span class="post-nav-card__title">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · 游戏 VPS 注入代理（封号教训）</span>
+        <span class="post-nav-card__title">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
