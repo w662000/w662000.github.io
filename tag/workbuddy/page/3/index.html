@@ -179,6 +179,38 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
+    </a>
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+方案生成方法
+A 计划：六顶思考帽 + RACI + 红队击穿
+单视角头脑风暴
+单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
+
+
+方案排期方法
+B 计划：Cynefin 判域...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-12
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
     <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
     </a>
@@ -327,10 +359,10 @@ SkillHub CLI：skillhub install china-stock-data --namespace kekewater
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · china-stock-data 实测报告（2026-08-04 21_xx）</h3>
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
     </a>
-    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -339,10 +371,47 @@ SkillHub CLI：skillhub install china-stock-data --namespace kekewater
 
 
 
-依赖版本策略
-升到最新版（akshare 1.18.81 / tushare 1.4.29）
-锁旧版规避改名
-akshare 上游接口本身在变，锁旧版只是把问题推后；且旧版可能已无人维护对应的东财接口...
+云端运行时
+Cloudflare Workers
+自建 VPS / 云函数
+免运维、免费额度足、自带 Cron Trigger（T1 实测）
+
+
+数据库
+D1（SQLite）
+KV 直存 / 外部 M...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-12
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    </a>
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+部署形态
+双容器（WebUI + Agent gateway）
+单容器塞两个进程
+官方支持路径；两者依赖差异大，混装易互相污染（T1）
+
+
+容器间通信
+Docker bridge 网络 + HTTP ...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12
@@ -383,10 +452,10 @@ akshare 上游接口本身在变，锁旧版只是把问题推后；且旧版可
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-用户级-skill-清单/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单</h3>
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
     </a>
-    <a href="/post/2026-08-05-techpoint-用户级-skill-清单/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -395,71 +464,10 @@ akshare 上游接口本身在变，锁旧版只是把问题推后；且旧版可
 
 
 
-盘点对象
-用户级 ~/.workbuddy/skills
-内置/连接器的 skill
-用户级才是本机真正可调用的资产全集，内置的是环境自带的（T1）
-
-
-扫描方式
-递归扫描含子命名空间与嵌套子技能
-只...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</h3>
-    </a>
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-常开系统（跑 agent）
-Debian 12/13 minimal headless
-Ubuntu / Win 常开
-Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
-    </a>
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-常开系统（跑 agent）
-Debian minimal
-Ubuntu
-Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
+看板后端环境变量修复
+setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
+改 start_studio.ps1 脚本
+用户要求「不碰配置、不重启」；Machine 级...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12

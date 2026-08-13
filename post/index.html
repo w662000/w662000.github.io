@@ -178,6 +178,25 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
+    <a href="/post/260813工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-13</h3>
+    </a>
+    <a href="/post/260813工作总结/" class="post-card__excerpt clamp-2">
+      今日理清通达信分时线红绿判定规则并交付「由绿翻红」预警公式两套。
+确认 serv00 监控项目的 126 邮箱与密钥当年存进 GitHub Secrets 而非本地明文。
+实测 conversation_search 能查历史对话但默...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
     <a href="/post/260812工作总结/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-12</h3>
     </a>
@@ -188,7 +207,7 @@
 260804 backlog handoff...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-13
       
     </div>
   </div>
@@ -207,26 +226,7 @@
 比对博客/语雀/论坛三端一致性，34组仅 wuxi-58 ...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 4 端 handoff 去重执行报告（2026-08-11） · 2026-08-11</h3>
-    </a>
-    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__excerpt clamp-2">
-      用户前天（实际补发动作发生在 2026-08-10 01:14–01:41）把一批 handoff 重新发布到 4 端，Gridea 端出现重复。要求：只去重这批补发引入的重复 handoff，并核查其他三端。
-
-无 sha256 完...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-13
       
     </div>
   </div>
@@ -267,7 +267,7 @@ A股量化回测策略引擎
 quant-backtest-...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-13
       
     </div>
   </div>
@@ -277,27 +277,13 @@ quant-backtest-...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
+    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · 4 端 handoff 去重执行报告（2026-08-11） · 2026-08-11</h3>
     </a>
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
+    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__excerpt clamp-2">
+      用户前天（实际补发动作发生在 2026-08-10 01:14–01:41）把一批 handoff 重新发布到 4 端，Gridea 端出现重复。要求：只去重这批补发引入的重复 handoff，并核查其他三端。
 
-
-
-
-云端运行时
-Cloudflare Workers
-自建 VPS / 云函数
-免运维、免费额度足、自带 Cron Trigger（T1 实测）
-
-
-数据库
-D1（SQLite）
-KV 直存 / 外部 M...
+无 sha256 完...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12
@@ -310,10 +296,10 @@ KV 直存 / 外部 M...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data 实测报告（2026-08-04 21_xx）</h3>
     </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -322,14 +308,42 @@ KV 直存 / 外部 M...
 
 
 
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
+依赖版本策略
+升到最新版（akshare 1.18.81 / tushare 1.4.29）
+锁旧版规避改名
+akshare 上游接口本身在变，锁旧版只是把问题推后；且旧版可能已无人维护对应的东财接口...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-12
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
+    </a>
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
 
-容器间通信
-Docker bridge 网络 + HTTP ...
+
+
+探测进程运行方式
+系统级常驻（nohup / 无窗口后台）
+框架后台任务句柄
+后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
+
+
+探测语言/依赖
+Python 标准库，零...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12
@@ -417,34 +431,6 @@ Windows 原生进程（agent + WebUI 各跑进程）
 Wispbyte（Pterodactyl 容器）
 Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
 Wispbyte 允许自定义 Sta...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
-    </a>
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-抓取方式
-Playwright 无头 Chromium
-纯 urllib/requests
-58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12

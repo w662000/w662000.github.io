@@ -194,6 +194,16 @@
     <div class="compact-grid">
       
        <article class="post-card post-card--compact">
+  <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
+      <div class="post-card__meta meta-text">2026-08-12</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
   <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__inner">
     <div class="post-card__body">
       <h3 class="post-card__title clamp-2">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
@@ -223,16 +233,6 @@
   </a>
 </article>
   
-       <article class="post-card post-card--compact">
-  <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
-      <div class="post-card__meta meta-text">2026-08-12</div>
-    </div>
-    
-  </a>
-</article>
-  
        
        
        
@@ -251,6 +251,34 @@
           <h2 class="section-title">最新文章</h2>
         </div>
         <div class="post-list">
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
+    </a>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-12
+      
+    </div>
+  </div>
+  
+</article>
+
           
           <article class="post-card post-card--list">
   <div class="post-card__body">
@@ -436,10 +464,10 @@ Cynefin
           
           <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
+    <a href="/post/2026-08-05-techpoint-用户级-skill-清单/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单</h3>
     </a>
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-05-techpoint-用户级-skill-清单/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -448,14 +476,15 @@ Cynefin
 
 
 
-探测进程运行方式
-系统级常驻（nohup / 无窗口后台）
-框架后台任务句柄
-后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
+盘点对象
+用户级 ~/.workbuddy/skills
+内置/连接器的 skill
+用户级才是本机真正可调用的资产全集，内置的是环境自带的（T1）
 
 
-探测语言/依赖
-Python 标准库，零...
+扫描方式
+递归扫描含子命名空间与嵌套子技能
+只...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12
@@ -515,38 +544,6 @@ requests / SDK
 看板 WIP≤2（2 个核心构建 slot）
 全并行推进 9 项目
 2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论）...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
-    </a>
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-方案生成方法
-A 计划：六顶思考帽 + RACI + 红队击穿
-单视角头脑风暴
-单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
-
-
-方案排期方法
-B 计划：Cynefin 判域...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-12
