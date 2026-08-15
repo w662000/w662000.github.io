@@ -179,10 +179,38 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
     </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-15
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
+    </a>
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -191,17 +219,18 @@
 
 
 
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
+云端运行时
+Cloudflare Workers
+自建 VPS / 云函数
+免运维、免费额度足、自带 Cron Trigger（T1 实测）
 
 
-容器间通信
-Docker bridge 网络 + HTTP ...
+数据库
+D1（SQLite）
+KV 直存 / 外部 M...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-14
+      2026-08-15
       
     </div>
   </div>
@@ -232,7 +261,35 @@ push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T
 ...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-14
+      2026-08-15
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
+    </a>
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+免费 VPS 平台
+Wispbyte（Pterodactyl 容器）
+Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
+Wispbyte 允许自定义 Sta...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-15
       
     </div>
   </div>
@@ -260,7 +317,88 @@ Windows 原生进程（agent + WebUI 各跑进程）
 容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-14
+      2026-08-15
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260815-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27） · 2026-08-15</h3>
+    </a>
+    <a href="/post/260815-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__excerpt clamp-2">
+      8787 webui 上&amp;quot;无法连接 MCP 服务器&amp;quot;的真实症状：Hermes 的 5 个 MCP server
+（hermes-studio-api / browser / devices / use + play...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-15
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260815-auto-dark-mode-自动深色模式-恢复说明/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · Auto Dark Mode（自动深色模式）恢复说明 · 2026-08-15</h3>
+    </a>
+    <a href="/post/260815-auto-dark-mode-自动深色模式-恢复说明/" class="post-card__excerpt clamp-2">
+      日期：2026-08-15
+
+名称：Auto Dark Mode（自动深色模式） v10.1.0.10
+安装时间：2026-08-03
+安装路径：C:\Program Files (x86)\AutoDarkMode\
+作用：按时间/...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-15
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单 · 2026-08-04</h3>
+    </a>
+    <a href="/post/260804-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
+      #
+名称
+slug
+分类
+⭐
+安装
+认证
+链接
+
+
+
+
+1
+A股量化 AkShare
+akshare-stock
+professional
+235
+13337
+未认证
+链接
+
+
+2
+A股量化回测策略引擎
+quant-backtest-...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-15
       
     </div>
   </div>
@@ -328,168 +466,6 @@ agent-plan-router
 我参与制定
 A/B/C 计划路由(A=六顶思考帽+RACI+多Agent；B=情境路由；C=PDCA)
 用A计划执行/用A...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260814-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills） · 2026-08-14</h3>
-    </a>
-    <a href="/post/260814-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      #
-Skill ID
-版本
-来源
-用途说明
-触发词
-
-
-
-
-1
-agent-plan-router
-1.0.0
-我参与制定
-A/B/C 计划路由(A=六顶思考帽+RACI+多Agent；B=情境路由；C=PDCA)
-用A计划执行/用A...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260814-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills） · 2026-08-14</h3>
-    </a>
-    <a href="/post/260814-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      #
-Skill ID
-版本
-来源
-用途说明
-触发词
-
-
-
-
-1
-agent-plan-router
-1.0.0
-我参与制定
-A/B/C 计划路由(A=六顶思考帽+RACI+多Agent；B=情境路由；C=PDCA)
-用A计划执行/用A...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260814-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills） · 2026-08-14</h3>
-    </a>
-    <a href="/post/260814-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      #
-Skill ID
-版本
-来源
-用途说明
-
-
-
-
-1
-agent-plan-router
-1.0.0
-手动补进
-A/B/C 计划路由(A=六顶思考帽+RACI+多Agent；B=情境路由；C=PDCA)
-
-
-2
-agent-reac...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260814-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills） · 2026-08-14</h3>
-    </a>
-    <a href="/post/260814-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      #
-Skill ID
-版本
-来源
-用途说明
-
-
-
-
-1
-agent-plan-router
-1.0.0
-手动补进
-A/B/C 计划路由(A=六顶思考帽+RACI+多Agent；B=情境路由；C=PDCA)
-
-
-2
-agent-reac...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260814-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent） · 2026-08-14</h3>
-    </a>
-    <a href="/post/260814-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
-      微信小程序整体盘子够大（用户约 9.49 亿、月均用近 70 次），但「高流量」不等于「你能赚到钱」。综合三顶帽子的结论，推荐按以下顺序切入（流量×付费×风险综合排序）：
-
-
-
-排名
-赛道
-一句话理由
-风险等级
-
-
-
-
-1
-小程序电商...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-14
