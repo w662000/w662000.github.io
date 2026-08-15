@@ -179,29 +179,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-12</h3>
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
     </a>
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__excerpt clamp-2">
-      用户反馈&amp;quot;昨天部署的系统还有错误&amp;quot;，排查发现 4 个叠加问题：
-
-现象：内核 uptime 39 分钟不变，但 systemd (PID 1) 每 1-3 分钟重启一次（apport socket 反复 Close...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 9 个 AI 项目 90 天落地方案（执行层）</h3>
-    </a>
-    <a href="/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -210,13 +191,18 @@
 
 
 
-并发度控制模型
-看板 WIP≤2（2 个核心构建 slot）
-全并行推进 9 项目
-2 人团队 + 单人多角色，超过 2 条构建线必然全部延期；副线单独限额每周 ≤8h，越线即砍（T1 实测排期结论）...
+云端运行时
+Cloudflare Workers
+自建 VPS / 云函数
+免运维、免费额度足、自带 Cron Trigger（T1 实测）
+
+
+数据库
+D1（SQLite）
+KV 直存 / 外部 M...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
@@ -226,28 +212,18 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范</h3>
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小游戏类别细分 · A3 一页纸（A 计划第二轮：六顶思考帽 + RACI + 多 Agent）</h3>
     </a>
-    <a href="/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__excerpt clamp-2">
+      本调查要解决：个人/小团队预算有限，进入微信小游戏赛道时该选哪个类别。
+选型结论：
 
-
-
-
-调用脚本依赖
-Python 标准库 urllib
-requests / SDK
-技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1）
-
-
-视频结果获取...
+研究方法：六顶思考帽 + RACI + 多 Agent 并行的 A 计划工作流。
+数据来源：T0 微信公开课/腾讯财报/游戏工委法规；T1 Data...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
@@ -257,98 +233,10 @@ requests / SDK
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
     </a>
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-探测进程运行方式
-系统级常驻（nohup / 无窗口后台）
-框架后台任务句柄
-后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
-
-
-探测语言/依赖
-Python 标准库，零...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-01-techpoint-glm-_-智谱-官方免费档清单-2026-08-01-核对/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · GLM _ 智谱 官方免费档清单（2026-08-01 核对）</h3>
-    </a>
-    <a href="/post/2026-08-01-techpoint-glm-_-智谱-官方免费档清单-2026-08-01-核对/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-免费档信源
-官方定价页 + 官方模型概览页 + 官方免费计划公告 三源交叉
-第三方测评文 / 社区帖
-免费档随时下线（glm-4.5-flash 2026-01-30 已下线自动路由到 4.7-Fla...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-31-techpoint-项目管理思维工具全景回顾/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 项目管理思维工具全景（可作 Agent 指导纲要的方法论资产）</h3>
-    </a>
-    <a href="/post/2026-07-31-techpoint-项目管理思维工具全景回顾/" class="post-card__excerpt clamp-2">
-      选型项
-选定（纳入 agent 资产）
-落选（仅参考）
-选型依据
-
-
-
-
-情境判定层
-Cynefin
-甘特图
-先判 Clear/Complicated/Complex/Chaotic 决定用流程还是试错，是「选工具前的工具」（T1 实...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-12
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
-    </a>
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -357,17 +245,13 @@ Cynefin
 
 
 
-调度
-GitHub Actions（cron 每 10 分钟）
-本机探测脚本 + 弹窗
-云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）
-
-
-通知通道
-126 邮箱（SMTP_SSL +...
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
@@ -377,28 +261,17 @@ GitHub Actions（cron 每 10 分钟）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
+选型结论：
 
-
-
-
-论坛
-phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
-bbs1org
-需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
-
-
-MCP ...
+判定标准升级：agent_created=true 自动检测 + 用户手...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
@@ -408,28 +281,18 @@ MCP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent）</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
+      本调查要解决：做什么微信小程序「访问量大 + 付费人群多」，且适合个人/小团队切入。
+选型结论：
 
-
-
-
-平台
-Gaming4Free（翼龙面板游戏 VPS）
-Wispbyte / Serv00 / Oracle
-比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
-
-
-代理内核...
+研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
+数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
@@ -439,10 +302,90 @@ Wispbyte / Serv00 / Oracle
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.2 要解决：v1.1 只补了 3 个手动 skill，用户进一步指出还有 6 个共建 skill 未纳入。
+选型结论：
+
+手动补进扩展 6 个：cf-58-scraper-replicate、forum-handoff-publ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
+选型结论：
+
+永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.4 要解决：agent-reach skill 目录已被删除，清单仍将其列为「我参与制定」，造成脏数据；同时 cangjie-skill 财富自由系列存在磁盘双份，需标记重复。
+选型结论：
+
+删除失效 skill：移除 agen...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.5（~_.workbuddy_skills）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.5 要解决：彻底消除财富自由系列 6 个 skill 的磁盘双份，使清单与磁盘都达到 name 去重后无重复。
+选型结论：
+
+删除顶层重复目录：fw01-wealth-freedom-definition、fw05-abando...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
+    </a>
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -451,17 +394,13 @@ Wispbyte / Serv00 / Oracle
 
 
 
-方案生成方法
-A 计划：六顶思考帽 + RACI + 红队击穿
-单视角头脑风暴
-单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
-
-
-方案排期方法
-B 计划：Cynefin 判域...
+免费 VPS 平台
+Wispbyte（Pterodactyl 容器）
+Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
+Wispbyte 允许自定义 Sta...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-12
+      2026-08-14
       
     </div>
   </div>
