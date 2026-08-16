@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复 | W662000&#39;s Blog</title>
+  <title>交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复" />
+<meta property="og:title" content="交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复","url":"https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/","description":"把 Docker 版 Hermes 迁到 Windows 原生：D:\\hermes-agent（gateway :8642）+ D:\\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须\u0026hellip;","datePublished":"2026-07-23T23:30:00+08:00","dateModified":"2026-07-26T22:40:25+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/","name":"交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复","position":2}]}</script>
-<meta property="og:title" content="交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复">
-<meta property="og:description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
+<meta name="description" content="日期：2026-07-23 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260723_Hermes_Windows原生部署迁移_handoff.md（编码探测：utf-8） 把已停的 Docker 版 Hermes 迁移到 Windows 原生：D:\hermes-agent（gateway :8642）+ `D:\her&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260723-hermes_windows原生部署迁移/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23","url":"https://towertop.kdns.fr/post/260723-hermes_windows原生部署迁移/","description":"日期：2026-07-23 状态：✅ 已完结（新方法重生成） 来源：handoff\\bak\\260723_Hermes_Windows原生部署迁移_handoff.md（编码探测：utf-8） 把已停的 Docker 版 Hermes 迁移到 Windows 原生：D:\\hermes-agent（gateway :8642）+ `D:\\her\u0026hellip;","datePublished":"2026-08-16T16:23:23+08:00","dateModified":"2026-08-16T16:23:23+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260723-hermes_windows原生部署迁移/","name":"交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23","position":2}]}</script>
+<meta property="og:title" content="交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23">
+<meta property="og:description" content="日期：2026-07-23 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260723_Hermes_Windows原生部署迁移_handoff.md（编码探测：utf-8） 把已停的 Docker 版 Hermes 迁移到 Windows 原生：D:\hermes-agent（gateway :8642）+ `D:\her&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260723-hermes_windows原生部署迁移/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260723-Hermes_Windows原生部署迁移/">
-<meta name="twitter:title" content="交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复">
-<meta name="twitter:description" content="把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。 修通：git_info 黑框（workspace.py/updates.py 的 _run_git() 加 CREATE_NO_WINDOW）、Startup 路径必须&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260723-hermes_windows原生部署迁移/">
+<meta name="twitter:title" content="交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23">
+<meta name="twitter:description" content="日期：2026-07-23 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260723_Hermes_Windows原生部署迁移_handoff.md（编码探测：utf-8） 把已停的 Docker 版 Hermes 迁移到 Windows 原生：D:\hermes-agent（gateway :8642）+ `D:\her&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,13 +172,21 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">交接文档 · Hermes Windows 原生部署迁移 + 启动器自启修复</h1>
+    <h1 class="article-title">交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-23</span>
+      <span class="article-meta__item">2026-08-16</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -187,28 +195,37 @@
   
 
   <div class="article-content">
-    <p>把 Docker 版 Hermes 迁到 Windows 原生：D:\hermes-agent（gateway :8642）+ D:\hermes-webui（:8787），配 config.yaml + 自启 VBS。</p>
-<p>修通：git_info 黑框（workspace.py/updates.py 的 <code>_run_git()</code> 加 CREATE_NO_WINDOW）、Startup 路径必须含 Programs、启动器用 VBS + FreeConsole 实现无窗口；装 Git for Windows + 导入 WSL Ubuntu 修 bash 工具。gateway 用 <code>--replace --accept-hooks</code> 才监听 8642；Docker 的 Linux .venv 不能复制到 Windows，必须重装。重启电脑后自启生效。</p>
+    <ul>
+<li><strong>日期</strong>：2026-07-23</li>
+<li><strong>状态</strong>：✅ 已完结（新方法重生成）</li>
+<li><strong>来源</strong>：handoff\bak\260723_Hermes_Windows原生部署迁移_handoff.md（编码探测：utf-8）</li>
+</ul>
+<hr />
+<h2 id="-docker--hermes--windows-dhermes-agentgateway-8642-dhermes-webuiwebui-8787-configyaml---vbs-git-info--git-for-windows---wsl-ubuntu--bash-">把已停的 Docker 版 Hermes 迁移到 Windows 原生：<code>D:\hermes-agent</code>（gateway :8642）+ <code>D:\hermes-webui</code>（WebUI :8787），配 <code>config.yaml</code> + 自启 VBS，并修通 git_info 黑框、补 Git for Windows + 导入 WSL Ubuntu 修复 bash 工具。</h2>
+<ul>
+<li>Docker 容器 <code>hermes-agent</code>/<code>hermes-webui</code> 停止后，迁到 Windows 原生进程直接跑（localhost=宿主机，三端发布更顺）。保留 Docker 容器作回退。<br />
+&mdash;…</li>
+</ul>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260723工作总结/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260725-58的无锡买房租房项目搭建/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">260723工作总结</span>
+        <span class="post-nav-card__title">交接文档 · 58的无锡买房租房项目搭建 · 2026-07-25</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260722工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260721-hermes-webui本地docker两容器部署/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260722工作总结</span>
+        <span class="post-nav-card__title">交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

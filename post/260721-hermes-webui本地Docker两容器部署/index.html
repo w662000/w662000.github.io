@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>交接文档 · hermes-webui 本地 Docker 两容器部署 | W662000&#39;s Blog</title>
+  <title>交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署" />
+<meta property="og:title" content="交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · hermes-webui 本地 Docker 两容器部署","url":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","description":"用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真\u0026hellip;","datePublished":"2026-07-21T23:30:00+08:00","dateModified":"2026-07-26T22:40:25+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/","name":"交接文档 · hermes-webui 本地 Docker 两容器部署","position":2}]}</script>
-<meta property="og:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署">
-<meta property="og:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
+<meta name="description" content="日期：2026-07-21 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8） 用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260721-hermes-webui本地docker两容器部署/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21","url":"https://towertop.kdns.fr/post/260721-hermes-webui本地docker两容器部署/","description":"日期：2026-07-21 状态：✅ 已完结（新方法重生成） 来源：handoff\\bak\\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8） 用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、\u0026hellip;","datePublished":"2026-08-16T16:23:07+08:00","dateModified":"2026-08-16T16:23:07+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260721-hermes-webui本地docker两容器部署/","name":"交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21","position":2}]}</script>
+<meta property="og:title" content="交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21">
+<meta property="og:description" content="日期：2026-07-21 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8） 用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地docker两容器部署/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地Docker两容器部署/">
-<meta name="twitter:title" content="交接文档 · hermes-webui 本地 Docker 两容器部署">
-<meta name="twitter:description" content="用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。 关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260721-hermes-webui本地docker两容器部署/">
+<meta name="twitter:title" content="交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21">
+<meta name="twitter:description" content="日期：2026-07-21 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8） 用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,13 +172,21 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">交接文档 · hermes-webui 本地 Docker 两容器部署</h1>
+    <h1 class="article-title">交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-21</span>
+      <span class="article-meta__item">2026-08-16</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -187,28 +195,36 @@
   
 
   <div class="article-content">
-    <p>用官方两容器方案跑通 hermes-webui（WebUI :8787）+ hermes-agent（gateway :8642），完整 Agent 能力可用。</p>
-<p>关键坑：agent 源码卷首次必须由 agent 镜像填充；网关需 API_SERVER_ENABLED=1 + HOST=0.0.0.0 + KEY 一致才跨 bridge 通；Provider key 要写成 compose 真实环境变量（两 service 都加），否则聊天 401；切 provider 必须清 base_url；🔥 改 env 只用 <code>docker compose restart</code>，禁用 <code>--force-recreate</code>（曾全量重装 95+ 包近 1 小时）。本机出口仅 OpenRouter 真正可用，Gemini 需代理，HuggingFace 被墙。</p>
+    <ul>
+<li><strong>日期</strong>：2026-07-21</li>
+<li><strong>状态</strong>：✅ 已完结（新方法重生成）</li>
+<li><strong>来源</strong>：handoff\bak\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8）</li>
+</ul>
+<hr />
+<h2 id="-hermes-webuiwebui--hermes-agentgateway-webui-8787agent-gateway-8642-agent-aiagentprovider-">用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、Agent gateway :8642，完整 Agent 能力（AIAgent）可用，修通网关鉴权/网络/Provider 模型路由。</h2>
+<ul>
+<li>本机（Windows Docker Desktop）跑 Hermes WebUI（对话界面）+ Agent（执行 shell/工具），两容器通过 Docker bridge 网络互联，Agent 源码以命名卷挂进 WebUI 让其在内 <code>import run_agent</code>。…</li>
+</ul>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260722-每日工作总结多端自动发布系统/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260723-hermes_windows原生部署迁移/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · 每日工作总结多端自动发布系统</span>
+        <span class="post-nav-card__title">交接文档 · Hermes_Windows原生部署迁移 · 2026-07-23</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260721工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260719-云南旅居房分析系统/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260721工作总结</span>
+        <span class="post-nav-card__title">交接文档 · 云南旅居房分析系统 · 2026-07-19</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

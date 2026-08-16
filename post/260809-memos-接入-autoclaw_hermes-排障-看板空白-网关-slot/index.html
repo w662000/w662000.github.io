@@ -33,12 +33,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：摘要模型（小快非思考型） 与 技能进化模型（思考型）。实施中发现 MemOS 的 openai_compatible provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 Auto&amp;hellip;">
+<meta name="description" content="日期：2026-08-09 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260809_MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进_handoff.md（编码探测：utf-8） 用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09","url":"https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/","description":"用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：摘要模型（小快非思考型） 与 技能进化模型（思考型）。实施中发现 MemOS 的 openai_compatible provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 Auto\u0026hellip;","datePublished":"2026-08-10T01:14:37+08:00","dateModified":"2026-08-10T01:14:37+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09","url":"https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/","description":"日期：2026-08-09 状态：✅ 已完结（新方法重生成） 来源：handoff\\bak\\260809_MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进_handoff.md（编码探测：utf-8） 用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信\u0026hellip;","datePublished":"2026-08-16T16:36:36+08:00","dateModified":"2026-08-16T16:36:36+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/","name":"交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09","position":2}]}</script>
 <meta property="og:title" content="交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09">
-<meta property="og:description" content="用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：摘要模型（小快非思考型） 与 技能进化模型（思考型）。实施中发现 MemOS 的 openai_compatible provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 Auto&amp;hellip;">
+<meta property="og:description" content="日期：2026-08-09 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260809_MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进_handoff.md（编码探测：utf-8） 用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/260809-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/">
 <meta name="twitter:title" content="交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09">
-<meta name="twitter:description" content="用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：摘要模型（小快非思考型） 与 技能进化模型（思考型）。实施中发现 MemOS 的 openai_compatible provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 Auto&amp;hellip;">
+<meta name="twitter:description" content="日期：2026-08-09 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260809_MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进_handoff.md（编码探测：utf-8） 用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -175,7 +175,7 @@
     <h1 class="article-title">交接文档 · MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进 · 2026-08-09</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-10</span>
+      <span class="article-meta__item">2026-08-16</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -195,14 +195,13 @@
   
 
   <div class="article-content">
-    <p>用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：<strong>摘要模型（小快非思考型）</strong> 与 <strong>技能进化模型（思考型）</strong>。实施中发现 MemOS 的 <code>openai_compatible</code> provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 AutoClaw 网关插件注册缺失的问题。</p>
-<ul>
+    <ul>
+<li><strong>日期</strong>：2026-08-09</li>
+<li><strong>状态</strong>：✅ 已完结（新方法重生成）</li>
+<li><strong>来源</strong>：handoff\bak\260809_MemOS 接入 AutoClaw_Hermes 排障：看板空白·网关 slots 重置·智谱 v4 模型接入与摘要_进_handoff.md（编码探测：utf-8）<br />
+用户想让 Hermes Agent 具备「长期记忆 + 技能自进化」能力，按一篇微信文章（MemOS Local Plugin 2.0 装 Hermes）实施。需要先配两个模型：<strong>摘要模型（小快非思考型）</strong> 与 <strong>技能进化模型（思考型）</strong>。实施中发现 MemOS 的 <code>openai_compatible</code> provider 对国内模型（尤其智谱）存在协议不兼容的硬坑，并连带暴露了 AutoClaw 网关插件注册缺失的问题。</li>
 <li><strong>现象</strong>：<code>http://127.0.0.1:8650/#/hermes/chat</code> 看板打不开 / 不展示。</li>
-<li><strong>根因（双层）</strong>：
-<ol>
-<li>启动脚本 <code>start_studio.ps1</code> 漏配 <code>HERMES_BIN</code> → spawn hermes 报 <code>ENOENT</code>；…</li>
-</ol>
-</li>
+<li><strong>根因（双层）</strong>：…</li>
 </ul>
 
   </div>
@@ -210,20 +209,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/260807-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">交接文档 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案 · 2026-08-07</span>
+        <span class="post-nav-card__title">交接文档 · 4 端 handoff 去重执行报告（2026-08-11） · 2026-08-11</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260809工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260808-hermes-接入模型评分表-纯-5-站榜单视角-moa-选型/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">每日工作总结 · 2026-08-09</span>
+        <span class="post-nav-card__title">交接文档 · Hermes 接入模型评分表（纯 5 站榜单视角 · MoA 选型） · 2026-08-08</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

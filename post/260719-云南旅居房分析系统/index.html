@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>交接文档 · 云南旅居房分析系统（yunnan-housing） | W662000&#39;s Blog</title>
+  <title>交接文档 · 云南旅居房分析系统 · 2026-07-19 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）" />
+<meta property="og:title" content="交接文档 · 云南旅居房分析系统 · 2026-07-19" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
+<meta name="description" content="日期：2026-07-19 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260719_云南旅居房分析系统_handoff.md（编码探测：utf-8） 基于 Cloudflare 全栈（Workers + D1 + KV + Pages）搭了房价采集看板：买房系统爬 58 同城（云南 16 城 + 无锡 7 区）+ 贝&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · 云南旅居房分析系统（yunnan-housing）","url":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","description":"用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute\u0026hellip;","datePublished":"2026-07-19T23:30:00+08:00","dateModified":"2026-07-19T23:30:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","name":"交接文档 · 云南旅居房分析系统（yunnan-housing）","position":2}]}</script>
-<meta property="og:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）">
-<meta property="og:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"交接文档 · 云南旅居房分析系统 · 2026-07-19","url":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","description":"日期：2026-07-19 状态：✅ 已完结（新方法重生成） 来源：handoff\\bak\\260719_云南旅居房分析系统_handoff.md（编码探测：utf-8） 基于 Cloudflare 全栈（Workers + D1 + KV + Pages）搭了房价采集看板：买房系统爬 58 同城（云南 16 城 + 无锡 7 区）+ 贝\u0026hellip;","datePublished":"2026-08-16T16:22:52+08:00","dateModified":"2026-08-16T16:22:52+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260719-云南旅居房分析系统/","name":"交接文档 · 云南旅居房分析系统 · 2026-07-19","position":2}]}</script>
+<meta property="og:title" content="交接文档 · 云南旅居房分析系统 · 2026-07-19">
+<meta property="og:description" content="日期：2026-07-19 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260719_云南旅居房分析系统_handoff.md（编码探测：utf-8） 基于 Cloudflare 全栈（Workers + D1 + KV + Pages）搭了房价采集看板：买房系统爬 58 同城（云南 16 城 + 无锡 7 区）+ 贝&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/260719-云南旅居房分析系统/">
-<meta name="twitter:title" content="交接文档 · 云南旅居房分析系统（yunnan-housing）">
-<meta name="twitter:description" content="用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。 最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + `wrangler d1 execute&amp;hellip;">
+<meta name="twitter:title" content="交接文档 · 云南旅居房分析系统 · 2026-07-19">
+<meta name="twitter:description" content="日期：2026-07-19 状态：✅ 已完结（新方法重生成） 来源：handoff\bak\260719_云南旅居房分析系统_handoff.md（编码探测：utf-8） 基于 Cloudflare 全栈（Workers + D1 + KV + Pages）搭了房价采集看板：买房系统爬 58 同城（云南 16 城 + 无锡 7 区）+ 贝&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">交接文档 · 云南旅居房分析系统（yunnan-housing）</h1>
+    <h1 class="article-title">交接文档 · 云南旅居房分析系统 · 2026-07-19</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-07-19</span>
+      <span class="article-meta__item">2026-08-16</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -186,11 +186,7 @@
       
       <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/cloudflare/" class="tag-pill tag-pill--sm">cloudflare</a>
-      
-      <a href="/tag/pa-chong/" class="tag-pill tag-pill--sm">爬虫</a>
-      
-      <a href="/tag/fang-jia/" class="tag-pill tag-pill--sm">房价</a>
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
       
     </div>
     
@@ -199,28 +195,36 @@
   
 
   <div class="article-content">
-    <p>用 WorkBuddy 搭了「爬 58 同城/贝壳 → Cloudflare D1 存储 → Pages 看板展示」的云南旅居房分析系统，含买房（58+贝壳）和租房（58）两套，覆盖云南 16 城。架构后来复用为无锡版（见《58 无锡买房租房项目搭建》）。</p>
-<p>最大收获是认知修正：CF Workers 机房 IP 被数据源封杀，必须本地住宅 IP 爬 + <code>wrangler d1 execute</code> 直连 D1；workers.dev 对中国 POST 被拦截。沉淀了快照累积去重（房价走势每套每次存一条）、Cookie 登录墙绕过、unit_price 字段名 snake/camel 坑、Android 走相对路径 API_BASE 等经验。完整流程与命令见 HANDOFF.md。</p>
+    <ul>
+<li><strong>日期</strong>：2026-07-19</li>
+<li><strong>状态</strong>：✅ 已完结（新方法重生成）</li>
+<li><strong>来源</strong>：handoff\bak\260719_云南旅居房分析系统_handoff.md（编码探测：utf-8）</li>
+</ul>
+<hr />
+<h2 id="-cloudflare-workers--d1--kv--pages-58--16----7---kecom-58----7--d1-11--58-handoff-5-">基于 Cloudflare 全栈（Workers + D1 + KV + Pages）搭了房价采集看板：<strong>买房系统</strong>爬 58 同城（云南 16 城 + 无锡 7 区）+ 贝壳 ke.com，<strong>租房系统</strong>爬 58 同城租房（云南 + 无锡 7 区），数据落 D1、看板可看全量，沉淀 11 条反爬铁律。这是后续「无锡 58 爬虫」(handoff #5) 的<strong>前身与架构母体</strong>。</h2>
+<ul>
+<li>技术栈：CF Workers（原设计云端爬+API，后改<strong>本地住宅 IP 爬虫 + <code>wrangler d1 execute</code> 直连 D1</strong>）、D1（SQLite）、KV（缓存）、CF Pages / Workers Static Assets（Dashboard）。…</li>
+</ul>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/260720工作总结/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/260721-hermes-webui本地docker两容器部署/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">260720工作总结</span>
+        <span class="post-nav-card__title">交接文档 · hermes-webui本地Docker两容器部署 · 2026-07-21</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/260719工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260805-技术点/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">260719工作总结</span>
+        <span class="post-nav-card__title">交接文档 · 技术点 · 2026-08-05</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
