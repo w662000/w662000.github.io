@@ -179,10 +179,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
+    <a href="/post/2026-08-08-techpoint-hermes-接入模型评分表-纯-5-站榜单视角-moa-选型/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · Hermes 接入模型评分表（纯 5 站榜单视角 · MoA 选型）</h3>
     </a>
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-08-techpoint-hermes-接入模型评分表-纯-5-站榜单视角-moa-选型/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -191,13 +191,10 @@
 
 
 
-博客端
-GitHub Pages + Jekyll（daily-note-blog）
-Gridea Pro 单独承担
-push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
-
-
-...
+评分数据来源
+本机实测缓存 provider_models_cache.json（75 条 → 去重 64 个）
+网上榜单截图 / 拍脑袋
+这是本机真实接入记录，T0 可信；避免引用过期或口径不明的榜...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-15
@@ -210,26 +207,13 @@ push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-09</h3>
     </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
-
-
-容器间通信
-Docker bridge 网络 + HTTP ...
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__excerpt clamp-2">
+      10:45 用户批准进化提案：记录&amp;quot;改启动脚本而非程序本体&amp;quot;固定自启动窗口位置/大小的用户偏好
+已应用到 MEMORY.md（追加&amp;quot;自启动窗口修复方式偏好&amp;quot;段落）
+草稿：evolution-dr...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-15
@@ -242,17 +226,17 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260810工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-10</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.5（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260810工作总结/" class="post-card__excerpt clamp-2">
-      今日主线只有一条：把 handoff 五天没发的问题彻底解决。
-先重启 Hermes 网关和 18800 内存看板，两个进程都拿到了新 PID。
-发现一个关键点：看门狗只管 OpenClaw，Hermes 这侧挂了不会自动复活。
-接着...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.5 要解决：彻底消除财富自由系列 6 个 skill 的磁盘双份，使清单与磁盘都达到 name 去重后无重复。
+选型结论：
+
+删除顶层重复目录：fw01-wealth-freedom-definition、fw05-abando...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-10
+      2026-08-15
       
     </div>
   </div>
@@ -262,14 +246,25 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260731-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日完成项目 · 2026-07-31</h3>
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
     </a>
-    <a href="/post/260731-每日完成项目/" class="post-card__excerpt clamp-2">
-      跨项目记忆瘦身（方案 B）：把 ~/.workbuddy/MEMORY.md 从 26KB／约 2747 token 压到约 16.6KB／1770 token，每次对话省约 977 token（36%）。6 条强制红线一字未动，He...
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+看板后端环境变量修复
+setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
+改 start_studio.ps1 脚本
+用户要求「不碰配置、不重启」；Machine 级...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-10
+      2026-08-15
       
     </div>
   </div>
@@ -279,15 +274,17 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260807-二-关键决策-_-注意事项/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">二、关键决策 _ 注意事项 · 2026-08-07</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260807-二-关键决策-_-注意事项/" class="post-card__excerpt clamp-2">
-      资金流看板走「同源代理 + UI 不动」路线。 不改人家的前端逻辑，只把 host 指向本地代理，服务端替它出网。这样保留了原版观感，也绕开了浏览器直连东财的一切跨域/风控问题。
-数据源双轨：主源 push2delay + 备用源 a...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.4 要解决：agent-reach skill 目录已被删除，清单仍将其列为「我参与制定」，造成脏数据；同时 cangjie-skill 财富自由系列存在磁盘双份，需标记重复。
+选型结论：
+
+删除失效 skill：移除 agen...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-10
+      2026-08-15
       
     </div>
   </div>
@@ -297,27 +294,14 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260807-三-生成的有用文件/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">三、生成的有用文件 · 2026-08-07</h3>
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-10</h3>
     </a>
-    <a href="/post/260807-三-生成的有用文件/" class="post-card__excerpt clamp-2">
-      文件 / 目录
-路径
-用途
-
-
-
-
-资金流看板项目目录
-D:\AI work\workbuddy\主力资金流向白名单版\
-今日最大交付，与模型测速雷达并列的独立项目
-
-
-看板服务端
-D:\AI work\workbuddy\主力资金流...
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__excerpt clamp-2">
+      09:08 清理自启动目录的 Hermes-AutoStart.vbs.bak-20260810（Windows 报 bak 无法启动），删除后目录剩 desktop.ini / Hermes-AutoStart.vbs / Rada...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-10
+      2026-08-15
       
     </div>
   </div>
@@ -327,17 +311,15 @@ D:\AI work\workbuddy\主力资金流...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260809工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-09</h3>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
     </a>
-    <a href="/post/260809工作总结/" class="post-card__excerpt clamp-2">
-      今日三条主线：进程安全清理、自动化代理诊断、Hermes 看板排障。
-上午拔掉一个最高权限常驻的 cua-driver 进程。
-查清它是 Hermes 生态自动装的开源件，但无签名无法证真，已彻底卸载。
-中午揪出前日两个自动化双双失败...
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-09
+      2026-08-15
       
     </div>
   </div>
@@ -347,17 +329,17 @@ D:\AI work\workbuddy\主力资金流...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260808工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-08</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260808工作总结/" class="post-card__excerpt clamp-2">
-      今日三条主线：资金看板迭代、模型评分表、WorkBuddy 更新排查。
-板块资金看板从 v1.2 连改两版到 v1.4，个股查询终于能用。
-新增独立的「个股资金」栏目，点查询自动跳转，结果不再塞进板块表格。
-东财个股查不出数的真凶是 ...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
+选型结论：
+
+永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-08
+      2026-08-15
       
     </div>
   </div>
@@ -367,16 +349,17 @@ D:\AI work\workbuddy\主力资金流...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260807工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-07</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260807工作总结/" class="post-card__excerpt clamp-2">
-      今日主线是主力资金流向白名单版看板，从&amp;quot;文档读不到&amp;quot;做到&amp;quot;双击桌面就能看&amp;quot;。
-腾讯文档 page 类型读不到正文，非权限问题而是接口能力未覆盖。
-用户导出 zip 后真相大白，看板是动态前端应用...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.2 要解决：v1.1 只补了 3 个手动 skill，用户进一步指出还有 6 个共建 skill 未纳入。
+选型结论：
+
+手动补进扩展 6 个：cf-58-scraper-replicate、forum-handoff-publ...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-07
+      2026-08-15
       
     </div>
   </div>
@@ -386,16 +369,17 @@ D:\AI work\workbuddy\主力资金流...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260806工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-06</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260806工作总结/" class="post-card__excerpt clamp-2">
-      今日主线三块：模型能力核查、bat 踩坑复盘升红线、另一台笔记本 Debian 双启装机。
-实测 step-1o-audio 不支持图片输入，纠正&amp;quot;三模态一体化&amp;quot;是宣传非单端点能力的误判。
-对文本推理类 54 模型...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
+选型结论：
+
+判定标准升级：agent_created=true 自动检测 + 用户手...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-06
+      2026-08-15
       
     </div>
   </div>
