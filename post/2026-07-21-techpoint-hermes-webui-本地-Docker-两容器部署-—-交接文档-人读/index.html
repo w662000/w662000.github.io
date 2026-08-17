@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 0.0.0-dev">
+  <title>技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读 | W662000&#39;s Blog</title>
+  
+<meta property="og:title" content="技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="技术点 · hermes-webui 本地 Docker 两容器部署 — 交接文档（人读） 来源：260721_hermes-webui本地Docker两容器部署_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-webui-本地-Docker-两容器部署-—-交接文档-人读/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读","url":"https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-webui-本地-Docker-两容器部署-—-交接文档-人读/","description":"技术点 · hermes-webui 本地 Docker 两容器部署 — 交接文档（人读） 来源：260721_hermes-webui本地Docker两容器部署_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） \u0026hellip;","datePublished":"2026-08-17T23:41:14+08:00","dateModified":"2026-08-17T23:41:14+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-webui-本地-Docker-两容器部署-—-交接文档-人读/","name":"技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读","position":2}]}</script>
+<meta property="og:title" content="技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读">
+<meta property="og:description" content="技术点 · hermes-webui 本地 Docker 两容器部署 — 交接文档（人读） 来源：260721_hermes-webui本地Docker两容器部署_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-webui-本地-Docker-两容器部署-—-交接文档-人读/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="W662000's Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-21-techpoint-hermes-webui-本地-Docker-两容器部署-—-交接文档-人读/">
+<meta name="twitter:title" content="技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读">
+<meta name="twitter:description" content="技术点 · hermes-webui 本地 Docker 两容器部署 — 交接文档（人读） 来源：260721_hermes-webui本地Docker两容器部署_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://towertop.kdns.fr" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="/images/avatar.png" alt="W662000&#39;s Blog" />
+        </a>
+        
+        <a href="https://towertop.kdns.fr" class="site-name-link">W662000&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/daily-note-blog/">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">技术点 · hermes-webui-本地-Docker-两容器部署-—-交接文档-人读</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-08-17</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">8 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
+      
+    </div>
+    
+  </header>
+
+  
+
+  <div class="article-content">
+    <h1 id="--hermes-webui--docker---">技术点 · hermes-webui 本地 Docker 两容器部署 — 交接文档（人读）</h1>
+<blockquote>
+<p>来源：260721_hermes-webui本地Docker两容器部署_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8）</p>
+</blockquote>
+<h2 id="heading">一、技术选型</h2>
+<p>（源 handoff 未单列技术选型）</p>
+<h2 id="heading-1">二、实施要点与关键技术</h2>
+<p>（源 handoff 未单列实施要点）</p>
+<h3 id="heading-2">关键技术要点（自动抽取）</h3>
+<ul>
+<li><strong>来源</strong>：handoff\bak\260721_hermes-webui本地Docker两容器部署_handoff.md（编码探测：utf-8）</li>
+<li>
+<blockquote>
+<p>给接手的同学看。本 handoff 只聚焦「本地 Docker 两容器（webui + agent）」这一条路径；同期调研的 Back4App/CloudFlare/Render/Koyeb/SnapDeploy 文档为别家平台，不属本项目。</p>
+</blockquote>
+</li>
+<li>用官方两容器方案跑通 hermes-webui（WebUI 容器）+ hermes-agent（gateway 容器），WebUI :8787、Agent gateway :8642，完整 Agent 能力（AIAgent）可用，修通网关鉴权/网络/Provider 模型路由。</li>
+<li>网络环境：docker.io 直连被墙（auth.docker.io 断开），ghcr.io 可达，GitHub 大克隆被干扰。</li>
+<li><strong>2026-07-21 上午</strong>：两容器方案跑通；修网关（aiohttp 缺失、API_SERVER_ENABLED、API_SERVER_HOST=0.0.0.0、API_SERVER_KEY）；Provider key 实测（Gemini 地区封禁、OpenRouter 可用、HuggingFace 不可达）；开日本代理后 Gemini 通；默认模型切 <code>openrouter/free</code>→ 因不支持 tools 改 <code>nvidia/nemotron-3-nano-30b-a3b:free</code>；Gemini 免费额度打满切回 OpenRouter；修流式输出页面抖动（overflow-anchor）。</li>
+<li>
+<ol>
+<li><strong>&ldquo;AIAgent not available&rdquo; 根因</strong>：agent 源码卷 <code>hermes-agent-src</code> 是空的——agent 不在 webui 仓库里。必须首启由 agent 镜像 <code>/opt/hermes</code> 填充命名卷，挂到 webui 的 <code>/home/hermeswebui/.hermes/hermes-agent</code>，WebUI 启动时 editable 安装 <code>hermes-agent==0.18.2</code>。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><strong>网关 heartbeat failed 四连坑</strong>（缺一不可）：① agent 容器缺 <code>aiohttp</code> → <code>uv pip install aiohttp</code>；② <code>API_SERVER_ENABLED=1</code> 才启动 HTTP 监听；③ <code>API_SERVER_HOST=0.0.0.0</code>（默认 127.0.0.1 仅容器内回环，跨 bridge 访问不到）；④ <code>API_SERVER_KEY</code> 必须 webui/agent 一致（本机 <code>hermes-local-dev-key-2026</code>）。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><strong>Provider key 不生效的 env 坑</strong>：LLM 调用层读 <code>os.environ</code>，但 Providers 检测从 <code>.env</code> 文件读 → 要把 <code>GEMINI_API_KEY</code>/<code>OPENROUTER_API_KEY</code>/<code>GLM_API_KEY</code> 写成 compose <code>environment:</code> 真实环境变量（两个 service 都加），否则聊天 401。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><strong>base_url 全局覆盖坑</strong>：切换默认 provider 时，残留的 <code>base_url: https://openrouter.ai/api/v1</code> 会被套到 gemini → 401。切 provider 必须清空/改 <code>base_url</code>。</li>
+</ol>
+</li>
+<li>
+<ol start="9">
+<li><strong>🔥 <code>--force-recreate</code> 红线</strong>：加 GLM_API_KEY 后误执行 <code>--force-recreate</code> 触发 webui 全量重装（rsync 1.2G + pip 95+ 包，近 1 小时）。改 compose env 后用 <code>docker compose restart</code>，绝对禁 <code>--force-recreate</code>。加 <code>UV_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/</code> 避免重装超时。</li>
+</ol>
+</li>
+<li>
+<ol start="10">
+<li><strong>Provider 实测结论</strong>：本机出口 IP 受限 → 仅 OpenRouter 真正可用；Gemini 需代理出口；HuggingFace 推理 API 被墙。<code>openrouter/free</code> 自动路由器<strong>不支持 tools</strong>，不能做 Agent 默认模型。</li>
+</ol>
+</li>
+<li><code>D:\hermes-webui\docker-compose.two-container.yml</code> — 两容器编排核心（env/卷/端口/key）</li>
+</ul>
+<h2 id="heading-3">三、关键产物与命令</h2>
+<p>（见源 handoff 关键产物字段）</p>
+<h2 id="--">四、如何复现 / 重打</h2>
+<p>（见源 handoff 重打方法字段）</p>
+<h2 id="heading-4">五、后续风险</h2>
+<ol>
+<li><strong>&ldquo;AIAgent not available&rdquo; 根因</strong>：agent 源码卷 <code>hermes-agent-src</code> 是空的——agent 不在 webui 仓库里。必须首启由 agent 镜像 <code>/opt/hermes</code> 填充命名卷，挂到 webui 的 <code>/home/hermeswebui/.hermes/hermes-agent</code>，WebUI 启动时 editable 安装 <code>hermes-agent==0.18.2</code>。</li>
+<li><strong>网关 heartbeat failed 四连坑</strong>（缺一不可）：① agent 容器缺 <code>aiohttp</code> → <code>uv pip install aiohttp</code>；② <code>API_SERVER_ENABLED=1</code> 才启动 HTTP 监听；③ <code>API_SERVER_HOST=0.0.0.0</code>（默认 127.0.0.1 仅容器内回环，跨 bridge 访问不到）；④ <code>API_SERVER_KEY</code> 必须 webui/agent 一致（本机 <code>hermes-local-dev-key-2026</code>）。</li>
+<li><strong>Provider key 不生效的 env 坑</strong>：LLM 调用层读 <code>os.environ</code>，但 Providers 检测从 <code>.env</code> 文件读 → 要把 <code>GEMINI_API_KEY</code>/<code>OPENROUTER_API_KEY</code>/<code>GLM_API_KEY</code> 写成 compose <code>environment:</code> 真实环境变量（两个 service 都加），否则聊天 401。</li>
+<li><strong>base_url 全局覆盖坑</strong>：切换默认 provider 时，残留的 <code>base_url: https://openrouter.ai/api/v1</code> 会被套到 gemini → 401。切 provider 必须清空/改 <code>base_url</code>。</li>
+<li><strong>镜像拉取</strong>：<code>python:3.12-slim</code> 用 <code>docker.1ms.run/library/python:3.12-slim</code> 拉后 <code>docker tag</code>；agent <code>nousresearch/hermes-agent:latest</code>（3.81GB）同走 <code>docker.1ms.run</code>。</li>
+<li><strong>CRLF 坑</strong>：Windows 克隆把 LF 转 CRLF → <code>docker_init.bash</code> shebang 变 <code>#!/bin/bash\r</code> → 容器 exec &ldquo;no such file&rdquo;。修：git <code>core.autocrlf=false</code> + Python 批量剥离 CR。</li>
+<li><strong>Providers 页面 &ldquo;Failed to fetch&rdquo;</strong>：bedrock_adapter 懒加载 boto3 超时死锁 → 阿里云镜像预装 <code>boto3==1.42.89</code>。</li>
+<li><strong>样式持久化坑</strong>：<code>/app/static</code> 不是挂载卷，直接改容器内文件会被入口 <code>rsync /apptoo → /app</code> 覆盖。正确：把 <code>style.override.css</code> 挂到 <strong>rsync 源</strong> <code>C:/Users/Administrator/.hermes/style.override.css:/apptoo/static/style.css:ro</code>。</li>
+<li><strong>🔥 <code>--force-recreate</code> 红线</strong>：加 GLM_API_KEY 后误执行 <code>--force-recreate</code> 触发 webui 全量重装（rsync 1.2G + pip 95+ 包，近 1 小时）。改 compose env 后用 <code>docker compose restart</code>，绝对禁 <code>--force-recreate</code>。加 <code>UV_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/</code> 避免重装超时。</li>
+<li><strong>Provider 实测结论</strong>：本机出口 IP 受限 → 仅 OpenRouter 真正可用；Gemini 需代理出口；HuggingFace 推理 API 被墙。<code>openrouter/free</code> 自动路由器<strong>不支持 tools</strong>，不能做 Agent 默认模型。</li>
+</ol>
+<hr />
+<h2 id="6">6、部署状态</h2>
+<ul>
+<li>WebUI：<code>http://localhost:8787</code>（容器 <code>127.0.0.1:8787-&gt;8787</code>，healthy，<code>/health</code> 200）</li>
+<li>Agent gateway：<code>127.0.0.1:8642-&gt;8642</code>（容器名 <code>hermes-agent</code>），OpenAI 兼容 <code>/v1/models</code> 返回 <code>hermes-agent</code></li>
+<li>启动：<code>cd D:\hermes-webui &amp;&amp; docker compose -f docker-compose.two-container.yml up -d</code></li>
+<li>镜像：webui <code>hermes-webui-hermes-webui:latest</code>；agent <code>nousresearch/hermes-agent:latest</code></li>
+<li><code>hermes-home</code> 已改 bind mount <code>C:/Users/Administrator/.hermes</code></li>
+</ul>
+<hr />
+<h2 id="7">7、关键文件</h2>
+<ul>
+<li><code>D:\hermes-webui\docker-compose.two-container.yml</code> — 两容器编排核心（env/卷/端口/key）</li>
+<li><code>C:\Users\Administrator\.hermes\config.yaml</code> — Hermes 主配置（model.default/provider/白名单）</li>
+<li><code>C:\Users\Administrator\.hermes\style.override.css</code> — 持久化样式修复（overflow-anchor:none）</li>
+<li><code>D:\hermes-webui\api\workspace.py</code> / <code>updates.py</code> — 含 <code>_run_git()</code>（项目「Hermes Windows 原生迁移」在此修黑框）</li>
+<li><code>hermes-webui-snapdeploy/README.md</code>、<code>hermes-webui-back4app-cloudflare-deploy.md</code>、<code>hermes-webui-render-koyeb-deploy.md</code> — 别家平台调研（非本路径）</li>
+</ul>
+<hr />
+<h2 id="8">8、发布记录</h2>
+<ul>
+<li>未对外发布（本地部署调试，无 handoff 文档历史）。后续 Hermes 已迁 Windows 原生，见 handoff「Hermes Windows 原生部署迁移」。</li>
+</ul>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-A-计划收尾与-handoff-自动发布链路修复/" class="post-nav-card post-nav-card--prev">
+      
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">技术点 · model-speed-radar-看板-A-计划收尾与-handoff-自动发布链路修复</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
+    
+    
+    <a href="/post/2026-08-04-techpoint-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">技术点 · china-stock-data-实测报告-2026-08-04-21_xx</span>
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/daily-note-blog/">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 W662000&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+    <div class="footer-custom">
+      Powered by Gridea Pro
+    </div>
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v0.0.0-dev %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>

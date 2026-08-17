@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 | W662000&#39;s Blog</title>
+  <title>技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范" />
+<meta property="og:title" content="技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="选型项 选定 落选 依据 调用脚本依赖 Python 标准库 urllib requests / SDK 技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1） 视频结果获取方式 API Key 调结果接口 /agnesapi 登录控&amp;hellip;">
+<meta name="description" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 来源：260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范","url":"https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","description":"选型项 选定 落选 依据 调用脚本依赖 Python 标准库 urllib requests / SDK 技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1） 视频结果获取方式 API Key 调结果接口 /agnesapi 登录控\u0026hellip;","datePublished":"2026-08-15T23:07:13+08:00","dateModified":"2026-08-15T23:07:13+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","name":"技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范","position":2}]}</script>
-<meta property="og:title" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范">
-<meta property="og:description" content="选型项 选定 落选 依据 调用脚本依赖 Python 标准库 urllib requests / SDK 技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1） 视频结果获取方式 API Key 调结果接口 /agnesapi 登录控&amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范","url":"https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","description":"技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 来源：260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） \u0026hellip;","datePublished":"2026-08-17T23:42:30+08:00","dateModified":"2026-08-17T23:42:30+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/","name":"技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范","position":2}]}</script>
+<meta property="og:title" content="技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范">
+<meta property="og:description" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 来源：260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-01-techpoint-为-workbuddy-接入-agnes-生图生视频能力并固化调用规范/">
-<meta name="twitter:title" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范">
-<meta name="twitter:description" content="选型项 选定 落选 依据 调用脚本依赖 Python 标准库 urllib requests / SDK 技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1） 视频结果获取方式 API Key 调结果接口 /agnesapi 登录控&amp;hellip;">
+<meta name="twitter:title" content="技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范">
+<meta name="twitter:description" content="技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范 来源：260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） &amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,13 +172,13 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范</h1>
+    <h1 class="article-title">技术点 · 为-WorkBuddy-接入-Agnes-生图生视频能力并固化调用规范</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-15</span>
+      <span class="article-meta__item">2026-08-17</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">1 分钟阅读</span>
+      <span class="article-meta__item">2 分钟阅读</span>
       
     </div>
     
@@ -195,88 +195,58 @@
   
 
   <div class="article-content">
-    <table>
-<thead>
-<tr>
-<th>选型项</th>
-<th>选定</th>
-<th>落选</th>
-<th>依据</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>调用脚本依赖</td>
-<td><strong>Python 标准库 <code>urllib</code></strong></td>
-<td>requests / SDK</td>
-<td>技能要在任意环境一键跑，装包会引入失败面；stdlib 足够覆盖 POST/GET/轮询/下载（T1）</td>
-</tr>
-<tr>
-<td>视频结果获取方式</td>
-<td><strong>API Key 调结果接口 <code>/agnesapi</code></strong></td>
-<td>登录控制台取 cookie</td>
-<td>官方文档明确推荐方式只需 API Key，响应顶层 <code>url</code> 即直链。曾误判&quot;必须 cookie&quot;，纯属没读文档（T0 官方文档纠偏）</td>
-</tr>
-<tr>
-<td>生成任务模型</td>
-<td><strong>异步：创建 → 轮询状态 → 取结果</strong></td>
-<td>同步等待返回</td>
-<td>视频生成实测 72 秒 ~ 4 分钟不等，同步必超时（T1）</td>
-</tr>
-<tr>
-<td>重试策略</td>
-<td><strong>429/5xx 温和退避重试，其余不重试</strong></td>
-<td>全错误码重试</td>
-<td>参数类错误重试无意义还烧配额；503 属服务瞬时不可用，退避后大概率成功（T1，生图一次 503 重试即成）</td>
-</tr>
-<tr>
-<td>规范文档存放</td>
-<td><strong>单一真源 + 会话副本，真源放不参与自动搬运的目录</strong></td>
-<td>多处各留一份</td>
-<td>多副本必漂移；真源要放在不匹配自动化命名模式的目录，避免被流程二次移动（T1）</td>
-</tr>
-<tr>
-<td>沉淀形态</td>
-<td><strong>用户级技能（SKILL.md + 脚本）</strong></td>
-<td>只写文档</td>
-<td>文档要人去找，技能可被触发词直接加载，坑位随调用自动生效（T1）</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><strong>对话端点返 404 ≠ 模型下线。</strong> 生成类模型不接 <code>/chat/completions</code>，走各自专用端点。删条目前必须先打平台 <code>/v1/models</code> 只读清单核对。这个坑同期栽过两次（一次是模型 id 带了多余前缀，一次就是本次生成类模型被误删）（T1）。</li>
-<li><strong>生图：参数位置有讲究。</strong>
-<pre><code>POST https://api.agnes-ai.cn/v1/images/generations
-</code></pre>
+    <h1 id="---workbuddy--agnes-">技术点 · 为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范</h1>
+<blockquote>
+<p>来源：260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8）</p>
+</blockquote>
+<h2 id="heading">一、技术选型</h2>
+<p>（源 handoff 未单列技术选型）</p>
+<h2 id="heading-1">二、实施要点与关键技术</h2>
+<p>（源 handoff 未单列实施要点）</p>
+<h3 id="heading-2">关键技术要点（自动抽取）</h3>
 <ul>
-<li><code>response_format</code> <strong>必须放进 <code>extra_body</code></strong>，放顶层会被忽略（甚至 400）。</li>
-<li>图生图把源图放 <code>extra_body.image</code>。</li>
+<li><strong>来源</strong>：handoff\bak\260801_为 WorkBuddy 接入 Agnes 生图生视频能力并固化调用规范_handoff.md（编码探测：utf-8）</li>
+<li>活清单（~/.workbuddy/models.json）里 Agnes-AI 原有 6 个文本模型，多模态的 agnes-image-2.1-flash、agnes-video-v2.0 此前被误删（chat 返 404 是路由级而非模型下线，被错判&quot;死了&quot;）。</li>
+<li>生图 POST <a href="https://api.agnes-ai.cn/v1/images/generations">https://api.agnes-ai.cn/v1/images/generations</a>，response_format 必须放进 extra_body（放顶层会被忽略）。</li>
+<li>生视频 POST <a href="https://api.agnes-ai.cn/v1/videos">https://api.agnes-ai.cn/v1/videos</a>（注意不是 /videos/generations）；num_frames 须 8n+1 ≤ 441；异步任务，取返回 task_id 轮询 GET <a href="https://api.agnes-ai.cn/v1/videos/%7Btask_id%7D">https://api.agnes-ai.cn/v1/videos/{task_id}</a>（单 /v1）直到 completed。</li>
+<li>取片（重大纠偏）：官方文档证明推荐方式只需 API Key —— GET <a href="https://api.agnes-ai.cn/agnesapi?video_id=">https://api.agnes-ai.cn/agnesapi?video_id=</a>&lt;VIDEO_ID&gt;&amp;model_name=agnes-video-v2.0，响应顶层 url 字段即 mp4 直链，curl 下载即可。根本不需要登录控制台 cookie（此前误判&quot;需控制台会话取片&quot;，根因是只轮询了状态接口 /v1/videos/{task_id}、没调结果接口 /agnesapi）。</li>
+<li>下载时 Windows schannel 证书吊销离线错误（CRYPT_E_REVOCATION_OFFLINE，走本地代理所致）→ curl 加 &ndash;ssl-no-revoke 解决。</li>
+<li>SKILL.md：完整流程 + 所有易踩坑（response_format 进 extra_body、num_frames 8n+1、轮询 vs 结果接口区分、下载 SSL 坑、两模型非对话模型 /chat 404 正常）。</li>
+<li>scripts/agnes_gen.py：基于 stdlib urllib 的一键脚本（无需装包），内置 429/5xx 温和退避重试。</li>
+<li>取片用 API Key 走 /agnesapi，不要再去控制台拿 cookie（以官方文档为准）。</li>
+<li>生视频是异步，必须轮询 /v1/videos/{task_id} 到 completed 再调 /agnesapi 取片。</li>
+<li>| 文件 | 路径 | 用途 |</li>
+<li>论坛发布（bbs1org/phpBB）在本机沙箱缺代理时曾 SSL 握手失败，自动化环境（venv python）通常正常；08-01 handoff 发布时若失败可次日补。</li>
 </ul>
-</li>
-<li><strong>生视频：端点、帧数、异步三个坑。</strong>
-<pre><code class="language-…"></code></pre>
-</li>
-</ol>
+<h2 id="heading-3">三、关键产物与命令</h2>
+<p>（见源 handoff 关键产物字段）</p>
+<h2 id="--">四、如何复现 / 重打</h2>
+<p>（见源 handoff 重打方法字段）</p>
+<h2 id="heading-4">五、后续风险</h2>
+<ul>
+<li>论坛发布（bbs1org/phpBB）在本机沙箱缺代理时曾 SSL 握手失败，自动化环境（venv python）通常正常；08-01 handoff 发布时若失败可次日补。</li>
+<li>视频模型对血腥画面（如&quot;斩断双腿&quot;）可能弱化，需改 prompt 淡化。</li>
+</ul>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-+-多补-改造方案/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</span>
+        <span class="post-nav-card__title">技术点 · 主力资金流向看板-8850-数据源-照搬-+-多补-改造方案</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-12-techpoint-slg-resume-plan-AutoClaw-项目表-—-交接文档/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · 9 个 AI 项目 90 天落地方案（执行层）</span>
+        <span class="post-nav-card__title">技术点 · slg-resume-plan-AutoClaw-项目表-—-交接文档</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

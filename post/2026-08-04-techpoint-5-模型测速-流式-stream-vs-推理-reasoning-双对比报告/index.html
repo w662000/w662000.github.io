@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告 | W662000&#39;s Blog</title>
+  <title>技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告" />
+<meta property="og:title" content="技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
+<meta name="description" content="技术点 · 5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告 来源：260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","description":"选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分\u0026quot;stream 的功劳\u0026quot;和\u0026quot;reasoning 的影响\u0026quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / \u0026hellip;","datePublished":"2026-08-15T23:07:13+08:00","dateModified":"2026-08-15T23:07:13+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","name":"技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告","position":2}]}</script>
-<meta property="og:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告">
-<meta property="og:description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告","url":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","description":"技术点 · 5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告 来源：260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff\u0026hellip;","datePublished":"2026-08-17T23:34:00+08:00","dateModified":"2026-08-17T23:34:00+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/","name":"技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告","position":2}]}</script>
+<meta property="og:title" content="技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告">
+<meta property="og:description" content="技术点 · 5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告 来源：260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-04-techpoint-5-模型测速-流式-stream-vs-推理-reasoning-双对比报告/">
-<meta name="twitter:title" content="技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告">
-<meta name="twitter:description" content="选型项 选定 落选 依据 实验设计 2×2 析因（stream × reasoning 四组全组合） 单变量前后对比 单变量对比无法区分&amp;quot;stream 的功劳&amp;quot;和&amp;quot;reasoning 的影响&amp;quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论） 分组定义 **N0 非流无推 / S0 流无推 / &amp;hellip;">
+<meta name="twitter:title" content="技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告">
+<meta name="twitter:description" content="技术点 · 5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告 来源：260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,13 +172,13 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · 5 模型测速 流式(stream) vs 推理(reasoning) 双对比报告</h1>
+    <h1 class="article-title">技术点 · 5-模型测速-流式-stream-vs-推理-reasoning-双对比报告</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-15</span>
+      <span class="article-meta__item">2026-08-17</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">1 分钟阅读</span>
+      <span class="article-meta__item">2 分钟阅读</span>
       
     </div>
     
@@ -195,83 +195,52 @@
   
 
   <div class="article-content">
-    <table>
-<thead>
-<tr>
-<th>选型项</th>
-<th>选定</th>
-<th>落选</th>
-<th>依据</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>实验设计</td>
-<td><strong>2×2 析因（stream × reasoning 四组全组合）</strong></td>
-<td>单变量前后对比</td>
-<td>单变量对比无法区分&quot;stream 的功劳&quot;和&quot;reasoning 的影响&quot;；析因能同时看主效应（T1，本项目正因此推翻了原帖结论）</td>
-</tr>
-<tr>
-<td>分组定义</td>
-<td><strong>N0 非流无推 / S0 流无推 / S1 流有推 / N1 非流有推</strong></td>
-<td>&ldquo;开/关某开关&quot;两段描述</td>
-<td>四组正交命名，任何两两比较都有明确语义（T1）</td>
-</tr>
-<tr>
-<td>度量指标</td>
-<td><strong>TTFT 首包延迟 + tot 总耗时 双指标</strong></td>
-<td>只看总耗时</td>
-<td>TTFT 反映&quot;用户多快看到第一个字&rdquo;，tot 反映&quot;完整响应成本&quot;；二者机制不同，必须分开（T1）</td>
-</tr>
-<tr>
-<td>采样纪律</td>
-<td><strong>每组 1 次、温和间隔、不重试</strong></td>
-<td>多次平均 / 重试</td>
-<td>守限流红线；单次样本明确标注&quot;仅供参考&quot;，不把 ±20% 内差异当显著（T1）</td>
-</tr>
-<tr>
-<td>验证手段</td>
-<td><strong>解析客户端产物（app.asar）实锤</strong></td>
-<td>只靠接口测速</td>
-<td>测速能证&quot;快了&quot;，但&quot;为什么快&quot;要扒客户端代码确认硬编码 <code>stream:true</code> 才闭环（T1）</td>
-</tr>
-<tr>
-<td>报告生成</td>
-<td><strong>脚本自动算百分比</strong></td>
-<td>手工填表</td>
-<td>20 行数据手工算改善率必出错；<code>bench_report.py</code> 由原始 JSON 自动生成对比表（T1）</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><strong>2×2 析因的核心价值是&quot;分离两个变量&quot;。</strong> 原帖作者感知&quot;去掉 reasoning_effort 变快了&quot;，但本项目固定流式条件单独看推理效果、再固定推理条件单独看流式效果，最终证明：那 44.8% 的加速 100% 来自 stream，作者把 stream 的功劳误记到 reasoning 头上（T1，5 模型全印证）。</li>
-<li><strong>TTFT 与 tot 的机制不同，结论可能相反。</strong> 本实验结论：
+    <h1 id="--5-stream-vs-reasoning-">技术点 · 5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告</h1>
+<blockquote>
+<p>来源：260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8）</p>
+</blockquote>
+<h2 id="heading">一、技术选型</h2>
+<p>（源 handoff 未单列技术选型）</p>
+<h2 id="heading-1">二、实施要点与关键技术</h2>
+<p>（源 handoff 未单列实施要点）</p>
+<h3 id="heading-2">关键技术要点（自动抽取）</h3>
 <ul>
-<li><strong>流式对 TTFT 普适大幅下降</strong>：5 模型 TTFT 平均 ↓70%+（最快 ↓93.5%），与模型类型、是否带推理无关。</li>
-<li><strong>流式对 tot 不一定降</strong>：流式只是提前吐字、不减少总生成量；部分模型 tot 反而略升（流式返回了更多元数据/思考内容，字节数上涨）。…</li>
+<li><strong>来源</strong>：handoff\bak\260804_5 模型测速：流式(stream) vs 推理(reasoning) 双对比报告_handoff.md（编码探测：utf-8）</li>
+<li>| # | 模型 id | 厂商 | 配置 supportsReasoning |</li>
+<li>| 1 | <code>step-3.7-flash</code> | StepFun | 否（参数可能被服务端忽略） |</li>
+<li>| 2 | <code>glm-4.5-air</code> | GLM API | 否（参数可能被服务端忽略） |</li>
+<li>| 3 | <code>agnes-2.5-flash</code> | Agnes-AI | 否（参数可能被服务端忽略） |</li>
+<li><strong>不支持推理的 3 个模型（step-3.7-flash、glm-4.5-air、agnes-2.5-flash）</strong>：<code>supportsReasoning=False</code>，服务端忽略 <code>reasoning_effort</code> 参数。对比② 的 tot 变化来自生成量随机性，<strong>不能归因于推理</strong>。</li>
+<li><strong>顺序偏差</strong>：请求按 N0→S0→S1→N1 紧挨跑，S1 紧接 S0，可能命中服务端缓存，导致部分 S1 的 TTFT 异常偏低（如 <code>glm-4.5-air</code> S1=0.642s vs S0=6.601s；<code>deepseek-v4-flash</code> S1=1.266s vs S0=1.805s）。这会让「对比② 流式 S0→S1」的 TTFT 改善被高估——<strong>读对比② 时优先看 tot（总耗时），TTFT 仅作参考</strong>。</li>
+<li><strong>单次采样</strong>：每组仅 1 次请求（遵守限流红线），未做多次平均；网络抖动会让 ±20% 内的差异不显著，仅看大趋势。</li>
+<li><em>原始数据：<code>bench_5models_result.json</code> ｜ 测速脚本：<code>bench_5models.py</code> ｜ 本表由 <code>bench_report.py</code> 自动生成。</em></li>
 </ul>
-</li>
-</ol>
+<h2 id="heading-3">三、关键产物与命令</h2>
+<p>（见源 handoff 关键产物字段）</p>
+<h2 id="--">四、如何复现 / 重打</h2>
+<p>（见源 handoff 重打方法字段）</p>
+<h2 id="heading-4">五、后续风险</h2>
+<p>（见源 handoff 后续风险字段）</p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-08-02-techpoint-9-个-ai-项目-90-天落地方案-执行层/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · yunnan-housing</span>
+        <span class="post-nav-card__title">技术点 · 9-个-AI-项目-90-天落地方案-执行层</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-08-11-techpoint-4-端-handoff-去重执行报告-2026-08-11/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</span>
+        <span class="post-nav-card__title">技术点 · 4-端-handoff-去重执行报告-2026-08-11</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
