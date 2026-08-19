@@ -178,14 +178,26 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      本项目要解决：清晰盘点 ~/.workbuddy/skills 目录下到底有多少个用户级 skill，其中哪些是模型与用户共建的，哪些来自市场/预装/第三方。
-选型结论：
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
 
-扫描对象：~/.workbuddy/skills/ 下所有 ...
+
+
+
+调度
+GitHub Actions（cron 每 10 分钟）
+本机探测脚本 + 弹窗
+云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）
+
+
+通知通道
+126 邮箱（SMTP_SSL +...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -198,14 +210,22 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
-选型结论：
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
 
-判定标准升级：agent_created=true 自动检测 + 用户手...
+
+
+
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -218,30 +238,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.2 要解决：v1.1 只补了 3 个手动 skill，用户进一步指出还有 6 个共建 skill 未纳入。
-选型结论：
-
-手动补进扩展 6 个：cf-58-scraper-replicate、forum-handoff-publ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
-    </a>
-    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -250,10 +250,13 @@
 
 
 
-看板后端环境变量修复
-setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
-改 start_studio.ps1 脚本
-用户要求「不碰配置、不重启」；Machine 级...
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
+
+
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -266,14 +269,62 @@ setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260817工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-17</h3>
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
     </a>
-    <a href="/post/260817工作总结/" class="post-card__excerpt clamp-2">
-      今天主线为发布链路事故修复与固化、有道龙虾模型导入与雷达调优。
-锁定全部 14 个自动化任务的模型为 hy3，避免调度器自动路由换模型。
-固化两条发布链路铁保证：有交接文档必有技术点、Gridea 不漏稿。
-修复 260816 夜间五...
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+平台
+Gaming4Free（翼龙面板游戏 VPS）
+Wispbyte / Serv00 / Oracle
+比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
+
+
+代理内核...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-09</h3>
+    </a>
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__excerpt clamp-2">
+      10:45 用户批准进化提案：记录&amp;quot;改启动脚本而非程序本体&amp;quot;固定自启动窗口位置/大小的用户偏好
+已应用到 MEMORY.md（追加&amp;quot;自启动窗口修复方式偏好&amp;quot;段落）
+草稿：evolution-dr...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-08</h3>
+    </a>
+    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__excerpt clamp-2">
+      用户要求：给接入的 70+ 模型（实际 84 个）做评分表，参考&amp;quot;上次做评分表的那 5 个网站的分数&amp;quot;，为 Hermes MoA 模式安排主力/助手，输出 md + html
+5 大平台来源（上次评分表，2026-...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -367,26 +418,6 @@ C:\Users\Ad...
 来源：handoff\bak\260812_autoclaw-模型能力清单_2026-08-06_handoff.md（编码探测：utf-8）
 模型总数：79
 支持图片输入...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-16
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-12/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-12 · 2026-08-12</h3>
-    </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-12/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-12_handoff.md（编码探测：utf-8）
-用户反馈&amp;quot;昨天部署的系...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-16
