@@ -179,22 +179,196 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
+选型结论：
+
+判定标准升级：agent_created=true 自动检测 + 用户手...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单（~_.workbuddy_skills）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      本项目要解决：清晰盘点 ~/.workbuddy/skills 目录下到底有多少个用户级 skill，其中哪些是模型与用户共建的，哪些来自市场/预装/第三方。
+选型结论：
+
+扫描对象：~/.workbuddy/skills/ 下所有 ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
+    </a>
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
-选型依据
+依据
+
+
+
+
+数据源
+目标站官方 API（匿名可读、分页）
+爬 HTML 页面
+前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
+
+
+采集并发
+12 路并行后台采集（每分类一路...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
+      本调查要解决：做什么微信小程序「访问量大 + 付费人群多」，且适合个人/小团队切入。
+选型结论：
+
+研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
+数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
+    </a>
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+筛选对象
+直接读已落盘的 skillhub_all.json（154MB）
+重新发请求抓
+数据源已在手，重抓既浪费额度又可能漂移（T1）
+
+
+匹配方式
+逐条拼装字段为 blob 再 re.search...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
+    </a>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+接口形态
+CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
+Python 库 import / 常驻服务
+Agent 侧调用只需拼一行命...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小游戏类别细分 · A3 一页纸（A 计划第二轮：六顶思考帽 + RACI + 多 Agent）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__excerpt clamp-2">
+      本调查要解决：个人/小团队预算有限，进入微信小游戏赛道时该选哪个类别。
+选型结论：
+
+研究方法：六顶思考帽 + RACI + 多 Agent 并行的 A 计划工作流。
+数据来源：T0 微信公开课/腾讯财报/游戏工委法规；T1 Data...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</h3>
+    </a>
+    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
 
 
 
 常开系统（跑 agent）
-Debian minimal
-Ubuntu
-Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
+Debian 12/13 minimal headless
+Ubuntu / Win 常开
+Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -207,26 +381,12 @@ Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
     </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
-
-
-容器间通信
-Docker bridge 网络 + HTTP ...
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -239,176 +399,12 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.2 要解决：v1.1 只补了 3 个手动 skill，用户进一步指出还有 6 个共建 skill 未纳入。
-选型结论：
-
-手动补进扩展 6 个：cf-58-scraper-replicate、forum-handoff-publ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
-    </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
-选型结论：
-
-永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills）</h3>
-    </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.4 要解决：agent-reach skill 目录已被删除，清单仍将其列为「我参与制定」，造成脏数据；同时 cangjie-skill 财富自由系列存在磁盘双份，需标记重复。
-选型结论：
-
-删除失效 skill：移除 agen...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
-    </a>
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
-      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
-登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案</h3>
-    </a>
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据接入方式
-同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;）
-前端直连东财
-浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测）
-
-
-主数据源 ho...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.5（~_.workbuddy_skills）</h3>
-    </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.5 要解决：彻底消除财富自由系列 6 个 skill 的磁盘双份，使清单与磁盘都达到 name 去重后无重复。
-选型结论：
-
-删除顶层重复目录：fw01-wealth-freedom-definition、fw05-abando...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
-    </a>
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-免费主机
-my-place.us（iFastNet）
-其他免费 PHP 主机
-提供 PHP+MySQL，成本 0，可装论坛（T1）
-
-
-论坛
-bbs1org 极简 PHP 论坛（单文件 294KB...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）</h3>
-    </a>
-    <a href="/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__excerpt clamp-2">
-      系统：Hermes AI Gateway / WebUI 双壳架构。
-端口角色：
-
-8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态；
-8650：Node webui（n...
+    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
+      数据来源：SkillHub 全站 skill 元数据（skillhub_all.json，98,824 条）。
+匹配策略：对 name / slug / description / description_zh / tags / la...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
