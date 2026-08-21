@@ -27,26 +27,26 @@
   })();
 </script>
   <meta name="generator" content="Gridea Pro 0.0.0-dev">
-  <title>技术点 · yunnan-housing | W662000&#39;s Blog</title>
+  <title>每日工作总结 · 2026-08-21 | W662000&#39;s Blog</title>
   
-<meta property="og:title" content="技术点 · yunnan-housing" />
+<meta property="og:title" content="每日工作总结 · 2026-08-21" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="选型项 选定 落选 依据 云端运行时 Cloudflare Workers 自建 VPS / 云函数 免运维、免费额度足、自带 Cron Trigger（T1 实测） 数据库 D1（SQLite） KV 直存 / 外部 MySQL 需要 SQL 聚合与走势查询；D1 有 `wrangl&amp;hellip;">
-<link rel="canonical" href="https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · yunnan-housing","url":"https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/","description":"选型项 选定 落选 依据 云端运行时 Cloudflare Workers 自建 VPS / 云函数 免运维、免费额度足、自带 Cron Trigger（T1 实测） 数据库 D1（SQLite） KV 直存 / 外部 MySQL 需要 SQL 聚合与走势查询；D1 有 `wrangl\u0026hellip;","datePublished":"2026-08-17T11:01:13+08:00","dateModified":"2026-08-17T11:01:13+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/","name":"技术点 · yunnan-housing","position":2}]}</script>
-<meta property="og:title" content="技术点 · yunnan-housing">
-<meta property="og:description" content="选型项 选定 落选 依据 云端运行时 Cloudflare Workers 自建 VPS / 云函数 免运维、免费额度足、自带 Cron Trigger（T1 实测） 数据库 D1（SQLite） KV 直存 / 外部 MySQL 需要 SQL 聚合与走势查询；D1 有 `wrangl&amp;hellip;">
-<meta property="og:url" content="https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/">
+<meta name="description" content="今天修发布链路单点脆弱性，新建 Gridea 自动同步独立兜底任务（每日 23:15 运行）。 修正浓缩版死路径，首选博客源从 _posts 改为 _dailylog。 涨停回调策略全市场回测打通 akshare 新浪源历史日线通道。 批量落盘 5549 只日线，最终 4561 只成功、988 只失败。 首板与二连板买点对比，止盈改为统一区间 [5%,15%] 并扣交易成本。 右侧交易写&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/260821工作总结/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"每日工作总结 · 2026-08-21","url":"https://towertop.kdns.fr/post/260821工作总结/","description":"今天修发布链路单点脆弱性，新建 Gridea 自动同步独立兜底任务（每日 23:15 运行）。 修正浓缩版死路径，首选博客源从 _posts 改为 _dailylog。 涨停回调策略全市场回测打通 akshare 新浪源历史日线通道。 批量落盘 5549 只日线，最终 4561 只成功、988 只失败。 首板与二连板买点对比，止盈改为统一区间 [5%,15%] 并扣交易成本。 右侧交易写\u0026hellip;","datePublished":"2026-08-21T23:54:36+08:00","dateModified":"2026-08-21T23:54:36+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/260821工作总结/","name":"每日工作总结 · 2026-08-21","position":2}]}</script>
+<meta property="og:title" content="每日工作总结 · 2026-08-21">
+<meta property="og:description" content="今天修发布链路单点脆弱性，新建 Gridea 自动同步独立兜底任务（每日 23:15 运行）。 修正浓缩版死路径，首选博客源从 _posts 改为 _dailylog。 涨停回调策略全市场回测打通 akshare 新浪源历史日线通道。 批量落盘 5549 只日线，最终 4561 只成功、988 只失败。 首板与二连板买点对比，止盈改为统一区间 [5%,15%] 并扣交易成本。 右侧交易写&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/260821工作总结/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-07-19-techpoint-yunnan-housing/">
-<meta name="twitter:title" content="技术点 · yunnan-housing">
-<meta name="twitter:description" content="选型项 选定 落选 依据 云端运行时 Cloudflare Workers 自建 VPS / 云函数 免运维、免费额度足、自带 Cron Trigger（T1 实测） 数据库 D1（SQLite） KV 直存 / 外部 MySQL 需要 SQL 聚合与走势查询；D1 有 `wrangl&amp;hellip;">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/260821工作总结/">
+<meta name="twitter:title" content="每日工作总结 · 2026-08-21">
+<meta name="twitter:description" content="今天修发布链路单点脆弱性，新建 Gridea 自动同步独立兜底任务（每日 23:15 运行）。 修正浓缩版死路径，首选博客源从 _posts 改为 _dailylog。 涨停回调策略全市场回测打通 akshare 新浪源历史日线通道。 批量落盘 5549 只日线，最终 4561 只成功、988 只失败。 首板与二连板买点对比，止盈改为统一区间 [5%,15%] 并扣交易成本。 右侧交易写&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -172,10 +172,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">技术点 · yunnan-housing</h1>
+    <h1 class="article-title">每日工作总结 · 2026-08-21</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2026-08-17</span>
+      <span class="article-meta__item">2026-08-21</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -186,8 +186,6 @@
       
       <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
       
-      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
-      
     </div>
     
   </header>
@@ -195,92 +193,37 @@
   
 
   <div class="article-content">
-    <table>
-<thead>
-<tr>
-<th>选型项</th>
-<th>选定</th>
-<th>落选</th>
-<th>依据</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>云端运行时</td>
-<td><strong>Cloudflare Workers</strong></td>
-<td>自建 VPS / 云函数</td>
-<td>免运维、免费额度足、自带 Cron Trigger（T1 实测）</td>
-</tr>
-<tr>
-<td>数据库</td>
-<td><strong>D1（SQLite）</strong></td>
-<td>KV 直存 / 外部 MySQL</td>
-<td>需要 SQL 聚合与走势查询；D1 有 <code>wrangler d1 execute --remote</code> 可绕 HTTP 直写（T1）</td>
-</tr>
-<tr>
-<td>缓存</td>
-<td><strong>KV</strong></td>
-<td>—</td>
-<td>看板热点查询降 D1 读次数（T1）</td>
-</tr>
-<tr>
-<td>看板托管</td>
-<td><strong>Workers Static Assets</strong></td>
-<td>CF Pages 独立站点</td>
-<td>与 Worker 同域省跨域配置，一次部署（T1）</td>
-</tr>
-<tr>
-<td>采集执行位置</td>
-<td><strong>本地住宅 IP</strong></td>
-<td>CF Workers 云端直爬</td>
-<td>CF 机房 IP 被 58/贝壳/安居客/优居全封，云端直爬 100% 失败（T1 实测，硬结论）</td>
-</tr>
-<tr>
-<td>数据源</td>
-<td><strong>58 同城</strong></td>
-<td>贝壳/链家（强制登录）、优居/Q房（连不上）、房天下（空壳）</td>
-<td>逐个实测后仅 58 可用；解析器针对 58 结构，70 条/页解析率近 100%（T1）</td>
-</tr>
-<tr>
-<td>数据回传通道</td>
-<td><strong><code>wrangler d1 execute --remote --file=x.sql</code></strong></td>
-<td>HTTP POST 到 workers.dev</td>
-<td>国内 IP 对 workers.dev 的 POST 被拦（SSL EOF），GET 正常（T1）</td>
-</tr>
-<tr>
-<td>反爬突破（后期升级）</td>
-<td><strong>Playwright 无头 Chromium</strong></td>
-<td>urllib + Cookie 头</td>
-<td>58 加验证码网关（code=300）后，纯 HTTP 请求过不了，必须真浏览器执行 JS 生成 <code>fzq_h</code> 令牌（T1，7-24 日志）</td>
-</tr>
-<tr>
-<td>定时调度</td>
-<td><strong>Windows 计划任务 + PowerShell</strong></td>
-<td>CF Cron</td>
-<td>爬虫必须在本地住宅 IP 跑，云端 Cron 只能管 API 侧（T1）</td>
-</tr>
-</tbody>
-</table>
+    <p>今天修发布链路单点脆弱性，新建 Gridea 自动同步独立兜底任务（每日 23:15 运行）。<br />
+修正浓缩版死路径，首选博客源从 _posts 改为 _dailylog。<br />
+涨停回调策略全市场回测打通 akshare 新浪源历史日线通道。<br />
+批量落盘 5549 只日线，最终 4561 只成功、988 只失败。<br />
+首板与二连板买点对比，止盈改为统一区间 [5%,15%] 并扣交易成本。<br />
+右侧交易写 36 组合均线入场对比，验证 EMA7 最优。<br />
+改用 lobsterai stocks.db 重跑，最优为 EMA7 加放量 1.5x。<br />
+二连板该组合胜率 62.94%，扣成本盈利因子 2.95。<br />
+与 lobsterai 报告交叉验证，我方放量过滤加区间止盈综合更优。<br />
+板后买点结论：EMA7 放量口径下板后第 5-6 天胜率最高。<br />
+交付通达信二连板右侧放量突破选股公式及 EMA7 放量版。<br />
+放量过滤确实提升胜率，验证主力拉起才进的假设。<br />
+注意幸存者偏差与极短线成本敏感，实盘需小资金先行验证。</p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-nav-card post-nav-card--prev">
-      
+    <div class="post-nav-card post-nav-card--empty">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · daily-publish</span>
+        <span class="post-nav-card__empty-text">没有上一篇了~</span>
       </div>
-      <span class="post-nav-card__arrow">&larr;</span>
-    </a>
+    </div>
     
     
-    <a href="/post/260816-进度-把-雷达间隔调整-做成可复用-skill/" class="post-nav-card post-nav-card--next">
+    <a href="/post/260820工作总结/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">交接文档 · 进度 · 把「雷达间隔调整」做成可复用 skill · 2026-08-16</span>
+        <span class="post-nav-card__title">每日工作总结 · 2026-08-20</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
