@@ -179,10 +179,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
     </a>
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -191,15 +191,14 @@
 
 
 
-云端运行时
-Cloudflare Workers
-自建 VPS / 云函数
-免运维、免费额度足、自带 Cron Trigger（T1 实测）
+探测进程运行方式
+系统级常驻（nohup / 无窗口后台）
+框架后台任务句柄
+后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
 
 
-数据库
-D1（SQLite）
-KV 直存 / 外部 M...
+探测语言/依赖
+Python 标准库，零...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -263,10 +262,10 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
     </a>
-    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -275,14 +274,10 @@ Docker bridge 网络 + HTTP ...
 
 
 
-探测进程运行方式
-系统级常驻（nohup / 无窗口后台）
-框架后台任务句柄
-后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
-
-
-探测语言/依赖
-Python 标准库，零...
+接口形态
+CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
+Python 库 import / 常驻服务
+Agent 侧调用只需拼一行命...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
