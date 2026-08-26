@@ -179,10 +179,60 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
+    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-08</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__excerpt clamp-2">
+      用户要求：给接入的 70+ 模型（实际 84 个）做评分表，参考&amp;quot;上次做评分表的那 5 个网站的分数&amp;quot;，为 Hermes MoA 模式安排主力/助手，输出 md + html
+5 大平台来源（上次评分表，2026-...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    </a>
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+部署形态
+双容器（WebUI + Agent gateway）
+单容器塞两个进程
+官方支持路径；两者依赖差异大，混装易互相污染（T1）
+
+
+容器间通信
+Docker bridge 网络 + HTTP ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
+    </a>
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -191,14 +241,13 @@
 
 
 
-免费主机
-my-place.us（iFastNet）
-其他免费 PHP 主机
-提供 PHP+MySQL，成本 0，可装论坛（T1）
+平台
+Gaming4Free（翼龙面板游戏 VPS）
+Wispbyte / Serv00 / Oracle
+比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
 
 
-论坛
-bbs1org 极简 PHP 论坛（单文件 294KB...
+代理内核...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -211,139 +260,10 @@ bbs1org 极简 PHP 论坛（单文件 294KB...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
     </a>
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
-      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
-登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
-    </a>
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据源
-目标站官方 API（匿名可读、分页）
-爬 HTML 页面
-前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
-
-
-采集并发
-12 路并行后台采集（每分类一路...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
-    </a>
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-筛选对象
-直接读已落盘的 skillhub_all.json（154MB）
-重新发请求抓
-数据源已在手，重抓既浪费额度又可能漂移（T1）
-
-
-匹配方式
-逐条拼装字段为 blob 再 re.search...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-12</h3>
-    </a>
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__excerpt clamp-2">
-      用户反馈&amp;quot;昨天部署的系统还有错误&amp;quot;，排查发现 4 个叠加问题：
-
-现象：内核 uptime 39 分钟不变，但 systemd (PID 1) 每 1-3 分钟重启一次（apport socket 反复 Close...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-windows</h3>
-    </a>
-    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-运行形态
-Windows 原生进程（agent + WebUI 各跑进程）
-保留 Docker 容器
-容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
-    </a>
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -352,10 +272,46 @@ Windows 原生进程（agent + WebUI 各跑进程）
 
 
 
-抓取方式
-Playwright 无头 Chromium
-纯 urllib/requests
-58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
+调度
+GitHub Actions（cron 每 10 分钟）
+本机探测脚本 + 弹窗
+云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）
+
+
+通知通道
+126 邮箱（SMTP_SSL +...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
+    </a>
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+探测进程运行方式
+系统级常驻（nohup / 无窗口后台）
+框架后台任务句柄
+后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
+
+
+探测语言/依赖
+Python 标准库，零...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -400,10 +356,10 @@ B 计划：Cynefin 判域...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -412,13 +368,10 @@ B 计划：Cynefin 判域...
 
 
 
-平台
-Gaming4Free（翼龙面板游戏 VPS）
-Wispbyte / Serv00 / Oracle
-比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
-
-
-代理内核...
+常开系统（跑 agent）
+Debian minimal
+Ubuntu
+Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -431,10 +384,59 @@ Wispbyte / Serv00 / Oracle
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
     </a>
-    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
+      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
+登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
+    </a>
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+论坛
+phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
+bbs1org
+需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
+
+
+MCP ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
+    </a>
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -443,10 +445,14 @@ Wispbyte / Serv00 / Oracle
 
 
 
-免费 VPS 平台
-Wispbyte（Pterodactyl 容器）
-Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
-Wispbyte 允许自定义 Sta...
+数据源
+目标站官方 API（匿名可读、分页）
+爬 HTML 页面
+前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
+
+
+采集并发
+12 路并行后台采集（每分类一路...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
