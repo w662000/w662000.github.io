@@ -179,6 +179,26 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
+    </a>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
+选型结论：
+
+永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
     <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
     </a>
@@ -239,15 +259,25 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent）</h3>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
-      本调查要解决：做什么微信小程序「访问量大 + 付费人群多」，且适合个人/小团队切入。
-选型结论：
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
-数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
+
+
+
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
+
+
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -288,10 +318,10 @@ setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-windows</h3>
     </a>
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -300,45 +330,10 @@ setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
 
 
 
-筛选对象
-直接读已落盘的 skillhub_all.json（154MB）
-重新发请求抓
-数据源已在手，重抓既浪费额度又可能漂移（T1）
-
-
-匹配方式
-逐条拼装字段为 blob 再 re.search...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
-    </a>
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-论坛
-phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
-bbs1org
-需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
-
-
-MCP ...
+运行形态
+Windows 原生进程（agent + WebUI 各跑进程）
+保留 Docker 容器
+容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -383,11 +378,12 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-10</h3>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
     </a>
-    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__excerpt clamp-2">
-      09:08 清理自启动目录的 Hermes-AutoStart.vbs.bak-20260810（Windows 报 bak 无法启动），删除后目录剩 desktop.ini / Hermes-AutoStart.vbs / Rada...
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -400,10 +396,10 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
     </a>
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -412,13 +408,10 @@ Docker bridge 网络 + HTTP ...
 
 
 
-博客端
-GitHub Pages + Jekyll（daily-note-blog）
-Gridea Pro 单独承担
-push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
-
-
-...
+免费 VPS 平台
+Wispbyte（Pterodactyl 容器）
+Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
+Wispbyte 允许自定义 Sta...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
