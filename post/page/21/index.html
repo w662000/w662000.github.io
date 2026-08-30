@@ -178,14 +178,12 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
-选型结论：
-
-永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -198,14 +196,11 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.2（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-10</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-2-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.2 要解决：v1.1 只补了 3 个手动 skill，用户进一步指出还有 6 个共建 skill 未纳入。
-选型结论：
-
-手动补进扩展 6 个：cf-58-scraper-replicate、forum-handoff-publ...
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__excerpt clamp-2">
+      09:08 清理自启动目录的 Hermes-AutoStart.vbs.bak-20260810（Windows 报 bak 无法启动），删除后目录剩 desktop.ini / Hermes-AutoStart.vbs / Rada...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -218,14 +213,22 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
-选型结论：
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-判定标准升级：agent_created=true 自动检测 + 用户手...
+
+
+
+看板后端环境变量修复
+setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
+改 start_studio.ps1 脚本
+用户要求「不碰配置、不重启」；Machine 级...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -238,14 +241,25 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      本项目要解决：清晰盘点 ~/.workbuddy/skills 目录下到底有多少个用户级 skill，其中哪些是模型与用户共建的，哪些来自市场/预装/第三方。
-选型结论：
+    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
 
-扫描对象：~/.workbuddy/skills/ 下所有 ...
+
+
+
+论坛
+phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
+bbs1org
+需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
+
+
+MCP ...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -289,34 +303,6 @@ push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
-    </a>
-    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-看板后端环境变量修复
-setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
-改 start_studio.ps1 脚本
-用户要求「不碰配置、不重启」；Machine 级...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
     <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">技术点 · hermes-windows</h3>
     </a>
@@ -345,56 +331,6 @@ Windows 原生进程（agent + WebUI 各跑进程）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
-    </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
-
-
-容器间通信
-Docker bridge 网络 + HTTP ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
-    </a>
-    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
-      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
-open-link 脚本在 PowerShell 下需 $env:PYTHONI...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
     <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
     </a>
@@ -411,6 +347,71 @@ open-link 脚本在 PowerShell 下需 $env:PYTHONI...
 Wispbyte（Pterodactyl 容器）
 Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
 Wispbyte 允许自定义 Sta...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
+    </a>
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
+      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
+登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-09</h3>
+    </a>
+    <a href="/post/2026-08-09-techpoint-autoclaw-2026-08-09/" class="post-card__excerpt clamp-2">
+      10:45 用户批准进化提案：记录&amp;quot;改启动脚本而非程序本体&amp;quot;固定自启动窗口位置/大小的用户偏好
+已应用到 MEMORY.md（追加&amp;quot;自启动窗口修复方式偏好&amp;quot;段落）
+草稿：evolution-dr...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
+    </a>
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+常开系统（跑 agent）
+Debian minimal
+Ubuntu
+Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
