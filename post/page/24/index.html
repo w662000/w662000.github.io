@@ -178,10 +178,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
     </a>
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -190,10 +190,10 @@
 
 
 
-常开系统（跑 agent）
-Debian minimal
-Ubuntu
-Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -222,6 +222,34 @@ Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 
 Debian 12/13 minimal headless
 Ubuntu / Win 常开
 Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
+    </a>
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+免费 VPS 平台
+Wispbyte（Pterodactyl 容器）
+Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
+Wispbyte 允许自定义 Sta...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -280,15 +308,22 @@ Agent 侧调用只需拼一行命...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent）</h3>
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-windows</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
-      本调查要解决：做什么微信小程序「访问量大 + 付费人群多」，且适合个人/小团队切入。
-选型结论：
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
-数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
+
+
+
+运行形态
+Windows 原生进程（agent + WebUI 各跑进程）
+保留 Docker 容器
+容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -301,10 +336,10 @@ Agent 侧调用只需拼一行命...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
     </a>
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -313,14 +348,13 @@ Agent 侧调用只需拼一行命...
 
 
 
-筛选对象
-直接读已落盘的 skillhub_all.json（154MB）
-重新发请求抓
-数据源已在手，重抓既浪费额度又可能漂移（T1）
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
 
 
-匹配方式
-逐条拼装字段为 blob 再 re.search...
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -333,91 +367,11 @@ Agent 侧调用只需拼一行命...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-10</h3>
     </a>
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据源
-目标站官方 API（匿名可读、分页）
-爬 HTML 页面
-前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
-
-
-采集并发
-12 路并行后台采集（每分类一路...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
-    </a>
-    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-云端运行时
-Cloudflare Workers
-自建 VPS / 云函数
-免运维、免费额度足、自带 Cron Trigger（T1 实测）
-
-
-数据库
-D1（SQLite）
-KV 直存 / 外部 M...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
-    </a>
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-方案生成方法
-A 计划：六顶思考帽 + RACI + 红队击穿
-单视角头脑风暴
-单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
-
-
-方案排期方法
-B 计划：Cynefin 判域...
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__excerpt clamp-2">
+      09:08 清理自启动目录的 Hermes-AutoStart.vbs.bak-20260810（Windows 报 bak 无法启动），删除后目录剩 desktop.ini / Hermes-AutoStart.vbs / Rada...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -460,6 +414,24 @@ Docker bridge 网络 + HTTP ...
 </article>
 
     
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
+    </a>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
   </div>
   
 
@@ -469,7 +441,7 @@ Docker bridge 网络 + HTTP ...
     
     <a href="/post/page/23/" class="btn btn--secondary">&larr; 上一页</a>
     
-    <span class="pagination__info">24 / 32</span>
+    <span class="pagination__info">24 / 33</span>
     
     <a href="/post/page/25/" class="btn btn--secondary">下一页 &rarr;</a>
     
