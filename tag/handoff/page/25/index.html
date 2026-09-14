@@ -179,10 +179,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
     </a>
-    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -191,14 +191,10 @@
 
 
 
-方案生成方法
-A 计划：六顶思考帽 + RACI + 红队击穿
-单视角头脑风暴
-单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
-
-
-方案排期方法
-B 计划：Cynefin 判域...
+看板后端环境变量修复
+setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
+改 start_studio.ps1 脚本
+用户要求「不碰配置、不重启」；Machine 级...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -211,26 +207,12 @@ B 计划：Cynefin 判域...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-11</h3>
     </a>
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据源
-目标站官方 API（匿名可读、分页）
-爬 HTML 页面
-前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
-
-
-采集并发
-12 路并行后台采集（每分类一路...
+    <a href="/post/2026-08-11-techpoint-autoclaw-2026-08-11/" class="post-card__excerpt clamp-2">
+      web_search 接口当天不可用（broker_unauthorized），改用 autoglm-open-link + 百度/官网页面拿信息，可行
+open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -243,26 +225,11 @@ B 计划：Cynefin 判域...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-10</h3>
     </a>
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-筛选对象
-直接读已落盘的 skillhub_all.json（154MB）
-重新发请求抓
-数据源已在手，重抓既浪费额度又可能漂移（T1）
-
-
-匹配方式
-逐条拼装字段为 blob 再 re.search...
+    <a href="/post/2026-08-10-techpoint-autoclaw-2026-08-10/" class="post-card__excerpt clamp-2">
+      09:08 清理自启动目录的 Hermes-AutoStart.vbs.bak-20260810（Windows 报 bak 无法启动），删除后目录剩 desktop.ini / Hermes-AutoStart.vbs / Rada...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
