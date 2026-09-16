@@ -179,14 +179,26 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills）</h3>
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
     </a>
-    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
-      v1.4 要解决：agent-reach skill 目录已被删除，清单仍将其列为「我参与制定」，造成脏数据；同时 cangjie-skill 财富自由系列存在磁盘双份，需标记重复。
-选型结论：
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-删除失效 skill：移除 agen...
+
+
+
+数据源
+目标站官方 API（匿名可读、分页）
+爬 HTML 页面
+前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
+
+
+采集并发
+12 路并行后台采集（每分类一路...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -312,25 +324,26 @@ KV 直存 / 外部 M...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
-选型依据
+依据
 
 
 
 
-平台
-Gaming4Free（翼龙面板游戏 VPS）
-Wispbyte / Serv00 / Oracle
-比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
+筛选对象
+直接读已落盘的 skillhub_all.json（154MB）
+重新发请求抓
+数据源已在手，重抓既浪费额度又可能漂移（T1）
 
 
-代理内核...
+匹配方式
+逐条拼装字段为 blob 再 re.search...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -343,12 +356,54 @@ Wispbyte / Serv00 / Oracle
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单</h3>
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
     </a>
-    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
-      数据来源：SkillHub 全站 skill 元数据（skillhub_all.json，98,824 条）。
-匹配策略：对 name / slug / description / description_zh / tags / la...
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+免费主机
+my-place.us（iFastNet）
+其他免费 PHP 主机
+提供 PHP+MySQL，成本 0，可装论坛（T1）
+
+
+论坛
+bbs1org 极简 PHP 论坛（单文件 294KB...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
+    </a>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+接口形态
+CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
+Python 库 import / 常驻服务
+Agent 侧调用只需拼一行命...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -370,34 +425,6 @@ Wispbyte / Serv00 / Oracle
 
 研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
 数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</h3>
-    </a>
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-常开系统（跑 agent）
-Debian 12/13 minimal headless
-Ubuntu / Win 常开
-Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
