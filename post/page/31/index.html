@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -178,242 +187,16 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
+    <a href="/post/261010-actual-inc-as-an-opencode-provider/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · actual.inc as an OpenCode provider · 2026-10-10</h3>
     </a>
-    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据源
-目标站官方 API（匿名可读、分页）
-爬 HTML 页面
-前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
-
-
-采集并发
-12 路并行后台采集（每分类一路...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
-    </a>
-    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-筛选对象
-直接读已落盘的 skillhub_all.json（154MB）
-重新发请求抓
-数据源已在手，重抓既浪费额度又可能漂移（T1）
-
-
-匹配方式
-逐条拼装字段为 blob 再 re.search...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
-    </a>
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-接口形态
-CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
-Python 库 import / 常驻服务
-Agent 侧调用只需拼一行命...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单</h3>
-    </a>
-    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
-      数据来源：SkillHub 全站 skill 元数据（skillhub_all.json，98,824 条）。
-匹配策略：对 name / slug / description / description_zh / tags / la...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</h3>
-    </a>
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-常开系统（跑 agent）
-Debian 12/13 minimal headless
-Ubuntu / Win 常开
-Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
-    </a>
-    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-常开系统（跑 agent）
-Debian minimal
-Ubuntu
-Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
-    </a>
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
-      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
-登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案</h3>
-    </a>
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据接入方式
-同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;）
-前端直连东财
-浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测）
-
-
-主数据源 ho...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260816-进度-把-雷达间隔调整-做成可复用-skill/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 进度 · 把「雷达间隔调整」做成可复用 skill · 2026-08-16</h3>
-    </a>
-    <a href="/post/260816-进度-把-雷达间隔调整-做成可复用-skill/" class="post-card__excerpt clamp-2">
-      日期：2026-08-16
+    <a href="/post/261010-actual-inc-as-an-opencode-provider/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
 状态：✅ 已完结（scan 自动收集）
-来源：2026-08-16-10-57-55\进度_20260816_1920_雷达skill.md
-
-
-
-项
-路径
-
-
-
-
-skill 目录
-C:\Users\Ad...
+来源：2026-10-10-hermes-upgrade\src-0215\optional-skills\devops\actual-setup\reference...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-10-13
       
     </div>
   </div>
@@ -423,19 +206,170 @@ C:\Users\Ad...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260816-复盘-au-autoclaw-的-handoff-生成流程与效果/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 复盘：au（autoclaw）的 handoff 生成流程与效果 · 2026-08-16</h3>
+    <a href="/post/261010-action/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · action · 2026-10-10</h3>
     </a>
-    <a href="/post/260816-复盘-au-autoclaw-的-handoff-生成流程与效果/" class="post-card__excerpt clamp-2">
-      日期：2026-08-16
+    <a href="/post/261010-action/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
 状态：✅ 已完结（scan 自动收集）
-来源：2026-08-16-10-57-55\复盘_au_handoff流程_20260816.md
-
-
-日志源定位：os.walk+glob 扫两时代日志——Ope...
+来源：2026-10-10-hermes-upgrade\src-0215\optional-skills\creative\baoyu-comic\referenc...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-_source-name_/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · _Source Name_ · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-_source-name_/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\src-0215\optional-skills\research\osint-investigation\...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-yunnan-housing-project-replication-case-/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · Yunnan Housing Project Replication Case Study · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-yunnan-housing-project-replication-case-/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\backup\20261010_173538.hermes\skills\software-developm...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-yuanbao/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · Yuanbao · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-yuanbao/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\src-0215\website\docs\user-guide\messaging\yuanbao.md
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-yuanbao-group-interaction/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · Yuanbao Group Interaction · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-yuanbao-group-interaction/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\backup\20261010_173538.hermes\skills\yuanbao\SKILL.md
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-youtube-content-tool/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · YouTube Content Tool · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-youtube-content-tool/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\backup\20261010_173538.hermes\skills\media\youtube-con...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-yaml-rule-reference-atomic-relational-co/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · YAML rule reference — atomic, relational, composite, transfo · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-yaml-rule-reference-atomic-relational-co/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\src-0215\optional-skills\software-development\ast-grep...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-xlsx-skill/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · XLSX Skill · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-xlsx-skill/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\backup\20261010_173538.hermes\skills\productivity\xlsx...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/261010-x-twitter-搜索/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · X (Twitter) 搜索 · 2026-10-10</h3>
+    </a>
+    <a href="/post/261010-x-twitter-搜索/" class="post-card__excerpt clamp-2">
+      日期：2026-10-10
+状态：✅ 已完结（scan 自动收集）
+来源：2026-10-10-hermes-upgrade\src-0215\website\i18n\zh-Hans\docusaurus-plugin-conten...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-10-13
       
     </div>
   </div>
@@ -452,7 +386,7 @@ C:\Users\Ad...
     
     <a href="/post/page/30/" class="btn btn--secondary">&larr; 上一页</a>
     
-    <span class="pagination__info">31 / 38</span>
+    <span class="pagination__info">31 / 160</span>
     
     <a href="/post/page/32/" class="btn btn--secondary">下一页 &rarr;</a>
     
