@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 0.0.0-dev">
+  <title>项目流 · 2026-11-14 · 主力模型能力分选型 | W662000&#39;s Blog</title>
+  
+<meta property="og:title" content="项目流 · 2026-11-14 · 主力模型能力分选型" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="项目流 · 2026-11-14 · 主力模型能力分选型（双雷达近 10 天） 数据源：本机 8848 测速雷达 + 8849 限速雷达（2026-11-05 ~ 11-14，57 轮 / 5,219 条 + 16 轮 / 18,645 次 15 连发，T0 实测） 能力分：本机《模型干活选型排行榜》2026-08-02 榜 A「得分」列（纯能力、不含速度，T2）；公开基准分：&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/261114项目流-模型能力分选型/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"项目流 · 2026-11-14 · 主力模型能力分选型","url":"https://towertop.kdns.fr/post/261114项目流-模型能力分选型/","description":"项目流 · 2026-11-14 · 主力模型能力分选型（双雷达近 10 天） 数据源：本机 8848 测速雷达 + 8849 限速雷达（2026-11-05 ~ 11-14，57 轮 / 5,219 条 + 16 轮 / 18,645 次 15 连发，T0 实测） 能力分：本机《模型干活选型排行榜》2026-08-02 榜 A「得分」列（纯能力、不含速度，T2）；公开基准分：\u0026hellip;","datePublished":"2026-11-14T21:40:56+08:00","dateModified":"2026-11-14T21:40:56+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/261114项目流-模型能力分选型/","name":"项目流 · 2026-11-14 · 主力模型能力分选型","position":2}]}</script>
+<meta property="og:title" content="项目流 · 2026-11-14 · 主力模型能力分选型">
+<meta property="og:description" content="项目流 · 2026-11-14 · 主力模型能力分选型（双雷达近 10 天） 数据源：本机 8848 测速雷达 + 8849 限速雷达（2026-11-05 ~ 11-14，57 轮 / 5,219 条 + 16 轮 / 18,645 次 15 连发，T0 实测） 能力分：本机《模型干活选型排行榜》2026-08-02 榜 A「得分」列（纯能力、不含速度，T2）；公开基准分：&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/261114项目流-模型能力分选型/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="W662000's Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/261114项目流-模型能力分选型/">
+<meta name="twitter:title" content="项目流 · 2026-11-14 · 主力模型能力分选型">
+<meta name="twitter:description" content="项目流 · 2026-11-14 · 主力模型能力分选型（双雷达近 10 天） 数据源：本机 8848 测速雷达 + 8849 限速雷达（2026-11-05 ~ 11-14，57 轮 / 5,219 条 + 16 轮 / 18,645 次 15 连发，T0 实测） 能力分：本机《模型干活选型排行榜》2026-08-02 榜 A「得分」列（纯能力、不含速度，T2）；公开基准分：&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://towertop.kdns.fr" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="/images/avatar.png" alt="W662000&#39;s Blog" />
+        </a>
+        
+        <a href="https://towertop.kdns.fr" class="site-name-link">W662000&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/daily-note-blog/">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">项目流 · 2026-11-14 · 主力模型能力分选型</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-11-14</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">18 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/3axis/" class="tag-pill tag-pill--sm">3axis</a>
+      
+      <a href="/tag/projects/" class="tag-pill tag-pill--sm">projects</a>
+      
+    </div>
+    
+  </header>
+
+  
+
+  <div class="article-content">
+    <h1 id="--2026-11-14---10-">项目流 · 2026-11-14 · 主力模型能力分选型（双雷达近 10 天）</h1>
+<blockquote>
+<p>数据源：本机 8848 测速雷达 + 8849 限速雷达（2026-11-05 ~ 11-14，57 轮 / 5,219 条 + 16 轮 / 18,645 次 15 连发，T0 实测）<br />
+能力分：本机《模型干活选型排行榜》2026-08-02 榜 A「得分」列（纯能力、不含速度，T2）；公开基准分：《综合分排行》2026-10-13（T1）<br />
+项目内容：CF 5 个 + NVIDIA NIM 4 个作免费主力，spark-x2.6 作主力，DeepSeek 官方收费模型作备用兜底；按能力分重排并出场景推荐</p>
+</blockquote>
+<h2 id="heading">〇、结论先说</h2>
+<ol>
+<li><strong>按能力分（纯能力「得分」列）第一是 NIM 的 <code>nvidia/nemotron-3-ultra-550b-a55b</code>（84，同模型 OR 免费版给 78），CF 第一是 <code>@cf/google/gemma-4-26b-a4b-it</code>（80）</strong>。这批免费模型几乎没有公开基准分，能力分全部来自本机 08-02 内部干活榜（T2）。</li>
+<li><strong>能力分和&quot;干活综合 A&quot;排序差很多</strong>：<code>@cf/nvidia/nemotron-3-120b-a12b</code> 能力 73 排第 4，但综合 A 只有 43.9（速度分 31.4 拖垮）；<code>@cf/qwen/qwen3-30b-a3b-fp8</code> 能力只有 63，综合 A 却有 62.4 排第二。<strong>要能力还是要速度，得按场景分开挑，不能只看一列。</strong></li>
+<li><strong>本次入选共 11 个模型</strong>：CF 5 个 + NIM 4 个（免费主力 9 个）+ <code>spark-x2.6</code>（主力）+ <code>deepseek-flash</code>（收费兜底）。其中 <code>nemotron-3.5-lightning-30b-a3b</code>、<code>spark-x2.6</code>、<code>deepseek-flash</code> 无可查能力分，排在表尾，不编数字。</li>
+<li><strong>CF 5 个现在还停测着</strong>：11-14 被 <code>config.json</code> 的 <code>skip_models</code> 排除出雷达轮询（额度让给发布链）。要当主力得先放行重启，且 CF 免费模型窗口小，装不下 WB agent 会话。详见第五节。</li>
+<li><strong>兜底换成收费的 <code>deepseek-flash</code> 是稳的</strong>：T0 240/240 全成功、零 429、824ms；T1 公开基准分 62.7 是全场唯一能查到的官方基准。</li>
+</ol>
+<h2 id="heading-1">一、口径说明（这次按哪个&quot;能力分&quot;排，为什么）</h2>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>定义</th>
+<th>来源</th>
+<th>可信度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>能力分</strong>（主排序键）</td>
+<td>08-02 干活榜榜 A 的「得分」列，<strong>纯能力分，不含速度</strong></td>
+<td><code>model-speed-radar/模型干活选型排行榜.md</code> 第 43/44/49/52/57/59/62/67/76 行</td>
+<td><strong>T2</strong>（本机内部推算，非官方基准）</td>
+</tr>
+<tr>
+<td>干活综合 A</td>
+<td>同榜「综合」列 = <code>0.7×速度分 + 0.3×得分</code>，<strong>含 70% 速度</strong></td>
+<td>同上</td>
+<td><strong>T2</strong></td>
+</tr>
+<tr>
+<td>T1 公开基准分</td>
+<td>OpenCompass 与 Vellum 原始分均值（0–100）</td>
+<td><code>model-speed-radar/综合分排行_2026-10-13.md</code></td>
+<td><strong>T1</strong>（公开评测平台）</td>
+</tr>
+<tr>
+<td>近10天成功率 / 429率 / TTFT / 靠谱分</td>
+<td>两个雷达 daemon 原始 jsonl 聚合</td>
+<td><code>data/history.jsonl</code>、<code>~/.cache/rate-limit-radar/data/history.jsonl</code></td>
+<td><strong>T0</strong>（本次实算）</td>
+</tr>
+<tr>
+<td>免费 / 收费</td>
+<td>需求口径 + 本机配置与工作日志；<code>deepseek-flash</code> 的 url 为 <code>api.deepseek.com</code></td>
+<td><code>~/.workbuddy/models.json</code>、<code>config.json</code>、11-13/11-14 工作日志</td>
+<td>T0/T1；<strong>本机数据不含官方价格，不给任何金额</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>为什么用纯能力得分排</strong>：上一份表按&quot;靠谱分&quot;（可靠性 + 速度）排，本次要求按能力分换维度；「综合 A」里 70% 还是速度，排出来跟上一份高度重叠，等于没换。所以用不含速度的「得分」列做主排序，综合 A、T1、T0 可靠性并列展示做交叉验证。</p>
+<p><strong>三处不确定，如实标出</strong>：</p>
+<ul>
+<li><code>nvidia/nemotron-3-ultra-550b-a55b</code> 在 08-02 榜里有两个不一致的分数：NIM 直连行「得分 84 / 综合 25.2」、OpenRouter 免费行「得分 78 / 综合 48.7」。表里写 <code>84 / 78</code>，按 84 排序；保守按 78 排它会掉到第 2。差异原因是当时 NIM 直连版 0% 可靠率（network 失败）把综合分压到 25.2，属旧数据，近 10 天已恢复到 72.08% 成功。</li>
+<li><code>poolside/laguna-xs-2.1</code>、<code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code> 的能力分取自 08-02 榜里<strong>同模型的 OpenRouter 免费版</strong>行（榜里没有 NIM 直连同名行），属跨通道引用，标 <code>*</code>。</li>
+<li><code>spark-x2.6</code> 在 10-13 报告里 <code>spark-x</code> 被列入「未取到公开分(主流类)」，08-02 榜也无 <code>spark-x2.6</code>；<code>nvidia/nemotron-3.5-lightning-30b-a3b</code> 同样无分。<strong>三个无分模型不参与能力排序，一律填 <code>—</code>。</strong></li>
+</ul>
+<h2 id="--">二、主表 · 按能力分从高到低</h2>
+<table>
+<thead>
+<tr>
+<th align="right">#</th>
+<th>模型 id</th>
+<th>平台</th>
+<th>角色</th>
+<th align="right">能力分 T2</th>
+<th align="right">综合A T2</th>
+<th align="right">T1 基准</th>
+<th align="right">近10天限速成功率 T0</th>
+<th align="right">429率 T0</th>
+<th align="right">TTFT中位 T0</th>
+<th align="right">靠谱分 T0</th>
+<th>费用</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td><code>nvidia/nemotron-3-ultra-550b-a55b</code></td>
+<td>NVIDIA NIM</td>
+<td>主力·免费</td>
+<td align="right"><strong>84</strong> / 78</td>
+<td align="right">25.2</td>
+<td align="right">—</td>
+<td align="right">72.08%</td>
+<td align="right">0.0%</td>
+<td align="right">2085ms</td>
+<td align="right">65.94</td>
+<td>免费预览</td>
+<td>推理 · 550B 旗舰</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td><code>@cf/google/gemma-4-26b-a4b-it</code></td>
+<td>Cloudflare</td>
+<td>主力·免费</td>
+<td align="right"><strong>80</strong></td>
+<td align="right">64.7</td>
+<td align="right">—</td>
+<td align="right">76.19%</td>
+<td align="right">0.0%</td>
+<td align="right">1473ms</td>
+<td align="right">68.13</td>
+<td>免费额度</td>
+<td>多模态 · 通用</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td><code>@cf/openai/gpt-oss-120b</code></td>
+<td>Cloudflare</td>
+<td>主力·免费</td>
+<td align="right"><strong>74</strong></td>
+<td align="right">59.7</td>
+<td align="right">—</td>
+<td align="right">76.19%</td>
+<td align="right">0.0%</td>
+<td align="right">1398.0ms</td>
+<td align="right">70.23</td>
+<td>免费额度</td>
+<td>推理 · 120B</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td><code>@cf/nvidia/nemotron-3-120b-a12b</code></td>
+<td>Cloudflare</td>
+<td>主力·免费</td>
+<td align="right"><strong>73</strong></td>
+<td align="right">43.9</td>
+<td align="right">—</td>
+<td align="right">77.14%</td>
+<td align="right">0.0%</td>
+<td align="right">1567ms</td>
+<td align="right">69.32</td>
+<td>免费额度</td>
+<td>推理 · 120B</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td><code>@cf/qwen/qwen3-30b-a3b-fp8</code></td>
+<td>Cloudflare</td>
+<td>主力·免费</td>
+<td align="right"><strong>63</strong></td>
+<td align="right">62.4</td>
+<td align="right">—</td>
+<td align="right">77.62%</td>
+<td align="right">0.0%</td>
+<td align="right">1128.5ms</td>
+<td align="right">71.31</td>
+<td>免费额度</td>
+<td>文本 · 轻快</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td><code>@cf/qwen/qwq-32b</code></td>
+<td>Cloudflare</td>
+<td>主力·免费</td>
+<td align="right"><strong>62</strong></td>
+<td align="right">54.8</td>
+<td align="right">—</td>
+<td align="right">77.62%</td>
+<td align="right">0.0%</td>
+<td align="right">1651.5ms</td>
+<td align="right">67.45</td>
+<td>免费额度</td>
+<td>推理链</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td><code>poolside/laguna-xs-2.1</code></td>
+<td>NVIDIA NIM</td>
+<td>主力·免费</td>
+<td align="right"><strong>57</strong></td>
+<td align="right">52.3</td>
+<td align="right">—</td>
+<td align="right">75.0%</td>
+<td align="right">0.0%</td>
+<td align="right">680ms</td>
+<td align="right">72.27</td>
+<td>免费预览</td>
+<td>代码向</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td><code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code></td>
+<td>NVIDIA NIM</td>
+<td>主力·免费</td>
+<td align="right"><strong>47</strong></td>
+<td align="right">51.1</td>
+<td align="right">—</td>
+<td align="right">81.25%</td>
+<td align="right">0.0%</td>
+<td align="right">697ms</td>
+<td align="right">78.32</td>
+<td>免费预览</td>
+<td>全模态 · 推理</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td><code>nvidia/nemotron-3.5-lightning-30b-a3b</code></td>
+<td>NVIDIA NIM</td>
+<td>主力·免费</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">81.25%</td>
+<td align="right">0.0%</td>
+<td align="right">725.0ms</td>
+<td align="right">77.51</td>
+<td>免费预览</td>
+<td>文本 · 快档</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td><code>spark-x2.6</code></td>
+<td>Xunfei</td>
+<td>主力（用户指定）</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">98.33%</td>
+<td align="right">0.0%</td>
+<td align="right">3711ms</td>
+<td align="right">78.13</td>
+<td>按平台政策</td>
+<td>文本 · 推理</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td><code>deepseek-flash</code></td>
+<td>DeepSeek</td>
+<td>备用兜底·收费</td>
+<td align="right">—</td>
+<td align="right">—</td>
+<td align="right">62.7</td>
+<td align="right">100.0%</td>
+<td align="right">0.0%</td>
+<td align="right">824ms</td>
+<td align="right">91.76</td>
+<td>官方计费</td>
+<td>文本 · 推理</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>能力分 84 / 78</code> = NIM 直连行 / OpenRouter 免费行两个不一致的评分，按 84 排序。带跨通道引用的分数见表后第 3 条说明。<br />
+「靠谱分」是上一份报告的可靠性+速度综合分，这里只作对照，<strong>本次不按它排</strong>。<br />
+无能力分的 3 个模型按指定席位保留在表尾：<code>nvidia/nemotron-3.5-lightning-30b-a3b</code>（T0 零限流、725ms）、<code>spark-x2.6</code>（T0 98.33% 成功）、<code>deepseek-flash</code>（T1 62.7、T0 240/240 全成功）。</p>
+</blockquote>
+<h3 id="21-">2.1 逐条关键说明</h3>
+<ol>
+<li><code>nvidia/nemotron-3-ultra-550b-a55b</code>（NVIDIA NIM，能力分 <strong>84</strong> / 78）：⚠️ 同模型两个通道评分不一致：NIM 直连行得分84、OpenRouter 免费行78；08-02 直连版当时 0% 可靠率(network失败)故综合A仅25.2，近10天实测已恢复到 72.08% 成功、零 429。</li>
+<li><code>@cf/google/gemma-4-26b-a4b-it</code>（Cloudflare，能力分 <strong>80</strong>）：CF 阵营能力分第一；08-02 榜标多模态。近10天零 429。</li>
+<li><code>@cf/openai/gpt-oss-120b</code>（Cloudflare，能力分 <strong>74</strong>）：推理系大身位，适合复杂推理；TTFT 1398ms。</li>
+<li><code>@cf/nvidia/nemotron-3-120b-a12b</code>（Cloudflare，能力分 <strong>73</strong>）：能力分第4但综合A只有43.9——速度分仅31.4（TTFT 1567ms）被拖垮，典型的「强但慢」。</li>
+<li><code>@cf/qwen/qwen3-30b-a3b-fp8</code>（Cloudflare，能力分 <strong>63</strong>）：综合A 62.4 是全部入选模型里第二高；CF 里最快（1128.5ms），限速成功率 77.62% 并列最高。</li>
+<li><code>@cf/qwen/qwq-32b</code>（Cloudflare，能力分 <strong>62</strong>）：显式推理过程，适合数学/逻辑；TTFT 1651.5ms 偏慢。</li>
+<li><code>poolside/laguna-xs-2.1</code>（NVIDIA NIM，能力分 <strong>57</strong>）：能力分取自同模型的 OpenRouter 免费版（榜里无 NIM 直连同名行），属跨通道引用；TTFT 680ms 很快。</li>
+<li><code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code>（NVIDIA NIM，能力分 <strong>47</strong>）：能力分取自同模型的 OpenRouter 免费版（跨通道引用）；近10天 81.25% 成功、TTFT 697ms，是 NIM 里最均衡的。</li>
+<li><code>nvidia/nemotron-3.5-lightning-30b-a3b</code>（NVIDIA NIM，能力分 —）：无可查能力分，按 T0 实测入选：81.25% 成功、零 429、TTFT 725ms。不要拿它跟有分模型比能力。</li>
+<li><code>spark-x2.6</code>（Xunfei，能力分 —）：⚠️ 无任何能力分；入选依据是 T0 可靠性 98.33% 成功、零 429、测速 89.47%。但 TTFT 3711ms 全场最慢，只适合不赶时间的任务。</li>
+<li><code>deepseek-flash</code>（DeepSeek，能力分 —）：⚠️ 活清单无 deepseek-4.1-flash；按 [DeepSeek] DeepSeek-V4-Flash（api.deepseek.com 官方计费）处理。T1 62.7 来自 10-13 公开基准。T0：240/240 全成功、零 429、824ms，是兜底最硬的一个。</li>
+</ol>
+<h3 id="22--a-70-">2.2 如果按「干活综合 A」排（含 70% 速度），次序会变成</h3>
+<p>1.<code>@cf/google/gemma-4-26b-a4b-it</code> 64.7 | 2.<code>@cf/qwen/qwen3-30b-a3b-fp8</code> 62.4 | 3.<code>@cf/openai/gpt-oss-120b</code> 59.7 | 4.<code>@cf/qwen/qwq-32b</code> 54.8 | 5.<code>poolside/laguna-xs-2.1</code> 52.3 | 6.<code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code> 51.1 | 7.<code>@cf/nvidia/nemotron-3-120b-a12b</code> 43.9 | 8.<code>nvidia/nemotron-3-ultra-550b-a55b</code> 25.2</p>
+<p>对照可见：<code>gemma-4-26b</code> 稳居第一；<code>qwen3-30b</code> 从能力第 5 升到综合第 2；<code>nemotron-3-120b</code> 从能力第 4 掉到综合第 8；<code>ultra-550b</code> 用 OR 免费版 48.7 排第 7、用 NIM 直连版 25.2 垫底。<strong>所以&quot;按能力分&quot;和&quot;按干活速度综合&quot;是两套结论，别混着用。</strong></p>
+<h2 id="-11-">三、按场景推荐（严格只用本次入选的 11 个模型）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>首选</th>
+<th>次选</th>
+<th>兜底</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>日常对话 / 大批量免费跑</strong></td>
+<td><code>@cf/google/gemma-4-26b-a4b-it</code></td>
+<td><code>@cf/qwen/qwen3-30b-a3b-fp8</code></td>
+<td><code>deepseek-flash</code></td>
+<td>能力分 80 最高、CF 零 429；次选综合A 62.4 且 TTFT 1128.5ms 最快。免费主力挂了才切收费兜底。</td>
+</tr>
+<tr>
+<td><strong>复杂推理 / 长链思考</strong></td>
+<td><code>nvidia/nemotron-3-ultra-550b-a55b</code></td>
+<td><code>@cf/openai/gpt-oss-120b</code> / <code>@cf/qwen/qwq-32b</code></td>
+<td><code>deepseek-flash</code></td>
+<td>550B 旗舰能力分 84；gpt-oss-120b 74、qwq-32b 带显式推理链。注意 ultra-550b 的 84 分与 OR 免费版 78 分不一致。</td>
+</tr>
+<tr>
+<td><strong>看图 / 多模态</strong></td>
+<td><code>@cf/google/gemma-4-26b-a4b-it</code></td>
+<td><code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code></td>
+<td><code>deepseek-flash</code>（不支持图像，仅文本兜底）</td>
+<td>gemma-4-26b 是入选里唯一 08-02 榜明确标「多模态」的 CF 模型；nano-omni 是全模态+推理。</td>
+</tr>
+<tr>
+<td><strong>代码 / 工程任务</strong></td>
+<td><code>poolside/laguna-xs-2.1</code></td>
+<td><code>@cf/qwen/qwen3-30b-a3b-fp8</code></td>
+<td><code>deepseek-flash</code></td>
+<td>Poolside 是代码向模型，TTFT 680ms；能力分 57 是跨通道引用值，别当精确基准。</td>
+</tr>
+<tr>
+<td><strong>快问快答 / 低延迟</strong></td>
+<td><code>nvidia/nemotron-3.5-lightning-30b-a3b</code></td>
+<td><code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning</code> / <code>poolside/laguna-xs-2.1</code></td>
+<td><code>deepseek-flash</code></td>
+<td>三者 TTFT 分别 725 / 697 / 680ms，是入选里最快的一档；lightning 无能力分，按速度入选。</td>
+</tr>
+<tr>
+<td><strong>不许失败 / 高可靠批量</strong></td>
+<td><code>spark-x2.6</code></td>
+<td><code>@cf/qwen/qwen3-30b-a3b-fp8</code></td>
+<td><code>deepseek-flash</code></td>
+<td>spark-x2.6 限速 98.33% 成功、零 429、测速 89.47%，是免费/指定席位里最稳的，代价是 3711ms 慢。</td>
+</tr>
+<tr>
+<td><strong>免费额度耗尽 / 主力集体失效</strong></td>
+<td><code>deepseek-flash</code></td>
+<td>—</td>
+<td>—</td>
+<td>唯一的收费兜底：240/240 全成功、零 429、TTFT 824ms、T1 基准分 62.7。平时不用，出事才切。</td>
+</tr>
+<tr>
+<td><strong>专用任务（非主力，按需调用）</strong></td>
+<td><code>nvidia/riva-translate-4b-instruct-v2</code>（翻译）</td>
+<td><code>nvidia/nemotron-parse-2.0</code>（文档解析）/ <code>nvidia/llama-3.1-nemotron-safety-guard-8b-v3</code>（内容审查）</td>
+<td>—</td>
+<td>这 3 个 NIM 模型近10天零 429、TTFT 658–907ms、靠谱分 66–79，但都是专用模型，不进主力表。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-">3.1 组合建议（免费优先、收费只兜底）</h3>
+<pre><code>主链路（免费）：gemma-4-26b 〔通用/看图〕 + qwen3-30b 〔快答〕 + gpt-oss-120b 〔推理〕
+           └ 需要 550B 重推理时切 nemotron-3-ultra-550b；代码任务切 laguna-xs-2.1
+高可靠批处理（慢但稳）：spark-x2.6  〔98.33% 成功、零 429，3711ms〕
+兜底（收费，平时不用）：deepseek-flash 〔240/240 全成功、824ms、T1 62.7〕
+触发条件：CF/NIM 免费额度耗尽、两家平台同时不可用、或连续 2 次调用失败
+</code></pre>
+<h2 id="-id-">四、名单里两个 id 的核实结果（不瞎猜）</h2>
+<table>
+<thead>
+<tr>
+<th>需求中的模型名</th>
+<th>活清单实际情况</th>
+<th>本次处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「deepseek 的收费模型 deepseek 4.1 flash」</td>
+<td><code>models.json</code>（94 条）里<strong>没有</strong> <code>deepseek-4.1-flash</code>。DeepSeek 官方只有 <code>deepseek-v4-pro</code>、<code>deepseek-flash</code>（= <code>[DeepSeek] DeepSeek-V4-Flash</code>），两者 url 都是 <code>api.deepseek.com</code>。10-13 报告第 19 行出现过别名 <code>DeepSeek-V4.1-Flash[Loomy]</code>，但该条目当前已不在活清单。</td>
+<td><strong><code>deepseek-flash</code></strong>（官方计费），T1 62.7</td>
+</tr>
+<tr>
+<td>「spark-x2.6 作为主力」</td>
+<td>活清单里有 <code>spark-x2.6</code> = <code>[xf] spark-x2.6</code>，vendor <code>Xunfei</code>，<code>maxTokens</code> 未填。10-13 报告把 <code>spark-x</code> 列入「未取到公开分」，08-02 榜无 <code>spark-x2.6</code> → <strong>无能力分</strong>。</td>
+<td>按 T0 可靠性入选，能力分填 <code>—</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>若 4.1 flash 指另一条目（如 Loomy 中转），需按实际 id 重新核对；本次不推断活清单外的模型。</p>
+</blockquote>
+<h2 id="-3-">五、部署前必须做的 3 件事（不做就用不起来）</h2>
+<p><strong>① 把 CF 5 个从 <code>skip_models</code> 里放出来，否则雷达根本不监控它们</strong></p>
+<p><code>model-speed-radar/config.json</code> 第 35–53 行的 <code>skip_models</code> 含这 5 个：</p>
+<pre><code>    &quot;@cf/google/gemma-4-26b-a4b-it&quot;,
+    &quot;@cf/qwen/qwen3-30b-a3b-fp8&quot;,
+    &quot;@cf/qwen/qwq-32b&quot;,
+    &quot;@cf/nvidia/nemotron-3-120b-a12b&quot;,
+    &quot;@cf/openai/gpt-oss-120b&quot;,
+</code></pre>
+<p>配置第 55 行注释 <code>_comment_cf_skip</code> 原文：「2026-11-14 用户指令：@cf 系列排除出雷达轮询，额度让给发布链（直连生成+雷达互抢免费额度）」。<br />
+要重新启用：编辑 <code>config.json</code> 删掉这 5 行 → 重启 8848/8849 两个 daemon（<code>stop.bat</code> 然后 <code>start.bat</code>）→ 等一轮确认 5 个模型重新出现在 <code>latest.json</code>。<br />
+⚠️ <strong>副作用</strong>：重新启用会跟发布链抢 CF 免费额度，这正是当初停测的原因；如果发布链还在跑直连生成，建议先只放 2–3 个 CF 模型试水。</p>
+<p><strong>② CF 免费模型上下文窗口装不下 WB agent 会话</strong></p>
+<p>11-13 工作日志（T1）实测：CF 探针显示 WB agent 会话体积约 53,974 token，而 <code>qwen3-30b</code> 窗口 32,768、<code>qwq-32b</code> 仅 24,000 → 物理装不下，这也是当晚判定「CF 方案死刑」的原因。<code>models.json</code> 里所有条目的 <code>maxTokens</code> 统一填 16384，那是<strong>输出上限配置值，不是上下文窗口</strong>，别拿它当窗口用。<br />
+结论：CF 这 5 个适合<strong>短请求 / 独立任务 / 脚本直连</strong>，不适合塞进 WB agent 会话当主模型。需要长上下文就用 <code>deepseek-flash</code>（收费）或 NIM 里窗口更大的模型（需另行核实窗口，本机无此数据）。</p>
+<p><strong>③ NIM 预览模型容易下架，要定期核对 id</strong></p>
+<p>近 10 天 NIM 平台有 <strong>180 个 <code>untestable</code> 轮次、219 次 <code>model_gone</code></strong>，26 个模型里一半是死的。当主力前建议每周核一次 <code>models.json</code> 里的 id 是否仍返回 200；<code>nvidia/nemotron-3.5-lightning-30b-a3b</code> 这类新模型尤其容易换名。</p>
+<h2 id="heading-2">六、数据质量与局限</h2>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字一致性</td>
+<td>✅ 能力分逐条核对 08-02 榜原始行（43/44/49/52/57/59/62/67/76 行）；T0 可靠性逐条取自上一轮已校验的聚合 JSON（<code>Σok+Σ429+Σother=18,645</code> 成立）</td>
+</tr>
+<tr>
+<td>未编造</td>
+<td>✅ 3 个无能力分模型一律填 <code>—</code>；跨通道引用值标 <code>*</code>；同模型双分数冲突如实并列</td>
+</tr>
+<tr>
+<td>可信度</td>
+<td>能力分 / 综合A = <strong>T2</strong>（08-02 内部推算，非官方）；T1 基准分 = <strong>T1</strong>；成功率/429率/TTFT = <strong>T0</strong>；费用 = 需求口径 + 本机配置，无价格数字</td>
+</tr>
+<tr>
+<td>时间性</td>
+<td>⚠️ 能力分是 2026-08-02 的历史值，距今 3 个多月，期间模型可能已更新；可靠性是近 10 天 T0 实测</td>
+</tr>
+<tr>
+<td>探针局限</td>
+<td>⚠️ 两个雷达都是 64-token 短请求（「用一句话介绍北京」/「回复两个字：正常」），能力分不能代表长上下文、工具密集、多轮真实负载</td>
+</tr>
+<tr>
+<td>窗口数据</td>
+<td>⚠️ 本机没有各模型的上下文窗口实测值，仅 11-13 日志记了 CF 两个模型的窗口，其余不推断</td>
+</tr>
+<tr>
+<td>免费额度</td>
+<td>⚠️ 本机数据不含任何官方额度/价格数字，&ldquo;免费&quot;按需求口径与配置注释记录，以平台官方为准</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading-3">七、交付物</h2>
+<table>
+<thead>
+<tr>
+<th>产物</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完整报告（Markdown）</td>
+<td>口径、主表、场景推荐、部署步骤、可信度与局限</td>
+</tr>
+<tr>
+<td>模型明细 CSV</td>
+<td>11 行 × 21 列，含能力分来源与 T0 可靠性</td>
+</tr>
+<tr>
+<td>交互式看板 HTML</td>
+<td>零外部依赖、可离线打开，支持按平台 / 角色 / 有无能力分筛选与表头排序</td>
+</tr>
+<tr>
+<td>看板预览图</td>
+<td>浏览器实测截图</td>
+</tr>
+<tr>
+<td>可复现脚本</td>
+<td>聚合脚本 + 渲染脚本（纯本地只读，不发 API 请求）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>本文所有成功率、429 率、TTFT、样本量均为本机两个雷达 daemon 原始落盘数据的 T0 实算；能力分为 2026-08-02 内部干活榜 T2 推算值；公开基准分为 10-13 整理的 T1 值。无数据处一律标「—」，未编造数字。</p>
+</blockquote>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <a href="/post/261114项目流/" class="post-nav-card post-nav-card--prev">
+      
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">项目流 · 2026-11-14</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
+    
+    
+    <a href="/post/261114技术点/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">技术点 · 2026-11-14</span>
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/daily-note-blog/">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 W662000&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+    <div class="footer-custom">
+      Powered by Gridea Pro
+    </div>
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v0.0.0-dev %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>
