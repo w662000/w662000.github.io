@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 0.0.0-dev">
+  <title>技术点 · Karpathy&#39;s-LLM-Wiki | W662000&#39;s Blog</title>
+  
+<meta property="og:title" content="技术点 · Karpathy&#39;s-LLM-Wiki" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="技术点 · Karpathy&amp;rsquo;s LLM Wiki 来源：261010_Karpathy&amp;rsquo;s LLM Wiki_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） 二、实施要点与关键技术 （源 handoff 未单&amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/2026-10-10-techpoint-Karpathy's-LLM-Wiki/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · Karpathy's-LLM-Wiki","url":"https://towertop.kdns.fr/post/2026-10-10-techpoint-Karpathy's-LLM-Wiki/","description":"技术点 · Karpathy\u0026rsquo;s LLM Wiki 来源：261010_Karpathy\u0026rsquo;s LLM Wiki_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） 二、实施要点与关键技术 （源 handoff 未单\u0026hellip;","datePublished":"2026-10-13T23:32:17+08:00","dateModified":"2026-10-13T23:32:17+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-10-10-techpoint-Karpathy's-LLM-Wiki/","name":"技术点 · Karpathy's-LLM-Wiki","position":2}]}</script>
+<meta property="og:title" content="技术点 · Karpathy's-LLM-Wiki">
+<meta property="og:description" content="技术点 · Karpathy&amp;rsquo;s LLM Wiki 来源：261010_Karpathy&amp;rsquo;s LLM Wiki_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） 二、实施要点与关键技术 （源 handoff 未单&amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/2026-10-10-techpoint-Karpathy's-LLM-Wiki/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="W662000's Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-10-10-techpoint-Karpathy's-LLM-Wiki/">
+<meta name="twitter:title" content="技术点 · Karpathy's-LLM-Wiki">
+<meta name="twitter:description" content="技术点 · Karpathy&amp;rsquo;s LLM Wiki 来源：261010_Karpathy&amp;rsquo;s LLM Wiki_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8） 一、技术选型 （源 handoff 未单列技术选型） 二、实施要点与关键技术 （源 handoff 未单&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://towertop.kdns.fr" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="/images/avatar.png" alt="W662000&#39;s Blog" />
+        </a>
+        
+        <a href="https://towertop.kdns.fr" class="site-name-link">W662000&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/daily-note-blog/">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">技术点 · Karpathy&#39;s-LLM-Wiki</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-10-13</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">10 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/handoff/" class="tag-pill tag-pill--sm">handoff</a>
+      
+    </div>
+    
+  </header>
+
+  
+
+  <div class="article-content">
+    <h1 id="--karpathys-llm-wiki">技术点 · Karpathy&rsquo;s LLM Wiki</h1>
+<blockquote>
+<p>来源：261010_Karpathy&rsquo;s LLM Wiki_handoff.md（项目 handoff 1:1 companion，由 techpoint_flow 新方法提炼；读取编码：utf-8）</p>
+</blockquote>
+<h2 id="heading">一、技术选型</h2>
+<p>（源 handoff 未单列技术选型）</p>
+<h2 id="heading-1">二、实施要点与关键技术</h2>
+<p>（源 handoff 未单列实施要点）</p>
+<h3 id="heading-2">关键技术要点（自动抽取）</h3>
+<ul>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+<p>WIKI=&quot;<span class="katex-error" title="ParseError: KaTeX parse error: Expected &#x27;}&#x27;, got &#x27;EOF&#x27; at end of input: {WIKI_PATH:-" style="color:#cc0000">{WIKI_PATH:-</span>HOME/wiki}&quot;</p>
+<pre><code>- ```
+wiki/
+├── SCHEMA.md           # Conventions, structure rules, domain config
+├── index.md            # Sectioned content catalog with one-line summaries
+├── log.md              # Chronological action log (append-only, rotated yearly)
+├── raw/                # Layer 1: Immutable source material
+│   ├── articles/       # Web articles, clippings
+│   ├── papers/         # PDFs, arxiv papers
+│   ├── transcripts/    # Meeting notes, interviews
+│   └── assets/         # Images, diagrams referenced by sources
+├── entities/           # Layer 2: Entity pages (people, orgs, products, models)
+├── concepts/           # Layer 2: Concept/topic pages
+├── comparisons/        # Layer 2: Side-by-side analyses
+└── queries/            # Layer 2: Filed query results worth keeping
+</code></pre>
+<ul>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+<p>WIKI=&quot;<span class="katex-error" title="ParseError: KaTeX parse error: Expected &#x27;}&#x27;, got &#x27;EOF&#x27; at end of input: {WIKI_PATH:-" style="color:#cc0000">{WIKI_PATH:-</span>HOME/wiki}&quot;</p>
+<h1 id="orientation-reads-at-session-start">Orientation reads at session start</h1>
+<p>read_file &ldquo;$WIKI/SCHEMA.md&rdquo;<br />
+read_file &ldquo;$WIKI/index.md&rdquo;<br />
+read_file &ldquo;$WIKI/log.md&rdquo; offset=&lt;last 30 lines&gt;</p>
+<pre><code>- ```
+# Wiki Schema
+
+## Domain
+[What this wiki covers — e.g., &quot;AI/ML research&quot;, &quot;personal health&quot;, &quot;startup intelligence&quot;]
+
+## Conventions
+- File names: lowercase, hyphens, no spaces (e.g., `transformer-architecture.md`)
+- Every wiki page starts with YAML frontmatter (see below)
+- Use `[[wikilinks]]` to link between pages (minimum 2 outbound links per page)
+- When updating a page, always bump the `updated` date
+- Every new page must be added to `index.md` under the correct section
+- Every action must be appended to `log.md`
+- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/source-file.md]`
+  at the end of paragraphs whose claims come from a specific source. This lets a reader trace each
+  claim back without re-reading the whole raw file. Optional on single-source pages where the
+  `sources:` frontmatter is enough.
+
+## Frontmatter
+</code></pre>
+<ul>
+<li>
+<pre><code>
+</code></pre>
+</li>
+</ul>
+<p><code>confidence</code> and <code>contested</code> are optional but recommended for opinion-heavy or fast-moving<br />
+topics. Lint surfaces <code>contested: true</code> and <code>confidence: low</code> pages for review so weak claims<br />
+don&rsquo;t silently harden into accepted wiki fact.</p>
+<h3 id="raw-frontmatter">raw/ Frontmatter</h3>
+<p>Raw sources ALSO get a small frontmatter block so re-ingests can detect drift:</p>
+<pre><code>- ```
+
+The `sha256:` lets a future re-ingest of the same URL skip processing when content is unchanged,
+and flag drift when it has changed. Compute over the body only (everything after the closing
+`---`), not the frontmatter itself.
+
+## Tag Taxonomy
+[Define 10-20 top-level tags for the domain. Add new tags here BEFORE using them.]
+
+Example for AI/ML:
+- Models: model, architecture, benchmark, training
+- People/Orgs: person, company, lab, open-source
+- Techniques: optimization, fine-tuning, inference, alignment, data
+- Meta: comparison, timeline, controversy, prediction
+
+Rule: every tag on a page must appear in this taxonomy. If a new tag is needed,
+add it here first, then use it. This prevents tag sprawl.
+
+## Page Thresholds
+- **Create a page** when an entity/concept appears in 2+ sources OR is central to one source
+- **Add to existing page** when a source mentions something already covered
+- **DON'T create a page** for passing mentions, minor details, or things outside the domain
+- **Split a page** when it exceeds ~200 lines — break into sub-topics with cross-links
+- **Archive a page** when its content is fully superseded — move to `_archive/`, remove from index
+
+## Entity Pages
+One page per notable entity. Include:
+- Overview / what it is
+- Key facts and dates
+- Relationships to other entities ([[wikilinks]])
+- Source references
+
+## Concept Pages
+One page per concept or topic. Include:
+- Definition / explanation
+- Current state of knowledge
+- Open questions or debates
+- Related concepts ([[wikilinks]])
+
+## Comparison Pages
+Side-by-side analyses. Include:
+- What is being compared and why
+- Dimensions of comparison (table format preferred)
+- Verdict or synthesis
+- Sources
+
+## Update Policy
+When new information conflicts with existing content:
+1. Check the dates — newer sources generally supersede older ones
+2. If genuinely contradictory, note both positions with dates and sources
+3. Mark the contradiction in frontmatter: `contradictions: [page-name]`
+4. Flag for user review in the lint report
+</code></pre>
+<ul>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+<h1 id="wiki-index">Wiki Index</h1>
+<blockquote>
+<p>Content catalog. Every wiki page listed under its type with a one-line summary.<br />
+Read this first to find relevant pages for any query.<br />
+Last updated: YYYY-MM-DD | Total pages: N</p>
+</blockquote>
+<h2 id="entities">Entities</h2>
+<!-- Alphabetical within section -->
+<h2 id="concepts">Concepts</h2>
+<h2 id="comparisons">Comparisons</h2>
+<h2 id="queries">Queries</h2>
+<pre><code>- ```
+# Wiki Log
+
+&gt; Chronological record of all wiki actions. Append-only.
+&gt; Format: `## [YYYY-MM-DD] action | subject`
+&gt; Actions: ingest, update, query, lint, create, archive, delete
+&gt; When this file exceeds 500 entries, rotate: rename to log-YYYY.md, start fresh.
+
+## [YYYY-MM-DD] create | Wiki initialized
+- Domain: [domain]
+- Structure created with SCHEMA.md, index.md, log.md
+</code></pre>
+<ul>
+<li>for key terms — the index alone may miss relevant content.</li>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+<h1 id="use-execute-code-for-this--programmatic-scan-across-all-wiki-pages">Use execute_code for this — programmatic scan across all wiki pages</h1>
+<p>import os, re<br />
+from collections import defaultdict<br />
+wiki = &ldquo;&lt;WIKI_PATH&gt;&rdquo;</p>
+<h1 id="scan-all-md-files-in-entities-concepts-comparisons-queries">Scan all .md files in entities/, concepts/, comparisons/, queries/</h1>
+<h1 id="extract-all-wikilinks--build-inbound-link-map">Extract all [[wikilinks]] — build inbound link map</h1>
+<h1 id="pages-with-zero-inbound-links-are-orphans">Pages with zero inbound links are orphans</h1>
+<pre><code>- ```
+# Find pages by content
+search_files &quot;transformer&quot; path=&quot;$WIKI&quot; file_glob=&quot;*.md&quot;
+
+# Find pages by filename
+search_files &quot;*.md&quot; target=&quot;files&quot; path=&quot;$WIKI&quot;
+
+# Find pages by tag
+search_files &quot;tags:.*alignment&quot; path=&quot;$WIKI&quot; file_glob=&quot;*.md&quot;
+
+# Recent activity
+read_file &quot;$WIKI/log.md&quot; offset=&lt;last 20 lines&gt;
+</code></pre>
+<ul>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+<h1 id="requires-nodejs-22">Requires Node.js 22+</h1>
+<p>npm install -g obsidian-headless</p>
+<h1 id="login-requires-obsidian-account-with-sync-subscription">Login (requires Obsidian account with Sync subscription)</h1>
+<p>ob login &ndash;email <email> &ndash;password &lsquo;<password>&rsquo;</p>
+<h1 id="create-a-remote-vault-for-the-wiki">Create a remote vault for the wiki</h1>
+<p>ob sync-create-remote &ndash;name &ldquo;LLM Wiki&rdquo;</p>
+<h1 id="connect-the-wiki-directory-to-the-vault">Connect the wiki directory to the vault</h1>
+<p>cd ~/wiki<br />
+ob sync-setup &ndash;vault &ldquo;<vault-id>&rdquo;</p>
+<h1 id="initial-sync">Initial sync</h1>
+<p>ob sync</p>
+<h1 id="continuous-sync-foreground--use-systemd-for-background">Continuous sync (foreground — use systemd for background)</h1>
+<p>ob sync &ndash;continuous</p>
+<pre><code>
+## 三、关键产物与命令
+（见源 handoff 关键产物字段）
+
+## 四、如何复现 / 重打
+（见源 handoff 重打方法字段）
+
+## 五、后续风险
+（见源 handoff 后续风险字段）
+</code></pre>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <a href="/post/2026-10-10-techpoint-LLM-and-Model-Providers/" class="post-nav-card post-nav-card--prev">
+      
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">技术点 · LLM-and-Model-Providers</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
+    
+    
+    <a href="/post/2026-10-10-techpoint-Kanban-—-多-Agent-配置文件协作/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">技术点 · Kanban-—-多-Agent-配置文件协作</span>
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/daily-note-blog/">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 W662000&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+    <div class="footer-custom">
+      Powered by Gridea Pro
+    </div>
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v0.0.0-dev %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>
