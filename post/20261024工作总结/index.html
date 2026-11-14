@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -33,12 +42,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64&amp;hellip;">
+<meta name="description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64秒。 次&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/20261024工作总结/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"每日工作总结 · 2026-10-24","url":"https://towertop.kdns.fr/post/20261024工作总结/","description":"今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64\u0026hellip;","datePublished":"2026-11-14T15:31:31+08:00","dateModified":"2026-11-14T15:31:31+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"每日工作总结 · 2026-10-24","url":"https://towertop.kdns.fr/post/20261024工作总结/","description":"今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64秒。 次\u0026hellip;","datePublished":"2026-11-14T15:43:20+08:00","dateModified":"2026-11-14T15:43:20+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/20261024工作总结/","name":"每日工作总结 · 2026-10-24","position":2}]}</script>
 <meta property="og:title" content="每日工作总结 · 2026-10-24">
-<meta property="og:description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64&amp;hellip;">
+<meta property="og:description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64秒。 次&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/20261024工作总结/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +55,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/20261024工作总结/">
 <meta name="twitter:title" content="每日工作总结 · 2026-10-24">
-<meta name="twitter:description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64&amp;hellip;">
+<meta name="twitter:description" content="今日完成Windows启动慢问题全面排查与修复。 排查机器为NEC PC-MKH20CZG5，配置i3-8300T、16GB内存、长城GW3000 NVMe 1TB。 现象为登录欢迎界面转圈15至20圈，实测64秒，内核启动仅6秒。 根因是DelayedDesktopSwitchTimeout默认60秒超时，WiFi网络就绪信号逐日延迟。 该延迟从10月14日的6秒恶化到10月24日的64秒。 次&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -225,10 +234,10 @@ WorkBuddyAI每天崩溃，TEMP达1.9GB、11万文件。<br />
     </a>
     
     
-    <a href="/post/20261023工作总结/" class="post-nav-card post-nav-card--next">
+    <a href="/post/20261027工作总结/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">每日工作总结 · 2026-10-23</span>
+        <span class="post-nav-card__title">每日工作总结 · 2026-10-27</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

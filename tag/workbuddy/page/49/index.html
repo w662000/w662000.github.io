@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -179,18 +188,25 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260803工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-03</h3>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
     </a>
-    <a href="/post/260803工作总结/" class="post-card__excerpt clamp-2">
-      深夜救火查清昨天多个项目一篇都没发出去的原因。
-扫描器只认HANDOFF文件，实际产出都是主题文件，收件箱一直空着。
-论坛证书报错真凶是本机代理中间人劫持，不是远端证书。
-做了一次晚间发布全链体检，结论是四棒都按时跑完，但棒是空的。
-...
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+接口形态
+CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
+Python 库 import / 常驻服务
+Agent 侧调用只需拼一行命...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-03
+      2026-08-17
       
     </div>
   </div>
@@ -200,18 +216,17 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260802工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-02</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260802工作总结/" class="post-card__excerpt clamp-2">
-      模型测速雷达修好了双击打不开的老毛病。
-根因是启动器只等三秒就拉浏览器，端口还没绑好。
-改为无窗口常驻加端口预检加就绪轮询，彻底解决。
-超时统一降到十秒，并新增慢模型当天冷却规则。
-派六个助手联网核实，重写了七十四个模型的标准化介绍。...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
+选型结论：
+
+永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-02
+      2026-08-17
       
     </div>
   </div>
@@ -221,16 +236,29 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260802-quanqiuai-paixingbang/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">全球AI排行榜</h3>
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
     </a>
-    <a href="/post/260802-quanqiuai-paixingbang/" class="post-card__excerpt clamp-2">
-      /* ════════════════════════════════════════════════════════════
-     Gridea 暗色模式核弹修复 v3
-     问题：Gridea 主题有 .article-c...
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+探测进程运行方式
+系统级常驻（nohup / 无窗口后台）
+框架后台任务句柄
+后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
+
+
+探测语言/依赖
+Python 标准库，零...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-02
+      2026-08-17
       
     </div>
   </div>
@@ -240,17 +268,29 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260801工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-01</h3>
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能中爬虫 _ Playwright 浏览器自动化技能提炼</h3>
     </a>
-    <a href="/post/260801工作总结/" class="post-card__excerpt clamp-2">
-      搭起模型测速雷达，每小时自动拨测全量模型首包延迟，成果落在本机看板。
-守温和红线：串行拨测、每模型每轮一枪、撞错即停不重试。
-查出八款赠送档 GLM 其实无额度，在客户端选中必报错。
-阶跃十四款模型全部救活，根因只是配置多带了一层前缀...
+    <a href="/post/2026-08-03-techpoint-skillhub-9-8-万技能中-爬虫-_-playwright-浏览器自动化/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+筛选对象
+直接读已落盘的 skillhub_all.json（154MB）
+重新发请求抓
+数据源已在手，重抓既浪费额度又可能漂移（T1）
+
+
+匹配方式
+逐条拼装字段为 blob 再 re.search...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-01
+      2026-08-17
       
     </div>
   </div>
@@ -260,18 +300,17 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260731工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260731工作总结</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.1（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260731工作总结/" class="post-card__excerpt clamp-2">
-      跨项目记忆精简三成六，每轮对话省近千 token。
-每日日志四端发布合并进 23:00 一条任务，生成完即发。
-Gridea 改脚本自动渲染推送，不再手动点同步。
-重构 handoff 流水线为扫描、发布、归档三段。
-阶跃十四款、商汤...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-1-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.1 要解决：基线版只凭 agent_created: true 判定共建 skill，漏掉了用户确认参与制定但未打标的 3 个 skill。
+选型结论：
+
+判定标准升级：agent_created=true 自动检测 + 用户手...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-31
+      2026-08-17
       
     </div>
   </div>
@@ -281,16 +320,29 @@ Gridea 改脚本自动渲染推送，不再手动点同步。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260730-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 每日完成项目（26-07-30）</h3>
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · SkillHub 9.8 万技能市场调研与 Cloudflare 部署上线</h3>
     </a>
-    <a href="/post/260730-每日完成项目/" class="post-card__excerpt clamp-2">
-      OmniRoute 本地网关从安装到跑通
+    <a href="/post/2026-08-02-techpoint-skillhub-9-8-万技能市场调研与-cloudflare-部署上线/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-把 OmniRoute（一个把多家大模型聚合成单一 OpenAI 兼容接口的工具）装到本机，并一路排查它启动黑屏/数据库报错的问题，最终定位根因是安装包自带的数据库原生模块与运行环境版本不匹...
+
+
+
+数据源
+目标站官方 API（匿名可读、分页）
+爬 HTML 页面
+前后端分离应用，接口匿名可读、每页 20 条，比解析 HTML 稳且快（T1，已核实）
+
+
+采集并发
+12 路并行后台采集（每分类一路...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-31
+      2026-08-17
       
     </div>
   </div>
@@ -300,14 +352,29 @@ Gridea 改脚本自动渲染推送，不再手动点同步。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260729-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 每日完成项目（26-07-29）</h3>
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AI 赚钱商业机会研究（16 机会 + A/B/C 计划 + 9 项目 90 天路线图）</h3>
     </a>
-    <a href="/post/260729-每日完成项目/" class="post-card__excerpt clamp-2">
-      DNSHE 免费域名平台梳理：把该平台 7 个可注册后缀（cc.cd / de5.net / bot.cd / ccwu.cc / bbroot.com / ddns.ge / l.cd）在 Cloudflare 托管兼容性与国内访问...
+    <a href="/post/2026-08-02-techpoint-ai-赚钱商业机会研究-16-机会-a_b_c-计划-9-项目-90-天路线图/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+方案生成方法
+A 计划：六顶思考帽 + RACI + 红队击穿
+单视角头脑风暴
+单视角会漏掉「黑帽」（风险）与「红队」（主动证伪）两层，方案看着都可行
+
+
+方案排期方法
+B 计划：Cynefin 判域...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-31
+      2026-08-17
       
     </div>
   </div>
@@ -317,14 +384,17 @@ Gridea 改脚本自动渲染推送，不再手动点同步。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260728-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 每日完成项目（26-07-28）</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260728-每日完成项目/" class="post-card__excerpt clamp-2">
-      通达信选股公式（强于大盘）：为用户整理 4 个版本的通达信条件选股公式，核心是「个股 vs 大盘涨幅对比 + 连续 N 天 + 明显跑赢」——覆盖每日跑赢、累计跑赢、综合版（推荐）、相对强度 RPS 思路；附公式管理器使用方法和踩坑提...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      本项目要解决：清晰盘点 ~/.workbuddy/skills 目录下到底有多少个用户级 skill，其中哪些是模型与用户共建的，哪些来自市场/预装/第三方。
+选型结论：
+
+扫描对象：~/.workbuddy/skills/ 下所有 ...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-31
+      2026-08-17
       
     </div>
   </div>
@@ -334,14 +404,27 @@ Gridea 改脚本自动渲染推送，不再手动点同步。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260727-每日完成项目/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 每日完成项目（26-07-27）</h3>
+    <a href="/post/260816-进度-把-雷达间隔调整-做成可复用-skill/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · 进度 · 把「雷达间隔调整」做成可复用 skill · 2026-08-16</h3>
     </a>
-    <a href="/post/260727-每日完成项目/" class="post-card__excerpt clamp-2">
-      
+    <a href="/post/260816-进度-把-雷达间隔调整-做成可复用-skill/" class="post-card__excerpt clamp-2">
+      日期：2026-08-16
+状态：✅ 已完结（scan 自动收集）
+来源：2026-08-16-10-57-55\进度_20260816_1920_雷达skill.md
+
+
+
+项
+路径
+
+
+
+
+skill 目录
+C:\Users\Ad...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-31
+      2026-08-16
       
     </div>
   </div>
@@ -351,19 +434,19 @@ Gridea 改脚本自动渲染推送，不再手动点同步。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260730工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">260730工作总结</h3>
+    <a href="/post/260816-复盘-au-autoclaw-的-handoff-生成流程与效果/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">交接文档 · 复盘：au（autoclaw）的 handoff 生成流程与效果 · 2026-08-16</h3>
     </a>
-    <a href="/post/260730工作总结/" class="post-card__excerpt clamp-2">
-      本地跑通 OmniRoute 网关。
-黑屏根因是安装包模块版本不匹配，打补丁修复。
-接好 8 个上游模型平台。
-OmniRoute 接入 WorkBuddy。
-改用 3 个具体模型替代不稳的智能路由。
-OmniRoute 接入 Her...
+    <a href="/post/260816-复盘-au-autoclaw-的-handoff-生成流程与效果/" class="post-card__excerpt clamp-2">
+      日期：2026-08-16
+状态：✅ 已完结（scan 自动收集）
+来源：2026-08-16-10-57-55\复盘_au_handoff流程_20260816.md
+
+
+日志源定位：os.walk+glob 扫两时代日志——Ope...
     </a>
     <div class="post-card__meta meta-text">
-      2026-07-30
+      2026-08-16
       
     </div>
   </div>

@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -178,36 +187,15 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261021工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-21</h3>
+    <a href="/post/260803工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-03</h3>
     </a>
-    <a href="/post/20261021工作总结/" class="post-card__excerpt clamp-2">
-      完成2026-10-20工作日志轴failover巡检，各端发布链路健康。
-完成handoff轴合规检查，昨日无项目交接，合规为空。
-完成技术点轴合规检查，昨日无技术点产出，合规为空。
-确认云笔记第5端同步完成，累计88篇工作日志已上...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/20261017工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-17</h3>
-    </a>
-    <a href="/post/20261017工作总结/" class="post-card__excerpt clamp-2">
-      FAILOVER巡检目标日为2026-10-16。
-昨日10-16发布链路健康。
-工作区本地、博客源GitHub、Gridea posts各端已齐备。
-Handoff与技术点轴合规为空。
-云笔记第5端于23:07完成主链三轴镜像。
-镜...
+    <a href="/post/260803工作总结/" class="post-card__excerpt clamp-2">
+      深夜救火查清昨天多个项目一篇都没发出去的原因。
+扫描器只认HANDOFF文件，实际产出都是主题文件，收件箱一直空着。
+论坛证书报错真凶是本机代理中间人劫持，不是远端证书。
+做了一次晚间发布全链体检，结论是四棒都按时跑完，但棒是空的。
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -220,33 +208,15 @@ Handoff与技术点轴合规为空。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261016工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-16</h3>
+    <a href="/post/260802工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-02</h3>
     </a>
-    <a href="/post/20261016工作总结/" class="post-card__excerpt clamp-2">
-      今日完成金山文档上传任务。
-上传文件为「300万收租计划-真实案例与简化方案.md」。
-源文件路径为 D:/workspace/loomy/300万收租计划-真实案例与简化方案.md，大小 11,722 字节。
-使用 mcp__kdo...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/20261018工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-18</h3>
-    </a>
-    <a href="/post/20261018工作总结/" class="post-card__excerpt clamp-2">
-      完成dsh由0.1.0-rc.7升级至0.2.0-rc.2。
-将@nanmicoder/dsh-agent-teams@0.1.25装入web profile并用dump-config验证加载正常。
-定位web UI白屏根因为升级前旧...
+    <a href="/post/260802工作总结/" class="post-card__excerpt clamp-2">
+      模型测速雷达修好了双击打不开的老毛病。
+根因是启动器只等三秒就拉浏览器，端口还没绑好。
+改为无窗口常驻加端口预检加就绪轮询，彻底解决。
+超时统一降到十秒，并新增慢模型当天冷却规则。
+派六个助手联网核实，重写了七十四个模型的标准化介绍。...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -259,16 +229,14 @@ Handoff与技术点轴合规为空。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261019工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-19</h3>
+    <a href="/post/260801工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-01</h3>
     </a>
-    <a href="/post/20261019工作总结/" class="post-card__excerpt clamp-2">
-      2026年10月19日今日无机器日志记录。
-依据对话上下文完成当日小结。
-每日工作总结由自动化任务于22:55生成并发布。
-总结文件基于昨日遗留上下文生成。
-今日无新会话，按合规空日兜底处理。
-发布流程覆盖Gridea、博客源、语雀源...
+    <a href="/post/260801工作总结/" class="post-card__excerpt clamp-2">
+      搭起模型测速雷达，每小时自动拨测全量模型首包延迟，成果落在本机看板。
+守温和红线：串行拨测、每模型每轮一枪、撞错即停不重试。
+查出八款赠送档 GLM 其实无额度，在客户端选中必报错。
+阶跃十四款模型全部救活，根因只是配置多带了一层前缀...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -281,34 +249,15 @@ Handoff与技术点轴合规为空。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261015工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-15</h3>
+    <a href="/post/260731工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260731工作总结</h3>
     </a>
-    <a href="/post/20261015工作总结/" class="post-card__excerpt clamp-2">
-      2026-10-15完成300万收租计划A计划分析优化。
-用WorkBuddy的六顶思考帽、多角色并行和RACI分析优化AutoClaw生成的方案HTML。
-蓝帽定题汇总，白帽联网核验，黑帽与绿帽挑刺并提优化建议。
-长沙老破小成交15...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/20261014工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-14</h3>
-    </a>
-    <a href="/post/20261014工作总结/" class="post-card__excerpt clamp-2">
-      2026-10-14完成自动化巡检启动。
-22:55触发每日工作总结生成·5端发布23:00自动化任务automation-1784700756809。
-巡检.workbuddy/memory/目录，确认当日无独立会话日志。
-结合10...
+    <a href="/post/260731工作总结/" class="post-card__excerpt clamp-2">
+      跨项目记忆精简三成六，每轮对话省近千 token。
+每日日志四端发布合并进 23:00 一条任务，生成完即发。
+Gridea 改脚本自动渲染推送，不再手动点同步。
+重构 handoff 流水线为扫描、发布、归档三段。
+阶跃十四款、商汤...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -321,35 +270,16 @@ Handoff与技术点轴合规为空。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261014-wb-国际版工作区-10-14-成果总结-agent-teams-六阶段收官与-/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">WB 国际版工作区 10/14 成果总结 - agent-teams 六阶段收官与 Phase 7 加固</h3>
+    <a href="/post/260730工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260730工作总结</h3>
     </a>
-    <a href="/post/20261014-wb-国际版工作区-10-14-成果总结-agent-teams-六阶段收官与-/" class="post-card__excerpt clamp-2">
-      WB 国际版工作区 10/14 成果总结 - agent-teams 六阶段收官与 Phase 7 加固
-
-.wbvd, .article-content .wbvd {
-  --bg: #f7f8fa; --card: #fffff...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-14
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/20261013工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-10-13</h3>
-    </a>
-    <a href="/post/20261013工作总结/" class="post-card__excerpt clamp-2">
-      今日从测速雷达拉取99个模型能力数据并落盘。
-99个模型中仅34个可评分，其余按不编造原则说明。
-34个可评分归并为21个基础模型组。
-派4个后台agent调研四个评分平台真实分。
-用户实测校准发现hy3误映射，误差超30%，已删除。...
+    <a href="/post/260730工作总结/" class="post-card__excerpt clamp-2">
+      本地跑通 OmniRoute 网关。
+黑屏根因是安装包模块版本不匹配，打补丁修复。
+接好 8 个上游模型平台。
+OmniRoute 接入 WorkBuddy。
+改用 3 个具体模型替代不稳的智能路由。
+OmniRoute 接入 Her...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -362,14 +292,108 @@ Handoff与技术点轴合规为空。
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/20261013-wb-国际版工作区-10-12-10-13-成果总结-acp-编排链路打通与-a/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">WB 国际版工作区 10/12-10/13 成果总结 - ACP 编排链路打通与 agent-teams 移植</h3>
+    <a href="/post/260729工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260729工作总结</h3>
     </a>
-    <a href="/post/20261013-wb-国际版工作区-10-12-10-13-成果总结-acp-编排链路打通与-a/" class="post-card__excerpt clamp-2">
-      WB 国际版工作区 10/12-10/13 成果总结 - ACP 编排链路打通与 agent-teams 移植
+    <a href="/post/260729工作总结/" class="post-card__excerpt clamp-2">
+      梳理 DNSHE 七后缀，推 de5.net。
+扫 de5 三位子域，305 可注册 694 占。
+实测 NIM 24 模型全免费。
+最快首字 0.28 秒。
+Kimi 已确认下线。
+模型扩至 30，改 5 个 NVIDIA 拼写。
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-14
+      
+    </div>
+  </div>
+  
+</article>
 
-.wbvd, .article-content .wbvd {
-  --bg: #f7f8fa; --card: #ff...
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260728工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260728工作总结</h3>
+    </a>
+    <a href="/post/260728工作总结/" class="post-card__excerpt clamp-2">
+      通达信选股公式整理 4 版。
+改版对标全 A 等权 880008。
+清理 WorkBuddy 误建的 D:/c 目录。
+产出微信文章准确爬取方案。
+Failover 巡检本次 no-op。
+runtime bug 周期误建 D:/c。...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260727工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260727工作总结</h3>
+    </a>
+    <a href="/post/260727工作总结/" class="post-card__excerpt clamp-2">
+      核实免费云资源是否真免卡服务器。
+澄清某云商注册要信用卡才免卡。
+Serv00 真免卡加 SSH 替代。
+装 5 个豆包技能并自建搜资料技能。
+完成免卡 AI 资源中心五合一项目。
+部署到 Replit 已上线 64 条。
+用脚本自动...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260726工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260726工作总结</h3>
+    </a>
+    <a href="/post/260726工作总结/" class="post-card__excerpt clamp-2">
+      Gaming4Free 跑代理被封号。
+Serv00 实测也禁代理。
+做注册开放自动抢注云端方案。
+博客加暗亮主题切换统一。
+注册 my-place.us 部署论坛。
+为 bbs1org 打通 MCP 库。
+装 phpBB 自写 MC...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-14
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260725工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">260725工作总结</h3>
+    </a>
+    <a href="/post/260725工作总结/" class="post-card__excerpt clamp-2">
+      无锡 58 买房租房爬虫全量完成。
+数据已全部落库，项目交付。
+Hermes 模型导入 WorkBuddy。
+合并后共二十四条模型。
+排查 Wispbyte 广告拦截误报。
+根因为网络阻断三个域名。
+罗马尼亚 VPS 用 gost 起...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-14
@@ -389,7 +413,7 @@ Handoff与技术点轴合规为空。
     
     <a href="/post/page/7/" class="btn btn--secondary">&larr; 上一页</a>
     
-    <span class="pagination__info">8 / 51</span>
+    <span class="pagination__info">8 / 53</span>
     
     <a href="/post/page/9/" class="btn btn--secondary">下一页 &rarr;</a>
     

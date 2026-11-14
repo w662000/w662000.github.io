@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -179,17 +188,29 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-11/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-11 · 2026-08-12</h3>
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
     </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-11/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-11_handoff.md（编码探测：utf-8）
-用户提供了有道云笔记 MCP A...
+    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+调度
+GitHub Actions（cron 每 10 分钟）
+本机探测脚本 + 弹窗
+云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）
+
+
+通知通道
+126 邮箱（SMTP_SSL +...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -199,17 +220,18 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-10/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-10 · 2026-08-12</h3>
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小游戏类别细分 · A3 一页纸（A 计划第二轮：六顶思考帽 + RACI + 多 Agent）</h3>
     </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-10/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-10_handoff.md（编码探测：utf-8）
-09:08 清理自启动目录的 H...
+    <a href="/post/2026-08-14-techpoint-微信小游戏类别细分-a3-一页纸-a-计划第二轮-六顶思考帽-raci-多-ag/" class="post-card__excerpt clamp-2">
+      本调查要解决：个人/小团队预算有限，进入微信小游戏赛道时该选哪个类别。
+选型结论：
+
+研究方法：六顶思考帽 + RACI + 多 Agent 并行的 A 计划工作流。
+数据来源：T0 微信公开课/腾讯财报/游戏工委法规；T1 Data...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -219,18 +241,30 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-09/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-09 · 2026-08-12</h3>
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
     </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-09/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-09_handoff.md（编码探测：utf-8）
-﻿
-10:45 用户批准进化提案...
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+云端运行时
+Cloudflare Workers
+自建 VPS / 云函数
+免运维、免费额度足、自带 Cron Trigger（T1 实测）
+
+
+数据库
+D1（SQLite）
+KV 直存 / 外部 M...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -240,17 +274,15 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-08/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-08 · 2026-08-12</h3>
+    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · skillhub 98824 个 skill 中「akshare 相关 MCP Skill」重筛清单</h3>
     </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-08/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-08_handoff.md（编码探测：utf-8）
-用户要求：给接入的 70+ 模型...
+    <a href="/post/2026-08-04-techpoint-skillhub-98824-个-skill-中-akshare-相关-mcp-/" class="post-card__excerpt clamp-2">
+      数据来源：SkillHub 全站 skill 元数据（skillhub_all.json，98,824 条）。
+匹配策略：对 name / slug / description / description_zh / tags / la...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -260,17 +292,18 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-工作日志-2026-08-07/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-工作日志-2026-08-07 · 2026-08-12</h3>
+    <a href="/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）</h3>
     </a>
-    <a href="/post/260812-autoclaw-工作日志-2026-08-07/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-工作日志-2026-08-07_handoff.md（编码探测：utf-8）
-᰸ID: evo-2026-08...
+    <a href="/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/" class="post-card__excerpt clamp-2">
+      系统：Hermes AI Gateway / WebUI 双壳架构。
+端口角色：
+
+8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态；
+8650：Node webui（n...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -280,19 +313,18 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-slg-resume-plan/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-slg-resume-plan · 2026-08-12</h3>
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 微信小程序前期调查 · A3 一页纸（A 计划：六顶思考帽 + RACI + 多 Agent）</h3>
     </a>
-    <a href="/post/260812-autoclaw-slg-resume-plan/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-slg-resume-plan_handoff.md（编码探测：utf-8）
+    <a href="/post/2026-08-14-techpoint-微信小程序前期调查-a3-一页纸-a-计划-六顶思考帽-raci-多-agent/" class="post-card__excerpt clamp-2">
+      本调查要解决：做什么微信小程序「访问量大 + 付费人群多」，且适合个人/小团队切入。
+选型结论：
 
-
-原理：把用户真实 Edge ...
+研究方法：A 计划 = 六顶思考帽 + RACI + 多 Agent。
+数据来源：T0 腾讯财报/微信公开课；T1 QuestMobi...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -302,17 +334,17 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260812-autoclaw-nim-100模型清单/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · autoclaw-nim-100模型清单 · 2026-08-12</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.5（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260812-autoclaw-nim-100模型清单/" class="post-card__excerpt clamp-2">
-      日期：2026-08-12
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260812_autoclaw-nim-100模型清单_handoff.md（编码探测：utf-8）
-来源：https://integrate...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-5-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.5 要解决：彻底消除财富自由系列 6 个 skill 的磁盘双份，使清单与磁盘都达到 name 去重后无重复。
+选型结论：
+
+删除顶层重复目录：fw01-wealth-freedom-definition、fw05-abando...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -322,17 +354,17 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · 4 端 handoff 去重执行报告（2026-08-11） · 2026-08-11</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.4（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260811-4-端-handoff-去重执行报告-2026-08-11/" class="post-card__excerpt clamp-2">
-      日期：2026-08-11
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260811_4 端 handoff 去重执行报告（2026-08-11）_handoff.md（编码探测：utf-8）
-用户前天（实际补发动...
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-4-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.4 要解决：agent-reach skill 目录已被删除，清单仍将其列为「我参与制定」，造成脏数据；同时 cangjie-skill 财富自由系列存在磁盘双份，需标记重复。
+选型结论：
+
+删除失效 skill：移除 agen...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -342,18 +374,25 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260804-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · china-stock-data 实测报告（2026-08-04 21_xx） · 2026-08-04</h3>
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
     </a>
-    <a href="/post/260804-china-stock-data-实测报告-2026-08-04-21_xx/" class="post-card__excerpt clamp-2">
-      日期：2026-08-04
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260804_china-stock-data 实测报告（2026-08-04 21_xx）_handoff.md（编码探测：utf-8）
+    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
 
-...
+
+
+
+接口形态
+CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
+Python 库 import / 常驻服务
+Agent 侧调用只需拼一行命...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
@@ -363,18 +402,17 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260804-china-stock-data-安装扫描报告/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">交接文档 · china-stock-data 安装扫描报告 · 2026-08-04</h3>
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 用户级 Skill 清单 v1.3（~_.workbuddy_skills）</h3>
     </a>
-    <a href="/post/260804-china-stock-data-安装扫描报告/" class="post-card__excerpt clamp-2">
-      日期：2026-08-04
-状态：✅ 已完结（新方法重生成）
-来源：handoff\bak\260804_china-stock-data 安装扫描报告_handoff.md（编码探测：utf-8）
+    <a href="/post/2026-08-14-techpoint-用户级-skill-清单-v1-3-_-workbuddy_skills/" class="post-card__excerpt clamp-2">
+      v1.3 要解决：把手动补进的 9 个 skill 永久化，并增加触发词信息，让清单真正反映 skill 的调用入口。
+选型结论：
 
-china-stock-data...
+永久化 agent_created：把 9 个手动补进 skill 的 SKILL.md 写入 ag...
     </a>
     <div class="post-card__meta meta-text">
-      2026-08-16
+      2026-08-17
       
     </div>
   </div>
