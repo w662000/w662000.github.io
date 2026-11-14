@@ -235,10 +235,10 @@ Windows 原生进程（agent + WebUI 各跑进程）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · yunnan-housing</h3>
     </a>
-    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -247,13 +247,15 @@ Windows 原生进程（agent + WebUI 各跑进程）
 
 
 
-博客端
-GitHub Pages + Jekyll（daily-note-blog）
-Gridea Pro 单独承担
-push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
+云端运行时
+Cloudflare Workers
+自建 VPS / 云函数
+免运维、免费额度足、自带 Cron Trigger（T1 实测）
 
 
-...
+数据库
+D1（SQLite）
+KV 直存 / 外部 M...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -359,26 +361,12 @@ Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
     </a>
-    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-部署形态
-双容器（WebUI + Agent gateway）
-单容器塞两个进程
-官方支持路径；两者依赖差异大，混装易互相污染（T1）
-
-
-容器间通信
-Docker bridge 网络 + HTTP ...
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
+      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
+登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -391,12 +379,25 @@ Docker bridge 网络 + HTTP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
     </a>
-    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
-      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
-登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
+
+
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
