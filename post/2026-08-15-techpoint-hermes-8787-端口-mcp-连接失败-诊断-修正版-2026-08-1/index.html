@@ -33,12 +33,12 @@
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload&amp;hellip;">
+<meta name="description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload 真正&amp;hellip;">
 <link rel="canonical" href="https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）","url":"https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/","description":"系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\\hermes-webui\\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload\u0026hellip;","datePublished":"2026-08-17T11:01:13+08:00","dateModified":"2026-08-17T11:01:13+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）","url":"https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/","description":"系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\\hermes-webui\\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload 真正\u0026hellip;","datePublished":"2026-08-17T11:01:13+08:00","dateModified":"2026-08-17T11:01:13+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/","name":"技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）","position":2}]}</script>
 <meta property="og:title" content="技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）">
-<meta property="og:description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload&amp;hellip;">
+<meta property="og:description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload 真正&amp;hellip;">
 <meta property="og:url" content="https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="W662000's Blog">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://towertop.kdns.fr/post/2026-08-15-techpoint-hermes-8787-端口-mcp-连接失败-诊断-修正版-2026-08-1/">
 <meta name="twitter:title" content="技术点 · Hermes 8787 端口 MCP 连接失败 — 诊断（修正版 2026-08-15 16_27）">
-<meta name="twitter:description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload&amp;hellip;">
+<meta name="twitter:description" content="系统：Hermes AI Gateway / WebUI 双壳架构。 端口角色： 8787：Python webui（D:\hermes-webui\server.py），只读展示 MCP 状态； 8650：Node webui（npm 全局 hermes-web-ui），持有 POST /api/hermes/mcp/reload 真正&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -252,20 +252,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</span>
+        <span class="post-nav-card__title">技术点 · wispbyte-gost</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-nav-card post-nav-card--next">
+    <a href="/post/2026-07-19-techpoint-yunnan-housing/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">技术点 · AutoClaw 2026-08-12</span>
+        <span class="post-nav-card__title">技术点 · yunnan-housing</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
