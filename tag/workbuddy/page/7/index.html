@@ -4,16 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-<link rel="stylesheet" href="/styles/base.css">
-<link rel="stylesheet" href="/styles/layout.css">
-<link rel="stylesheet" href="/styles/components.css">
-<link rel="stylesheet" href="/styles/article.css">
-<link rel="stylesheet" href="/styles/pages.css">
-<link rel="stylesheet" href="/styles/comments.css">
-<link rel="stylesheet" href="/styles/utilities.css">
-<link rel="stylesheet" href="/styles/responsive.css">
+<link rel="stylesheet" href="/styles/main.min.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -188,48 +179,29 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
+    <a href="/post/260925工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-25</h3>
+    </a>
+    <a href="/post/260925工作总结/" class="post-card__excerpt clamp-2">
+      今日排查并修复 lobsterai 连续弹出 git 控制台窗口问题。根因是 publish_site.py 和 cloud_daily.py 调用 subprocess.run 调 git 时未加 CREATE_NO_WINDOW ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
     <a href="/post/260923工作总结/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-23</h3>
     </a>
     <a href="/post/260923工作总结/" class="post-card__excerpt clamp-2">
       今日核心工作在两个方向。
 一、LobsterAI 稳定性治理。把桌面应用从 9.4 回滚到 8.14，并在 asar 包里打了四处字节补丁，彻底关掉了自动更新、自动下载和版本就绪 toast。回滚原因是 9.4 起网关频繁断连和间歇 ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260922工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-22</h3>
-    </a>
-    <a href="/post/260922工作总结/" class="post-card__excerpt clamp-2">
-      每日工作总结 · 2026-09-22
-AutoClaw zai 通道 403 限流排查完成，定位根因为服务端突发限流，非额度问题。
-ETF 组合回测独立验证完成，年化 17.43% 与文章 17.62% 基本一致，但最大回撤 -12...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260921工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-21</h3>
-    </a>
-    <a href="/post/260921工作总结/" class="post-card__excerpt clamp-2">
-      排查 AutoClaw 网关频繁断开问题。根本原因：V8 native 崩溃（退出码 2147483651），非 hosts 屏蔽。触发面为 bundle-MCP 批量启动 connector 后 event loop 打满。今日 d...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-17
@@ -266,6 +238,23 @@ ETF 组合回测独立验证完成，年化 17.43% 与文章 17.62% 基本一致
     <a href="/post/260919工作总结/" class="post-card__excerpt clamp-2">
       LobsterAI 回滚至 2026.8.14，解决升级后任务断流问题。备份数据与程序至 D:\LobsterAI_backup\。回滚成功，配置与工作区完整保留。
 关闭 LobsterAI 自动更新：在 app.asar 实施四处补...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260921工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-21</h3>
+    </a>
+    <a href="/post/260921工作总结/" class="post-card__excerpt clamp-2">
+      排查 AutoClaw 网关频繁断开问题。根本原因：V8 native 崩溃（退出码 2147483651），非 hosts 屏蔽。触发面为 bundle-MCP 批量启动 connector 后 event loop 打满。今日 d...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-17
