@@ -205,10 +205,10 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · MemOS 接入 AutoClaw/Hermes 排障（看板空白 · 网关 slots 重置 · 智谱 v4 模型接入）</h3>
     </a>
-    <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-09-techpoint-memos-接入-autoclaw_hermes-排障-看板空白-网关-slot/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -217,10 +217,10 @@
 
 
 
-免费 VPS 平台
-Wispbyte（Pterodactyl 容器）
-Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
-Wispbyte 允许自定义 Sta...
+看板后端环境变量修复
+setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
+改 start_studio.ps1 脚本
+用户要求「不碰配置、不重启」；Machine 级...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -252,25 +252,26 @@ Wispbyte 允许自定义 Sta...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · model-speed-radar 看板 A 计划收尾与 handoff 自动发布链路修复</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-08-01-techpoint-model-speed-radar-看板-a-计划收尾与-handoff-自动发/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
-选型依据
+依据
 
 
 
 
-论坛
-phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
-bbs1org
-需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
+探测进程运行方式
+系统级常驻（nohup / 无窗口后台）
+框架后台任务句柄
+后台任务句柄会被框架在对话轮次切换时回收，导致服务静默消失（T1，多次复现）
 
 
-MCP ...
+探测语言/依赖
+Python 标准库，零...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -283,26 +284,25 @@ MCP ...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · serv00-monitor（GitHub Actions 云端常驻探测 + 邮箱自动注册）</h3>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-serv00-monitor/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
-选型依据
+依据
 
 
 
 
-调度
-GitHub Actions（cron 每 10 分钟）
-本机探测脚本 + 弹窗
-云端常驻、不依赖本机 24h 开机；本机沙箱无外网（T1）
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
 
 
-通知通道
-126 邮箱（SMTP_SSL +...
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -364,10 +364,10 @@ GitHub Actions（cron 每 10 分钟）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
     </a>
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -376,10 +376,13 @@ GitHub Actions（cron 每 10 分钟）
 
 
 
-抓取方式
-Playwright 无头 Chromium
-纯 urllib/requests
-58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
+平台
+Gaming4Free（翼龙面板游戏 VPS）
+Wispbyte / Serv00 / Oracle
+比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
+
+
+代理内核...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
