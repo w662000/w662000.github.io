@@ -4,16 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-<link rel="stylesheet" href="/styles/base.css">
-<link rel="stylesheet" href="/styles/layout.css">
-<link rel="stylesheet" href="/styles/components.css">
-<link rel="stylesheet" href="/styles/article.css">
-<link rel="stylesheet" href="/styles/pages.css">
-<link rel="stylesheet" href="/styles/comments.css">
-<link rel="stylesheet" href="/styles/utilities.css">
-<link rel="stylesheet" href="/styles/responsive.css">
+<link rel="stylesheet" href="/styles/main.min.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -203,6 +194,16 @@
     <div class="compact-grid">
       
        <article class="post-card post-card--compact">
+  <a href="/post/260927工作总结/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">每日工作总结 · 2026-09-27</h3>
+      <div class="post-card__meta meta-text">2026-11-22</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
   <a href="/post/260928工作总结/" class="post-card__inner">
     <div class="post-card__body">
       <h3 class="post-card__title clamp-2">每日工作总结 · 2026-09-28</h3>
@@ -223,19 +224,9 @@
 </article>
   
        <article class="post-card post-card--compact">
-  <a href="/post/260927工作总结/" class="post-card__inner">
+  <a href="/post/260924工作总结/" class="post-card__inner">
     <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">每日工作总结 · 2026-09-27</h3>
-      <div class="post-card__meta meta-text">2026-11-22</div>
-    </div>
-    
-  </a>
-</article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/260925工作总结/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">每日工作总结 · 2026-09-25</h3>
+      <h3 class="post-card__title clamp-2">每日工作总结 · 2026-09-24</h3>
       <div class="post-card__meta meta-text">2026-11-22</div>
     </div>
     
@@ -260,6 +251,26 @@
           <h2 class="section-title">最新文章</h2>
         </div>
         <div class="post-list">
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/260927工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-27</h3>
+    </a>
+    <a href="/post/260927工作总结/" class="post-card__excerpt clamp-2">
+      每日工作总结 · 2026-09-27
+今日无会话级机器日志记录，依 FAILOVER 巡检日志与上下文小结。
+FAILOVER 巡检完成，目标日 2026-09-26 的日志轴本地三端齐备。
+语雀源与博客源已写入本地仓库，GitHu...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-22
+      
+    </div>
+  </div>
+  
+</article>
+
           
           <article class="post-card post-card--list">
   <div class="post-card__body">
@@ -301,14 +312,12 @@ Handoff 轴与技术点轴合规为空，无产出需补发。
           
           <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260927工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-27</h3>
+    <a href="/post/260924工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-24</h3>
     </a>
-    <a href="/post/260927工作总结/" class="post-card__excerpt clamp-2">
-      每日工作总结 · 2026-09-27
-今日无会话级机器日志记录，依 FAILOVER 巡检日志与上下文小结。
-FAILOVER 巡检完成，目标日 2026-09-26 的日志轴本地三端齐备。
-语雀源与博客源已写入本地仓库，GitHu...
+    <a href="/post/260924工作总结/" class="post-card__excerpt clamp-2">
+      今日核心工作在两个方向。
+一、Hermes 弹窗问题诊断与修复。15:30 之后频繁弹出 git/控制台黑窗，排查定位到是 Hermes gateway 后台每约 5 分钟自动重连 5 个已损坏的 MCP server。每次重连 sp...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-22
@@ -326,24 +335,6 @@ FAILOVER 巡检完成，目标日 2026-09-26 的日志轴本地三端齐备。
     </a>
     <a href="/post/260925工作总结/" class="post-card__excerpt clamp-2">
       今日排查并修复 lobsterai 连续弹出 git 控制台窗口问题。根因是 publish_site.py 和 cloud_daily.py 调用 subprocess.run 调 git 时未加 CREATE_NO_WINDOW ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-11-22
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/260924工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-09-24</h3>
-    </a>
-    <a href="/post/260924工作总结/" class="post-card__excerpt clamp-2">
-      今日核心工作在两个方向。
-一、Hermes 弹窗问题诊断与修复。15:30 之后频繁弹出 git/控制台黑窗，排查定位到是 Hermes gateway 后台每约 5 分钟自动重连 5 个已损坏的 MCP server。每次重连 sp...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-22
