@@ -178,6 +178,97 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-docker</h3>
+    </a>
+    <a href="/post/2026-07-21-techpoint-hermes-docker/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+部署形态
+双容器（WebUI + Agent gateway）
+单容器塞两个进程
+官方支持路径；两者依赖差异大，混装易互相污染（T1）
+
+
+容器间通信
+Docker bridge 网络 + HTTP ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · daily-publish</h3>
+    </a>
+    <a href="/post/2026-07-22-techpoint-daily-publish/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+博客端
+GitHub Pages + Jekyll（daily-note-blog）
+Gridea Pro 单独承担
+push 即自动构建上线，彻底消灭&amp;quot;手动点同步&amp;quot;（T1）
+
+
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · hermes-windows</h3>
+    </a>
+    <a href="/post/2026-07-23-techpoint-hermes-windows/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+运行形态
+Windows 原生进程（agent + WebUI 各跑进程）
+保留 Docker 容器
+容器停了很麻烦；原生进程下 localhost 即宿主机，三端发布链路更顺；保留 Docker 作...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
     <a href="/post/2026-07-25-techpoint-wispbyte-gost/" class="post-card__title-link">
       <h3 class="post-card__title clamp-3">技术点 · wispbyte-gost</h3>
     </a>
@@ -224,10 +315,10 @@ open-link 脚本在 PowerShell 下需 $env:PYTHONI...
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · gaming4free-singbox（受限游戏 VPS 二进制入口注入，技术成功但封号）</h3>
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
     </a>
-    <a href="/post/2026-07-26-techpoint-gaming4free-singbox/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -236,13 +327,10 @@ open-link 脚本在 PowerShell 下需 $env:PYTHONI...
 
 
 
-平台
-Gaming4Free（翼龙面板游戏 VPS）
-Wispbyte / Serv00 / Oracle
-比 Wispbyte 大方 5 倍、可多开端口铺多协议（但只适合真玩游戏）
-
-
-代理内核...
+抓取方式
+Playwright 无头 Chromium
+纯 urllib/requests
+58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -319,29 +407,10 @@ setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-12</h3>
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
     </a>
-    <a href="/post/2026-08-12-techpoint-autoclaw-2026-08-12/" class="post-card__excerpt clamp-2">
-      用户反馈&amp;quot;昨天部署的系统还有错误&amp;quot;，排查发现 4 个叠加问题：
-
-现象：内核 uptime 39 分钟不变，但 systemd (PID 1) 每 1-3 分钟重启一次（apport socket 反复 Close...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · phpbb-mcp（phpBB 子目录安装 + 平铺单文件 MCP 扩展）</h3>
-    </a>
-    <a href="/post/2026-07-26-techpoint-phpbb-mcp/" class="post-card__excerpt clamp-2">
+    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__excerpt clamp-2">
       选型项
 选定
 落选
@@ -350,62 +419,14 @@ setx /M HERMES_BIN + 全套 env（含 HERMES_HOME）
 
 
 
+免费主机
+my-place.us（iFastNet）
+其他免费 PHP 主机
+提供 PHP+MySQL，成本 0，可装论坛（T1）
+
+
 论坛
-phpBB 3.3（Softaculous 一键装，子目录 /AIblog）
-bbs1org
-需要真·无限级子版块（bbs1org 是扁平结构，无 parent_id）（T1）
-
-
-MCP ...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-08</h3>
-    </a>
-    <a href="/post/2026-08-08-techpoint-autoclaw-2026-08-08/" class="post-card__excerpt clamp-2">
-      用户要求：给接入的 70+ 模型（实际 84 个）做评分表，参考&amp;quot;上次做评分表的那 5 个网站的分数&amp;quot;，为 Hermes MoA 模式安排主力/助手，输出 md + html
-5 大平台来源（上次评分表，2026-...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · 主力资金流向看板（8850）数据源「照搬 + 多补」改造方案</h3>
-    </a>
-    <a href="/post/2026-08-07-techpoint-主力资金流向看板-8850-数据源-照搬-多补-改造方案/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-数据接入方式
-同源代理（服务端出网 + 前端走 host:&amp;quot;&amp;quot;）
-前端直连东财
-浏览器直连受跨域限制 + 风控；且前端直连会把密钥/行为暴露给外部（T1 实测）
-
-
-主数据源 ho...
+bbs1org 极简 PHP 论坛（单文件 294KB...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
@@ -425,7 +446,7 @@ MCP ...
     
     <a href="/post/page/52/" class="btn btn--secondary">&larr; 上一页</a>
     
-    <span class="pagination__info">53 / 59</span>
+    <span class="pagination__info">53 / 60</span>
     
     <a href="/post/page/54/" class="btn btn--secondary">下一页 &rarr;</a>
     
