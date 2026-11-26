@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 0.0.0-dev">
+  <title>技术点 · 2026-11-26 | W662000&#39;s Blog</title>
+  
+<meta property="og:title" content="技术点 · 2026-11-26" />
+<meta property="og:type" content="article" />
+
+
+<meta name="description" content="wb-cn（WB 国内版） 数据源：D:\AI work\workbuddy\2026-11-26-10-42-34.workbuddy\memory\2026-11-26.md, D:\AI work\workbuddy\2026-11-26-21-10-26.workbuddy\memory\2026-11-26.md 21:15 skill 清单 + 加模型 &amp;hellip;">
+<link rel="canonical" href="https://towertop.kdns.fr/post/261126技术点/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"技术点 · 2026-11-26","url":"https://towertop.kdns.fr/post/261126技术点/","description":"wb-cn（WB 国内版） 数据源：D:\\AI work\\workbuddy\\2026-11-26-10-42-34.workbuddy\\memory\\2026-11-26.md, D:\\AI work\\workbuddy\\2026-11-26-21-10-26.workbuddy\\memory\\2026-11-26.md 21:15 skill 清单 + 加模型 \u0026hellip;","datePublished":"2026-11-26T23:16:37+08:00","dateModified":"2026-11-26T23:16:37+08:00","author":{"@type":"Person","name":"W662000's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"W662000's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://towertop.kdns.fr","name":"W662000's Blog","position":1},{"@type":"ListItem","item":"https://towertop.kdns.fr/post/261126技术点/","name":"技术点 · 2026-11-26","position":2}]}</script>
+<meta property="og:title" content="技术点 · 2026-11-26">
+<meta property="og:description" content="wb-cn（WB 国内版） 数据源：D:\AI work\workbuddy\2026-11-26-10-42-34.workbuddy\memory\2026-11-26.md, D:\AI work\workbuddy\2026-11-26-21-10-26.workbuddy\memory\2026-11-26.md 21:15 skill 清单 + 加模型 &amp;hellip;">
+<meta property="og:url" content="https://towertop.kdns.fr/post/261126技术点/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="W662000's Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://towertop.kdns.fr/post/261126技术点/">
+<meta name="twitter:title" content="技术点 · 2026-11-26">
+<meta name="twitter:description" content="wb-cn（WB 国内版） 数据源：D:\AI work\workbuddy\2026-11-26-10-42-34.workbuddy\memory\2026-11-26.md, D:\AI work\workbuddy\2026-11-26-21-10-26.workbuddy\memory\2026-11-26.md 21:15 skill 清单 + 加模型 &amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://towertop.kdns.fr" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="/images/avatar.png" alt="W662000&#39;s Blog" />
+        </a>
+        
+        <a href="https://towertop.kdns.fr" class="site-name-link">W662000&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/daily-note-blog/">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">技术点 · 2026-11-26</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-11-26</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">13 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/workbuddy/" class="tag-pill tag-pill--sm">workbuddy</a>
+      
+      <a href="/tag/3axis/" class="tag-pill tag-pill--sm">3axis</a>
+      
+    </div>
+    
+  </header>
+
+  
+
+  <div class="article-content">
+    <h2 id="wb-cnwb-">wb-cn（WB 国内版）</h2>
+<blockquote>
+<p>数据源：D:\AI work\workbuddy\2026-11-26-10-42-34.workbuddy\memory\2026-11-26.md, D:\AI work\workbuddy\2026-11-26-21-10-26.workbuddy\memory\2026-11-26.md</p>
+</blockquote>
+<h2 id="2115-skill----handoff-">21:15 skill 清单 + 加模型 handoff 汇总（纯检索，无配置改动）</h2>
+<ul>
+<li>用户要求：列出 skill 目录里跟&quot;新增模型/给其他agent装模型&quot;相关的 skill，并分别写出最近成功加模型的 handoff。</li>
+<li>锁定 4 个加模型 skill：<code>custom-model-onboarding</code>（总入口五端）、<code>autoclaw-add-model</code>（au 1.x/2.0/国际版）、<code>lobsterai-batch-model-import</code>（龙虾）、<code>zcode-batch-model-import</code>（ZCode）。辨析排除 <code>cross-agent-skill-install</code>（装 skill 非装模型）。</li>
+<li>各 skill 最近成功案例（均本地 T1 记录）：onboarding=11-25 SenseNova 五端同步；autoclaw=11-24 au 国际版 +11；lobsterai=11-25 custom_2 换 6 模型（+9-23 对齐68）；zcode=11-16 WB 41 条 DECODE_OK。</li>
+<li>产物：<code>加模型skill清单与最近成功handoff_20261126.md</code>；进度备份 <code>进度/进度_20261126_2115_加模型skill清单与handoff.md</code>。</li>
+<li>未重启任何 agent、未改任何配置。会话ID：3c322604-5c56-4804-bec5-79b6075b55a7</li>
+</ul>
+<h1 id="2026-11-26-">2026-11-26 工作日志</h1>
+<h2 id="wb-intlwb-">wb-intl（WB 国际版）</h2>
+<blockquote>
+<p>数据源：D:\workspace\workbuddyai\2026-11-26-10-38-56.workbuddy-ai\memory\2026-11-26.md, D:\workspace\workbuddyai\2026-11-26-12-43-58.workbuddy-ai\memory\2026-11-26.md</p>
+</blockquote>
+<h2 id="1307-1309--43---17">13:07-13:09 共有标记口径纠错（用户质疑 43 → 查因并修回 17）</h2>
+<ul>
+<li>根因（T0）：旧 HTML 的 32 个 <code>cover=6</code> 节点<strong>全部缺 wb-intl 和 au-intl 两端</strong>（生成时漏扫这两端），我的新脚本补全 8 端后 cover 6→8，又用 <code>shared = (cover==8)</code> 自动推导，把旧 HTML 实际 17 个共有误膨胀到 43。用户记忆的 14 来自 SKILL.md 旧列表（漏写 memory / skill-creator / skill-vetter 三个）。</li>
+<li>被误标 26 个：17 个原本 cover=6 的已标节点被改 cover=8 后连带标 shared；9 个是今天新发现的节点（autocli-skill、last30days、skill-star-map、qiaomu-opencli-* 5 个、qiaomu-smart-search）。</li>
+<li>修复：<code>sync_skill_starmap.py</code> 的 <code>rebuild_data</code> 改为 <strong>shared 保留旧值、新节点 shared=False</strong>；cover 仍按磁盘实测刷新（8/8 是对的）。从备份恢复权威 HTML 的 17 个标记后重新同步 8 端。</li>
+<li>核验：HTML/JSON 287 节点、shared <strong>17</strong>、cover=8 <strong>43</strong>（两者不再混为一谈）；8 端 HTML/JSON/SKILL.md 哈希各一致；dry-run 0 变更。</li>
+<li>SKILL.md 共有列表补齐 17 个，并写明 shared 是人工语义标记、不按 cover 自动推导。</li>
+</ul>
+<h2 id="1323--html">13:23 溯源技能星图 HTML「本体」（只读调查）</h2>
+<ul>
+<li>全盘共 18 份 <code>skill星空图*.html</code>。用户给的 <code>AutoClaw...\projects\Default\skill星空图-全量.html</code> 是 <strong>11:56 旧版</strong>：277 节点、65,453B、sha <code>e0a4597a1b45</code>、标题「全量 277 Skill」，与备份中 8 份旧版逐字节一致——它是当时的生成落点/过期快照，<strong>不在当前同步链里</strong>。</li>
+<li>当前唯一权威源 = <code>C:\Users\Administrator\.workbuddy-ai\skills\skill-star-map\data\skill星空图-全量.html</code>（13:08，287 节点，69,110B，sha <code>0cddd79dc8cc</code>），<code>sync_skill_starmap.py</code> 的 <code>AUTHORITY_HTML</code> 指向它；8 端副本哈希一致。</li>
+<li>「14 个共有」的数字来源找到：11:14 的 <code>projects\Default\skill星空图.html</code>（<strong>75 节点版</strong>，shared=14、cover=8 有 29），不是全量版的数字。另有 10:31 附件目录一份 SVG 版 75 节点图。277 版 shared=17。</li>
+<li>用户决定「纳入同步」。已从备份目录留底旧版（<code>au-intl-projects-default__skill星空图-全量.html</code>，sha <code>e0a4597a1b45</code>），再改 <code>sync_skill_starmap.py</code> 增 <code>VIEW_HTML_AU_INTL</code> 常量（从 au-intl skill 根上溯三级到 <code>projects/Default</code>），<code>sync_skill_html</code> 在八端之外多写 1 份查看副本。</li>
+<li>13:31 实跑：查看副本由 277 节点旧版更新为 287 节点（sha <code>0cddd79dc8cc</code>），<strong>9 份 HTML 哈希全一致</strong>；dry-run 显示 9 份 0 更新，幂等。</li>
+<li>顺手修正 SKILL.md 里「刷新 shared」的错误描述（实际是保留 shared、只刷新 p/cover），并写明共 9 份 HTML，同步八端。</li>
+</ul>
+<h2 id="1335-1339--">13:35-13:39 修复技能星图标签显示（已完成 ✅）</h2>
+<ul>
+<li>用户反馈：平台下载类节点只有粉色星星、没有名称。数据侧排查：212 个平台类节点 name/c/r/p 全完整，c 全在 CL 内；非 DATA 部分与备份逐字一致（不是同步脚本改坏的）。</li>
+<li>根因：原标签渲染按星级降序 + 严格防重叠；75 个自建类多为 3-5 星先占满位置，187 个 2 星平台类几乎全被 skip。项目星图同样逻辑但节点权重分布不同，没暴露。</li>
+<li>修复：改权威 HTML 的标签块——低星（1-2 星）用 9.4px 小字号 + 收紧碰撞盒（只避让高星标签、同档允许适度靠近），平台类名称改用浅粉色 <code>lighten(PLATFORM_COLOR,0.46)</code> 与星星配色一致；高星保持 12.2px 和原逻辑。补 JS 括号平衡检查通过。</li>
+<li>备份：<code>..._bak_20261126_1252\skill_data_backup\pre_label_fix__skill星空图-全量.html</code>（修复前 sha <code>0cddd79dc8cc9f2f</code>）。</li>
+<li>13:38 同步：9 份 HTML 全部更新，哈希 <code>28569e87b109</code> 一致；因同步器以权威 HTML 为模板，后续定时重建会保留此修复，不会回退。</li>
+<li>环境无 playwright，未能截图自动验证，已用 present_files 打开预览供用户目视确认。</li>
+</ul>
+<h2 id="1500-1505--">15:00-15:05 涨停回调看板：本地/云端严选池报警差异查因与修复（已完成 ✅）</h2>
+<ul>
+<li>项目星图：p43「涨停回调候选股站点 zt-site」（autoclaw，星图 path 指向 <code>.openclaw-autoclaw/workspace/.openclaw-attachments</code>，实际线上文件不在此）。</li>
+<li>真实路径：本地页 <code>C:\Users\Administrator\lobsterai\project\选股\涨停回调候选股.htm</code>（8844 由 <code>hold_sync_server.py</code> 托管，WEB_ROOT=选股）；云端 Worker 源码 <code>C:\Users\Administrator\lobsterai\project\cf_worker\worker.js</code>，页面读 <code>https://zt.780.de5.net/pool.json</code>。</li>
+<li>结论：报警差异不是算法/数据源不同，是<strong>本地浏览器旧标签页</strong>。两份最新池子（11-26 10:25:22）严选子集都为空。</li>
+<li>证据：本地当前 HTML <code>const CANDS = []</code>，候选_20261126.json 无 001226/600408；云端 pool.json 37 只、严选 0。截图两票参数与 <code>涨停回调候选股261120.htm</code> 内嵌值逐字一致（板日 2026-11-10、gap 7、拓山 ey=41.023/pc=39.53/dc=5.5，安泰 ey=3.54/pc=3.41/dc=6.6）；其最后出现在 11-18/11-20 扫描，11-26 已剔除。</li>
+<li>根因（T0）：本地模板页脚写「每1分钟整页重载以更新候选池」，但模板与历史页面里<strong>从未有 location.reload</strong>，只刷行情不换池子；云端每轮 fetch <code>/pool.json</code>（no-store）自动换池。</li>
+<li>修复：先整目录备份 <code>C:\Users\Administrator\lobsterai\project_bak_20261126_1500</code>（diff 校验一致）。在 <code>scan_realtime.py</code> 模板 + 当前生成 HTML 增加每分钟 HEAD 检查 <code>Last-Modified</code>，服务端文件更新则自动 <code>location.reload()</code>，并修正页脚文案。py_compile 通过；服务端页面已含自愈逻辑；编译产生的 .pyc 已从备份还原。最终差异仅 scan_realtime.py 与 选股/涨停回调候选股.htm（cloud_daily.log 由后台任务自行变化）。</li>
+<li>用户侧动作：旧标签页会在 1 分钟内自愈；按 F5 可立即对齐。</li>
+</ul>
+<h2 id="1505-1510--5-vs-7--">15:05-15:10 第二轮：宽候选池数量 5 vs 7 查因与对齐（已完成 ✅）</h2>
+<ul>
+<li>用户刷新后严选池已对齐（两边均 0），但本地「已突破EMA7·候选池」5 张 vs 云端「宽候选池·已突破EMA7」7 张。</li>
+<li>根因（T0）：本地 <code>broke_js</code> 由 <code>scan_realtime.py</code> 在 10:25 扫描时快照生成（<code>现价&gt;EMA7 且 gap&gt;=3</code>），盘中后来突破的票不会进列表；云端每轮用全部 37 只实时重算同条件，多出小熊电器(002959)、泰嘉股份(002843)。另本地徽标用「真上穿」(昨收≤EMA7×1.02) 而云端宽池用 plainBroke(站上即算)，导致本地 5 张全显示「未上穿/回踩」。</li>
+<li>修复：二次备份 <code>C:\Users\Administrator\lobsterai\project_bak_20261126_1505</code>（仅两文件）。把本地模板和当前 HTML 的中部栏改为遍历 ALLPOOL 全池实时重算（<code>plainBroke &amp;&amp; g&gt;=3</code>），徽标统一为突破✅并额外标「真上穿」，语音与新宽池集合同步；栏目标题改为与云端一致。</li>
+<li>验证：py_compile 通过；抽取脚本 node &ndash;check 通过；用同一腾讯行情源复算 WIDE_NOW=7，与云端截图 7 只逐只一致（000521/002959/002843/600410/000530/002199/603004）；服务端页面已含新逻辑。用户侧需再 F5 一次加载新页面。</li>
+</ul>
+<h2 id="1510-1515--">15:10-15:15 第三轮：底部全量池数量与灰色卡片口径（已完成 ✅）</h2>
+<ul>
+<li>用户反馈本地底部「候选池·10日2板（37只）」而云端看起来更多、且卡片发灰。</li>
+<li>T0 核对：本地 ALLPOOL 37 只、云端 KV pool.json 37 只，<code>SAME_SET=True</code>，两边代码集合完全一致；云端视觉上更多是因为它还有宽池 7 只独立面板（本地第二轮已补齐）。</li>
+<li>灰色含义：云端 <code>card()</code> 在 <code>!pr.price</code>（无实时行情）时返回 <code>.stk.far</code>（opacity .5 + saturate .55）+「无行情」标签；不是被淘汰、也不是信号，只表示行情没拿到。本地 CSS 本来就有 <code>.stk.far</code>，但底部栏从没用过，而是显示缓存价/<code>…</code>。</li>
+<li>修复：三次备份 <code>C:\Users\Administrator\lobsterai\project_bak_20261126_1512</code>。本地模板+当前 HTML 底部全量栏改为：无实时行情即灰卡+「无行情」，不再用缓存价冒充实时；页脚加「灰色卡片=无行情（与云端同口径）」。py_compile 与 node &ndash;check 通过，服务端页面已更新。</li>
+</ul>
+<h2 id="1542-1550--zt-dashboard-deploy-skill--">15:42-15:50 新建 zt-dashboard-deploy skill 并分发六端（已完成 ✅）</h2>
+<ul>
+<li>新建 skill：源在 WB 国内版 <code>C:\Users\Administrator\.workbuddy\skills\zt-dashboard-deploy\</code>，含 <code>SKILL.md</code>、<code>references/deployment.md</code>、<code>scripts/deploy_cloud.py</code>（刷新 token + <a href="mailto:wrangler@3.60.0">wrangler@3.60.0</a> 部署，支持 &ndash;dry-run，静默无窗）。记录本地生成/publish_site、云端部署、对齐清单、KV 额度与踩坑（API 手搓 multipart 10021、wrangler Python 坏包）。</li>
+<li>校验：skill-creator quick_validate 通过；脚本 py_compile 通过；实跑 <code>--dry-run</code> 成功（Total Upload 52.76 KiB，绑定正常）。</li>
+<li>分发：<code>sync_skill.py zt-dashboard-deploy --to wb-intl au au-intl loomy raccoon</code>，五端均新装成功；加源端共 6 端。脚本内置绿灯闸按 8 端检查，因按要求未装 zcode/lobsterai 报 RED（预期），改用 SHA256 手工验收：6 端三文件哈希全一致。</li>
+<li>注意：新 skill 需各 agent 新开会话才会加载。</li>
+</ul>
+<h2 id="1604-1610--slg-wordpress--">16:04-16:10 新增 SLG WordPress 发布端（技术点链，已完成 ✅）</h2>
+<ul>
+<li>用户要求在原 4 端/5 物理落点基础上新增 <code>https://slg.de5.net/</code>（WordPress blog）。项目星图 p57/p154 指向旧 SLG 攻略中心，实际凭证与发布脚本在 <code>D:/workspace/autoclaw_zai/wp-kb/config.json</code>（site/user/app_password/notes），只读探测确认 <code>wp-json/wp/v2</code> 可达：全站 765 篇；分类 id：工作日志 3（151篇）、项目流 4（270篇）、技术点 5（344篇）。<code>kb_publish.py</code> 说明必须发送 HTML（Ultimate Markdown 不会渲染 API 送入的 MD）。</li>
+<li>先整目录备份 <code>D:/AI work/workbuddy/handoff_bak_20261126_160419</code>（101MB，diff 校验一致），并把 automation <code>6920caf0-aa43-46fd-9bbb-0791b687c8fa</code> 原 prompt/配置备份为 <code>automation_6920caf0_before_slg.json</code>。</li>
+<li>新建 <code>D:/AI work/workbuddy/handoff/slg_blog_publish.py</code>：按 external-write-idempotency-gate G1~G5 实现——G1 全量分页+X-WP-Total 对账+最小 700 篇断言；G2 站点历史同名组证明不能靠重复 POST 报错兜底；G3 单次默认最多 20 写；G4 JSONL 台账 <code>slg_blog_ledger.jsonl</code>；G5 <code>audit</code> 只读报告落 <code>slg_blog_reports/</code>。凭证只从配置读入内存，日志/报告不输出敏感值。</li>
+<li>修改 <code>techpoint_flow.py</code>：技术点 publish 从 4 通道扩为 5 通道/6 物理落点，新增调用 <code>publish_slg_blog_techpoint()</code>（<code>sync --axis techpoint --source-dir UPDATE_DIR --trigger techpoint_flow</code>）。更新 automation 名称与 prompt 为「5通道/6落点核验」，加入 SLG 只读 audit 与幂等补发命令，禁止自行放大写入熔断。</li>
+<li>验证：只读 API 探测成功；脚本 AST/语法检查通过；<code>sync --dry-run</code> 不写远端；<code>audit --axis techpoint --since 2026-11-01</code> 全量 765、目标 3、台账缺失 0、同名组 0；用 <code>_handoffs</code> 历史源 dry-run（since 2026-08-01）显示 300 候选、290 已存在、<strong>10 篇未发布</strong>（未擅自补发，待用户确认）；敏感值泄漏检查 False。</li>
+<li>编译产生的 pyc 已清理/从备份还原，最终差异仅 <code>slg_blog_publish.py</code>、<code>techpoint_flow.py</code>、<code>slg_blog_reports/</code> 与备份目录中的 automation 备份。</li>
+</ul>
+<h1 id="2026-11-26--1">2026-11-26 工作日志</h1>
+<h2 id="autoclaw-115autoclaw-115">autoclaw-115（AutoClaw 1.15）</h2>
+<blockquote>
+<p>数据源：无</p>
+</blockquote>
+<p>（该 Agent 当天日志中未检出此类段落）</p>
+<h2 id="zcodezcode">zcode（ZCode）</h2>
+<blockquote>
+<p>数据源：C:\Users\Administrator.zcode\cli\db\db.sqlite</p>
+</blockquote>
+<p>（该 Agent 当天日志中未检出此类段落）</p>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <a href="/post/261126项目流/" class="post-nav-card post-nav-card--prev">
+      
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">项目流 · 2026-11-26</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
+    
+    
+    <a href="/post/261126多Agent工作日志/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">多 Agent 工作日志 · 2026-11-26</span>
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/daily-note-blog/">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 W662000&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+    <div class="footer-custom">
+      Powered by Gridea Pro
+    </div>
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v0.0.0-dev %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>

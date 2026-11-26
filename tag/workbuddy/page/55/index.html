@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -176,6 +185,80 @@
 
   
   <div class="post-list">
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · AutoClaw 2026-08-07</h3>
+    </a>
+    <a href="/post/2026-08-07-techpoint-autoclaw-2026-08-07/" class="post-card__excerpt clamp-2">
+      外部助手生成补丁: MIN_WINDOW_WIDTH 800→700, 等长替换 @133410287
+登记时检查: app.asar=原始800 / bak=800干净 / app.asar.new=700就绪 / bat存在(52...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署实操（Win10 + Debian + Hermes 共享）</h3>
+    </a>
+    <a href="/post/2026-08-05-techpoint-联想n50-80双系统部署win10与debian共享hermes数据/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+选型依据
+
+
+
+
+常开系统（跑 agent）
+Debian minimal
+Ubuntu
+Ubuntu 默认带 snapd，系统开销大；Debian minimal 更轻，4GB 内存 + 5 代低压双核更友好（T...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">技术点 · 联想 N50-80 双系统部署清单（Win10 + Debian + Hermes 数据共享）</h3>
+    </a>
+    <a href="/post/2026-08-05-techpoint-联想-n50-80-双系统部署清单-win10-debian-hermes-数据/" class="post-card__excerpt clamp-2">
+      选型项
+选定
+落选
+依据
+
+
+
+
+常开系统（跑 agent）
+Debian 12/13 minimal headless
+Ubuntu / Win 常开
+Debian minimal 缺省无 snapd，空载内存低 30~50%；He...
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-08-17
+      
+    </div>
+  </div>
+  
+</article>
+
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
@@ -369,94 +452,6 @@ Windows 原生进程（agent + WebUI 各跑进程）
 Wispbyte（Pterodactyl 容器）
 Gaming4Free（锁 shell、易封号）、Serv00（禁代理且 mass ban）
 Wispbyte 允许自定义 Sta...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · wuxi-58（58 同城多区爬虫 + Cloudflare D1 全栈落库）</h3>
-    </a>
-    <a href="/post/2026-07-25-techpoint-wuxi-58/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-抓取方式
-Playwright 无头 Chromium
-纯 urllib/requests
-58 升级了 code=300 验证码网关，单凭 Cookie 的 HTTP 请求过不了，必须真浏览器执...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · china-stock-data（@kekewater/china-stock-data）用法大全</h3>
-    </a>
-    <a href="/post/2026-08-04-techpoint-china-stock-data-kekewater_china-stock-d/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-依据
-
-
-
-
-接口形态
-CLI 子命令（china_stock.py &amp;lt;cmd&amp;gt; &amp;lt;args&amp;gt;，16 个子命令）
-Python 库 import / 常驻服务
-Agent 侧调用只需拼一行命...
-    </a>
-    <div class="post-card__meta meta-text">
-      2026-08-17
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">技术点 · bbs1org-mcp（免费 PHP 主机论坛 + 插件式 MCP 知识库）</h3>
-    </a>
-    <a href="/post/2026-07-26-techpoint-bbs1org-mcp/" class="post-card__excerpt clamp-2">
-      选型项
-选定
-落选
-选型依据
-
-
-
-
-免费主机
-my-place.us（iFastNet）
-其他免费 PHP 主机
-提供 PHP+MySQL，成本 0，可装论坛（T1）
-
-
-论坛
-bbs1org 极简 PHP 论坛（单文件 294KB...
     </a>
     <div class="post-card__meta meta-text">
       2026-08-17
