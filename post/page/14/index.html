@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/article.css">
+<link rel="stylesheet" href="/styles/pages.css">
+<link rel="stylesheet" href="/styles/comments.css">
+<link rel="stylesheet" href="/styles/utilities.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -217,13 +226,15 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260806工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-06</h3>
+    <a href="/post/260805工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-05</h3>
     </a>
-    <a href="/post/260806工作总结/" class="post-card__excerpt clamp-2">
-      今日主线三块：模型能力核查、bat 踩坑复盘升红线、另一台笔记本 Debian 双启装机。
-实测 step-1o-audio 不支持图片输入，纠正&amp;quot;三模态一体化&amp;quot;是宣传非单端点能力的误判。
-对文本推理类 54 模型...
+    <a href="/post/260805工作总结/" class="post-card__excerpt clamp-2">
+      今天最大的工程是从零做出「模型测限流雷达」，端口8849，四次迭代。
+中途翻车一次，进程被强杀，一轮28分钟的扫描39个结果全丢。
+根因是抄了测速雷达「整轮跑完才落盘」的模式。
+教训：长耗时任务必须每完成一项就落盘，并支持断点续测。
+...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-28
@@ -236,15 +247,13 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/260805工作总结/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-05</h3>
+    <a href="/post/260806工作总结/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">每日工作总结 · 2026-08-06</h3>
     </a>
-    <a href="/post/260805工作总结/" class="post-card__excerpt clamp-2">
-      今天最大的工程是从零做出「模型测限流雷达」，端口8849，四次迭代。
-中途翻车一次，进程被强杀，一轮28分钟的扫描39个结果全丢。
-根因是抄了测速雷达「整轮跑完才落盘」的模式。
-教训：长耗时任务必须每完成一项就落盘，并支持断点续测。
-...
+    <a href="/post/260806工作总结/" class="post-card__excerpt clamp-2">
+      今日主线三块：模型能力核查、bat 踩坑复盘升红线、另一台笔记本 Debian 双启装机。
+实测 step-1o-audio 不支持图片输入，纠正&amp;quot;三模态一体化&amp;quot;是宣传非单端点能力的误判。
+对文本推理类 54 模型...
     </a>
     <div class="post-card__meta meta-text">
       2026-11-28
